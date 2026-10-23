@@ -1,0 +1,2125 @@
+﻿=== 1. ARBOL DE ARCHIVOS DE PS3RECOMP ===
+C:\AsuraPS3\ps3recomp\.gitignore
+C:\AsuraPS3\ps3recomp\CHANGELOG.md
+C:\AsuraPS3\ps3recomp\CMakeLists.txt
+C:\AsuraPS3\ps3recomp\CONTRIBUTING.md
+C:\AsuraPS3\ps3recomp\CONTRIBUTORS.md
+C:\AsuraPS3\ps3recomp\LICENSE
+C:\AsuraPS3\ps3recomp\README.md
+C:\AsuraPS3\ps3recomp\requirements.txt
+C:\AsuraPS3\ps3recomp\.github\workflows\linux-vulkan.yml
+C:\AsuraPS3\ps3recomp\.github\workflows\linux.yml
+C:\AsuraPS3\ps3recomp\.github\workflows\macos.yml
+C:\AsuraPS3\ps3recomp\.github\workflows\release.yml
+C:\AsuraPS3\ps3recomp\.github\workflows\windows.yml
+C:\AsuraPS3\ps3recomp\cmake\PS3RecompSPU.cmake
+C:\AsuraPS3\ps3recomp\config\example.toml
+C:\AsuraPS3\ps3recomp\docs\ARCHITECTURE.md
+C:\AsuraPS3\ps3recomp\docs\BUILDING.md
+C:\AsuraPS3\ps3recomp\docs\CELLFS_VFS_ROOT.md
+C:\AsuraPS3\ps3recomp\docs\cross-platform-candidates.md
+C:\AsuraPS3\ps3recomp\docs\CUSTOM_MODULES.md
+C:\AsuraPS3\ps3recomp\docs\DEBUG_CONSOLE.md
+C:\AsuraPS3\ps3recomp\docs\DEPTH24_ROUNDING.md
+C:\AsuraPS3\ps3recomp\docs\DIAGNOSTICS.md
+C:\AsuraPS3\ps3recomp\docs\FAQ.md
+C:\AsuraPS3\ps3recomp\docs\FIRMWARE_LLE.md
+C:\AsuraPS3\ps3recomp\docs\FP_EXPORT_CACHE.md
+C:\AsuraPS3\ps3recomp\docs\FRAGMENT_COLOR_INPUTS.md
+C:\AsuraPS3\ps3recomp\docs\GAME_PORTING_GUIDE.md
+C:\AsuraPS3\ps3recomp\docs\GETTING_STARTED.md
+C:\AsuraPS3\ps3recomp\docs\metal-window-close.md
+C:\AsuraPS3\ps3recomp\docs\METAL_DEPTH_READBACK.md
+C:\AsuraPS3\ps3recomp\docs\MODULES_REFERENCE.md
+C:\AsuraPS3\ps3recomp\docs\MODULE_STATUS.md
+C:\AsuraPS3\ps3recomp\docs\NID_SYSTEM.md
+C:\AsuraPS3\ps3recomp\docs\ONLINE.md
+C:\AsuraPS3\ps3recomp\docs\PLATFORM_ABSTRACTION.md
+C:\AsuraPS3\ps3recomp\docs\PPU_RECOMP.md
+C:\AsuraPS3\ps3recomp\docs\PROTO_BUILDS.md
+C:\AsuraPS3\ps3recomp\docs\REGRESSION_GATE.md
+C:\AsuraPS3\ps3recomp\docs\rsx-color-feedback.md
+C:\AsuraPS3\ps3recomp\docs\rsx-framebuffer-srgb.md
+C:\AsuraPS3\ps3recomp\docs\rsx-texture-gamma.md
+C:\AsuraPS3\ps3recomp\docs\rsxfifo.txt
+C:\AsuraPS3\ps3recomp\docs\RSXFIFOCommands - PS3 Developer wiki.pdf
+C:\AsuraPS3\ps3recomp\docs\RSX_FRAGMENT_PROGRAM.md
+C:\AsuraPS3\ps3recomp\docs\RSX_GRAPHICS.md
+C:\AsuraPS3\ps3recomp\docs\RUNTIME.md
+C:\AsuraPS3\ps3recomp\docs\SAIL_BOOT_CALLBACK.md
+C:\AsuraPS3\ps3recomp\docs\SHADOW_COMPARISON.md
+C:\AsuraPS3\ps3recomp\docs\spu-fnms-zero-extended-design.md
+C:\AsuraPS3\ps3recomp\docs\SPURS_SCHEDULING.md
+C:\AsuraPS3\ps3recomp\docs\SPURS_TASK_EXIT_CODE_INITIALIZE.md
+C:\AsuraPS3\ps3recomp\docs\SPU_CONTEXT_REGISTRIES.md
+C:\AsuraPS3\ps3recomp\docs\SPU_FALLBACK.md
+C:\AsuraPS3\ps3recomp\docs\SPU_INTERPRETER_LIFTED_HANDOFF.md
+C:\AsuraPS3\ps3recomp\docs\SPU_LIFTER.md
+C:\AsuraPS3\ps3recomp\docs\SYSCALLS.md
+C:\AsuraPS3\ps3recomp\docs\SYSMODULE_UNLOAD_MODULE_EX.md
+C:\AsuraPS3\ps3recomp\docs\TOOLS.md
+C:\AsuraPS3\ps3recomp\include\ps3emu\endian.h
+C:\AsuraPS3\ps3recomp\include\ps3emu\error_codes.h
+C:\AsuraPS3\ps3recomp\include\ps3emu\guest_call.h
+C:\AsuraPS3\ps3recomp\include\ps3emu\log_first.h
+C:\AsuraPS3\ps3recomp\include\ps3emu\milestone.h
+C:\AsuraPS3\ps3recomp\include\ps3emu\module.h
+C:\AsuraPS3\ps3recomp\include\ps3emu\nid.h
+C:\AsuraPS3\ps3recomp\include\ps3emu\ps3types.h
+C:\AsuraPS3\ps3recomp\include\ps3emu\ps3_ftrace.h
+C:\AsuraPS3\ps3recomp\include\ps3emu\spu_fallback.h
+C:\AsuraPS3\ps3recomp\include\ps3emu\yz_frontier_trace.h
+C:\AsuraPS3\ps3recomp\include\ps3emu\yz_runtime_config.h
+C:\AsuraPS3\ps3recomp\libs\guest_struct.h
+C:\AsuraPS3\ps3recomp\libs\audio\cellAudio.c
+C:\AsuraPS3\ps3recomp\libs\audio\cellAudio.h
+C:\AsuraPS3\ps3recomp\libs\audio\cellMic.c
+C:\AsuraPS3\ps3recomp\libs\audio\cellMic.h
+C:\AsuraPS3\ps3recomp\libs\audio\cellVoice.c
+C:\AsuraPS3\ps3recomp\libs\audio\cellVoice.h
+C:\AsuraPS3\ps3recomp\libs\audio\tests\test_audio_ring.c
+C:\AsuraPS3\ps3recomp\libs\codec\cellAdec.c
+C:\AsuraPS3\ps3recomp\libs\codec\cellAdec.h
+C:\AsuraPS3\ps3recomp\libs\codec\cellAdecAtrac3p.c
+C:\AsuraPS3\ps3recomp\libs\codec\cellAdecAtrac3p.h
+C:\AsuraPS3\ps3recomp\libs\codec\cellAdecCelp8.c
+C:\AsuraPS3\ps3recomp\libs\codec\cellAdecCelp8.h
+C:\AsuraPS3\ps3recomp\libs\codec\cellAtrac.c
+C:\AsuraPS3\ps3recomp\libs\codec\cellAtrac.h
+C:\AsuraPS3\ps3recomp\libs\codec\cellDmux.c
+C:\AsuraPS3\ps3recomp\libs\codec\cellDmux.h
+C:\AsuraPS3\ps3recomp\libs\codec\cellGifDec.c
+C:\AsuraPS3\ps3recomp\libs\codec\cellGifDec.h
+C:\AsuraPS3\ps3recomp\libs\codec\cellJpgDec.c
+C:\AsuraPS3\ps3recomp\libs\codec\cellJpgDec.h
+C:\AsuraPS3\ps3recomp\libs\codec\cellJpgEnc.c
+C:\AsuraPS3\ps3recomp\libs\codec\cellJpgEnc.h
+C:\AsuraPS3\ps3recomp\libs\codec\cellPamf.c
+C:\AsuraPS3\ps3recomp\libs\codec\cellPamf.h
+C:\AsuraPS3\ps3recomp\libs\codec\cellPngDec.c
+C:\AsuraPS3\ps3recomp\libs\codec\cellPngDec.h
+C:\AsuraPS3\ps3recomp\libs\codec\cellPngEnc.c
+C:\AsuraPS3\ps3recomp\libs\codec\cellPngEnc.h
+C:\AsuraPS3\ps3recomp\libs\codec\cellSail.c
+C:\AsuraPS3\ps3recomp\libs\codec\cellSail.h
+C:\AsuraPS3\ps3recomp\libs\codec\cellVdec.c
+C:\AsuraPS3\ps3recomp\libs\codec\cellVdec.h
+C:\AsuraPS3\ps3recomp\libs\codec\cellVdecDivx.c
+C:\AsuraPS3\ps3recomp\libs\codec\cellVdecDivx.h
+C:\AsuraPS3\ps3recomp\libs\codec\cellVpost.c
+C:\AsuraPS3\ps3recomp\libs\codec\cellVpost.h
+C:\AsuraPS3\ps3recomp\libs\codec\ffmpeg_runtime.c
+C:\AsuraPS3\ps3recomp\libs\codec\ffmpeg_runtime.h
+C:\AsuraPS3\ps3recomp\libs\codec\stb_image.h
+C:\AsuraPS3\ps3recomp\libs\codec\stb_image_write.h
+C:\AsuraPS3\ps3recomp\libs\codec\vdec_ffmpeg.c
+C:\AsuraPS3\ps3recomp\libs\codec\vdec_ffmpeg.h
+C:\AsuraPS3\ps3recomp\libs\codec\tests\CMakeLists.txt
+C:\AsuraPS3\ps3recomp\libs\codec\tests\gen_vdec_media.cmake
+C:\AsuraPS3\ps3recomp\libs\codec\tests\test_adec_abi.c
+C:\AsuraPS3\ps3recomp\libs\codec\tests\test_cellAtrac.c
+C:\AsuraPS3\ps3recomp\libs\codec\tests\test_vdec_decode.c
+C:\AsuraPS3\ps3recomp\libs\filesystem\cellFs.c
+C:\AsuraPS3\ps3recomp\libs\filesystem\cellFs.h
+C:\AsuraPS3\ps3recomp\libs\filesystem\cellFsUtility.c
+C:\AsuraPS3\ps3recomp\libs\filesystem\cellFsUtility.h
+C:\AsuraPS3\ps3recomp\libs\filesystem\edat.c
+C:\AsuraPS3\ps3recomp\libs\filesystem\edat.h
+C:\AsuraPS3\ps3recomp\libs\filesystem\tests\test_edat_guest_klicensee.c
+C:\AsuraPS3\ps3recomp\libs\filesystem\tests\test_edat_guest_klicensee_np.c
+C:\AsuraPS3\ps3recomp\libs\font\cellFont.c
+C:\AsuraPS3\ps3recomp\libs\font\cellFont.h
+C:\AsuraPS3\ps3recomp\libs\font\cellFontFT.c
+C:\AsuraPS3\ps3recomp\libs\font\cellFontFT.h
+C:\AsuraPS3\ps3recomp\libs\font\cellFreeType.c
+C:\AsuraPS3\ps3recomp\libs\font\cellFreeType.h
+C:\AsuraPS3\ps3recomp\libs\font\cellL10n.c
+C:\AsuraPS3\ps3recomp\libs\font\cellL10n.h
+C:\AsuraPS3\ps3recomp\libs\font\stb_truetype.h
+C:\AsuraPS3\ps3recomp\libs\font\tests\test_font_initialize_with_revision.c
+C:\AsuraPS3\ps3recomp\libs\hardware\cellCamera.c
+C:\AsuraPS3\ps3recomp\libs\hardware\cellCamera.h
+C:\AsuraPS3\ps3recomp\libs\hardware\cellGem.c
+C:\AsuraPS3\ps3recomp\libs\hardware\cellGem.h
+C:\AsuraPS3\ps3recomp\libs\hardware\cellUsbd.c
+C:\AsuraPS3\ps3recomp\libs\hardware\cellUsbd.h
+C:\AsuraPS3\ps3recomp\libs\input\cellKb.c
+C:\AsuraPS3\ps3recomp\libs\input\cellKb.h
+C:\AsuraPS3\ps3recomp\libs\input\cellMouse.c
+C:\AsuraPS3\ps3recomp\libs\input\cellMouse.h
+C:\AsuraPS3\ps3recomp\libs\input\cellPad.c
+C:\AsuraPS3\ps3recomp\libs\input\cellPad.h
+C:\AsuraPS3\ps3recomp\libs\input\tests\test_pad_rumble.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellAvconfExt.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellAvconfExt.h
+C:\AsuraPS3\ps3recomp\libs\misc\cellBGDL.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellBGDL.h
+C:\AsuraPS3\ps3recomp\libs\misc\cellGameExec.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellGameExec.h
+C:\AsuraPS3\ps3recomp\libs\misc\cellGameRecording.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellGameRecording.h
+C:\AsuraPS3\ps3recomp\libs\misc\cellImeJp.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellImeJp.h
+C:\AsuraPS3\ps3recomp\libs\misc\cellKey2char.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellKey2char.h
+C:\AsuraPS3\ps3recomp\libs\misc\cellLicenseArea.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellLicenseArea.h
+C:\AsuraPS3\ps3recomp\libs\misc\cellMusicDecode.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellMusicDecode.h
+C:\AsuraPS3\ps3recomp\libs\misc\cellMusicDecode2.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellMusicDecode2.h
+C:\AsuraPS3\ps3recomp\libs\misc\cellMusicExport.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellMusicExport.h
+C:\AsuraPS3\ps3recomp\libs\misc\cellOskDialog.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellOskDialog.h
+C:\AsuraPS3\ps3recomp\libs\misc\cellOvis.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellOvis.h
+C:\AsuraPS3\ps3recomp\libs\misc\cellPhotoExport.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellPhotoExport.h
+C:\AsuraPS3\ps3recomp\libs\misc\cellPhotoImport.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellPhotoImport.h
+C:\AsuraPS3\ps3recomp\libs\misc\cellPrint.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellPrint.h
+C:\AsuraPS3\ps3recomp\libs\misc\cellRemotePlay.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellRemotePlay.h
+C:\AsuraPS3\ps3recomp\libs\misc\cellScreenshot.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellScreenshot.h
+C:\AsuraPS3\ps3recomp\libs\misc\cellSheap.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellSheap.h
+C:\AsuraPS3\ps3recomp\libs\misc\cellSubdisplay.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellSubdisplay.h
+C:\AsuraPS3\ps3recomp\libs\misc\cellVideoExport.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellVideoExport.h
+C:\AsuraPS3\ps3recomp\libs\misc\cellVideoUpload.c
+C:\AsuraPS3\ps3recomp\libs\misc\cellVideoUpload.h
+C:\AsuraPS3\ps3recomp\libs\misc\tests\test_avconf_gamma.c
+C:\AsuraPS3\ps3recomp\libs\network\cellHttp.c
+C:\AsuraPS3\ps3recomp\libs\network\cellHttp.h
+C:\AsuraPS3\ps3recomp\libs\network\cellHttps.c
+C:\AsuraPS3\ps3recomp\libs\network\cellHttps.h
+C:\AsuraPS3\ps3recomp\libs\network\cellHttpUtil.c
+C:\AsuraPS3\ps3recomp\libs\network\cellHttpUtil.h
+C:\AsuraPS3\ps3recomp\libs\network\cellNet.c
+C:\AsuraPS3\ps3recomp\libs\network\cellNet.h
+C:\AsuraPS3\ps3recomp\libs\network\cellNetCtl.c
+C:\AsuraPS3\ps3recomp\libs\network\cellNetCtl.h
+C:\AsuraPS3\ps3recomp\libs\network\cellRudp.c
+C:\AsuraPS3\ps3recomp\libs\network\cellRudp.h
+C:\AsuraPS3\ps3recomp\libs\network\cellSsl.c
+C:\AsuraPS3\ps3recomp\libs\network\cellSsl.h
+C:\AsuraPS3\ps3recomp\libs\network\cellSysutilAvc2.c
+C:\AsuraPS3\ps3recomp\libs\network\host_socket_send.h
+C:\AsuraPS3\ps3recomp\libs\network\np_psnr.c
+C:\AsuraPS3\ps3recomp\libs\network\np_psnr.h
+C:\AsuraPS3\ps3recomp\libs\network\sceNp.c
+C:\AsuraPS3\ps3recomp\libs\network\sceNp.h
+C:\AsuraPS3\ps3recomp\libs\network\sceNpBasic.c
+C:\AsuraPS3\ps3recomp\libs\network\sceNpBasic.h
+C:\AsuraPS3\ps3recomp\libs\network\sceNpClans.c
+C:\AsuraPS3\ps3recomp\libs\network\sceNpClans.h
+C:\AsuraPS3\ps3recomp\libs\network\sceNpCommerce.c
+C:\AsuraPS3\ps3recomp\libs\network\sceNpCommerce.h
+C:\AsuraPS3\ps3recomp\libs\network\sceNpCommerce2.c
+C:\AsuraPS3\ps3recomp\libs\network\sceNpCommerce2.h
+C:\AsuraPS3\ps3recomp\libs\network\sceNpLookup.c
+C:\AsuraPS3\ps3recomp\libs\network\sceNpMatching2.c
+C:\AsuraPS3\ps3recomp\libs\network\sceNpMatching2.h
+C:\AsuraPS3\ps3recomp\libs\network\sceNpScore.c
+C:\AsuraPS3\ps3recomp\libs\network\sceNpSignaling.c
+C:\AsuraPS3\ps3recomp\libs\network\sceNpSignaling.h
+C:\AsuraPS3\ps3recomp\libs\network\sceNpSns.c
+C:\AsuraPS3\ps3recomp\libs\network\sceNpSns.h
+C:\AsuraPS3\ps3recomp\libs\network\sceNpTrophy.c
+C:\AsuraPS3\ps3recomp\libs\network\sceNpTrophy.h
+C:\AsuraPS3\ps3recomp\libs\network\sceNpTus.c
+C:\AsuraPS3\ps3recomp\libs\network\sceNpTus.h
+C:\AsuraPS3\ps3recomp\libs\network\sceNpUtil.c
+C:\AsuraPS3\ps3recomp\libs\network\sceNpUtil.h
+C:\AsuraPS3\ps3recomp\libs\network\sysNet.c
+C:\AsuraPS3\ps3recomp\libs\network\sysNet.h
+C:\AsuraPS3\ps3recomp\libs\network\psnr\psnr.c
+C:\AsuraPS3\ps3recomp\libs\network\psnr\psnr.h
+C:\AsuraPS3\ps3recomp\libs\network\psnr\README.md
+C:\AsuraPS3\ps3recomp\libs\network\tests\test_http_response_getters.c
+C:\AsuraPS3\ps3recomp\libs\network\tests\test_http_uri_path.c
+C:\AsuraPS3\ps3recomp\libs\network\tests\test_np_basic_after_np_init.c
+C:\AsuraPS3\ps3recomp\libs\network\tests\test_np_basic_after_np_init_np.c
+C:\AsuraPS3\ps3recomp\libs\network\tests\test_np_commerce2.c
+C:\AsuraPS3\ps3recomp\libs\network\tests\test_np_identity.c
+C:\AsuraPS3\ps3recomp\libs\network\tests\test_np_matching2.c
+C:\AsuraPS3\ps3recomp\libs\network\tests\test_np_nat.c
+C:\AsuraPS3\ps3recomp\libs\network\tests\test_score_init.c
+C:\AsuraPS3\ps3recomp\libs\network\tests\test_socket_sigpipe.c
+C:\AsuraPS3\ps3recomp\libs\network\tests\test_sys_net.c
+C:\AsuraPS3\ps3recomp\libs\network\tests\test_trophy_registration.c
+C:\AsuraPS3\ps3recomp\libs\network\tests\test_trophy_start.c
+C:\AsuraPS3\ps3recomp\libs\spurs\cellDaisy.c
+C:\AsuraPS3\ps3recomp\libs\spurs\cellDaisy.h
+C:\AsuraPS3\ps3recomp\libs\spurs\cellFiber.c
+C:\AsuraPS3\ps3recomp\libs\spurs\cellFiber.h
+C:\AsuraPS3\ps3recomp\libs\spurs\cellSpurs.c
+C:\AsuraPS3\ps3recomp\libs\spurs\cellSpurs.h
+C:\AsuraPS3\ps3recomp\libs\spurs\cellSpursJq.c
+C:\AsuraPS3\ps3recomp\libs\spurs\cellSpursJq.h
+C:\AsuraPS3\ps3recomp\libs\spurs\spurs_pm.c
+C:\AsuraPS3\ps3recomp\libs\spurs\spurs_taskset.c
+C:\AsuraPS3\ps3recomp\libs\spurs\spurs_taskset.h
+C:\AsuraPS3\ps3recomp\libs\sync\cellSync.c
+C:\AsuraPS3\ps3recomp\libs\sync\cellSync.h
+C:\AsuraPS3\ps3recomp\libs\sync\cellSync2.c
+C:\AsuraPS3\ps3recomp\libs\sync\cellSync2.h
+C:\AsuraPS3\ps3recomp\libs\system\cellGame.c
+C:\AsuraPS3\ps3recomp\libs\system\cellGame.h
+C:\AsuraPS3\ps3recomp\libs\system\cellMsgDialog.c
+C:\AsuraPS3\ps3recomp\libs\system\cellMsgDialog.h
+C:\AsuraPS3\ps3recomp\libs\system\cellRtc.c
+C:\AsuraPS3\ps3recomp\libs\system\cellRtc.h
+C:\AsuraPS3\ps3recomp\libs\system\cellSaveData.c
+C:\AsuraPS3\ps3recomp\libs\system\cellSaveData.h
+C:\AsuraPS3\ps3recomp\libs\system\cellSysmodule.c
+C:\AsuraPS3\ps3recomp\libs\system\cellSysmodule.h
+C:\AsuraPS3\ps3recomp\libs\system\cellSysutil.c
+C:\AsuraPS3\ps3recomp\libs\system\cellSysutil.h
+C:\AsuraPS3\ps3recomp\libs\system\cellSysutilNpEula.c
+C:\AsuraPS3\ps3recomp\libs\system\cellSysutilNpEula.h
+C:\AsuraPS3\ps3recomp\libs\system\cellUserInfo.c
+C:\AsuraPS3\ps3recomp\libs\system\cellUserInfo.h
+C:\AsuraPS3\ps3recomp\libs\system\ps3_psf.h
+C:\AsuraPS3\ps3recomp\libs\system\sysPrxForUser.c
+C:\AsuraPS3\ps3recomp\libs\system\sysPrxForUser.h
+C:\AsuraPS3\ps3recomp\libs\system\sys_interrupt.c
+C:\AsuraPS3\ps3recomp\libs\system\sys_interrupt.h
+C:\AsuraPS3\ps3recomp\libs\system\tests\test_dialog_abort.c
+C:\AsuraPS3\ps3recomp\libs\system\tests\test_dialog_callbacks.c
+C:\AsuraPS3\ps3recomp\libs\system\tests\test_game_category.c
+C:\AsuraPS3\ps3recomp\libs\system\tests\test_game_paths.c
+C:\AsuraPS3\ps3recomp\libs\system\tests\test_game_space.c
+C:\AsuraPS3\ps3recomp\libs\system\tests\test_savedata_fixed.c
+C:\AsuraPS3\ps3recomp\libs\system\tests\test_savedata_io.c
+C:\AsuraPS3\ps3recomp\libs\system\tests\test_savedata_param_sfo.c
+C:\AsuraPS3\ps3recomp\libs\system\tests\test_savedata_root.c
+C:\AsuraPS3\ps3recomp\libs\system\tests\test_savedata_user_autosave.c
+C:\AsuraPS3\ps3recomp\libs\system\tests\test_static_lwmutex.c
+C:\AsuraPS3\ps3recomp\libs\video\cellGcmSys.c
+C:\AsuraPS3\ps3recomp\libs\video\cellGcmSys.h
+C:\AsuraPS3\ps3recomp\libs\video\cellResc.c
+C:\AsuraPS3\ps3recomp\libs\video\cellResc.h
+C:\AsuraPS3\ps3recomp\libs\video\cellVideoOut.c
+C:\AsuraPS3\ps3recomp\libs\video\cellVideoOut.h
+C:\AsuraPS3\ps3recomp\libs\video\metal_frame_rate.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_commands.c
+C:\AsuraPS3\ps3recomp\libs\video\rsx_commands.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_d3d12_backend.c
+C:\AsuraPS3\ps3recomp\libs\video\rsx_d3d12_backend.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_d3d12_shaders.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_dispatch.c
+C:\AsuraPS3\ps3recomp\libs\video\rsx_dispatch.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_draw_engine.c
+C:\AsuraPS3\ps3recomp\libs\video\rsx_draw_engine.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_fp_decompiler.c
+C:\AsuraPS3\ps3recomp\libs\video\rsx_fp_decompiler.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_live_draw.c
+C:\AsuraPS3\ps3recomp\libs\video\rsx_live_draw.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_live_draw_config.c
+C:\AsuraPS3\ps3recomp\libs\video\rsx_metal_backend.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_metal_backend.m
+C:\AsuraPS3\ps3recomp\libs\video\rsx_null_backend.c
+C:\AsuraPS3\ps3recomp\libs\video\rsx_null_backend.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_primitives.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_restart_cuts.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_shader_msl.cpp
+C:\AsuraPS3\ps3recomp\libs\video\rsx_shader_msl.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_shader_spirv.cpp
+C:\AsuraPS3\ps3recomp\libs\video\rsx_shader_spirv.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_test_programs.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_texture_formats.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_texture_layout.c
+C:\AsuraPS3\ps3recomp\libs\video\rsx_texture_layout.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_vertex_compact.c
+C:\AsuraPS3\ps3recomp\libs\video\rsx_vertex_compact.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_vertex_fetch.c
+C:\AsuraPS3\ps3recomp\libs\video\rsx_vertex_fetch.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_vertex_formats.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_vp_decompiler.c
+C:\AsuraPS3\ps3recomp\libs\video\rsx_vp_decompiler.h
+C:\AsuraPS3\ps3recomp\libs\video\rsx_vulkan_backend.c
+C:\AsuraPS3\ps3recomp\libs\video\rsx_vulkan_backend.h
+C:\AsuraPS3\ps3recomp\libs\video\sys_rsx.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\live_draw_test_harness.h
+C:\AsuraPS3\ps3recomp\libs\video\tests\metal-frame-rate.md
+C:\AsuraPS3\ps3recomp\libs\video\tests\rsx_harness_main.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_color_feedback_engine.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_color_feedback_metal.m
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_color_input_metal.m
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_depth24_rounding.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_fp_decompiler.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_fp_export_cache.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_gcm_fifo_user_command.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_gcm_flip_status.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_gcm_flip_stream.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_gcm_flip_wrap.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_gcm_get_on_jump.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_gcm_get_on_release.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_gcm_user_command.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_live_draw_aa_surface.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_live_draw_alias_subrect.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_live_draw_depth_export.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_live_draw_depth_textures.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_live_draw_z16_clear.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_metal_depth_readback.m
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_metal_depth_readback_errors.m
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_metal_fp_export_cache.m
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_metal_frame_rate.m
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_metal_independent_clears.m
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_metal_present_post.m
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_metal_resource_lifetime.m
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_nv3089_engine_read.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_rsx_command_texture_offset.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_rsx_draw_engine.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_rsx_fifo.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_rsx_framebuffer_srgb.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_rsx_framebuffer_srgb.m
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_rsx_primitives.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_rsx_texture_gamma.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_rsx_texture_gamma.m
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_rsx_texture_offset.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_rsx_transform_constants.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_shader_msl.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_shader_spirv.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_shadow_compare_metal.m
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_shadow_engine.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_shadow_metadata.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_texture_layout.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_user_command.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\test_vertex_fetch_plan.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\validate_fp_shaders.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\validate_vp_decode.c
+C:\AsuraPS3\ps3recomp\libs\video\tests\validate_vp_shaders.c
+C:\AsuraPS3\ps3recomp\libs\video\vulkan\rsx_vk_fallback.frag
+C:\AsuraPS3\ps3recomp\libs\video\vulkan\rsx_vk_fallback.vert
+C:\AsuraPS3\ps3recomp\libs\video\vulkan\rsx_vk_fallback_frag.spv.h
+C:\AsuraPS3\ps3recomp\libs\video\vulkan\rsx_vk_fallback_vert.spv.h
+C:\AsuraPS3\ps3recomp\packaging\macos\icon_1024.png
+C:\AsuraPS3\ps3recomp\packaging\macos\Info.plist
+C:\AsuraPS3\ps3recomp\packaging\macos\make_dmg.sh
+C:\AsuraPS3\ps3recomp\packaging\macos\ps3recomp.icns
+C:\AsuraPS3\ps3recomp\runtime\milestone.c
+C:\AsuraPS3\ps3recomp\runtime\ps3_log.h
+C:\AsuraPS3\ps3recomp\runtime\diag\yz_frontier_trace.c
+C:\AsuraPS3\ps3recomp\runtime\host\host_main.c
+C:\AsuraPS3\ps3recomp\runtime\host\host_posix.c
+C:\AsuraPS3\ps3recomp\runtime\host\host_stubs.c
+C:\AsuraPS3\ps3recomp\runtime\memory\vm.h
+C:\AsuraPS3\ps3recomp\runtime\platform\darwin_compat.h
+C:\AsuraPS3\ps3recomp\runtime\platform\msvc_compat.h
+C:\AsuraPS3\ps3recomp\runtime\platform\posix_sem.h
+C:\AsuraPS3\ps3recomp\runtime\platform\win32_backtrace.h
+C:\AsuraPS3\ps3recomp\runtime\platform\win32_compat.c
+C:\AsuraPS3\ps3recomp\runtime\platform\win32_compat.h
+C:\AsuraPS3\ps3recomp\runtime\platform\win32_dirent.h
+C:\AsuraPS3\ps3recomp\runtime\platform\tests\test_guest_ptr_trap.c
+C:\AsuraPS3\ps3recomp\runtime\platform\tests\test_win32_compat.c
+C:\AsuraPS3\ps3recomp\runtime\ppu\ppu_context.h
+C:\AsuraPS3\ps3recomp\runtime\ppu\ppu_fs.cpp
+C:\AsuraPS3\ps3recomp\runtime\ppu\ppu_hle.cpp
+C:\AsuraPS3\ps3recomp\runtime\ppu\ppu_loader.cpp
+C:\AsuraPS3\ps3recomp\runtime\ppu\ppu_memory.h
+C:\AsuraPS3\ps3recomp\runtime\ppu\ppu_ops.h
+C:\AsuraPS3\ps3recomp\runtime\ppu\ppu_sysprx.cpp
+C:\AsuraPS3\ps3recomp\runtime\ppu\ppu_tls.h
+C:\AsuraPS3\ps3recomp\runtime\ppu\ppu_vmx.h
+C:\AsuraPS3\ps3recomp\runtime\ppu\sdata_decrypt.h
+C:\AsuraPS3\ps3recomp\runtime\ppu\tests\boot_main.cpp
+C:\AsuraPS3\ps3recomp\runtime\ppu\tests\test_fs_aio.cpp
+C:\AsuraPS3\ps3recomp\runtime\ppu\tests\test_fs_imports.cpp
+C:\AsuraPS3\ps3recomp\runtime\ppu\tests\test_fs_large_file.cpp
+C:\AsuraPS3\ps3recomp\runtime\ppu\tests\test_hle.cpp
+C:\AsuraPS3\ps3recomp\runtime\ppu\tests\test_hle_integration.cpp
+C:\AsuraPS3\ps3recomp\runtime\ppu\tests\test_loader.cpp
+C:\AsuraPS3\ps3recomp\runtime\ppu\tests\test_ppu_directory.cpp
+C:\AsuraPS3\ps3recomp\runtime\ppu\tests\test_ppu_dispatch_depth.cpp
+C:\AsuraPS3\ps3recomp\runtime\ppu\tests\test_ppu_entry_arguments.cpp
+C:\AsuraPS3\ps3recomp\runtime\ppu\tests\smoke\smoke_recomp.c
+C:\AsuraPS3\ps3recomp\runtime\prx\prx_loader.c
+C:\AsuraPS3\ps3recomp\runtime\prx\prx_loader.h
+C:\AsuraPS3\ps3recomp\runtime\prx\tests\libsre_externs_stub.cpp
+C:\AsuraPS3\ps3recomp\runtime\prx\tests\test_prx_loader.cpp
+C:\AsuraPS3\ps3recomp\runtime\spu\spurs_job.c
+C:\AsuraPS3\ps3recomp\runtime\spu\spurs_policy.c
+C:\AsuraPS3\ps3recomp\runtime\spu\spurs_policy_blob_weak.c
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_channels.c
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_coherency.c
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_coherency.h
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_context.h
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_dispatch_mt.c
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_dma.h
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_drain.c
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_helpers.h
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_interp.c
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_interp.h
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_interp_tables.inc
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_intr.inc
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_lifted_job.h
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_lifted_thread.c
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_lifted_thread.h
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_lockstep.c
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_lockstep.h
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_raw.c
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_raw.h
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_tsp_weak.c
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_vm_pagemap.c
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_workload.c
+C:\AsuraPS3\ps3recomp\runtime\spu\spu_workload.h
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\build_diff_test.sh
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\gcc_err.txt
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\gcc_out.txt
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\gen_lifted_cases.py
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\gen_test_adapter.py
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\gen_test_bringup.py
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\gen_test_brsl_return.py
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\gen_test_dma.py
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\gen_test_event.py
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\gen_test_lfqueue.py
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\gen_test_shufb.py
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\gen_test_sum.py
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\gen_test_taskset.py
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\gen_test_torture.py
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\gen_test_workload.py
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\run_tests.sh
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\spu_float_referee.py
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\spu_interp_diff_test.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\spu_interp_selftest.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\spu_xswd_test.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_adapter_main.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_bringup_main.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_brsl_return_main.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_dma_main.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_event_main.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_lfqueue.deps
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_lfqueue_main.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_mfc_resume_elements.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_shufb_main.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spurs_job_stack.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spurs_signalled_atomic.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spurs_taskset_bits_atomic.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spu_coherency.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spu_float_neon.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spu_helpers.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spu_interpreter_handoff.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spu_interpreter_ilh.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spu_int_neon.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spu_lifted_start.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spu_lockline_peer.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spu_machine_status.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spu_mfc_shared_lookup.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spu_mfc_slots.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spu_numeric_semantics.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spu_registry_allocation.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spu_sdcrz.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spu_shufb.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spu_taskset_elf_flags.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spu_taskset_wake.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spu_thread_image_id.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_spu_user_event_port.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_sum_main.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_taskset.deps
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_taskset_main.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_torture_expected.h
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_torture_main.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_workload.deps
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_workload_image.h
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\test_workload_main.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\out_adapter\spu_recomp.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\out_adapter\spu_recomp.h
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\out_bringup\spu_recomp.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\out_bringup\spu_recomp.h
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\out_brsl_return\spu_recomp.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\out_brsl_return\spu_recomp.h
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\out_dma\spu_recomp.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\out_dma\spu_recomp.h
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\out_event\spu_recomp.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\out_event\spu_recomp.h
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\out_lfqueue\spu_recomp.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\out_lfqueue\spu_recomp.h
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\out_shufb\spu_recomp.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\out_shufb\spu_recomp.h
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\out_sum\spu_recomp.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\out_sum\spu_recomp.h
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\out_taskset\spu_recomp.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\out_taskset\spu_recomp.h
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\out_workload\spu_recomp.c
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\out_workload\spu_recomp.h
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\rpcs3_oracle\extract.py
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\rpcs3_oracle\oracle.h
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\rpcs3_oracle\oracle_run.inc
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\rpcs3_oracle\README.md
+C:\AsuraPS3\ps3recomp\runtime\spu\tests\rpcs3_oracle\shim\oracle_shim.h
+C:\AsuraPS3\ps3recomp\runtime\syscalls\job_complete_weak.c
+C:\AsuraPS3\ps3recomp\runtime\syscalls\lv2_lock_line.c
+C:\AsuraPS3\ps3recomp\runtime\syscalls\lv2_lock_line.h
+C:\AsuraPS3\ps3recomp\runtime\syscalls\lv2_register.c
+C:\AsuraPS3\ps3recomp\runtime\syscalls\lv2_syscall_table.h
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sdk_version_weak.c
+C:\AsuraPS3\ps3recomp\runtime\syscalls\spu_fallback.c
+C:\AsuraPS3\ps3recomp\runtime\syscalls\spu_lifted_fallback.c
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sys_cond.c
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sys_cond.h
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sys_event.c
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sys_event.h
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sys_fs.c
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sys_fs.h
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sys_memory.c
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sys_memory.h
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sys_mutex.c
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sys_mutex.h
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sys_ppu_thread.c
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sys_ppu_thread.h
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sys_rwlock.c
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sys_rwlock.h
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sys_semaphore.c
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sys_semaphore.h
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sys_timer.c
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sys_timer.h
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sys_vm.c
+C:\AsuraPS3\ps3recomp\runtime\syscalls\sys_vm.h
+C:\AsuraPS3\ps3recomp\scratch\lift_audit_baseline.txt
+C:\AsuraPS3\ps3recomp\scratch\ppu_conformance.cpp
+C:\AsuraPS3\ps3recomp\scratch\ppu_conformance_run.bat
+C:\AsuraPS3\ps3recomp\templates\project\CMakeLists.txt
+C:\AsuraPS3\ps3recomp\templates\project\config.toml
+C:\AsuraPS3\ps3recomp\templates\project\main.cpp
+C:\AsuraPS3\ps3recomp\templates\project\README.md
+C:\AsuraPS3\ps3recomp\templates\project\stubs.cpp
+C:\AsuraPS3\ps3recomp\tests\.gitignore
+C:\AsuraPS3\ps3recomp\tests\run_torture.py
+C:\AsuraPS3\ps3recomp\tests\test_cellfs_vfs_root.c
+C:\AsuraPS3\ps3recomp\tests\test_gcm_io_alloc.c
+C:\AsuraPS3\ps3recomp\tests\test_gcm_map_flags.c
+C:\AsuraPS3\ps3recomp\tests\test_loaded_image_memory.cpp
+C:\AsuraPS3\ps3recomp\tests\test_log_first.c
+C:\AsuraPS3\ps3recomp\tests\test_mmapper_hle_heap.c
+C:\AsuraPS3\ps3recomp\tests\test_ppu_thread_slots.c
+C:\AsuraPS3\ps3recomp\tests\test_sail_boot_callback.cpp
+C:\AsuraPS3\ps3recomp\tests\test_spurs_queue_size.c
+C:\AsuraPS3\ps3recomp\tests\test_spurs_scheduler.c
+C:\AsuraPS3\ps3recomp\tests\test_spu_fnms_zero_extended.c
+C:\AsuraPS3\ps3recomp\tests\test_spu_fnms_zero_extended.py
+C:\AsuraPS3\ps3recomp\tests\test_sysmodule_is_loaded_ex.c
+C:\AsuraPS3\ps3recomp\tests\test_sysmodule_load_module_ex.c
+C:\AsuraPS3\ps3recomp\tests\test_sysmodule_unload_module_ex.cpp
+C:\AsuraPS3\ps3recomp\tests\test_time_timezone.c
+C:\AsuraPS3\ps3recomp\tests\test_user_memory_domain.c
+C:\AsuraPS3\ps3recomp\tests\bench\spu\.gitignore
+C:\AsuraPS3\ps3recomp\tests\bench\spu\apply_barriers.py
+C:\AsuraPS3\ps3recomp\tests\bench\spu\bench_barrier.h
+C:\AsuraPS3\ps3recomp\tests\bench\spu\gen_spu_bench.py
+C:\AsuraPS3\ps3recomp\tests\bench\spu\README.md
+C:\AsuraPS3\ps3recomp\tests\bench\spu\run_spu_bench.sh
+C:\AsuraPS3\ps3recomp\tests\bench\spu\spu_bench_main.c
+C:\AsuraPS3\ps3recomp\tests\bench\spu\results\2026-10-06-m1pro-baseline.csv
+C:\AsuraPS3\ps3recomp\tests\bench\spu\results\2026-10-06-m1pro-baseline.txt
+C:\AsuraPS3\ps3recomp\tests\fiber_switch\CMakeLists.txt
+C:\AsuraPS3\ps3recomp\tests\fiber_switch\main.c
+C:\AsuraPS3\ps3recomp\tests\gcm_reports\CMakeLists.txt
+C:\AsuraPS3\ps3recomp\tests\gcm_reports\main.c
+C:\AsuraPS3\ps3recomp\tests\guest\gen_vectors.py
+C:\AsuraPS3\ps3recomp\tests\guest\smoke.c
+C:\AsuraPS3\ps3recomp\tests\guest\torture.c
+C:\AsuraPS3\ps3recomp\tests\guest\torture.h
+C:\AsuraPS3\ps3recomp\tests\guest\torture_c.c
+C:\AsuraPS3\ps3recomp\tests\guest\torture_mem.c
+C:\AsuraPS3\ps3recomp\tests\sync_stress\CMakeLists.txt
+C:\AsuraPS3\ps3recomp\tests\sync_stress\main.c
+C:\AsuraPS3\ps3recomp\tests\sync_stress\test_cond_semantics.c
+C:\AsuraPS3\ps3recomp\tests\sync_stress\test_shims.c
+C:\AsuraPS3\ps3recomp\tests\syscalls\CMakeLists.txt
+C:\AsuraPS3\ps3recomp\tests\syscalls\test_lock_line.c
+C:\AsuraPS3\ps3recomp\tests\torture\build.bat
+C:\AsuraPS3\ps3recomp\tests\torture\CMakeLists.txt
+C:\AsuraPS3\ps3recomp\tests\torture\main.cpp
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\at3_bridge.cpp
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\at3_bridge.h
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\at3_decoders.h
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\atrac.cpp
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\atrac.h
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\atrac3.cpp
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\atrac3data.h
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\atrac3plus.cpp
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\atrac3plus.h
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\atrac3plusdec.cpp
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\atrac3plusdsp.cpp
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\atrac3plus_data.h
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\compat.cpp
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\compat.h
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\COPYING.LGPLv2.1
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\fft.cpp
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\fft.h
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\float_dsp.h
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\get_bits.cpp
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\get_bits.h
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\intreadwrite.h
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\mem.cpp
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\mem.h
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\ppsspp_config.h
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\README.txt
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\Common\Log.h
+C:\AsuraPS3\ps3recomp\third_party\at3_standalone\Common\MemoryUtil.h
+C:\AsuraPS3\ps3recomp\tools\audit_entry_calls.py
+C:\AsuraPS3\ps3recomp\tools\audit_guest_ptrs.py
+C:\AsuraPS3\ps3recomp\tools\build_spu_workloads.py
+C:\AsuraPS3\ps3recomp\tools\callgraph.py
+C:\AsuraPS3\ps3recomp\tools\check_metal_window_close.py
+C:\AsuraPS3\ps3recomp\tools\check_ppu_scaffold.py
+C:\AsuraPS3\ps3recomp\tools\disasm_audit.py
+C:\AsuraPS3\ps3recomp\tools\disasm_audit_operands.py
+C:\AsuraPS3\ps3recomp\tools\disasm_audit_operands_whitelist.txt
+C:\AsuraPS3\ps3recomp\tools\dwarf_abi.py
+C:\AsuraPS3\ps3recomp\tools\dwarf_common.py
+C:\AsuraPS3\ps3recomp\tools\dwarf_line.py
+C:\AsuraPS3\ps3recomp\tools\elf_parser.py
+C:\AsuraPS3\ps3recomp\tools\elf_symbols.py
+C:\AsuraPS3\ps3recomp\tools\endian_audit.py
+C:\AsuraPS3\ps3recomp\tools\endian_audit_whitelist.txt
+C:\AsuraPS3\ps3recomp\tools\extract_jobmods.py
+C:\AsuraPS3\ps3recomp\tools\extract_spu_images.py
+C:\AsuraPS3\ps3recomp\tools\find_functions.py
+C:\AsuraPS3\ps3recomp\tools\find_spu_functions.py
+C:\AsuraPS3\ps3recomp\tools\ftrace_report.py
+C:\AsuraPS3\ps3recomp\tools\generate_stubs.py
+C:\AsuraPS3\ps3recomp\tools\gen_diagnostics_index.py
+C:\AsuraPS3\ps3recomp\tools\gen_hle_nids.py
+C:\AsuraPS3\ps3recomp\tools\gen_imports.py
+C:\AsuraPS3\ps3recomp\tools\gen_spu_interp.py
+C:\AsuraPS3\ps3recomp\tools\gen_spu_workloads.py
+C:\AsuraPS3\ps3recomp\tools\ghidra_analyze.py
+C:\AsuraPS3\ps3recomp\tools\ghidra_names.py
+C:\AsuraPS3\ps3recomp\tools\hle_abi_audit.py
+C:\AsuraPS3\ps3recomp\tools\hle_abi_audit_whitelist.txt
+C:\AsuraPS3\ps3recomp\tools\hle_dispatch_classify.py
+C:\AsuraPS3\ps3recomp\tools\ida_analyze.py
+C:\AsuraPS3\ps3recomp\tools\inject_spcheck.py
+C:\AsuraPS3\ps3recomp\tools\instrument_kernel.py
+C:\AsuraPS3\ps3recomp\tools\instrument_policy.py
+C:\AsuraPS3\ps3recomp\tools\lift_audit.py
+C:\AsuraPS3\ps3recomp\tools\lift_jobmods.py
+C:\AsuraPS3\ps3recomp\tools\lift_prx.py
+C:\AsuraPS3\ps3recomp\tools\lift_selftest.py
+C:\AsuraPS3\ps3recomp\tools\make_smoke_elf.py
+C:\AsuraPS3\ps3recomp\tools\msvc_env.py
+C:\AsuraPS3\ps3recomp\tools\nid_database.py
+C:\AsuraPS3\ps3recomp\tools\nid_from_protos.json
+C:\AsuraPS3\ps3recomp\tools\nid_harvest.py
+C:\AsuraPS3\ps3recomp\tools\objdump_audit.py
+C:\AsuraPS3\ps3recomp\tools\parse_rrc.py
+C:\AsuraPS3\ps3recomp\tools\pkg_extract.py
+C:\AsuraPS3\ps3recomp\tools\ppu_disasm.py
+C:\AsuraPS3\ps3recomp\tools\ppu_lifter.py
+C:\AsuraPS3\ps3recomp\tools\ppu_loader.py
+C:\AsuraPS3\ps3recomp\tools\ppu_scaffold_baseline.json
+C:\AsuraPS3\ps3recomp\tools\prepare_yakuza_macos.py
+C:\AsuraPS3\ps3recomp\tools\prx_analyzer.py
+C:\AsuraPS3\ps3recomp\tools\prx_exports.py
+C:\AsuraPS3\ps3recomp\tools\prx_relocate.py
+C:\AsuraPS3\ps3recomp\tools\rebase_spu_elf.py
+C:\AsuraPS3\ps3recomp\tools\regress.py
+C:\AsuraPS3\ps3recomp\tools\regress_ports.toml
+C:\AsuraPS3\ps3recomp\tools\requirements.txt
+C:\AsuraPS3\ps3recomp\tools\show_func.py
+C:\AsuraPS3\ps3recomp\tools\spbalance.py
+C:\AsuraPS3\ps3recomp\tools\spu_disasm.py
+C:\AsuraPS3\ps3recomp\tools\spu_disasm_audit.py
+C:\AsuraPS3\ps3recomp\tools\spu_disasm_audit_operands.py
+C:\AsuraPS3\ps3recomp\tools\spu_disasm_audit_operands_whitelist.txt
+C:\AsuraPS3\ps3recomp\tools\spu_elf.py
+C:\AsuraPS3\ps3recomp\tools\spu_ident.py
+C:\AsuraPS3\ps3recomp\tools\spu_lifter.py
+C:\AsuraPS3\ps3recomp\tools\spu_lift_selftest.py
+C:\AsuraPS3\ps3recomp\tools\spu_program_pipeline.py
+C:\AsuraPS3\ps3recomp\tools\stderr_revert2.txt
+C:\AsuraPS3\ps3recomp\tools\stderr_vt1.txt
+C:\AsuraPS3\ps3recomp\tools\test_audit_guest_ptrs.py
+C:\AsuraPS3\ps3recomp\tools\test_cellfs_vfs_root.py
+C:\AsuraPS3\ps3recomp\tools\test_dialog_abort.py
+C:\AsuraPS3\ps3recomp\tools\test_dwarf.py
+C:\AsuraPS3\ps3recomp\tools\test_edat_guest_klicensee.py
+C:\AsuraPS3\ps3recomp\tools\test_font_hle_nids.py
+C:\AsuraPS3\ps3recomp\tools\test_gcm_flip_stream.py
+C:\AsuraPS3\ps3recomp\tools\test_gcm_get_on_jump.py
+C:\AsuraPS3\ps3recomp\tools\test_gcm_get_on_release.py
+C:\AsuraPS3\ps3recomp\tools\test_gcm_io_alloc.py
+C:\AsuraPS3\ps3recomp\tools\test_gcm_io_mappings.py
+C:\AsuraPS3\ps3recomp\tools\test_gcm_map_flags.py
+C:\AsuraPS3\ps3recomp\tools\test_hle_registration_dependencies.py
+C:\AsuraPS3\ps3recomp\tools\test_http_response_getters.py
+C:\AsuraPS3\ps3recomp\tools\test_http_uri_path.py
+C:\AsuraPS3\ps3recomp\tools\test_lifter_dedupe.py
+C:\AsuraPS3\ps3recomp\tools\test_lifter_header_name.py
+C:\AsuraPS3\ps3recomp\tools\test_live_draw_sampler_key.py
+C:\AsuraPS3\ps3recomp\tools\test_loaded_image_memory.py
+C:\AsuraPS3\ps3recomp\tools\test_loader_memory_domain.py
+C:\AsuraPS3\ps3recomp\tools\test_lwcond_layout.py
+C:\AsuraPS3\ps3recomp\tools\test_metal_frame_rate.py
+C:\AsuraPS3\ps3recomp\tools\test_metal_independent_clears.py
+C:\AsuraPS3\ps3recomp\tools\test_mfc_resume_elements.py
+C:\AsuraPS3\ps3recomp\tools\test_milestone.py
+C:\AsuraPS3\ps3recomp\tools\test_mingw_tls.py
+C:\AsuraPS3\ps3recomp\tools\test_mmapper_hle_heap.py
+C:\AsuraPS3\ps3recomp\tools\test_nid_from_protos.py
+C:\AsuraPS3\ps3recomp\tools\test_np_basic_after_np_init.py
+C:\AsuraPS3\ps3recomp\tools\test_objdump_audit.py
+C:\AsuraPS3\ps3recomp\tools\test_pkg_extract.py
+C:\AsuraPS3\ps3recomp\tools\test_ppu_branches.py
+C:\AsuraPS3\ps3recomp\tools\test_ppu_cs_carry_forms.py
+C:\AsuraPS3\ps3recomp\tools\test_ppu_cs_epilogue_restore.py
+C:\AsuraPS3\ps3recomp\tools\test_ppu_cs_restore.py
+C:\AsuraPS3\ps3recomp\tools\test_ppu_directory.py
+C:\AsuraPS3\ps3recomp\tools\test_ppu_dispatch_depth.py
+C:\AsuraPS3\ps3recomp\tools\test_ppu_entry_arguments.py
+C:\AsuraPS3\ps3recomp\tools\test_ppu_fallthrough.py
+C:\AsuraPS3\ps3recomp\tools\test_ppu_fs_aio.py
+C:\AsuraPS3\ps3recomp\tools\test_ppu_fs_imports.py
+C:\AsuraPS3\ps3recomp\tools\test_ppu_fs_large_file.py
+C:\AsuraPS3\ps3recomp\tools\test_ppu_jumptables.py
+C:\AsuraPS3\ps3recomp\tools\test_ppu_lift.py
+C:\AsuraPS3\ps3recomp\tools\test_ppu_lifter_chunks.py
+C:\AsuraPS3\ps3recomp\tools\test_ppu_thread_slots.py
+C:\AsuraPS3\ps3recomp\tools\test_ppu_tls_blocks.py
+C:\AsuraPS3\ps3recomp\tools\test_ppu_vcmp_record_cr6.py
+C:\AsuraPS3\ps3recomp\tools\test_ppu_vmx_lanes.py
+C:\AsuraPS3\ps3recomp\tools\test_raw_prx_toc.py
+C:\AsuraPS3\ps3recomp\tools\test_rsx_immediate_vertices.py
+C:\AsuraPS3\ps3recomp\tools\test_sail_boot_callback.py
+C:\AsuraPS3\ps3recomp\tools\test_savedata_user_autosave.py
+C:\AsuraPS3\ps3recomp\tools\test_socket_sigpipe.py
+C:\AsuraPS3\ps3recomp\tools\test_spinlock_word_width.py
+C:\AsuraPS3\ps3recomp\tools\test_spurs_queue_size.py
+C:\AsuraPS3\ps3recomp\tools\test_spurs_scheduler.py
+C:\AsuraPS3\ps3recomp\tools\test_spurs_taskset_size.py
+C:\AsuraPS3\ps3recomp\tools\test_spurs_task_exit_code_initialize.py
+C:\AsuraPS3\ps3recomp\tools\test_spu_context_registries.py
+C:\AsuraPS3\ps3recomp\tools\test_spu_disasm_ri10.py
+C:\AsuraPS3\ps3recomp\tools\test_spu_interpreter_handoff.py
+C:\AsuraPS3\ps3recomp\tools\test_spu_interpreter_ilh.py
+C:\AsuraPS3\ps3recomp\tools\test_spu_machine_status.py
+C:\AsuraPS3\ps3recomp\tools\test_spu_program_pipeline.py
+C:\AsuraPS3\ps3recomp\tools\test_spu_sdcrz.py
+C:\AsuraPS3\ps3recomp\tools\test_spu_smc_lqa_stqa.py
+C:\AsuraPS3\ps3recomp\tools\test_spu_taskset_elf_flags.py
+C:\AsuraPS3\ps3recomp\tools\test_sysmodule_is_loaded_ex.py
+C:\AsuraPS3\ps3recomp\tools\test_sysmodule_load_module_ex.py
+C:\AsuraPS3\ps3recomp\tools\test_sysmodule_unload_module_ex.py
+C:\AsuraPS3\ps3recomp\tools\test_sys_net.py
+C:\AsuraPS3\ps3recomp\tools\test_time_timezone.py
+C:\AsuraPS3\ps3recomp\tools\test_unfself.py
+C:\AsuraPS3\ps3recomp\tools\test_user_memory_domain.py
+C:\AsuraPS3\ps3recomp\tools\title_hacks.py
+C:\AsuraPS3\ps3recomp\tools\title_hacks_baseline.json
+C:\AsuraPS3\ps3recomp\tools\triage_elf.py
+C:\AsuraPS3\ps3recomp\tools\triage_protos.py
+C:\AsuraPS3\ps3recomp\tools\unfself.py
+C:\AsuraPS3\ps3recomp\tools\vp_eval.py
+C:\AsuraPS3\ps3recomp\tools\wrap_spu_elf.py
+C:\AsuraPS3\ps3recomp\tools\compare\compare_report.py
+C:\AsuraPS3\ps3recomp\tools\compare\ida_export_units.py
+C:\AsuraPS3\ps3recomp\tools\compare\ingest_native.py
+C:\AsuraPS3\ps3recomp\tools\compare\match_functions.py
+C:\AsuraPS3\ps3recomp\tools\compare\README.md
+C:\AsuraPS3\ps3recomp\tools\compare\run_compare.py
+C:\AsuraPS3\ps3recomp\tools\compare\schema.py
+C:\AsuraPS3\ps3recomp\tools\compare\selftest.py
+C:\AsuraPS3\ps3recomp\tools\compare\xex_parser.py
+C:\AsuraPS3\ps3recomp\tools\compare\ghidra\ExportCompareUnits.java
+C:\AsuraPS3\ps3recomp\tools\ghidra\ExportAnalysisJson.java
+C:\AsuraPS3\ps3recomp\tools\harness\ps3_recomp_harness.py
+C:\AsuraPS3\ps3recomp\tools\harness\README.md
+C:\AsuraPS3\ps3recomp\tools\libsre\defrag_func0.py
+C:\AsuraPS3\ps3recomp\tools\regress\simpsons.txt
+C:\AsuraPS3\ps3recomp\tools\regress\tokyojungle.txt
+C:\AsuraPS3\ps3recomp\tools\regress\twistedmetal.txt
+C:\AsuraPS3\ps3recomp\tools\regress\vf5.txt
+C:\AsuraPS3\ps3recomp\tools\regress\youdontknowjack.txt
+C:\AsuraPS3\ps3recomp\tools\rpcs3_probe\bp_test.py
+C:\AsuraPS3\ps3recomp\tools\rpcs3_probe\diag.py
+C:\AsuraPS3\ps3recomp\tools\rpcs3_probe\diag_oracle.py
+C:\AsuraPS3\ps3recomp\tools\rpcs3_probe\diag_oracle2.py
+C:\AsuraPS3\ps3recomp\tools\rpcs3_probe\oracle_006CEAA0.py
+C:\AsuraPS3\ps3recomp\tools\rpcs3_probe\probe.py
+C:\AsuraPS3\ps3recomp\tools\rpcs3_probe\rsp.py
+C:\AsuraPS3\ps3recomp\tools\rpcs3_probe\snap_addrs.py
+C:\AsuraPS3\ps3recomp\tools\rpcs3_probe\snap_singleton.py
+C:\AsuraPS3\ps3recomp\tools\rpcs3_probe\trace.py
+C:\AsuraPS3\ps3recomp\wave\main.cpp
+=== 2. README.md ===
+# ps3recomp
+
+### *Because the Cell processor deserves a second life*
+
+> Static recompilation runtime libraries for PlayStation 3 titles.
+> Turn PS3 binaries into native executables. No emulator required.
+
+**[Join the sp00nznet recomp Discord](https://discord.gg/CRpzGWZFcu)** â€” the
+community hub for sp00nznet's recomp projects, where ps3recomp development
+happens in the open. Good place to ask questions, show a port you are working
+on, or find out what people are stuck on before you duplicate the effort.
+
+---
+
+## What Is This?
+
+**ps3recomp** is an open-source toolkit that provides the runtime libraries, system stubs, and analysis tools needed to **statically recompile PlayStation 3 games into native PC executables**.
+
+Instead of interpreting or dynamically recompiling PowerPC/SPU instructions at runtime (what emulators like RPCS3 do brilliantly), we take the opposite approach: **translate everything ahead of time** into C/C++ that compiles with your favorite compiler on any modern platform.
+
+This is the same philosophy behind:
+- [N64Recomp](https://github.com/N64Recomp/N64Recomp) (N64 -> native)
+- [UnleashedRecomp](https://github.com/hedge-dev/UnleashedRecomp) (Xbox 360 -> native)
+- [PS2Recomp](https://github.com/ran-j/PS2Recomp) (PS2 -> native)
+- [burnout3](https://github.com/sp00nznet/burnout3) (Original Xbox -> native)
+- [ReXGlue](https://github.com/rexglue/rexglue-sdk) (Xbox 360 -> native)
+- [AnyPS5](https://github.com/boykopovar/AnyPS5) (PS5 -> native)
+
+...but for the PS3's glorious, terrifying **Cell Broadband Engine**.
+
+## Why PS3?
+
+The PlayStation 3 has over **3,000 titles** and some of the most beloved games ever made. RPCS3 has done heroic work making ~70% of the library playable through emulation, but static recompilation offers something different:
+
+- **Native performance** â€” no runtime translation overhead
+- **Lower hardware requirements** â€” runs on mid-range PCs
+- **Moddability** â€” recompiled C/C++ is infinitely more hackable than PPC binaries
+- **Preservation** â€” native ports survive long after emulators stop being maintained
+- **Portability** â€” the output is C/C++, so it can target any platform a compiler does (see [platform support](#platform-support) for where the runtime actually stands today)
+
+## Platform support
+
+CI builds and tests every row on every pull request: Windows (clang-cl), macOS
+arm64, Linux (GCC and Clang), and Linux with the Vulkan backend on lavapipe
+under the validation layer. A green check means the runtime built and the tests
+passed. It does not mean a game ran; the last row is the only one that claims
+that.
+
+| | Windows | macOS (arm64) | Linux |
+|---|---|---|---|
+| Runtime library builds | yes | yes | yes |
+| Lifter test suites + C unit tests | yes | yes | yes |
+| Render backend | D3D12 | Metal | Vulkan (opt-in); null (headless, CI) |
+| Runs a recompiled game, in this tree | **yes** | **no** | **no** |
+
+**What stops macOS and Linux running a title is the PPU boot scaffold.**
+`ppu_loader.cpp`, `boot_main.cpp` and the HLE dispatch are compiled per game,
+not into the library. They compile on POSIX with zero errors (a CI ratchet
+keeps it that way) and the frame clock runs there, but no title has yet been
+booted to gameplay from this tree on either OS.
+
+**The renderers are further along than that.** `ps3recomp_host` drives cellGcm
+â†’ RSX â†’ backend end to end with no game. With guest programs on, Metal and
+Vulkan both run the title's own shaders on the shared register-file draw
+engine. Every `ps3recomp_host` scene passes on both, including render-to-texture,
+MRT, depth textures, cube maps and stencil. Linux's default stays the headless
+null backend, a CPU triangle filler that CI draws with.
+
+**Downstream, people are already past this.** Twisted Metal's menus run on
+Linux/Vulkan, inFamous on macOS, and Killzone 3 under Proton (see
+[In the community](#in-the-community)). Those ports carry patches that are
+still on their way upstream, which is why the table still says "no".
+
+## The Challenge
+
+The PS3's Cell processor is a beast unlike anything else:
+
+| Component | What It Is | Why It's Hard |
+|-----------|-----------|---------------|
+| **PPU** | PowerPC 64-bit main CPU | Custom ISA extensions, VMX/AltiVec SIMD |
+| **6x SPU** | 128-bit SIMD vector processors | Proprietary ISA, 256KB local store, explicit DMA |
+| **Memory** | 256MB XDR RAM | 128-byte alignment requirements, split bus |
+| **LV2 Kernel** | Proprietary OS layer | ~300+ system calls, complex threading model |
+| **PRX Modules** | Dynamic libraries | 100+ system libraries with intricate interdependencies |
+
+We don't shy away from hard problems. We just break them into smaller ones.
+
+## Architecture
+
+```
+ps3recomp/
+â”œâ”€â”€ tools/                    # Binary analysis & recompilation pipeline
+â”‚   â”œâ”€â”€ elf_parser.py         # Parse PS3 ELF/SELF/PRX binaries
+â”‚   â”œâ”€â”€ ppu_disasm.py         # PowerPC disassembler with PS3 extensions
+â”‚   â”œâ”€â”€ ppu_lifter.py         # PPU assembly -> C code lifter
+â”‚   â”œâ”€â”€ spu_disasm.py         # SPU instruction set disassembler
+â”‚   â”œâ”€â”€ spu_lifter.py         # SPU assembly -> C code lifter
+â”‚   â”œâ”€â”€ extract_spu_images.py # Extract embedded SPU images from PRX/ELF
+â”‚   â”œâ”€â”€ find_spu_functions.py # SPU function boundary detection
+â”‚   â”œâ”€â”€ wrap_spu_elf.py       # Wrap a raw SPU blob as a loadable ELF
+â”‚   â”œâ”€â”€ prx_analyzer.py       # Analyze PRX imports/exports and NIDs
+â”‚   â”œâ”€â”€ nid_database.py       # Function Name ID (NID) resolver
+â”‚   â”œâ”€â”€ find_functions.py     # Function boundary detection
+â”‚   â””â”€â”€ generate_stubs.py     # Generate HLE stub skeletons from a NID list
+â”‚
+â”œâ”€â”€ runtime/                  # Core runtime for recompiled executables
+â”‚   â”œâ”€â”€ ppu/                  # PPU execution context
+â”‚   â”‚   â”œâ”€â”€ ppu_context.h     # Register file, CR, LR, CTR, FPSCR
+â”‚   â”‚   â”œâ”€â”€ ppu_memory.h      # Memory access macros (loads, stores, byte-swap)
+â”‚   â”‚   â””â”€â”€ ppu_ops.h         # Instruction operation macros
+â”‚   â”œâ”€â”€ spu/                  # SPU execution context
+â”‚   â”‚   â”œâ”€â”€ spu_context.h     # 128Ã—128-bit register file, 256KB local store, image_id
+â”‚   â”‚   â”œâ”€â”€ spu_channels.c    # Channel ops + per-image function-table dispatch
+â”‚   â”‚   â”œâ”€â”€ spu_helpers.h     # SPU intrinsics (incl. float conversions)
+â”‚   â”‚   â”œâ”€â”€ spu_dma.h         # DMA (MFC) transfer engine
+â”‚   â”‚   â””â”€â”€ tests/            # Self-contained SPU runtime tests
+â”‚   â”œâ”€â”€ memory/               # Memory subsystem
+â”‚   â”‚   â””â”€â”€ vm.h              # Virtual memory manager (256MB address space)
+â”‚   â””â”€â”€ syscalls/             # LV2 kernel system call implementations
+â”‚       â”œâ”€â”€ sys_ppu_thread.h  # Thread creation/management
+â”‚       â”œâ”€â”€ sys_mutex.h       # Mutex/cond synchronization
+â”‚       â”œâ”€â”€ sys_memory.h      # Memory allocation/mapping
+â”‚       â”œâ”€â”€ sys_fs.h          # Filesystem operations
+â”‚       â””â”€â”€ lv2_syscall_table.h # Full syscall dispatch table
+â”‚
+â”œâ”€â”€ libs/                     # HLE library implementations
+â”‚   â”œâ”€â”€ audio/                # cellAudio, cellAdec, libmixer, libsnd3, libsynth2
+â”‚   â”œâ”€â”€ video/                # cellGcmSys, cellResc, cellVideoOut, cellVpost, cellVdec
+â”‚   â”œâ”€â”€ input/                # cellPad, cellKb, cellMouse
+â”‚   â”œâ”€â”€ hardware/             # cellGem, cellCamera, cellUsbd
+â”‚   â”œâ”€â”€ network/              # cellNetCtl, cellHttp, cellHttps, cellSsl, sceNp*
+â”‚   â”œâ”€â”€ filesystem/           # cellFs, cellGame, cellSaveData, cellStorage
+â”‚   â”œâ”€â”€ system/               # cellSysutil, cellSysmodule, cellRtc, sysPrxForUser
+â”‚   â”œâ”€â”€ spurs/                # cellSpurs, cellFiber, cellSpursJq, cellDaisy (SPU task management)
+â”‚   â”œâ”€â”€ sync/                 # cellSync, cellSync2 (cross-PPU/SPU synchronization)
+â”‚   â”œâ”€â”€ codec/                # cellJpgDec, cellPngDec, cellGifDec, cellPamf, cellDmux, cellAdecAtrac3p, cellAdecCelp8, cellVdecDivx
+â”‚   â”œâ”€â”€ font/                 # cellFont, cellFontFT, cellFreeType, cellL10n
+â”‚   â””â”€â”€ misc/                 # cellScreenshot, cellSubdisplay, cellImeJp, cellVideoExport, cellMusicExport, cellGameRecording, etc.
+â”‚
+â”œâ”€â”€ include/ps3emu/           # Public API headers
+â”‚   â”œâ”€â”€ ps3types.h            # Fundamental PS3 types (u8-u128, s8-s64, be_t<>)
+â”‚   â”œâ”€â”€ endian.h              # Big-endian <-> little-endian conversion
+â”‚   â”œâ”€â”€ nid.h                 # NID hashing and lookup
+â”‚   â”œâ”€â”€ module.h              # Module registration framework
+â”‚   â””â”€â”€ error_codes.h         # PS3 system error codes (CELL_OK, CELL_E*)
+â”‚
+â”œâ”€â”€ templates/project/        # Starter template for new game ports
+â”‚   â”œâ”€â”€ CMakeLists.txt        # Build system
+â”‚   â”œâ”€â”€ main.cpp              # Application entry point
+â”‚   â”œâ”€â”€ stubs.cpp             # Game-specific function overrides
+â”‚   â””â”€â”€ config.toml           # Recompiler configuration
+â”‚
+â”œâ”€â”€ config/                   # Reference configurations
+â”‚   â””â”€â”€ example.toml          # Example recompilation config
+â”‚
+â””â”€â”€ docs/                     # See the Documentation table below
+```
+
+## How It Works
+
+The pipeline follows the same proven approach as our [burnout3](https://github.com/sp00nznet/burnout3) project, adapted for the Cell architecture:
+
+```
+   PS3 Game Disc / PKG
+         â”‚
+         â–¼
+   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+   â”‚  SELF/EBOOT  â”‚  Encrypted PS3 executable
+   â”‚  Decryption  â”‚  (requires keys / fSELF)
+   â””â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”˜
+          â”‚
+          â–¼
+   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+   â”‚  ELF Parser  â”‚  Extract sections, segments, relocations
+   â”‚  + PRX Scan  â”‚  Identify imported NIDs & library deps
+   â””â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”˜
+          â”‚
+          â–¼
+   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+   â”‚  PPU Disasm  â”‚  Disassemble PowerPC 64-bit + VMX
+   â”‚  + Analysis  â”‚  Function boundaries, jump tables, ABI
+   â””â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”˜
+          â”‚
+          â–¼
+   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+   â”‚  PPU Lifter  â”‚  PowerPC â†’ C code generation
+   â”‚  + SPU Lift  â”‚  SPU programs â†’ C code generation
+   â””â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”˜
+          â”‚
+          â–¼
+   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+   â”‚  Link with   â”‚  ps3recomp runtime + HLE libs
+   â”‚  Runtime     â”‚  Provides all PS3 OS services
+   â””â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”˜
+          â”‚
+          â–¼
+   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+   â”‚  Compile &   â”‚  MSVC / GCC / Clang
+   â”‚  Ship!       â”‚  Native x86-64 executable
+   â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+```
+
+## SPU Strategy
+
+The SPU is the elephant in the room. Each SPU has its own instruction set, its own 256KB memory, and communicates with the PPU via DMA and mailbox channels. Our approach:
+
+1. **SPU programs are self-contained** â€” they live in ELF segments loaded to local store (`extract_spu_images.py` pulls them out of PRX/ELF)
+2. **Recompile each SPU program separately** â€” dedicated `spu_disasm.py` + `spu_lifter.py` handle the SPU ISA
+3. **SPU local store becomes an array** â€” 256KB per "virtual SPU"
+4. **DMA operations become memcpy** â€” via the MFC engine (`spu_dma.h`)
+5. **Channels become cross-thread message queues** â€” preserving ordering guarantees
+6. **Per-image function-table dispatch** â€” `image_id` lets multiple SPU programs (e.g. a SPURS kernel, a policy module, and a job) coexist at overlapping local-store addresses
+
+This mirrors how RPCS3 handles SPU but at compile time rather than runtime. The
+disassembler, lifter, and runtime are functional and covered by self-contained
+tests (`runtime/spu/tests/`: sum, shufb, DMA, brsl-return).
+
+## Module Status
+
+HLE implementations of the PS3 system libraries, written for this project. RPCS3 is a behavioural reference, not a code source. Most modules are complete. The ones still marked Partial are the media decoders (cellVdec, cellAdec, cellDmux, cellAtrac, cellAdecAtrac3p) and cellSpurs. [docs/MODULE_STATUS.md](docs/MODULE_STATUS.md) has one row per module and is the source for the counts.
+
+| Category | Modules | Status |
+|----------|---------|--------|
+| **Kernel Threading** | sys_ppu_thread, sys_mutex, sys_cond, sys_semaphore, sys_rwlock | âœ… Complete |
+| **Kernel Events** | sys_event (queues, ports, flags), sys_timer | âœ… Complete |
+| **Kernel Memory** | sys_memory, sys_mmapper (containers, shared mem) | âœ… Complete |
+| **Kernel Filesystem** | sys_fs (path mapping, real I/O) | âœ… Complete |
+| **Filesystem** | cellFs (real file I/O, dir ops, stat, path translation) | âœ… Complete |
+| **Save System** | cellSaveData (callback-driven, PARAM.SFO), cellGame | âœ… Complete |
+| **Input** | cellPad (XInput/SDL2), cellKb, cellMouse | âœ… Complete |
+| **Audio** | cellAudio (WASAPI/SDL2, mixing thread, multi-port) | âœ… Complete |
+| **Video Output** | cellVideoOut (resolution config, 720p default) | âœ… Complete |
+| **Codecs** | cellPngDec, cellJpgDec, cellGifDec (stb_image) | âœ… Complete |
+| **Font** | cellFont (stb_truetype backend + fallback metrics) | âœ… Complete |
+| **Network** | sys_net (BSD sockets, P2P), cellNet, cellNetCtl, cellHttpUtil, cellSsl, sceNp*, sceNpTrophy, sceNpMatching2 + Score over [psnr](docs/ONLINE.md) | âœ… Complete |
+| **Hardware** | cellUsbd (USB), cellCamera (PS Eye), cellGem (PS Move) â€” stub, no devices | âœ… Complete |
+| **Sync** | cellSync (atomic spinlocks, LF queue), cellSync2 (OS-backed) | âœ… Complete |
+| **System** | cellRtc, cellMsgDialog, cellOskDialog, cellUserInfo, cellGameExec | âœ… Complete |
+| **Localization** | cellL10n (UTF-8/16/32/UCS-2, ISO-8859-1, generic converter) | âœ… Complete |
+| **Resolution** | cellResc (display modes, scaling, interlace, aspect ratio) | âœ… Complete |
+| **Fibers** | cellFiber (PPU fiber scheduler via Windows Fibers/ucontext) | âœ… Complete |
+| **AV Config** | cellAvconfExt (audio output info, gamma, sound availability) | âœ… Complete |
+| **Input Util** | cellKey2char (HID scancode â†’ Unicode, US-101 layout) | âœ… Complete |
+| **Graphics** | cellGcmSys (cmd buffer, IO mapping, tile/zcull, flip handlers, timestamps, FIFO walker + ring recycle), RSX command processor (NV47xx parsing, state tracking, backend callbacks), **live D3D12 backend** (executes the title's real NV4097 vertex/fragment programs â€” indexed draws, per-draw VP constants + textures, render-to-texture, MRT, FP predication), null backend (Win32 window) | âœ… Complete |
+| **SPURS** | cellSpurs (management APIs, event flags, task/workload tracking), cellSpursJq (job queues with wait/signal), cellDaisy (real ring buffer FIFO) | âœ… Complete |
+| **Core Runtime** | cellSysutil (BGM, cache, disc), cellSysmodule, sysPrxForUser (real lwmutex/lwcond/threads) | âœ… Complete |
+| **Media Pipeline** | cellPamf (PAMF header + stream descriptors), cellDmux (callback sequencing), cellVdec (H.264/MPEG-2 through FFmpeg loaded at run time, opt-in), cellAtrac (ATRAC3plus, all-in-memory), cellAdec (callbacks, no decode yet), cellSail (state machine) | ðŸ”¨ Partial |
+| **HTTP/HTTPS** | cellHttp (real HTTP/1.1 via native sockets), cellHttps (TLS stub with cert management) | âœ… Complete |
+| **Misc/Export** | cellSubdisplay, cellImeJp, cellVideoExport, cellMusicExport, cellPhotoExport/Import, cellGameRecording, cellPrint, cellRemotePlay | âœ… Complete |
+
+Full status tracking: [docs/MODULE_STATUS.md](docs/MODULE_STATUS.md)
+
+## Documentation
+
+We've written extensive docs covering every aspect of the project. Whether you're contributing, porting a game, or just trying to understand how PS3 static recompilation works, there's a doc for you.
+
+| Document | What It Covers |
+|----------|---------------|
+| **[Getting Started](docs/GETTING_STARTED.md)** | Prerequisites, installation, first recompilation walkthrough |
+| **[Architecture](docs/ARCHITECTURE.md)** | Cell processor overview, recomp pipeline stages, memory model, comparison with RPCS3 |
+| **[Building](docs/BUILDING.md)** | CMake build system, compiler support, platform-specific notes, troubleshooting |
+| **[Game Porting Guide](docs/GAME_PORTING_GUIDE.md)** | Full 12-phase walkthrough for porting a PS3 game â€” with [flOw case study](docs/GAME_PORTING_GUIDE.md#case-study-flow) |
+| **[Custom Modules](docs/CUSTOM_MODULES.md)** | Step-by-step tutorial for writing new HLE modules â€” NID system, calling convention bridge, patterns |
+| **[FAQ & Troubleshooting](docs/FAQ.md)** | Common questions, build errors, runtime crashes, lifter issues, performance tips |
+| **[Contributing](CONTRIBUTING.md)** | Development setup, code style, PR guidelines, ways to contribute |
+| **[Runtime Reference](docs/RUNTIME.md)** | Virtual memory manager, PPU/SPU execution contexts, type system, endianness, syscall dispatch, DMA engine |
+| **[Syscall Reference](docs/SYSCALLS.md)** | All LV2 kernel syscalls: threading, sync, events, timers, memory, filesystem |
+| **[NID System](docs/NID_SYSTEM.md)** | How PS3 function linking works, NID computation, module registration framework |
+| **[Module Reference](docs/MODULES_REFERENCE.md)** | Detailed documentation for every HLE module â€” what they do and how they're implemented |
+| **[Module Status](docs/MODULE_STATUS.md)** | Quick-reference status table for all modules |
+| **[RSX Graphics](docs/RSX_GRAPHICS.md)** | RSX GPU translation architecture: command processor, D3D12 and Metal backends, shader strategy |
+| **[Tools Reference](docs/TOOLS.md)** | Every recompiler pipeline tool documented: ELF parser, disassembler, lifter, NID database |
+| **[SPU Lifter](docs/SPU_LIFTER.md)** | SPU ISA decoding/lifting, the runtime model (local store, channels, DMA, per-image dispatch), and the SPU tests |
+| **[Platform Abstraction](docs/PLATFORM_ABSTRACTION.md)** | How we handle Win32 vs POSIX: threading, sockets, timers, audio, memory, fibers |
+| **[SPU Fallback](docs/SPU_FALLBACK.md)** | The PPU-side fallback registry â€” a hand-written replacement for an SPU job, or a bring-up shim before an image is lifted |
+| **[Debug Console](docs/DEBUG_CONSOLE.md)** | Ask a title that is already running what it is doing, without a rebuild |
+| **[Runtime Diagnostics](docs/DIAGNOSTICS.md)** | Generated index of every diagnostic environment variable the runtime reads |
+| **[Prototype & Debug Builds](docs/PROTO_BUILDS.md)** | Why unencrypted, symbol-bearing prototype builds are the pipeline's ground truth |
+| **[Online Play](docs/ONLINE.md)** | Matchmaking, leaderboards and P2P play through a [psnr](https://github.com/sp00nznet/psnr) server â€” `--psnr host --username NAME` |
+| **[Regression Gate](docs/REGRESSION_GATE.md)** | How five ports are checked against recorded goldens before a shared-runtime change lands â€” and how to tell a real red from the four kinds of measurement artefact |
+
+## Getting Started
+
+**Downloads:** each [release](https://github.com/sp00nznet/ps3recomp/releases/latest)
+includes a prebuilt SDK bundle per platform (`ps3recomp-<version>-win-x64.zip`,
+`-mac-arm64.zip`, `-linux-x64.zip`) plus `SHA256SUMS.txt`. A bundle contains the
+runtime library, its headers and the Python pipeline. `VERSION.txt` inside it
+says what that platform can and cannot do yet.
+
+> **Prerequisites (building from source)**: Python 3.10+, CMake 3.20+, a C17/C++20 compiler (MSVC 19.x / clang-cl, GCC 12+, or Clang 15+)
+
+```bash
+git clone https://github.com/sp00nznet/ps3recomp.git
+cd ps3recomp
+pip install -r requirements.txt
+
+# Stage 1: image, OPD function table, TOC and firmware imports
+python tools/ppu_loader.py /path/to/EBOOT.ELF -o out/
+
+# Stage 2: lift to C++. --hle-stubs turns each firmware import stub into
+# ps3_hle_call(nid); leave it out and the first import call crashes the port.
+python tools/ppu_lifter.py /path/to/EBOOT.ELF \
+    --functions out/EBOOT.functions.json \
+    --hle-stubs out/EBOOT.imports.json \
+    --output templates/project/recompiled/
+
+# Stage 3: the NID -> HLE handler table, next to the lifted code
+python tools/gen_hle_nids.py --all --out templates/project/recompiled/ppu_hle_nids.cpp
+
+# Build the port from the template (RECOMP_DIR defaults to ./recompiled)
+cd templates/project
+cmake -B build -G Ninja
+cmake --build build
+```
+
+See [docs/GETTING_STARTED.md](docs/GETTING_STARTED.md) for the full walkthrough.
+
+## Game Ports Using ps3recomp
+
+*Status as of 2026-10-12. Each port's own README carries the live detail and the run recipe.*
+
+### In game
+
+| Game | Title ID | Status | Repo |
+|------|----------|--------|------|
+| **The Simpsons Arcade Game** (Konami) | NPUB30563 | **Playable, and playable online.** Boots through the Konami intro and character select into Stage 1, Downtown Springfield, with its ATRAC3plus music (#186) and correct flashes and glyphs (#185). **Two players meet over [psnr](https://github.com/sp00nznet/psnr)** and play a match together: lobby, character select, the host's game setup, then Stage 1 in sync on both machines with each player's input moving their character on both screens â€” including with one player behind a NAT, through psnr's relay (#200, see [docs/ONLINE.md](docs/ONLINE.md)). A Konami arcade *emulator* EBOOT: the 1991 coin-op ROM lives in `SIMPSONS.SR` and the binary emulates the hardware around it | [sp00nznet/simpsonsarcade-ps3](https://github.com/sp00nznet/simpsonsarcade-ps3) |
+| **Tornado Outbreak** (Loose Cannon / Konami) | BLUS30371 | **In game, rendering correctly with no per-title overrides.** Logos and Bink intro, title, main menu, New Game (the save is created), the story intro and dialogue, then the first level under stick control at ~10â€“16 fps. The runtime fixes it needed â€” raw-SPU proxy DMA, vertex-program flow control, GPU resolve copies â€” are shared (#189) | [sp00nznet/tornado](https://github.com/sp00nznet/tornado) |
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/sp00nznet/simpsonsarcade-ps3/main/docs/media/06-stage1.png" alt="The Simpsons Arcade Game, Stage 1" width="48%">
+  <img src="https://raw.githubusercontent.com/sp00nznet/tornado/main/docs/media/hero.gif" alt="Tornado Outbreak in the farmers' market" width="48%">
+</p>
+
+### Earlier ports
+
+Not under active development; they are where much of the runtime was first
+proven, and several stay in the [regression gate](docs/REGRESSION_GATE.md).
+
+| Game | Title ID | Where it got to | Repo |
+|------|----------|-----------------|------|
+| **Virtua Fighter 5** (Sega AM2) | BLUS30020 | Renders its NOW LOADING, CRIWARE and AM2 screens; zero SPURS and zero PSN imports | [sp00nznet/vf5](https://github.com/sp00nznet/vf5) |
+| **Tokyo Jungle** (Crispy's/SCE Japan) | NPUA80523 | Data install, SPURS jobs, title screen and the main menus | [sp00nznet/tokyojungle](https://github.com/sp00nznet/tokyojungle) |
+| **You Don't Know Jack** (Jellyvision/THQ) | BLUS30569 | Menus and answerable quiz questions; movie-backed screens still draw noise | [sp00nznet/youdontknowjack](https://github.com/sp00nznet/youdontknowjack) |
+| **Twisted Metal** (Eat Sleep Play) | BCUS98106 | Drove the live NV4097 engine (#113); boots real game code and its asset install | [sp00nznet/twistedmetal](https://github.com/sp00nznet/twistedmetal) |
+| **flOw** (thatgamecompany) | NPUA80001 | First draws with the real `libsre.prx`; assets load | [sp00nznet/flow](https://github.com/sp00nznet/flow) |
+| **Rubber Ducky** (Sony E3 2006 demo) | NPEA00003 | A debug build with full symbols â€” the lifter's ground truth, not a game target | [sp00nznet/rubberducky](https://github.com/sp00nznet/rubberducky) |
+
+### In the community
+
+Ports other people are running on ps3recomp, whose fixes come back upstream:
+
+- **inFamous** ([@NoahBPeterson](https://github.com/NoahBPeterson)): in game on
+  macOS/arm64 at around 13 fps, booting on Sony's own liblv2 and libsre (LLE).
+  Its exact SPU float and VMX work landed in v0.15.0 (#286, #287), and
+  [@erikomis](https://github.com/erikomis)'s *inFAMOUS 2* bring-up on the same
+  branch sent six fixes (#311-#316).
+- **Twisted Metal** ([@Kurtisone](https://github.com/Kurtisone)): menus on
+  Linux/Vulkan, the deferred renderer's lighting and post-FX included. Most of
+  v0.14.0's draw-engine and Vulkan work came out of this port.
+- **Killzone 3** ([@undecuple](https://github.com/undecuple)): all nine
+  chapters load and run five minutes of scripted play, and one chapter has
+  been played by hand to its end (Windows build, run under Proton). Its
+  general fixes went upstream through #214 and the PRs that followed it.
+- *LittleBigPlanet* ([@sagemono](https://github.com/sagemono)), *Yakuza: Dead
+  Souls* ([@canersaka](https://github.com/canersaka)), *God of War II HD* and
+  *Ben 10 Omniverse* ([@andrebrumdev](https://github.com/andrebrumdev)), and
+  *DBZ Budokai HD* ([@gnome41](https://github.com/gnome41/ps3recomp-dbz-budokai-hd)).
+
+Ask in the [Discord](https://discord.gg/CRpzGWZFcu) to get yours listed.
+
+Want to port a game? Start with the [Getting Started](#getting-started) section, check [docs/MODULE_STATUS.md](docs/MODULE_STATUS.md) for system library coverage, and see the [Game Porting Guide](docs/GAME_PORTING_GUIDE.md) for a real-world walkthrough.
+
+## Relationship to Other Projects
+
+| Project | Role |
+|---------|------|
+| **[RPCS3](https://github.com/RPCS3/rpcs3)** | Our primary reference for HLE module behavior and system call semantics. Standing on the shoulders of giants. |
+| **[XenonRecomp](https://github.com/hedge-dev/XenonRecomp)** | PowerPC recompiler for Xbox 360. Same ISA family and the same approach; our lifter is our own. |
+| **[N64Recomp](https://github.com/N64Recomp/N64Recomp)** | Pioneered the modern static recomp approach. Our architecture follows the same "recompile to C, link with runtime" philosophy. |
+| **[PS2Recomp](https://github.com/ran-j/PS2Recomp)** | Sibling project for PS2. Different ISA (MIPS vs PowerPC) but same spirit. |
+| **[ReXGlue](https://github.com/rexglue/rexglue-sdk)** | The closest sibling this project has: a static recompilation SDK for the Xbox 360, turning PowerPC into portable C++ compiled ahead of time rather than interpreted. Same shape as ps3recomp â€” a toolkit plus a runtime, with game ports built on top â€” and a generation of Xenon hardware away from Cell. Their release engineering covers five platforms from one reusable build workflow, with nightlies and tagged releases that publish artifacts. |
+| **[pcrecomp](https://github.com/sp00nznet/pcrecomp)** | Our PC recompilation toolkit. Shared philosophy of "analyze â†’ disassemble â†’ lift â†’ link â†’ ship". |
+
+## Building Blocks We Leverage
+
+- **RPCS3**: a behavioural reference for HLE modules and syscalls. We read what it does and then write our own. No RPCS3 (GPL) code belongs in this tree.
+- **Direct3D 12 / Metal / Vulkan**: RSX graphics translation. D3D12 is the backend that runs games in this tree today. Metal (macOS) and Vulkan (Linux, opt-in, see [docs/BUILDING.md](docs/BUILDING.md#the-vulkan-backend-linux-opt-in)) run guest shaders on the shared draw engine. CI draws with the headless null backend.
+- **SDL2**: input and audio off Windows. `cellPad` and `cellAudio` always use their SDL2 backends on non-Windows hosts, so SDL2 is required there; on Windows they use XInput and WASAPI. SDL2 does no windowing here; each graphics backend makes its own.
+- **FFmpeg** (optional, loaded at run time): video decode for cellVdec and ATRAC3plus for cellAtrac. It is never linked and never vendored.
+
+## Contributing
+
+This is a massive undertaking and we need help. Here's how to get involved:
+
+- **HLE Module Authors** â€” Fill in the partial modules (media decode, SPURS edge cases) from documented behaviour
+- **PPU/SPU Experts** â€” Improve the disassembler and lifter accuracy
+- **Graphics Engineers** â€” Bring Metal and Vulkan to D3D12 parity, then run a title on them
+- **Game Testers** â€” Try recompiling titles and report what breaks
+- **Documentation** â€” Help us map out the PS3's system library landscape
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+Not sure where to start, or want to sanity-check an idea first? Ask in the
+[Discord](https://discord.gg/CRpzGWZFcu) â€” several of the people working on ports
+and on the lifter are there.
+
+## Legal
+
+This project does not contain any proprietary Sony code, firmware, encryption keys, or copyrighted material ([docs/FIRMWARE_LLE.md](docs/FIRMWARE_LLE.md) explains how LLE works without shipping firmware). It provides clean-room implementations of system library interfaces based on publicly documented behavior. You must provide your own legally obtained PS3 game files.
+
+Contributors are credited in **[CONTRIBUTORS.md](CONTRIBUTORS.md)**.
+
+## License
+
+MIT License. See [LICENSE](LICENSE) for details.
+
+
+## Changelog
+
+### v0.17.0 â€” *"Thirty-Three"* (October 2026)
+
+*33 pull requests from seven contributors, merged in #413. Most of them come
+from two new God of War ports (HD and Ascension), plus Killzone 3, Twisted
+Metal and SoulCalibur II HD.*
+
+**RSX and graphics**
+- God of War HD on D3D12 (*[@rigaz29](https://github.com/rigaz29)*, new):
+  depth/stencil-only clears no longer wipe the scene (#393). Indexed strips
+  keep their winding (#391). The guest-FP pipeline cache is keyed on the code,
+  not the address, which removed a full recompile per draw for programs
+  uploaded to a ring (#392). The FP decompiler is told the draw's export width
+  (#396). A wrapped command ring no longer overwrites commands the RSX hasn't
+  read (#390). `initguid.h` is included in the right place (#389), and new
+  `FP_DUMP=<n>` (#398), `PS3_HLE_TOP=<s>` (#397) and `SPU_INTERP_STATS=<s>`
+  (#394) diagnostics.
+- God of War: Ascension (*[@MaChInEgUn3](https://github.com/MaChInEgUn3)*,
+  new): X16 textures present like B8, so the font atlas shows (#384). A
+  smaller clip on the same rows reuses the surface (#382). The Vulkan pipeline
+  table is as large as the engine's (#378).
+- Killzone 3 (*[@undecuple](https://github.com/undecuple)*): texture offsets
+  are 31 bits (#408). A texture smaller than the surface it aliases samples
+  the surface's top-left (#395). `get` is published past a semaphore RELEASE
+  before its label (#401). Main-memory maps take the first free IO pages, and
+  are refused before `cellGcmInit` (#410).
+
+**SPU, SPURS and threads**
+- The Twisted Metal bring-up runtime is on master, so that port links again
+  (*[@Kurtisone](https://github.com/Kurtisone)*, #381).
+- Taskset bitsets are updated atomically on task create and exit (#388).
+  `cellSpursQueueSize` is answered (#411), and non-joinable PPU threads free
+  their slot when they end (#409) (*@undecuple*).
+- The identical-transfer DMA halt also waits for wall time and backs off,
+  so a job polling an RSX label isn't killed (*@MaChInEgUn3*, #383).
+- `cellFiber` is the SDK's scheduler API, replacing the made-up one
+  (*[@n0madic](https://github.com/n0madic)*, #400, closes #365).
+
+**Memory, codecs and system**
+- LV2 user allocations and mapper reservations are separate domains, and
+  loaded ELF segments are never handed out
+  (*[@tekulvw](https://github.com/tekulvw)*, #296).
+- cellVdec: `QueryAttrEx`/`OpenEx` (#379), and time stamps and frame rate for
+  MPEG-2 pictures (#380). WASAPI shared mode converts the 48 kHz stream, so a
+  44.1 kHz or 5.1 device isn't silent (#385) (*@MaChInEgUn3*).
+- Log caps stop at their limit (`PS3_LOG_FIRST`) instead of wrapping and
+  printing on every call (*@n0madic*, #399, closes #364). MinGW builds the
+  tests and reads the time zone from the system (#402).
+- Lifter: jump-table bounds compares are found beyond the 30-instruction
+  window (*@undecuple*, #387). `lift_jobmods --merge-chunks` is passed through
+  (#386).
+- The project template maps the guest arena with `mmap` on POSIX, so
+  `vm_commit` can `mprotect` it
+  (*[@arnaudaprahamian](https://github.com/arnaudaprahamian)*, new, #412).
+- Docs: stale module counts removed (#405), Killzone 3 entry updated (#407).
+
+### v0.16.0 â€” *"Forty-Four"* (October 2026)
+
+*44 pull requests from six contributors, merged in #377. They come from
+inFAMOUS 2, Twisted Metal and SoulCalibur II HD, plus Tornado Outbreak.*
+
+**RSX and graphics**
+- **3D textures** in the draw engine (*[@erikomis](https://github.com/erikomis)*, #335).
+  The fragment decompiler also gains FACING, TC8 and TC9 (#328), the
+  perspective-correct flag on texcoord reads (#329), and signed results from
+  biased-remap and `_bx2` fetches (#331). Y16_X16/HILO8 crossbars present
+  R-G-R-G (#332).
+- **A flip in the command stream completes when the RSX reaches it**
+  (*[@Kurtisone](https://github.com/Kurtisone)*, #343), and a late flip
+  completion no longer marks a newer flip done (*@erikomis*, #354). Also:
+  get follows the walker across a JUMP (#347), the semaphore acquire is
+  bounded (#327), and GCM callbacks are delivered at `sys_timer_usleep`/`sleep`
+  (#353).
+- NV3089: the source origin is 12.4 fixed point, and copies were 256 times too
+  short (*[@n0madic](https://github.com/n0madic)*, #358). Unscaled blits copy
+  a row at a time (#334). 2D transfers read FP16 targets (#367) and convert a
+  pixel at a time (#348).
+- Speed: the D3D12 vertex program cache is keyed on the program instead of the
+  store behind it, which took most of the D3DCompile calls off the FIFO thread
+  (*@n0madic*, #361). HLSL to SPIR-V translations are cached (#346), cached
+  textures are re-hashed sparsely (#375), and the per-vertex span is found once
+  per draw (#357).
+- Vulkan: colour feedback snapshots for draws that sample their own target
+  (#352), and present on its own command buffer (#351).
+- Metal: per-MRT colour mask and blend (#330), `PS3_ANISO` (#373),
+  `PS3_AA=fxaa` and `PS3_SHARPEN` (#374), `cellVideoOutSetGamma` (#355), and
+  `precise::` math from spirv-cross (#356).
+- Diagnostics: `PS3_FTRACE`, a frame timeline of who waits for whom (#339), and
+  fragment-program debug knobs keyed by structural hash (#336).
+
+**SPU and SPURS**
+- An SPU thread starts in the lifted image its own bytes identify, instead of
+  whichever image registered first at that entry point (*@n0madic*, #362). An
+  SPU user event finds the port the PPU binds, and waits for it (#363).
+- A task's signalled bit is updated atomically against SPU commits (#340), and
+  a job's first frame stays below its cache buffers (#366)
+  (*@Kurtisone*).
+- Single-precision fast paths run four lanes at a time with AVX2 (#369) and
+  SSE2 (#370).
+- Syscall 14 classifies lock-line addresses by guest segment
+  (*[@kalpakprod](https://github.com/kalpakprod)*, #341).
+
+**System libraries**
+- cellFs: the `CELL_FS_O_*` flag values are corrected, so `O_CREAT` creates
+  (*@kalpakprod*, #349); `/dev_hdd1` maps to a writable host root (#350); and
+  an AIO read keeps the fd's position (*@Kurtisone*, #376).
+- `cellGameBootCheck` reports the game type from PARAM.SFO (#359), and
+  `CELL_MSGDIALOG_BUTTON_NONE`/`INVALID` are no longer swapped (#360)
+  (*@n0madic*). An HDD title's `/dev_hdd0/game/<id>/` now resolves to the
+  booted game tree, which kept Simpsons Arcade reading its data once #359
+  reported it as an HDD game.
+- `PS3_LANG` picks the system language (#333), and `PS3_GAMEDATA_ROOT` moves
+  saves and trophies out of the working directory (#338). The small rumble
+  motor runs at full strength (#372) (*@erikomis*).
+- Guest spinlocks use a 32-bit atomic on LP64 hosts, which fixes a fault on
+  arm64 (*[@tekulvw](https://github.com/tekulvw)*, #326).
+- Tornado Outbreak: the 2x zoomed frames from #281 are fixed (#344).
+
+### v0.15.0 â€” *"Seventy-Six"* (October 2026)
+
+*76 pull requests from six contributors, merged in #325. They come from five
+ports in progress: Killzone 2 and 3, inFAMOUS and inFAMOUS 2, and Twisted
+Metal, plus tekulvw's correctness sweep of the runtime and Metal. Every
+change ships with a test or a measurement.*
+
+**SPU and SPURS**
+- **Hardware-exact SPU float** (*[@NoahBPeterson](https://github.com/NoahBPeterson)*, #287).
+  Single precision now follows the ISA: extended range, truncation, denormal
+  flush and saturation. `frest` uses the hardware table. Results are checked
+  against an exact-arithmetic referee, and NEON paths run 1.6-4x faster with
+  bit-identical output. This replaces the previous GPL-derived float code.
+- **SPURS policy scheduling** (*[@tekulvw](https://github.com/tekulvw)*, #291).
+  Each instance gets a coordinator and `nSpus` persistent workers, with
+  admission capped by each workload's contention, so a waiting consumer no
+  longer starves its producer. Every live SPU context also keeps private DMA
+  and reservation state (#290).
+- Interpreter fallback resumes lifted code (#266), and machine status reports
+  the interrupt-enable bit (#289). MFC `SDCRZ` is implemented (#295), FNMS
+  keeps its addend for zero times an extended operand (#318), and parked-list
+  diagnostics are bounded (#298). SPURS task exit-code containers (#283),
+  taskset storage size (#284) and TaskInfo requeue masking (#306)
+  (*@tekulvw*).
+- `build_spu_workloads.py --input` discovers, validates and registers SPU ELFs
+  from supplied files, and the project template runs it (*@tekulvw*, #288).
+- `SPU_RdDec` no longer wraps 231 s after its base stamp
+  (*[@erikomis](https://github.com/erikomis)*, #313).
+- From *[@undecuple](https://github.com/undecuple)*: the SMC micro-interpreter
+  addresses `lqa`/`stqa` at I16 << 2 (#268). The MFC engine table grows past
+  eight contexts (#272, later replaced by #290's unbounded registry). The
+  policy module's u64 argument is passed in the preferred doubleword (#309),
+  and `_cellSpursAttributeInitialize` gets its SDK argument order (#310).
+
+**PPU lifter and loader**
+- **Exact VMX** (*@NoahBPeterson*, #286). About 45 VMX ops that lifted as
+  no-ops are now implemented, along with VSCR saturation and CR6 compares.
+  BO/BI branches are decoded (`bdnzt` and `bdzf` were always taken), CTR is
+  64-bit, and get-PC idioms are recognised.
+- From *@undecuple*:
+  - big-endian lane order for ten VMX integer ops (#269);
+  - `lwax` jump tables (#285);
+  - `sc` at the end of a function falls through (#297);
+  - a carry-form definition is no longer mistaken for a callee-save restore
+    (#320);
+  - `--chunks N` cuts lifted source by guest address and rewrites only the
+    files that changed (#254).
+- Loader, from *@undecuple*: TLS blocks sized by the TLS image (#253), a
+  per-coroutine indirect-call depth guard (#270), and thread-locals that stay
+  thread-local under MinGW (#271).
+- Jump tables behind a tail-call epilogue are found (*@erikomis*, #311).
+- Boot, from *@tekulvw*: PPU entry argv/envp live in stack-owned storage
+  (#263), and HLE registrations regenerate when library sources change (#262).
+
+**RSX, draw engine, Metal and Vulkan**
+- **Depth:** from *@undecuple*, fragment depth export (#279), depth buffers
+  sampled as textures return real depth (#280), and Z16 clear values are
+  decoded (#282). From *@tekulvw*, 2D depth-compare textures (#302), depth24
+  endpoints preserved (#299), depth export in the shader cache keys (#301),
+  and Metal depth attachments read back to guest memory (#300). From
+  *[@Kurtisone](https://github.com/Kurtisone)*, the depth bounds test (#319).
+- **Colour:** from *@tekulvw*, sRGB framebuffer output (#304), per-channel
+  texture input gamma (#305), fragment colour inputs clamped before source
+  modifiers (#303), and register-fed DATA3F/DATA4F immediate vertices (#292).
+- **Fragment decompiler:** predicated writes are a select, not a lerp
+  (*@undecuple*, #278). The NV40 pack/unpack opcodes are implemented
+  (*@erikomis*, #314).
+- Antialiased surfaces render at sample resolution (#281), and the sampler
+  cache key covers every field it decodes (#321) (*@undecuple*).
+- **Metal:**
+  - from *@tekulvw*: owned colour targets snapshotted in GPU order (#307),
+    clears replayed over complete surfaces (#293), real window-close
+    reporting (#308), and opt-in `PS3RECOMP_METAL_FPS` frame timing (#294);
+  - from *@erikomis*: a command buffer that fails is reported (#316).
+
+**cellGcm**
+- From *@undecuple*: IO mapping table 16 -> 512 with no leak on refusal
+  (#255), `GET_REPORT` honours its DMA context (#256), FIFO user commands
+  reach `cellGcmSetUserHandler` (#273), and the in-FIFO flip wraps only the
+  runtime's own ring (#275).
+- Strict-order IO mapping (*@tekulvw*, #248). A parked FIFO gets time to be
+  patched before the walker follows `put` (*@erikomis*, #312).
+
+**System libraries**
+- **cellFs:** directory entries (*@tekulvw*, #247), configured disc roots
+  (*@tekulvw*, #249), `GetFreeSize`/`Chmod`/`Utime`/`SdataOpenByFd` (#257),
+  and 64-bit sizes on Windows (#258).
+- **cellSaveData:** PARAM.SFO is written and read as a real binary PSF, and
+  old text saves still load (#322). UserAutoSave keeps its ninth argument
+  (#276).
+- **Network:**
+  - from *@undecuple*: cellHttp's URI path (#260) and response getters (#261);
+    sceNpBasic usable after `sceNpInit` (#259); sceNpCommerce2 `CreateCtx`
+    (#323); the EDAT klicensee from `sceNpDrmIsAvailable` (#274);
+  - from *@tekulvw*: no SIGPIPE on host sends (#250) and `inet_pton` (#265).
+- **Other:**
+  - from *@undecuple*: `sys_lwcond_t` layout (#277) and
+    `cellFontInitializeWithRevision` (#324);
+  - from *@erikomis*: `cellGemGetMemorySize` and the event-queue notify forms
+    (#315);
+  - from *@tekulvw*: the timezone syscall (#264), extended sysmodule tracking
+    (#267), message-dialog abort (#251) and Sail boot parameters (#252).
+
+Older releases: **[CHANGELOG.md](CHANGELOG.md)**.
+
+=== 3. CMakeLists.txt ===
+cmake_minimum_required(VERSION 3.20)
+# Keep in step with the changelog in README.md. This sat at 0.3.0 until August
+# 2026 while the project shipped 0.6.x through 0.8.0, so every build printed
+# "ps3recomp runtime v0.3.0" and was believed. v0.9.0 is the first TAGGED one.
+project(ps3recomp_runtime
+    VERSION 0.11.0
+    LANGUAGES C CXX
+    DESCRIPTION "ps3recomp - Static recompilation runtime for PS3 games"
+)
+
+# ---------------------------------------------------------------------------
+# Standards
+# ---------------------------------------------------------------------------
+set(CMAKE_C_STANDARD 17)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# ---------------------------------------------------------------------------
+# Options
+# ---------------------------------------------------------------------------
+option(PS3RECOMP_BUILD_TESTS "Build unit tests" OFF)
+
+# ---------------------------------------------------------------------------
+# Collect source files
+# ---------------------------------------------------------------------------
+
+# HLE library sources
+file(GLOB_RECURSE HLE_SOURCES
+    "libs/system/*.c"
+    "libs/filesystem/*.c"
+    "libs/input/*.c"
+    "libs/audio/*.c"
+    "libs/video/*.c"
+    "libs/network/*.c"
+    "libs/spurs/*.c"
+    "libs/sync/*.c"
+    "libs/codec/*.c"
+    "libs/font/*.c"
+    "libs/misc/*.c"
+    "libs/hardware/*.c"
+    "runtime/diag/*.c"      # yz_frontier_trace, used by the live draw engine
+)
+# Exclude test harnesses (e.g. libs/video/tests/*): they define their own main().
+list(FILTER HLE_SOURCES EXCLUDE REGEX "/tests/")
+
+# The Vulkan RSX backend is opt-in while it grows (stage V0: clear + present).
+# It loads libvulkan at run time, so building needs only the Vulkan headers --
+# no target-architecture libvulkan, which keeps cross-compiling simple.
+option(PS3RECOMP_RSX_VULKAN "Build the Vulkan RSX backend (Linux)" OFF)
+list(FILTER HLE_SOURCES EXCLUDE REGEX "rsx_vulkan_backend\\.c$")
+if(PS3RECOMP_RSX_VULKAN)
+    if(WIN32 OR APPLE)
+        message(FATAL_ERROR "PS3RECOMP_RSX_VULKAN is Linux-only for now")
+    endif()
+    find_path(PS3RECOMP_VULKAN_INCLUDE_DIR vulkan/vulkan.h)
+    if(NOT PS3RECOMP_VULKAN_INCLUDE_DIR)
+        message(FATAL_ERROR "Vulkan headers not found. Debian/Ubuntu: "
+            "libvulkan-dev, Fedora: vulkan-headers -- or pass "
+            "-DPS3RECOMP_VULKAN_INCLUDE_DIR=<dir containing vulkan/vulkan.h>")
+    endif()
+    list(APPEND HLE_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/libs/video/rsx_vulkan_backend.c")
+    # HLSL -> SPIR-V for guest programs: a stub unless glslang is found below.
+    list(APPEND HLE_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/libs/video/rsx_shader_spirv.cpp")
+endif()
+
+# The Metal backend is Objective-C and Apple-only, so it is added explicitly
+# rather than globbed. It needs no platform #ifdef of its own as a result.
+if(APPLE)
+    enable_language(OBJC)
+    list(APPEND HLE_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/libs/video/rsx_metal_backend.m")
+endif()
+# The HLSL -> MSL translator is C++ (it drives glslang's C++ API) and compiles
+# to a stub wherever the shader tools are absent, so it is part of the
+# library everywhere. See the "Guest shaders on Metal" section below.
+list(APPEND HLE_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/libs/video/rsx_shader_msl.cpp")
+# cellAtrac decodes with FFmpeg's ATRAC3plus decoder as extracted by PPSSPP
+# (LGPL-2.1, kept separate in third_party/at3_standalone -- see its README).
+file(GLOB AT3_SOURCES "third_party/at3_standalone/*.cpp")
+set_source_files_properties(${AT3_SOURCES} PROPERTIES COMPILE_OPTIONS "-w")  # upstream code
+list(APPEND HLE_SOURCES ${AT3_SOURCES})
+
+# Runtime core (syscalls, PPU, SPU, memory)
+file(GLOB_RECURSE RUNTIME_SOURCES
+    "runtime/*.c"
+    "runtime/*.cpp"
+)
+# Exclude:
+#  - test harnesses (runtime/*/tests/*): they have their own main() and #include
+#    per-game generated headers (spu_recomp.h) that a plain library build lacks.
+#  - the PPU boot scaffold (runtime/ppu/, runtime/host/): these are compiled
+#    per-game against the lifter-generated ppu_recomp.h (and the game's RSX/D3D12
+#    backend), not as part of the game-agnostic runtime library. See
+#    docs/PPU_RECOMP.md.
+#  - spu_dispatch_mt.c: the musttail SPU indirect-branch fast path. It uses
+#    __attribute__((musttail)), which MSVC cannot parse, and it must be compiled
+#    *inside the game build* by clang so the tail call is guaranteed -- a plain
+#    call leaks one resolver frame per guest loop iteration. A port adds it to
+#    its own target; see templates/project/CMakeLists.txt.
+list(FILTER RUNTIME_SOURCES EXCLUDE REGEX "/tests/|/runtime/ppu/|/runtime/host/|/spu_dispatch_mt\.c$")
+
+# ---------------------------------------------------------------------------
+# Static library
+# ---------------------------------------------------------------------------
+add_library(ps3recomp_runtime STATIC
+    ${HLE_SOURCES}
+    ${RUNTIME_SOURCES}
+)
+
+target_include_directories(ps3recomp_runtime PUBLIC
+    "${CMAKE_CURRENT_SOURCE_DIR}/include"
+)
+
+# HLE modules include their own headers
+target_include_directories(ps3recomp_runtime PRIVATE
+    "${CMAKE_CURRENT_SOURCE_DIR}/libs/system"
+    "${CMAKE_CURRENT_SOURCE_DIR}/libs/filesystem"
+    "${CMAKE_CURRENT_SOURCE_DIR}/libs/input"
+    "${CMAKE_CURRENT_SOURCE_DIR}/libs/audio"
+    "${CMAKE_CURRENT_SOURCE_DIR}/libs/video"
+    "${CMAKE_CURRENT_SOURCE_DIR}/libs/network"
+    "${CMAKE_CURRENT_SOURCE_DIR}/libs/spurs"
+    "${CMAKE_CURRENT_SOURCE_DIR}/libs/sync"
+    "${CMAKE_CURRENT_SOURCE_DIR}/libs/codec"
+    "${CMAKE_CURRENT_SOURCE_DIR}/libs/font"
+    "${CMAKE_CURRENT_SOURCE_DIR}/libs/misc"
+    "${CMAKE_CURRENT_SOURCE_DIR}/runtime/spu"
+    "${CMAKE_CURRENT_SOURCE_DIR}/include"
+)
+
+# Platform-specific link libraries
+if(WIN32)
+    target_link_libraries(ps3recomp_runtime PRIVATE
+        ws2_32      # Winsock for network modules
+        xinput      # XInput for gamepad
+        ole32       # COM for WASAPI audio
+        bcrypt      # BCryptGenRandom for SSL RNG
+    )
+else()
+    # cellPad and cellAudio select their SDL2 backends unconditionally off
+    # Windows (see PAD_BACKEND_SDL2 / AUDIO_BACKEND_SDL2), so SDL2 is required
+    # here -- docs/BUILDING.md already lists it as the Linux/macOS dependency.
+    find_package(SDL2 QUIET)
+    if(SDL2_FOUND)
+        if(TARGET SDL2::SDL2)
+            target_link_libraries(ps3recomp_runtime PRIVATE SDL2::SDL2)
+        else()
+            target_include_directories(ps3recomp_runtime PRIVATE ${SDL2_INCLUDE_DIRS})
+            target_link_libraries(ps3recomp_runtime PRIVATE ${SDL2_LIBRARIES})
+        endif()
+        message(STATUS "  SDL2:         found (input + audio backends enabled)")
+    else()
+        message(FATAL_ERROR
+            "SDL2 not found. It provides the cellPad and cellAudio backends on "
+            "non-Windows hosts.\n"
+            "  macOS:  brew install sdl2\n"
+            "  Debian: apt install libsdl2-dev\n"
+            "If SDL2 is installed in a non-standard prefix, pass "
+            "-DCMAKE_PREFIX_PATH=<prefix>.")
+    endif()
+
+    find_package(Threads REQUIRED)
+    target_link_libraries(ps3recomp_runtime PRIVATE Threads::Threads)
+endif()
+
+if(APPLE)
+    target_link_libraries(ps3recomp_runtime PUBLIC
+        "-framework Metal"
+        "-framework QuartzCore"
+        "-framework Foundation"
+        "-framework AppKit"
+    )
+    set_source_files_properties(
+        "${CMAKE_CURRENT_SOURCE_DIR}/libs/video/rsx_metal_backend.m"
+        PROPERTIES COMPILE_OPTIONS "-fobjc-arc")
+    message(STATUS "  Metal:        RSX backend enabled (rsx_metal_backend.m)")
+endif()
+
+if(PS3RECOMP_RSX_VULKAN)
+    target_include_directories(ps3recomp_runtime PRIVATE "${PS3RECOMP_VULKAN_INCLUDE_DIR}")
+    # PUBLIC: ps3recomp_host selects its backend on this definition.
+    target_compile_definitions(ps3recomp_runtime PUBLIC PS3RECOMP_RSX_VULKAN)
+    target_link_libraries(ps3recomp_runtime PUBLIC ${CMAKE_DL_LIBS})
+    message(STATUS "  Vulkan:       RSX backend enabled (rsx_vulkan_backend.c, headers in ${PS3RECOMP_VULKAN_INCLUDE_DIR})")
+endif()
+
+# cellVdec decodes H.264 / MPEG-2 through FFmpeg when this is on. libavcodec
+# is loaded at run time (dlopen / LoadLibrary), never linked, so building needs
+# only the FFmpeg headers, and a binary run where FFmpeg is absent -- or with
+# PS3RECOMP_FFMPEG=0 -- keeps the callback-only decoders. FFmpeg stays a
+# separate, user-supplied LGPL library. See libs/codec/ffmpeg_runtime.h.
+option(PS3RECOMP_FFMPEG_RUNTIME "Decode media through FFmpeg loaded at run time (needs the FFmpeg headers)" OFF)
+if(PS3RECOMP_FFMPEG_RUNTIME)
+    find_path(PS3RECOMP_FFMPEG_INCLUDE_DIR libavcodec/avcodec.h)
+    if(NOT PS3RECOMP_FFMPEG_INCLUDE_DIR)
+        message(FATAL_ERROR "FFmpeg headers not found. Debian/Ubuntu: "
+            "libavcodec-dev, Fedora: ffmpeg-free-devel, MSYS2: mingw-w64-x86_64-ffmpeg "
+            "-- or pass -DPS3RECOMP_FFMPEG_INCLUDE_DIR=<dir containing libavcodec/avcodec.h>")
+    endif()
+    target_include_directories(ps3recomp_runtime PRIVATE "${PS3RECOMP_FFMPEG_INCLUDE_DIR}")
+    target_compile_definitions(ps3recomp_runtime PRIVATE PS3RECOMP_FFMPEG_RUNTIME)
+    target_link_libraries(ps3recomp_runtime PUBLIC ${CMAKE_DL_LIBS})
+    message(STATUS "  FFmpeg:       run-time loaded (headers in ${PS3RECOMP_FFMPEG_INCLUDE_DIR})")
+endif()
+
+# ---------------------------------------------------------------------------
+# Guest shaders on Metal: HLSL -> SPIR-V -> MSL
+# ---------------------------------------------------------------------------
+# The RSX decompilers emit HLSL for the D3D12 backend. Metal cannot compile
+# that, so libs/video/rsx_shader_msl.cpp lowers it with glslang (HLSL ->
+# SPIR-V) and spirv-cross (SPIR-V -> MSL). Both are optional: without them the
+# module compiles to a stub, rsx_hlsl_to_msl_available() says so, and the
+# Metal backend stays on its fixed-function path. The translation has no GPU
+# in it, so it is built and tested on Linux as well -- that is where the
+# decompilers' HLSL meets glslang's front end on every push.
+#
+#   macOS:  brew install glslang spirv-cross
+#   Debian: apt install glslang-dev glslang-tools spirv-tools \
+#                       libspirv-cross-c-shared-dev
+#           (glslang-tools only because the packaged CMake config declares
+#           the standalone binary as an imported target and fails to load
+#           without it)
+set(PS3RECOMP_MSL_TRANSLATION OFF)
+if(UNIX)
+    find_package(glslang CONFIG QUIET)
+
+    # spirv-cross's C API. Debian ships it as a shared library and Homebrew as
+    # a static one, under different pkg-config names -- and pkg-config itself
+    # is not a given on a Mac, so fall back to a plain header + library search.
+    set(SPVC_OK OFF)
+    find_package(PkgConfig QUIET)
+    if(PkgConfig_FOUND)
+        pkg_check_modules(SPVC QUIET spirv-cross-c-shared)
+        if(NOT SPVC_FOUND)
+            pkg_check_modules(SPVC QUIET spirv-cross-c)
+        endif()
+        if(SPVC_FOUND)
+            set(SPVC_INC     ${SPVC_INCLUDE_DIRS})
+            set(SPVC_LIBS    ${SPVC_LINK_LIBRARIES})
+            set(SPVC_LIBDIRS ${SPVC_LIBRARY_DIRS})
+            set(SPVC_OK ON)
+        endif()
+    endif()
+    if(NOT SPVC_OK)
+        find_path(SPVC_INC_DIR spirv_cross_c.h PATH_SUFFIXES spirv_cross)
+        find_library(SPVC_LIB NAMES spirv-cross-c-shared spirv-cross-c)
+        if(SPVC_INC_DIR AND SPVC_LIB)
+            set(SPVC_INC  ${SPVC_INC_DIR})
+            set(SPVC_LIBS ${SPVC_LIB})
+            get_filename_component(SPVC_LIBDIRS "${SPVC_LIB}" DIRECTORY)
+            set(SPVC_OK ON)
+        endif()
+    endif()
+
+    if(glslang_FOUND AND SPVC_OK
+       AND TARGET glslang::glslang AND TARGET glslang::SPIRV)
+        add_library(ps3recomp_msl_translation INTERFACE)
+        target_compile_definitions(ps3recomp_msl_translation INTERFACE
+            PS3RECOMP_HAVE_MSL_TRANSLATION=1)
+        target_include_directories(ps3recomp_msl_translation INTERFACE ${SPVC_INC})
+        target_link_libraries(ps3recomp_msl_translation INTERFACE
+            glslang::glslang glslang::SPIRV ${SPVC_LIBS})
+        if(TARGET glslang::glslang-default-resource-limits)
+            target_link_libraries(ps3recomp_msl_translation INTERFACE
+                glslang::glslang-default-resource-limits)
+        endif()
+        # A static spirv-cross C API (Homebrew's) needs the backends it was
+        # built from, and neither pkg-config nor the library name says so:
+        # pick up the static siblings next to it. The shared one carries
+        # its own.
+        if(SPVC_LIBS MATCHES "\\.a$")
+            foreach(part msl glsl hlsl cpp reflect util core)
+                find_library(SPVC_PART_${part} NAMES spirv-cross-${part}
+                    HINTS ${SPVC_LIBDIRS} NO_DEFAULT_PATH)
+                if(SPVC_PART_${part})
+                    target_link_libraries(ps3recomp_msl_translation INTERFACE
+                        ${SPVC_PART_${part}})
+                endif()
+            endforeach()
+        endif()
+        target_link_libraries(ps3recomp_runtime PRIVATE ps3recomp_msl_translation)
+        set(PS3RECOMP_MSL_TRANSLATION ON)
+        message(STATUS "  Shaders:      guest programs translated to MSL (glslang ${glslang_VERSION}, ${SPVC_LIBS})")
+    else()
+        message(STATUS "  Shaders:      glslang/spirv-cross not found; Metal backend stays fixed-function")
+    endif()
+endif()
+
+# Guest shaders on Vulkan: HLSL -> SPIR-V. glslang only -- Vulkan consumes
+# SPIR-V, so spirv-cross is not needed. Without glslang
+# libs/video/rsx_shader_spirv.cpp is a stub and the Vulkan backend stays on
+# its fixed-function path.
+if(PS3RECOMP_RSX_VULKAN)
+    if(glslang_FOUND AND TARGET glslang::glslang AND TARGET glslang::SPIRV)
+        set_source_files_properties(
+            "${CMAKE_CURRENT_SOURCE_DIR}/libs/video/rsx_shader_spirv.cpp"
+            PROPERTIES COMPILE_DEFINITIONS PS3RECOMP_HAVE_SPIRV_TRANSLATION=1)
+        target_link_libraries(ps3recomp_runtime PRIVATE glslang::glslang glslang::SPIRV)
+        if(TARGET glslang::glslang-default-resource-limits)
+            target_link_libraries(ps3recomp_runtime PRIVATE
+                glslang::glslang-default-resource-limits)
+        endif()
+        set(PS3RECOMP_SPIRV_TRANSLATION ON)
+        message(STATUS "  Vulkan:       guest programs available (glslang ${glslang_VERSION}); "
+                       "opt in with PS3RECOMP_VK_GUEST_PROGRAMS=1")
+    else()
+        message(STATUS "  Vulkan:       glslang not found; guest programs unavailable")
+    endif()
+endif()
+
+# ---------------------------------------------------------------------------
+# Compiler flags
+# ---------------------------------------------------------------------------
+if(CMAKE_C_COMPILER_ID MATCHES "Clang|GNU")
+    target_compile_options(ps3recomp_runtime PRIVATE
+        -Wall -Wextra -Wno-unused-parameter
+        -fno-strict-aliasing
+        # No spontaneous fused multiply-add. MSVC never contracts, and x86-64
+        # without -mfma has nothing to contract into, so every validated
+        # result came from separate multiplies and adds; arm64 has FMA in
+        # the base ISA and Clang fuses by default there. A PPC fmadd is
+        # spelt as one where the lifter means one.
+        -ffp-contract=off
+        # Explicit, because the per-config defaults cannot be trusted: this
+        # tree's caches carry CMAKE_C_FLAGS_RELEASE="" and CMAKE_CXX_FLAGS_RELEASE="",
+        # and clang-cl with no /O flag compiles at /Od -- a "Release" runtime
+        # was unoptimised without a word. Duplicating a default -O2 is harmless.
+        $<$<CONFIG:Release,RelWithDebInfo>:-O2>
+    )
+    # SSE4.1 (any x86-64 since ~2008): pshufb/blendv for spu_shufb, the
+    # hottest SPU op in lifted audio code. Probed rather than assumed: recent
+    # Apple clang rejects the flag outright for arm64 ("unsupported option
+    # '-msse4.1'"), which stops the whole runtime from building there.
+    include(CheckCCompilerFlag)
+    check_c_compiler_flag(-msse4.1 PS3RECOMP_HAS_MSSE41)
+    if(PS3RECOMP_HAS_MSSE41)
+        target_compile_options(ps3recomp_runtime PRIVATE -msse4.1)
+    endif()
+elseif(MSVC)
+    # Real cl.exe -- clang-cl reports its id as Clang and is handled above.
+    #
+    # This does not currently build. The runtime and the lifted output use GCC/
+    # Clang builtins that cl has no equivalent for, and the failure lands as a
+    # wall of errors in whichever file the build happens to reach first rather
+    # than as anything that names the cause. Say it here instead.
+    message(WARNING
+        "Building with cl.exe (MSVC). This is not currently supported.\n"
+        "  The runtime uses __atomic_* builtins, __int128 and __builtin_bswap*, "
+        "and the lifted output uses __int128 for the PPC 64x64 multiplies. "
+        "cl has none of them.\n"
+        "  Use clang-cl instead -- it consumes the MSVC headers and libraries, "
+        "so nothing else about a Visual Studio build changes:\n"
+        "    cmake -S . -B build -G Ninja "
+        "-DCMAKE_C_COMPILER=clang-cl -DCMAKE_CXX_COMPILER=clang-cl\n"
+        "  See docs/BUILDING.md. Porting the intrinsics to cl is a welcome "
+        "contribution; nothing else stands in the way.")
+    target_compile_options(ps3recomp_runtime PRIVATE
+        /W3 /wd4100 /wd4244 /wd4267 /wd4996
+        /Zc:__cplusplus
+        /experimental:c11atomics   # Enable C11 <stdatomic.h> support
+    )
+    target_compile_definitions(ps3recomp_runtime PRIVATE
+        _CRT_SECURE_NO_WARNINGS
+    )
+endif()
+
+if(NOT MSVC AND NOT WIN32)
+    # dladdr/Dl_info (runtime/platform/win32_backtrace.h) are GNU extensions
+    # that glibc hides unless _GNU_SOURCE is set. g++ defines it implicitly,
+    # so the C++ boot scaffold never noticed; a C file including the same
+    # shim does not get it for free.
+    target_compile_definitions(ps3recomp_runtime PRIVATE _GNU_SOURCE)
+endif()
+
+# ---------------------------------------------------------------------------
+# Tests
+# ---------------------------------------------------------------------------
+if(PS3RECOMP_BUILD_TESTS)
+    include(CTest)
+    # sync_stress is written directly against the Win32 threading API
+    # (WaitForMultipleObjects, joinable HANDLEs, Interlocked*, CRITICAL_SECTION).
+    # Off Windows all of that comes from runtime/platform/win32_compat.h, so
+    # the suite runs everywhere -- and is the arm64 memory-model regression
+    # net for the lv2 sync primitives.
+    add_subdirectory(tests/sync_stress)
+    # cellFiber switches contexts with Windows fibers on Windows and ucontext
+    # everywhere else. Apple deprecated the ucontext routines and gates both
+    # them and the shape of ucontext_t on _XOPEN_SOURCE, so whether that path
+    # works on arm64 is a question to answer rather than assume.
+    add_subdirectory(tests/fiber_switch)
+    # Syscall 14's address/flags classification as a plain unit test: the
+    # check is pure, so the test links one runtime translation unit
+    # (lv2_lock_line.c) and nothing else.
+    add_subdirectory(tests/syscalls)
+    # cellVdec through its guest API: the callback-only decoder always, and
+    # real H.264 / MPEG-2 decode when FFmpeg is on (libs/codec/tests).
+    add_subdirectory(libs/codec/tests)
+    # cellGcm's FIFO walker without a backend: where GET_REPORT writes for
+    # each report DMA context. Links the runtime like the POSIX host below.
+    if(UNIX)
+        add_subdirectory(tests/gcm_reports)
+    endif()
+    # PS3_LOG_FIRST, the saturating counter behind the "first n times" log lines.
+    add_executable(test_log_first tests/test_log_first.c)
+    target_include_directories(test_log_first PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/include")
+    add_test(NAME log_first COMMAND test_log_first)
+
+    find_package(Python3 3.10 COMPONENTS Interpreter QUIET)
+    if(Python3_Interpreter_FOUND)
+        add_test(NAME spinlock_word_width
+            COMMAND "${Python3_EXECUTABLE}"
+                "${CMAKE_CURRENT_SOURCE_DIR}/tools/test_spinlock_word_width.py")
+        add_test(NAME spurs_task_exit_code_initialize
+            COMMAND "${Python3_EXECUTABLE}"
+                "${CMAKE_CURRENT_SOURCE_DIR}/tools/test_spurs_task_exit_code_initialize.py")
+        add_test(NAME spurs_taskset_size
+            COMMAND "${Python3_EXECUTABLE}"
+                "${CMAKE_CURRENT_SOURCE_DIR}/tools/test_spurs_taskset_size.py")
+        add_test(NAME spu_sdcrz
+            COMMAND "${Python3_EXECUTABLE}"
+                "${CMAKE_CURRENT_SOURCE_DIR}/tools/test_spu_sdcrz.py")
+    endif()
+    if(NOT WIN32)
+        find_package(Python3 3.10 COMPONENTS Interpreter QUIET)
+        if(Python3_Interpreter_FOUND)
+            add_test(NAME spu_fnms_zero_extended
+                COMMAND "${Python3_EXECUTABLE}"
+                    "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_spu_fnms_zero_extended.py")
+        endif()
+    endif()
+    find_package(Python3 3.10 COMPONENTS Interpreter QUIET)
+    if(Python3_Interpreter_FOUND)
+        add_test(NAME loaded_image_memory
+            COMMAND "${Python3_EXECUTABLE}"
+                "${CMAKE_CURRENT_SOURCE_DIR}/tools/test_loaded_image_memory.py")
+        add_test(NAME loader_memory_domain
+            COMMAND "${Python3_EXECUTABLE}"
+                "${CMAKE_CURRENT_SOURCE_DIR}/tools/test_loader_memory_domain.py")
+        add_test(NAME mmapper_hle_heap
+            COMMAND "${Python3_EXECUTABLE}"
+                "${CMAKE_CURRENT_SOURCE_DIR}/tools/test_mmapper_hle_heap.py")
+        add_test(NAME user_memory_domain
+            COMMAND "${Python3_EXECUTABLE}"
+                "${CMAKE_CURRENT_SOURCE_DIR}/tools/test_user_memory_domain.py")
+    endif()
+endif()
+
+# ---------------------------------------------------------------------------
+# POSIX host harness
+# ---------------------------------------------------------------------------
+# Drives the cellGcm -> RSX -> backend bridge with no lifted game, so a backend
+# can be brought up and regression-tested without a game binary or a recompiler
+# run. Builds on any POSIX host: it picks Metal on Apple and the null backend's
+# headless software path everywhere else, so Linux -- which has no real backend
+# yet -- can still run the whole guest command stream end to end in CI.
+if(UNIX)
+    add_executable(ps3recomp_host
+        runtime/host/host_posix.c
+        runtime/host/host_stubs.c
+    )
+    target_link_libraries(ps3recomp_host PRIVATE ps3recomp_runtime)
+    if(NOT WIN32)
+        # glibc keeps the math functions in a separate library; MSVC does not.
+        target_link_libraries(ps3recomp_host PRIVATE m)
+    endif()
+    target_include_directories(ps3recomp_host PRIVATE
+        "${CMAKE_CURRENT_SOURCE_DIR}/libs/video"
+        "${CMAKE_CURRENT_SOURCE_DIR}/include"
+    )
+    # The runtime carries C++ (and, with translation on, spirv-cross), so the
+    # C++ driver must do the final link or the standard library goes missing.
+    set_target_properties(ps3recomp_host PROPERTIES LINKER_LANGUAGE CXX)
+
+    # Guest shader translation, decompilers -> HLSL -> MSL, with no GPU: the
+    # regression net for the Metal backend's shader path on every platform.
+    if(PS3RECOMP_MSL_TRANSLATION)
+        add_executable(test_shader_msl
+            libs/video/tests/test_shader_msl.c
+            libs/video/rsx_shader_msl.cpp
+            libs/video/rsx_vp_decompiler.c
+            libs/video/rsx_fp_decompiler.c
+        )
+        target_include_directories(test_shader_msl PRIVATE
+            "${CMAKE_CURRENT_SOURCE_DIR}/libs/video"
+            "${CMAKE_CURRENT_SOURCE_DIR}/include"
+        )
+        target_link_libraries(test_shader_msl PRIVATE ps3recomp_msl_translation)
+    endif()
+
+    # The HLSL -> SPIR-V translation cache, memory and disk. Needs glslang
+    # only, no GPU.
+    if(PS3RECOMP_SPIRV_TRANSLATION)
+        add_executable(test_shader_spirv
+            libs/video/tests/test_shader_spirv.c
+            libs/video/rsx_shader_spirv.cpp
+        )
+        target_include_directories(test_shader_spirv PRIVATE
+            "${CMAKE_CURRENT_SOURCE_DIR}/libs/video"
+            "${CMAKE_CURRENT_SOURCE_DIR}/include"
+        )
+        target_link_libraries(test_shader_spirv PRIVATE glslang::glslang glslang::SPIRV)
+        if(TARGET glslang::glslang-default-resource-limits)
+            target_link_libraries(test_shader_spirv PRIVATE
+                glslang::glslang-default-resource-limits)
+        endif()
+        set_target_properties(test_shader_spirv PROPERTIES LINKER_LANGUAGE CXX)
+    endif()
+endif()
+
+# ---------------------------------------------------------------------------
+# PPU boot smoke title
+# ---------------------------------------------------------------------------
+# The one target that LINKS AND RUNS the PPU boot scaffold. runtime/ppu/ is the
+# game-agnostic boot path every port is built on, and nothing here has ever
+# built it: it #includes the lifter's per-game ppu_recomp.h, so
+# tools/check_ppu_scaffold.py compiles it against a stub header and stops
+# there. Compiling is not running, and on POSIX the loader, the NID bridge, the
+# lv2 syscalls, guest threads, the frame clock and the RSX backend had never
+# once run together.
+#
+# runtime/ppu/tests/smoke/ supplies what was missing: a hand-written program in
+# the lifter's ABI, and tools/make_smoke_elf.py writes both the PPU ELF it is
+# loaded from and the ppu_recomp.h it compiles against -- the header from
+# ppu_lifter.py's own HEADER_PREAMBLE, so the synthetic title cannot drift away
+# from the ABI a real one gets.
+#
+# The HLE NID table is generated exactly as a port generates it, so the smoke
+# title's firmware imports resolve through the same bridge a game's do.
+if(UNIX)
+    find_package(Python3 COMPONENTS Interpreter QUIET)
+    if(NOT Python3_Interpreter_FOUND)
+        message(STATUS "  Boot smoke:   no python3; ps3recomp_boot_smoke not built")
+    else()
+        set(SMOKE_GEN "${CMAKE_CURRENT_BINARY_DIR}/smoke")
+
+        add_custom_command(
+            OUTPUT "${SMOKE_GEN}/smoke.elf" "${SMOKE_GEN}/ppu_recomp.h"
+            COMMAND "${Python3_EXECUTABLE}"
+                    "${CMAKE_CURRENT_SOURCE_DIR}/tools/make_smoke_elf.py"
+                    --out    "${SMOKE_GEN}/smoke.elf"
+                    --header "${SMOKE_GEN}/ppu_recomp.h"
+            DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/tools/make_smoke_elf.py"
+                    "${CMAKE_CURRENT_SOURCE_DIR}/tools/ppu_lifter.py"
+            COMMENT "Generating the smoke title's image and ppu_recomp.h")
+
+        add_custom_command(
+            OUTPUT "${SMOKE_GEN}/ppu_hle_nids.cpp"
+            COMMAND "${Python3_EXECUTABLE}"
+                    "${CMAKE_CURRENT_SOURCE_DIR}/tools/gen_hle_nids.py"
+                    --out "${SMOKE_GEN}/ppu_hle_nids.cpp" --all
+            DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/tools/gen_hle_nids.py"
+                    "${CMAKE_CURRENT_SOURCE_DIR}/tools/nid_database.py"
+            COMMENT "Generating the HLE NID -> handler table")
+
+        add_executable(ps3recomp_boot_smoke
+            runtime/ppu/tests/boot_main.cpp
+            runtime/ppu/tests/smoke/smoke_recomp.c
+            runtime/ppu/ppu_loader.cpp
+            runtime/ppu/ppu_hle.cpp
+            runtime/ppu/ppu_fs.cpp
+            runtime/ppu/ppu_sysprx.cpp
+            "${SMOKE_GEN}/ppu_hle_nids.cpp"
+            "${SMOKE_GEN}/ppu_recomp.h"
+        )
+        target_include_directories(ps3recomp_boot_smoke PRIVATE
+            "${SMOKE_GEN}"                                  # the generated ppu_recomp.h
+            "${CMAKE_CURRENT_SOURCE_DIR}/include"
+            "${CMAKE_CURRENT_SOURCE_DIR}/runtime/ppu"
+            "${CMAKE_CURRENT_SOURCE_DIR}/runtime/spu"
+            "${CMAKE_CURRENT_SOURCE_DIR}/runtime/memory"
+            "${CMAKE_CURRENT_SOURCE_DIR}/runtime/syscalls"
+            "${CMAKE_CURRENT_SOURCE_DIR}/runtime/platform"
+            "${CMAKE_CURRENT_SOURCE_DIR}/libs/video"
+        )
+        target_link_libraries(ps3recomp_boot_smoke PRIVATE ps3recomp_runtime)
+        set_target_properties(ps3recomp_boot_smoke PROPERTIES LINKER_LANGUAGE CXX)
+
+        # Where the runnable image lands, so CI and a developer both say
+        #   ./build/ps3recomp_boot_smoke build/smoke/smoke.elf
+        message(STATUS "  Boot smoke:   ps3recomp_boot_smoke + smoke/smoke.elf")
+
+        # The same lift again, arranged the way a port's own tree arranges one:
+        # the generated ppu_recomp.h and the lifted source in one directory,
+        # which is what templates/project wants for -DRECOMP_DIR. The header is
+        # generated into the build tree and the source lives in the repository,
+        # so a directory holding both has to be made rather than pointed at.
+        #
+        # This is what lets CI build the project template against a real lift
+        # and run it -- the check that a port started from templates/project
+        # still boots, on a platform where it can be run.
+        set(SMOKE_LIFT "${SMOKE_GEN}/lift")
+        set(SMOKE_LIFT_SRC
+            "${CMAKE_CURRENT_SOURCE_DIR}/runtime/ppu/tests/smoke/smoke_recomp.c")
+        add_custom_command(
+            OUTPUT "${SMOKE_LIFT}/ppu_recomp.h" "${SMOKE_LIFT}/smoke_recomp.c"
+            COMMAND "${CMAKE_COMMAND}" -E make_directory "${SMOKE_LIFT}"
+            COMMAND "${CMAKE_COMMAND}" -E copy_if_different
+                    "${SMOKE_GEN}/ppu_recomp.h" "${SMOKE_LIFT}/ppu_recomp.h"
+            COMMAND "${CMAKE_COMMAND}" -E copy_if_different
+                    "${SMOKE_LIFT_SRC}" "${SMOKE_LIFT}/smoke_recomp.c"
+            DEPENDS "${SMOKE_GEN}/ppu_recomp.h" "${SMOKE_LIFT_SRC}"
+            COMMENT "Staging the smoke title's lift as a RECOMP_DIR")
+        add_custom_target(ps3recomp_smoke_lift ALL
+            DEPENDS "${SMOKE_LIFT}/ppu_recomp.h" "${SMOKE_LIFT}/smoke_recomp.c")
+        message(STATUS "  Smoke lift:   smoke/lift (a RECOMP_DIR for templates/project)")
+    endif()
+endif()
+
+# ---------------------------------------------------------------------------
+# Install
+# ---------------------------------------------------------------------------
+install(TARGETS ps3recomp_runtime
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+)
+
+install(DIRECTORY include/ps3emu
+    DESTINATION include
+    FILES_MATCHING PATTERN "*.h"
+)
+
+# ---------------------------------------------------------------------------
+# Summary
+# ---------------------------------------------------------------------------
+message(STATUS "")
+message(STATUS "ps3recomp runtime v${PROJECT_VERSION}")
+message(STATUS "  C compiler:   ${CMAKE_C_COMPILER_ID} ${CMAKE_C_COMPILER_VERSION}")
+message(STATUS "  C++ compiler: ${CMAKE_CXX_COMPILER_ID} ${CMAKE_CXX_COMPILER_VERSION}")
+message(STATUS "  Build type:   ${CMAKE_BUILD_TYPE}")
+message(STATUS "")
+
