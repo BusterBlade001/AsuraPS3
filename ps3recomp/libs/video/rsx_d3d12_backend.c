@@ -3737,10 +3737,10 @@ static u32 current_rt_off(u32* out_w, u32* out_h, u32 out_mrt[3])
      * draw as offscreen, has_display stays 0, and render_frame() -- which is
      * what draws ALL recorded geometry -- is never called. The backbuffer shows
      * only the clear, which looks exactly like "nothing rasterizes". */
-    if (st->color_target < 0x13 &&
-        st->surface_clip_w == s_d3d.width && st->surface_clip_h == s_d3d.height &&
-        (st->surface_format != 0x0B && st->surface_format != 0x0C))
-        return 0;
+    { static int _bs = -1; if (_bs < 0) _bs = getenv("RT_DISPLAY_BY_SIZE") ? 1 : 0;
+      if (_bs && st->color_target < 0x13 &&
+          st->surface_clip_w == s_d3d.width && st->surface_clip_h == s_d3d.height)
+          return 0; }
     /* Surface clip dims when sane; else the window size. Any size works --
      * passes draw normalized full-surface quads -- this only picks resolution. */
     u32 w = st->surface_clip_w, h = st->surface_clip_h;
