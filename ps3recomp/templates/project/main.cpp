@@ -205,11 +205,6 @@ static LONG WINAPI ydkj_crash_filter(EXCEPTION_POINTERS* ep)
 }
 #endif
 
-#if defined(__APPLE__)
-#include <CoreFoundation/CoreFoundation.h>   /* the main thread's run loop, see run_guest */
-#include <pthread.h>
-#endif
-
 #ifdef _WIN32
 /* abort()/exit(3) reporter: the recompiled CRT (or a failed invariant) can call
  * abort() — Windows turns that into exit code 3 with no message. Capture a host
@@ -237,7 +232,6 @@ static void ydkj_abort_handler(int)
 }
 #endif
 
-<<<<<<< HEAD
 /* Derive the VFS root (the dir containing PS3_GAME) from the EBOOT path
  * <root>/PS3_GAME/USRDIR/EBOOT.elf  -> <root>. $PS3_VFS_ROOT overrides. */
 static char s_vfs_root[1024];
@@ -251,58 +245,6 @@ static void derive_vfs_root(const char* eboot)
     for (int i = 0; i < 3; i++) { char* s = strrchr(s_vfs_root, '/'); if (s) *s = 0; }
     if (!s_vfs_root[0]) strcpy(s_vfs_root, ".");
     ppu_vfs_root = s_vfs_root;
-=======
-/* ---------------------------------------------------------------------------
- * What the scaffold gives this file
- * -----------------------------------------------------------------------*/
-extern "C" {
-uint32_t ppu_load_elf(const char* path);      /* ELF -> guest RAM, returns entry OPD */
-void     ppu_recomp_register(void);           /* generated: lifted table -> address map */
-void     ppu_hle_init(void);                  /* firmware import NID -> HLE handler */
-void     ppu_sysprx_register(void);           /* boot-critical CRT (sys_initialize_tls, ...) */
-void     ppu_fs_register(void);               /* cellFs over the real game directory */
-void     lv2_init_syscalls(void);             /* the lv2 syscall table */
-int      ppu_run(uint32_t entry_opd, uint32_t stack_top);
-
-/* This project's own: load whatever real system PRX modules the title needs
- * into guest RAM and register their exports. stubs.cpp has the empty version
- * a game with no lifted PRX wants. */
-void     ps3_load_prx_modules(void);
-
-extern const char* ppu_vfs_root;              /* host dir the PS3 mount points map into */
-void     ps3_host_quit(const char* why);      /* cellSysutil.c: REQUEST_EXITGAME, then exit 0 */
-
-/* sys_ppu_thread.c: the main thread's stack, as sys_ppu_thread_get_stack_information
- * reports it. Left at 0 it names VM_STACK_BASE, the first created thread's stack. */
-extern uint32_t g_ppu_main_stack_addr;
-extern uint32_t g_ppu_main_stack_size;
-
-/* The status the guest handed to sys_process_exit. A title that exits that way
- * never returns through ppu_run, so this is only read on the path where the
- * entry function unwound instead. */
-extern int     g_sys_process_exit_called;
-extern int32_t g_sys_process_exit_code;
-
-/* Host-provided symbols the runtime and the HLE libraries link against. */
-uint8_t* vm_base = nullptr;
-extern uint32_t ppu_vm_size;                  /* ppu_loader.cpp: the OOB guard */
-
-/* Guest-callback dispatch. g_ps3_guest_caller is the hook the HLE runtime
- * calls back into recompiled code through -- cellSysutil events and the GCM
- * vblank/flip handlers. ppu_guest_call does the OPD -> dispatch. */
-typedef void (*ps3_guest_caller_fn)(uint32_t, uint64_t, uint64_t, uint64_t, uint64_t,
-                                    uint64_t, uint64_t, uint64_t, uint64_t);
-extern ps3_guest_caller_fn g_ps3_guest_caller;
-uint64_t ppu_guest_call(uint32_t, uint64_t, uint64_t, uint64_t, uint64_t,
-                        uint64_t, uint64_t, uint64_t, uint64_t);
-
-/* The GCM half of the frame clock. */
-void     cellGcmTickVBlank(void);
-void     cellGcmTickFlip(void);
-int      cellGcm_take_flip_pending(void);
-void     cellGcm_rsx_process_fifo(void);      /* drain get -> put */
-unsigned cellGcm_flip_request_count(void);
->>>>>>> 4e8f3ca87a3e1d87bb83b8b7e9348fe2685cd514
 }
 
 /* Host-provided symbols the runtime + HLE libs need. */
@@ -367,7 +309,6 @@ extern "C" unsigned cellGcm_flip_request_count(void);
 extern "C" unsigned cellGcmGetCurrentDisplayBufferId(void);
 extern "C" int sys_event_queue_inject(unsigned int, unsigned long long, unsigned long long, unsigned long long, unsigned long long);
 
-<<<<<<< HEAD
 /* Live NV4097->D3D12 engine (libs/video/rsx_live_draw.c, from caner /
  * canersaka's Yakuza: Dead Souls port). Opt-in with RSX_LIVE_DRAW=1: the null
  * backend opens the window, the engine binds its swap chain to that HWND and
@@ -387,19 +328,6 @@ extern "C" void* rsx_null_backend_get_hwnd(void);
 extern "C" void  rsx_null_backend_suppress_present(int on);
 extern "C" uint32_t cellGcmResolveLocated(int local, uint32_t offset);
 extern "C" uint32_t cellGcmResolveIO(uint32_t offset);
-=======
-/* ---------------------------------------------------------------------------
- * Configuration
- * -----------------------------------------------------------------------*/
-/* The flat VM must span every region the PS3 memory map uses, not just the
- * game image: sys_ppu_thread_create puts thread stacks at 0xD0000000, so a
- * smaller arena makes every spawned thread's stack access out of bounds. */
-#define VM_SIZE       0x100010000ull   /* the full 32-bit guest space + a 64K guard */
-#define STACK_TOP     0x0FF00000u      /* main-thread stack, below the 0x10000000 segment */
-#define STACK_SIZE    0x00100000u      /* what the main thread is told it has */
-#define WINDOW_WIDTH  1280
-#define WINDOW_HEIGHT 720
->>>>>>> 4e8f3ca87a3e1d87bb83b8b7e9348fe2685cd514
 
 static int s_rsx_live = 0;   /* live engine selected AND up */
 
@@ -599,7 +527,6 @@ static DWORD WINAPI vblank_ticker(LPVOID)
                 last_flip = cellGcm_flip_request_count();
             }
             cellGcm_rsx_process_fifo();
-<<<<<<< HEAD
         }
         /* YDKJ_INJECT_Q3: the main thread polls q3 (load/state-complete) each frame but
          * it's never posted (producer signals a condvar, never enqueues). Inject a q3
@@ -636,25 +563,6 @@ static DWORD WINAPI vblank_ticker(LPVOID)
                 } else if (fc == 0) {
                     rsx_backend_present();
                 }
-=======
-
-            if (rsx_backend_pump() != 0) {
-                rsx_ok = 0;              /* window closed */
-                /* ...so quit, as the console's Quit Game does, instead of
-                 * leaving the game running with no window. */
-                ps3_host_quit("window closed");
-                continue;
-            }
-            /* Present on a guest flip. A present on a fixed clock can catch the
-             * drain mid-frame and flash a partial one. Before the first flip
-             * present freely, so the window is not blank during boot. */
-            unsigned fc = cellGcm_flip_request_count();
-            if (fc != last_flip) {
-                present_guest_frame();
-                last_flip = fc;
-            } else if (fc == 0) {
-                rsx_backend_present();
->>>>>>> 4e8f3ca87a3e1d87bb83b8b7e9348fe2685cd514
             }
         }
     }
@@ -1174,100 +1082,6 @@ static LONG WINAPI vm_commit_veh(EXCEPTION_POINTERS* ep)
 }
 #endif
 
-<<<<<<< HEAD
-=======
-static bool alloc_guest_vm(void)
-{
-#ifdef _WIN32
-    AddVectoredExceptionHandler(1, vm_commit_veh);
-    vm_base = (uint8_t*)VirtualAlloc(NULL, VM_SIZE, MEM_RESERVE, PAGE_READWRITE);
-    ppu_vm_size = 0;              /* the whole space is backed; no OOB guard needed */
-#else
-    /* No vectored exception handlers off Windows, so the arena is mapped up
-     * front and lazily backed by the OS: only pages the title touches cost
-     * anything. It spans the whole 32-bit space plus the guard, as on Windows.
-     * It used to stop below 0xE0000000, but the raw SPU windows (local store
-     * and problem-state registers, runtime/spu/spu_raw.c) live from there up.
-     * Every load and store a title made into one was reported as an
-     * out-of-bounds access and dropped, so a raw SPU was never loaded or
-     * started, and sys_raw_spu_create, which clears the registers through
-     * vm_base directly, wrote past the end of the mapping. With the whole
-     * space backed, ppu_vm_size 0 also gives the loader's bounds check the
-     * one-compare fast path Windows already has.
-     *
-     * mmap, not calloc: vm_commit() hands vm_base + addr to mprotect, which
-     * takes page-aligned addresses only. glibc serves an allocation this big
-     * from its own mmap chunk and returns a pointer 16 bytes past the page
-     * start, so every commit failed with EINVAL and sys_memory_allocate
-     * answered ENOMEM to every call. mmap's base is page-aligned and zeroed. */
-    void* p = mmap(NULL, VM_SIZE, PROT_READ | PROT_WRITE,
-                   MAP_PRIVATE | MAP_ANONYMOUS | MAP_NORESERVE, -1, 0);
-    vm_base = (p == MAP_FAILED) ? nullptr : (uint8_t*)p;
-    ppu_vm_size = 0;              /* the whole space is backed; no OOB guard needed */
-#endif
-    return vm_base != nullptr;
-}
-
-/* ---------------------------------------------------------------------------
- * Main
- * -----------------------------------------------------------------------*/
-static void harness_guest_caller(uint32_t opd, uint64_t a0, uint64_t a1,
-                                 uint64_t a2, uint64_t a3, uint64_t a4,
-                                 uint64_t a5, uint64_t a6, uint64_t a7)
-{
-    ppu_guest_call(opd, a0, a1, a2, a3, a4, a5, a6, a7);
-}
-
-/* ---------------------------------------------------------------------------
- * Running the guest
- * -----------------------------------------------------------------------*/
-#if defined(__APPLE__)
-/* AppKit only runs on the process's main thread. The Metal backend creates
- * its window and pumps its events with dispatch_sync onto the main queue
- * when it is called from any other thread, as it is from the frame clock.
- * With the guest on the main thread nothing ever serviced that queue: the
- * frame clock blocked in its first rsx_backend_init, no vblank or flip was
- * ever delivered and the FIFO never drained. A title that waits for a flip
- * hangs there. So the guest runs on a thread of its own, with the same
- * 256 MB host stack every guest thread gets (sys_ppu_thread.c), and the
- * main thread turns the run loop until ppu_run returns. Headless runs never
- * touch the main queue, which is why CI does not see the difference. */
-struct guest_run { uint32_t entry, stack_top; int rc; volatile int done; };
-
-static void* guest_thread(void* arg)
-{
-    guest_run* g = (guest_run*)arg;
-    g->rc = ppu_run(g->entry, g->stack_top);
-    __atomic_store_n(&g->done, 1, __ATOMIC_RELEASE);
-    CFRunLoopStop(CFRunLoopGetMain());
-    return nullptr;
-}
-
-static int run_guest(uint32_t entry, uint32_t stack_top)
-{
-    static guest_run g;
-    g.entry = entry; g.stack_top = stack_top; g.rc = 0; g.done = 0;
-    pthread_attr_t attr;
-    pthread_attr_init(&attr);
-    pthread_attr_setstacksize(&attr, 256u * 1024u * 1024u);
-    pthread_t th;
-    int err = pthread_create(&th, &attr, guest_thread, &g);
-    pthread_attr_destroy(&attr);
-    if (err != 0) {
-        fprintf(stderr, "[boot] could not start the guest thread (%d)\n", err);
-        return -1;
-    }
-    /* Short slices: CFRunLoopStop only ends a run that is already going. */
-    while (!__atomic_load_n(&g.done, __ATOMIC_ACQUIRE))
-        CFRunLoopRunInMode(kCFRunLoopDefaultMode, 0.05, false);
-    pthread_join(th, nullptr);
-    return g.rc;
-}
-#else
-static int run_guest(uint32_t entry, uint32_t stack_top) { return ppu_run(entry, stack_top); }
-#endif
-
->>>>>>> 4e8f3ca87a3e1d87bb83b8b7e9348fe2685cd514
 int main(int argc, char** argv)
 {
     /* <PPU ELF> [--username NAME] [--psnr host[:port]], flags in any order. */
@@ -1405,7 +1219,6 @@ int main(int argc, char** argv)
                        CreateThread(NULL, 0, debug_console, dbgpath, 0, NULL); } }   /* tlhelp32-based */
 #endif
 
-<<<<<<< HEAD
     ps3_ms("boot:entry");
 #ifdef _WIN32
     { extern void ps3_sampler_start(void); ps3_sampler_start(); } /* PS3_SAMPLE=<ms> */
@@ -1429,17 +1242,6 @@ int main(int argc, char** argv)
     fprintf(stderr, "[boot] MAIN guest thread tid=%lu\n", (unsigned long)GetCurrentThreadId());
 #endif
     int rc = ppu_run(entry, stack_top);
-=======
-    printf("\n[boot] dispatching entry OPD 0x%08X (stack top 0x%08X)\n\n",
-           entry, STACK_TOP);
-
-    /* A title that reads its own stack bounds (to find data its parent left
-     * below the top, say) gets the stack it really runs on. */
-    g_ppu_main_stack_addr = STACK_TOP - STACK_SIZE;
-    g_ppu_main_stack_size = STACK_SIZE;
-
-    int rc = run_guest(entry, STACK_TOP);
->>>>>>> 4e8f3ca87a3e1d87bb83b8b7e9348fe2685cd514
     printf("\n[boot] ppu_run returned %d (entry function unwound)\n", rc);
     /* A guest that called sys_process_exit never reaches this line: that path
      * ends in the host exit(). Getting here means the entry function returned

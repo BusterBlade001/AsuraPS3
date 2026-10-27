@@ -89,3 +89,5 @@ extern "C" void ps3_load_prx_modules(void)
  *   // Replace a function call with a direct return
  *   ps3::patches::force_return(0x009A1000, 0);  // return 0
  */
+
+extern "C" int cellSysutilNpEulaCheck(void) { return 0; }

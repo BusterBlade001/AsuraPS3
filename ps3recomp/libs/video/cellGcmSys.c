@@ -2369,18 +2369,7 @@ static void gcm_rsx_process_fifo_unlocked(void)
                       const unsigned long long now = ps3_ms_now();
                       if (park_off != s_fifo_getoff || park_put != put) {
                           park_off = s_fifo_getoff; park_put = put; park_since = now;
-<<<<<<< HEAD
                       } else if (now - park_since >= 2) {
-=======
-                      } else if (now - park_since >= gcm_park_grace_ms() &&
-                                 /* Read the park again before giving up on it.
-                                  * An SPU job that fills a command-buffer hole
-                                  * (Edge geometry reserves them as self-JUMPs)
-                                  * can land between this pass's read and the
-                                  * resync, which would then jump over the
-                                  * commands it just wrote. */
-                                 vm_read32(gcm_io2ea(s_fifo_getoff)) == w) {
->>>>>>> 4e8f3ca87a3e1d87bb83b8b7e9348fe2685cd514
                           park_off = 0;
                           u32 next_ea = gcm_io2ea(s_fifo_getoff + 4);
                           u32 next_w  = next_ea ? vm_read32(next_ea) : 0;
