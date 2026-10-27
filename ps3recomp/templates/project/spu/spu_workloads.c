@@ -65,9 +65,9 @@ extern void spu_0025_at_01917080_spu_func_00003070(spu_context*);
 extern void spu_0025_at_01917080_spu_recomp_register(void);
 extern void spu_0026_at_0191BB00_spu_func_00003070(spu_context*);
 extern void spu_0026_at_0191BB00_spu_recomp_register(void);
-extern void spujob_42E1FC8CEE0BE246_spu_func_00000010(spu_context*);
+extern void spujob_42E1FC8CEE0BE246_spu_func_0000001C(spu_context*);
 extern void spujob_42E1FC8CEE0BE246_spu_recomp_register(void);
-extern void spujob_D6E964B601AB14C0_spu_func_00000010(spu_context*);
+extern void spujob_D6E964B601AB14C0_spu_func_0000001C(spu_context*);
 extern void spujob_D6E964B601AB14C0_spu_recomp_register(void);
 
 void spu_register_all(void)
@@ -154,11 +154,11 @@ void spu_register_all(void)
     spu_workload_register_img(0x61032D72B6F41122ULL, spu_0026_at_0191BB00_spu_func_00003070, 27, "spu_0026_at_0191BB00");
     spu_workload_register_img(0x45190D161BC2E09CULL, spu_0026_at_0191BB00_spu_func_00003070, 27, "spu_0026_at_0191BB00.text");
     spu_begin_image(28); spujob_42E1FC8CEE0BE246_spu_recomp_register();
-    spu_workload_register_img(0xB4E3CB6B699AF052ULL, spujob_42E1FC8CEE0BE246_spu_func_00000010, 28, "spujob_42E1FC8CEE0BE246");
-    spu_workload_register_img(0x42E1FC8CEE0BE246ULL, spujob_42E1FC8CEE0BE246_spu_func_00000010, 28, "spujob_42E1FC8CEE0BE246.text");
+    spu_workload_register_img(0x93B1B86C784198A6ULL, spujob_42E1FC8CEE0BE246_spu_func_0000001C, 28, "spujob_42E1FC8CEE0BE246");
+    spu_workload_register_img(0x42E1FC8CEE0BE246ULL, spujob_42E1FC8CEE0BE246_spu_func_0000001C, 28, "spujob_42E1FC8CEE0BE246.text");
     spu_begin_image(29); spujob_D6E964B601AB14C0_spu_recomp_register();
-    spu_workload_register_img(0xE044BC176EB4F85DULL, spujob_D6E964B601AB14C0_spu_func_00000010, 29, "spujob_D6E964B601AB14C0");
-    spu_workload_register_img(0xD6E964B601AB14C0ULL, spujob_D6E964B601AB14C0_spu_func_00000010, 29, "spujob_D6E964B601AB14C0.text");
+    spu_workload_register_img(0x4600BF717CA22A91ULL, spujob_D6E964B601AB14C0_spu_func_0000001C, 29, "spujob_D6E964B601AB14C0");
+    spu_workload_register_img(0xD6E964B601AB14C0ULL, spujob_D6E964B601AB14C0_spu_func_0000001C, 29, "spujob_D6E964B601AB14C0.text");
     spu_begin_image(0);
 }
 

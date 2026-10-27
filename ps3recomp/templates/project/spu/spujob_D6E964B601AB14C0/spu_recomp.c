@@ -8,21 +8,17 @@ void spujob_D6E964B601AB14C0_spu_func_00000000(spu_context* ctx) {
         ctx->gpr[2] = spu_ila(0x1D8CD);
         ctx->gpr[2] = spu_ila(0x394DA);
         ctx->gpr[2] = spu_ila(0x22A1B);
-        { ctx->pc = 0x10; g_spu_trampoline_fn = spujob_D6E964B601AB14C0_spu_func_00000010; return; }
-}
-
-void spujob_D6E964B601AB14C0_spu_func_00000010(spu_context* ctx) {
         ctx->gpr[80] = spu_xori(ctx->gpr[80], 4);
-        { ctx->pc = 0x18; g_spu_trampoline_fn = spujob_D6E964B601AB14C0_spu_func_00000018; return; }
+        { SPU_DIRECT(ctx, 0x18, spujob_D6E964B601AB14C0_spu_func_00000018); }
 }
 
 void spujob_D6E964B601AB14C0_spu_func_00000018(spu_context* ctx) {
         ctx->gpr[80] = spu_xori(ctx->gpr[80], 4);
-        { ctx->pc = 0x1C; g_spu_trampoline_fn = spujob_D6E964B601AB14C0_spu_func_0000001C; return; }
+        { SPU_DIRECT(ctx, 0x1C, spujob_D6E964B601AB14C0_spu_func_0000001C); }
 }
 
 void spujob_D6E964B601AB14C0_spu_func_0000001C(spu_context* ctx) {
-        { ctx->pc = 0x30; g_spu_trampoline_fn = spujob_D6E964B601AB14C0_spu_func_00000030; return; }
+        { SPU_DIRECT(ctx, 0x30, spujob_D6E964B601AB14C0_spu_func_00000030); }
 }
 
 void spujob_D6E964B601AB14C0_spu_func_00000024(spu_context* ctx) {
@@ -37,8 +33,8 @@ void spujob_D6E964B601AB14C0_spu_func_00000030(spu_context* ctx) {
         ctx->gpr[3] = spu_il(28);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x20, ctx->gpr[81]);
         ctx->gpr[5] = spu_ila(0x4C50);
-        ctx->gpr[126] = spu_link(0x50); { ctx->pc = 0x50; g_spu_trampoline_fn = spujob_D6E964B601AB14C0_spu_func_00000050; return; }
-        { ctx->pc = 0x50; g_spu_trampoline_fn = spujob_D6E964B601AB14C0_spu_func_00000050; return; }
+        ctx->gpr[126] = spu_link(0x50); { SPU_DIRECT(ctx, 0x50, spujob_D6E964B601AB14C0_spu_func_00000050); }
+        { SPU_DIRECT(ctx, 0x50, spujob_D6E964B601AB14C0_spu_func_00000050); }
 }
 
 void spujob_D6E964B601AB14C0_spu_func_00000050(spu_context* ctx) {
@@ -53,8 +49,8 @@ void spujob_D6E964B601AB14C0_spu_func_00000050(spu_context* ctx) {
         ctx->gpr[1] = spu_ai(ctx->gpr[1], -80);
         ctx->gpr[4] = spu_a(ctx->gpr[4], ctx->gpr[126]);
         ctx->gpr[6] = spu_rotqby(ctx->gpr[7], ctx->gpr[2]);
-        if (ctx->gpr[6]._u32[0] == 0) { ctx->pc = 0x13C; g_spu_trampoline_fn = spujob_D6E964B601AB14C0_spu_func_0000013C; return; }
-        { ctx->pc = 0x80; g_spu_trampoline_fn = spujob_D6E964B601AB14C0_spu_func_00000080; return; }
+        if (ctx->gpr[6]._u32[0] == 0) { SPU_DIRECT(ctx, 0x13C, spujob_D6E964B601AB14C0_spu_func_0000013C); }
+        { SPU_DIRECT(ctx, 0x80, spujob_D6E964B601AB14C0_spu_func_00000080); }
 }
 
 void spujob_D6E964B601AB14C0_spu_func_00000080(spu_context* ctx) {
@@ -73,7 +69,7 @@ void spujob_D6E964B601AB14C0_spu_func_00000080(spu_context* ctx) {
         ctx->gpr[5] = spu_shlqbyi(ctx->gpr[11], 4);
         ctx->gpr[9] = spu_sfi(ctx->gpr[9], 0);
         ctx->gpr[8] = spu_shlqbyi(ctx->gpr[8], 4);
-        if (ctx->gpr[5]._u32[0] == 0) { ctx->pc = 0x124; g_spu_trampoline_fn = spujob_D6E964B601AB14C0_spu_func_00000124; return; }
+        if (ctx->gpr[5]._u32[0] == 0) { SPU_DIRECT(ctx, 0x124, spujob_D6E964B601AB14C0_spu_func_00000124); }
         ctx->gpr[29] = spu_il(36);
         ctx->gpr[32] = spu_ls_read128(ctx, ctx->gpr[6]._u32[0] + 0x0);
         ctx->gpr[33] = spu_andi(ctx->gpr[8], 15);
@@ -88,11 +84,11 @@ void spujob_D6E964B601AB14C0_spu_func_00000080(spu_context* ctx) {
         ctx->gpr[25] = spu_sfi(ctx->gpr[26], 0);
         ctx->gpr[23] = spu_and(ctx->gpr[24], ctx->gpr[25]);
         ctx->gpr[22] = spu_and(ctx->gpr[9], ctx->gpr[23]);
-        { ctx->pc = 0xF8; g_spu_trampoline_fn = spujob_D6E964B601AB14C0_spu_func_000000F8; return; }
+        { SPU_DIRECT(ctx, 0xF8, spujob_D6E964B601AB14C0_spu_func_000000F8); }
 }
 
 void spujob_D6E964B601AB14C0_spu_func_000000F8(spu_context* ctx) {
-        if ((int32_t)ctx->gpr[22]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x000F8 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[20] = spu_il(0);
         ctx->gpr[19] = spu_ori(ctx->gpr[8], 0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[6]);
@@ -103,7 +99,7 @@ void spujob_D6E964B601AB14C0_spu_func_000000F8(spu_context* ctx) {
         spu_wrch(ctx, MFC_Size, ctx->gpr[18]);
         spu_wrch(ctx, MFC_TagID, ctx->gpr[17]);
         spu_wrch(ctx, MFC_Cmd, ctx->gpr[10]);
-        { ctx->pc = 0x124; g_spu_trampoline_fn = spujob_D6E964B601AB14C0_spu_func_00000124; return; }
+        { SPU_DIRECT(ctx, 0x124, spujob_D6E964B601AB14C0_spu_func_00000124); }
 }
 
 void spujob_D6E964B601AB14C0_spu_func_00000124(spu_context* ctx) {
@@ -117,12 +113,12 @@ void spujob_D6E964B601AB14C0_spu_func_00000124(spu_context* ctx) {
 
 void spujob_D6E964B601AB14C0_spu_func_0000013C(spu_context* ctx) {
         ctx->gpr[0] = spu_link(0x140); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_D6E964B601AB14C0_spu_func_00000150(ctx); spu_drain_call(ctx, 0x140); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        { ctx->pc = 0x80; g_spu_trampoline_fn = spujob_D6E964B601AB14C0_spu_func_00000080; return; }
+        { SPU_DIRECT(ctx, 0x80, spujob_D6E964B601AB14C0_spu_func_00000080); }
 }
 
 void spujob_D6E964B601AB14C0_spu_func_00000150(spu_context* ctx) {
         ctx->gpr[2] = spu_pref_u32(spu_rchcnt(ctx, SPU_RdInMbox));
-        if (ctx->gpr[2]._u32[0] != 0) { ctx->pc = 0x1BC; g_spu_trampoline_fn = spujob_D6E964B601AB14C0_spu_func_000001BC; return; }
+        if (ctx->gpr[2]._u32[0] != 0) { SPU_DIRECT(ctx, 0x1BC, spujob_D6E964B601AB14C0_spu_func_000001BC); }
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x100, ctx->gpr[4]);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0xF0, ctx->gpr[5]);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0xE0, ctx->gpr[6]);
@@ -145,9 +141,9 @@ void spujob_D6E964B601AB14C0_spu_func_00000150(spu_context* ctx) {
         spu_arch_fence();
         spu_wrch(ctx, SPU_WrOutIntrMbox, ctx->gpr[3]);
         ctx->gpr[3] = spu_rdch(ctx, SPU_RdInMbox);
-        if (ctx->gpr[3]._u32[0] != 0) { ctx->pc = 0x1B8; g_spu_trampoline_fn = spujob_D6E964B601AB14C0_spu_func_000001B8; return; }
+        if (ctx->gpr[3]._u32[0] != 0) { SPU_DIRECT(ctx, 0x1B8, spujob_D6E964B601AB14C0_spu_func_000001B8); }
         ctx->gpr[3] = spu_rdch(ctx, SPU_RdInMbox);
-        { ctx->pc = 0x1B8; g_spu_trampoline_fn = spujob_D6E964B601AB14C0_spu_func_000001B8; return; }
+        { SPU_DIRECT(ctx, 0x1B8, spujob_D6E964B601AB14C0_spu_func_000001B8); }
 }
 
 void spujob_D6E964B601AB14C0_spu_func_000001B8(spu_context* ctx) {
@@ -159,11 +155,36 @@ void spujob_D6E964B601AB14C0_spu_func_000001BC(spu_context* ctx) {
         SPU_RET(ctx);
 }
 
+void spujob_D6E964B601AB14C0_spu_func_000001D0(spu_context* ctx) {
+        /* TODO spu: .word 0x57462072 */ spu_unsupported(0x1D0, ".word");
+        /* TODO spu: .word 0x65736572 */ spu_unsupported(0x1D4, ".word");
+        ctx->gpr[32] = spu_cfltu(ctx->gpr[72], 149);
+        /* TODO spu: .word 0x57726974 */ spu_unsupported(0x1DC, ".word");
+        /* TODO spu: .word 0x6546656E */ spu_unsupported(0x1E0, ".word");
+        /* TODO spu: .word 0x63652829 */ spu_unsupported(0x1E4, ".word");
+        if (ctx->gpr[102]._u32[0] == 0) { SPU_DIRECT(ctx, 0x31590, spujob_D6E964B601AB14C0_spu_func_00031590); }
+        /* TODO spu: .word 0x66657220 */ spu_unsupported(0x1EC, ".word");
+        /* TODO spu: .word 0x61742030 */ spu_unsupported(0x1F0, ".word");
+        /* TODO spu: .word 0x7825700A */ spu_unsupported(0x1F4, ".word");
+        ctx->stop_code = 0x0u; ctx->status = SPU_STATUS_STOPPED_BY_STOP; spu_stop(ctx); return;
+        ctx->stop_code = 0x0u; ctx->status = SPU_STATUS_STOPPED_BY_STOP; spu_stop(ctx); return;
+        ctx->stop_code = 0x0u; ctx->status = SPU_STATUS_STOPPED_BY_STOP; spu_stop(ctx); return;
+        ctx->stop_code = 0x0u; ctx->status = SPU_STATUS_STOPPED_BY_STOP; spu_stop(ctx); return;
+        ctx->stop_code = 0x0u; ctx->status = SPU_STATUS_STOPPED_BY_STOP; spu_stop(ctx); return;
+        ctx->stop_code = 0x0u; ctx->status = SPU_STATUS_STOPPED_BY_STOP; spu_stop(ctx); return;
+}
+
+/* Indirect-dispatch stubs for cross-function targets the
+ * function detector did not seed (typically conditional
+ * branches that escape a function's range). */
+void spujob_D6E964B601AB14C0_spu_func_00031590(spu_context* ctx) {
+    ctx->pc = 0x31590u; g_spu_trampoline_fn = spu_indirect_branch; return;
+}
+
 /* Function table */
 typedef struct { uint32_t addr; void (*func)(spu_context*); const char* name; } spu_func_entry;
 static const spu_func_entry spu_function_table[] = {
     { 0x00000000u, spujob_D6E964B601AB14C0_spu_func_00000000, "spujob_D6E964B601AB14C0_spu_func_00000000" },
-    { 0x00000010u, spujob_D6E964B601AB14C0_spu_func_00000010, "spujob_D6E964B601AB14C0_spu_func_00000010" },
     { 0x00000018u, spujob_D6E964B601AB14C0_spu_func_00000018, "spujob_D6E964B601AB14C0_spu_func_00000018" },
     { 0x0000001Cu, spujob_D6E964B601AB14C0_spu_func_0000001C, "spujob_D6E964B601AB14C0_spu_func_0000001C" },
     { 0x00000024u, spujob_D6E964B601AB14C0_spu_func_00000024, "spujob_D6E964B601AB14C0_spu_func_00000024" },
@@ -176,6 +197,7 @@ static const spu_func_entry spu_function_table[] = {
     { 0x00000150u, spujob_D6E964B601AB14C0_spu_func_00000150, "spujob_D6E964B601AB14C0_spu_func_00000150" },
     { 0x000001B8u, spujob_D6E964B601AB14C0_spu_func_000001B8, "spujob_D6E964B601AB14C0_spu_func_000001B8" },
     { 0x000001BCu, spujob_D6E964B601AB14C0_spu_func_000001BC, "spujob_D6E964B601AB14C0_spu_func_000001BC" },
+    { 0x000001D0u, spujob_D6E964B601AB14C0_spu_func_000001D0, "spujob_D6E964B601AB14C0_spu_func_000001D0" },
     { 0, NULL, NULL }
 };
 

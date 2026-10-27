@@ -64,7 +64,6 @@ void spu_trace_rt(spu_context* ctx, uint32_t rt);
 
 
 void spujob_D6E964B601AB14C0_spu_func_00000000(spu_context* ctx);
-void spujob_D6E964B601AB14C0_spu_func_00000010(spu_context* ctx);
 void spujob_D6E964B601AB14C0_spu_func_00000018(spu_context* ctx);
 void spujob_D6E964B601AB14C0_spu_func_0000001C(spu_context* ctx);
 void spujob_D6E964B601AB14C0_spu_func_00000024(spu_context* ctx);
@@ -77,6 +76,8 @@ void spujob_D6E964B601AB14C0_spu_func_0000013C(spu_context* ctx);
 void spujob_D6E964B601AB14C0_spu_func_00000150(spu_context* ctx);
 void spujob_D6E964B601AB14C0_spu_func_000001B8(spu_context* ctx);
 void spujob_D6E964B601AB14C0_spu_func_000001BC(spu_context* ctx);
+void spujob_D6E964B601AB14C0_spu_func_000001D0(spu_context* ctx);
+void spujob_D6E964B601AB14C0_spu_func_00031590(spu_context* ctx); /* external */
 
 /* Runtime glue (runtime/spu/spu_channels.c) */
 void spu_register_function(uint32_t addr, void (*fn)(spu_context*));

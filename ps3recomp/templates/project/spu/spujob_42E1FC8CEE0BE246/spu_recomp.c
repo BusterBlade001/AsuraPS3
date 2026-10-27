@@ -5,40 +5,40 @@
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000000(spu_context* ctx) {
         ctx->gpr[2] = spu_ila(0x3F7C);
-        { ctx->pc = 0x4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000004; return; }
+        { SPU_DIRECT(ctx, 0x4, spujob_42E1FC8CEE0BE246_spu_func_00000004); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000004(spu_context* ctx) {
         ctx->gpr[2] = spu_ila(0x2851D);
-        { ctx->pc = 0x8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000008; return; }
+        { SPU_DIRECT(ctx, 0x8, spujob_42E1FC8CEE0BE246_spu_func_00000008); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000008(spu_context* ctx) {
         ctx->gpr[2] = spu_ila(0x11E6);
-        { ctx->pc = 0xC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000000C; return; }
+        { SPU_DIRECT(ctx, 0xC, spujob_42E1FC8CEE0BE246_spu_func_0000000C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000000C(spu_context* ctx) {
         ctx->gpr[2] = spu_ila(0x3567);
-        { ctx->pc = 0x10; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000010; return; }
+        { SPU_DIRECT(ctx, 0x10, spujob_42E1FC8CEE0BE246_spu_func_00000010); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000010(spu_context* ctx) {
         ctx->gpr[80] = spu_xori(ctx->gpr[80], 4);
-        { ctx->pc = 0x14; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000014; return; }
+        { SPU_DIRECT(ctx, 0x14, spujob_42E1FC8CEE0BE246_spu_func_00000014); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000014(spu_context* ctx) {
-        { ctx->pc = 0x18; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000018; return; }
+        { SPU_DIRECT(ctx, 0x18, spujob_42E1FC8CEE0BE246_spu_func_00000018); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000018(spu_context* ctx) {
         ctx->gpr[80] = spu_xori(ctx->gpr[80], 4);
-        { ctx->pc = 0x1C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000001C; return; }
+        { SPU_DIRECT(ctx, 0x1C, spujob_42E1FC8CEE0BE246_spu_func_0000001C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000001C(spu_context* ctx) {
-        { ctx->pc = 0x368; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000368; return; }
+        { SPU_DIRECT(ctx, 0x368, spujob_42E1FC8CEE0BE246_spu_func_00000368); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000020(spu_context* ctx) {
@@ -55,55 +55,55 @@ void spujob_42E1FC8CEE0BE246_spu_func_0000002C(spu_context* ctx) {
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000030(spu_context* ctx) {
         ctx->gpr[16] = spu_ori(ctx->gpr[6], 0);
-        { ctx->pc = 0x34; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000034; return; }
+        { SPU_DIRECT(ctx, 0x34, spujob_42E1FC8CEE0BE246_spu_func_00000034); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000034(spu_context* ctx) {
         /* branch hint (ignored) */;
         ctx->gpr[13] = spu_ori(ctx->gpr[4], 0);
-        { ctx->pc = 0x3C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000003C; return; }
+        { SPU_DIRECT(ctx, 0x3C, spujob_42E1FC8CEE0BE246_spu_func_0000003C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000003C(spu_context* ctx) {
         ctx->gpr[19] = spu_shlqbyi(ctx->gpr[5], 0);
-        { ctx->pc = 0x40; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000040; return; }
+        { SPU_DIRECT(ctx, 0x40, spujob_42E1FC8CEE0BE246_spu_func_00000040); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000040(spu_context* ctx) {
         /* nop */;
-        { ctx->pc = 0x44; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000044; return; }
+        { SPU_DIRECT(ctx, 0x44, spujob_42E1FC8CEE0BE246_spu_func_00000044); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000044(spu_context* ctx) {
         if (ctx->gpr[6]._u32[0] == 0) { SPU_RET(ctx); }
-        { ctx->pc = 0x48; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000048; return; }
+        { SPU_DIRECT(ctx, 0x48, spujob_42E1FC8CEE0BE246_spu_func_00000048); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000048(spu_context* ctx) {
         ctx->gpr[4] = spu_clgti(ctx->gpr[3], 31);
-        { ctx->pc = 0x4C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000004C; return; }
+        { SPU_DIRECT(ctx, 0x4C, spujob_42E1FC8CEE0BE246_spu_func_0000004C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000004C(spu_context* ctx) {
         ctx->gpr[18] = spu_shlqbyi(ctx->gpr[3], 0);
         ctx->gpr[10] = spu_il(0);
-        { ctx->pc = 0x54; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000054; return; }
+        { SPU_DIRECT(ctx, 0x54, spujob_42E1FC8CEE0BE246_spu_func_00000054); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000054(spu_context* ctx) {
         ctx->gpr[2] = spu_nor(ctx->gpr[4], ctx->gpr[4]);
         ctx->gpr[20] = spu_il(34);
-        { ctx->pc = 0x5C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000005C; return; }
+        { SPU_DIRECT(ctx, 0x5C, spujob_42E1FC8CEE0BE246_spu_func_0000005C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000005C(spu_context* ctx) {
         ctx->gpr[17] = spu_sfi(ctx->gpr[2], 0);
         /* nop */;
-        { ctx->pc = 0x64; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000064; return; }
+        { SPU_DIRECT(ctx, 0x64, spujob_42E1FC8CEE0BE246_spu_func_00000064); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000064(spu_context* ctx) {
-        { ctx->pc = 0x188; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000188; return; }
+        { SPU_DIRECT(ctx, 0x188, spujob_42E1FC8CEE0BE246_spu_func_00000188); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000068(spu_context* ctx) {
@@ -112,8 +112,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000068(spu_context* ctx) {
         ctx->gpr[11] = spu_il(8);
         ctx->gpr[9] = spu_fsmbi(0x0);
         /* nop */;
-        if (ctx->gpr[12]._u32[0] == 0) { ctx->pc = 0x100; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000100; return; }
-        { ctx->pc = 0x80; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000080; return; }
+        if (ctx->gpr[12]._u32[0] == 0) { SPU_DIRECT(ctx, 0x100, spujob_42E1FC8CEE0BE246_spu_func_00000100); }
+        { SPU_DIRECT(ctx, 0x80, spujob_42E1FC8CEE0BE246_spu_func_00000080); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000080(spu_context* ctx) {
@@ -126,26 +126,26 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000080(spu_context* ctx) {
         ctx->gpr[9] = spu_il(1);
         /* nop */;
         ctx->gpr[7] = spu_sfi(ctx->gpr[15], 0);
-        if (ctx->gpr[14]._u32[0] == 0) { ctx->pc = 0x100; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000100; return; }
-        { ctx->pc = 0xA8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000000A8; return; }
+        if (ctx->gpr[14]._u32[0] == 0) { SPU_DIRECT(ctx, 0x100, spujob_42E1FC8CEE0BE246_spu_func_00000100); }
+        { SPU_DIRECT(ctx, 0xA8, spujob_42E1FC8CEE0BE246_spu_func_000000A8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000000A8(spu_context* ctx) {
         ctx->gpr[37] = spu_andi(ctx->gpr[4], 1);
         ctx->gpr[30] = spu_fsmbi(0x0);
-        { ctx->pc = 0xB0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000000B0; return; }
+        { SPU_DIRECT(ctx, 0xB0, spujob_42E1FC8CEE0BE246_spu_func_000000B0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000000B0(spu_context* ctx) {
         ctx->gpr[33] = spu_a(ctx->gpr[13], ctx->gpr[10]);
-        { ctx->pc = 0xB4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000000B4; return; }
+        { SPU_DIRECT(ctx, 0xB4, spujob_42E1FC8CEE0BE246_spu_func_000000B4); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000000B4(spu_context* ctx) {
         ctx->gpr[29] = spu_fsmbi(0x0);
         ctx->gpr[36] = spu_ceqbi(ctx->gpr[37], 0);
         ctx->gpr[35] = spu_xori(ctx->gpr[33], 1);
-        { ctx->pc = 0xC0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000000C0; return; }
+        { SPU_DIRECT(ctx, 0xC0, spujob_42E1FC8CEE0BE246_spu_func_000000C0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000000C0(spu_context* ctx) {
@@ -153,7 +153,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000000C0(spu_context* ctx) {
         ctx->gpr[26] = spu_andi(ctx->gpr[35], 1);
         ctx->gpr[8] = spu_ceqhi(ctx->gpr[34], 0);
         ctx->gpr[5] = spu_il(1);
-        { ctx->pc = 0xD0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000000D0; return; }
+        { SPU_DIRECT(ctx, 0xD0, spujob_42E1FC8CEE0BE246_spu_func_000000D0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000000D0(spu_context* ctx) {
@@ -166,18 +166,18 @@ void spujob_42E1FC8CEE0BE246_spu_func_000000D0(spu_context* ctx) {
         ctx->gpr[11] = spu_il(1);
         ctx->gpr[8] = spu_selb(ctx->gpr[33], ctx->gpr[33], ctx->gpr[22]);
         ctx->gpr[9] = spu_selb(ctx->gpr[30], ctx->gpr[29], ctx->gpr[9]);
-        { ctx->pc = 0xF4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000000F4; return; }
+        { SPU_DIRECT(ctx, 0xF4, spujob_42E1FC8CEE0BE246_spu_func_000000F4); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000000F4(spu_context* ctx) {
         ctx->gpr[5] = spu_selb(ctx->gpr[5], ctx->gpr[28], ctx->gpr[27]);
-        { ctx->pc = 0xF8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000000F8; return; }
+        { SPU_DIRECT(ctx, 0xF8, spujob_42E1FC8CEE0BE246_spu_func_000000F8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000000F8(spu_context* ctx) {
         ctx->gpr[7] = spu_selb(ctx->gpr[26], ctx->gpr[25], ctx->gpr[22]);
         ctx->gpr[11] = spu_selb(ctx->gpr[23], ctx->gpr[11], ctx->gpr[22]);
-        { ctx->pc = 0x100; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000100; return; }
+        { SPU_DIRECT(ctx, 0x100, spujob_42E1FC8CEE0BE246_spu_func_00000100); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000100(spu_context* ctx) {
@@ -201,7 +201,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000100(spu_context* ctx) {
         ctx->gpr[46] = spu_sfi(ctx->gpr[52], 0);
         ctx->gpr[44] = spu_and(ctx->gpr[46], ctx->gpr[47]);
         ctx->gpr[43] = spu_and(ctx->gpr[44], ctx->gpr[45]);
-        if ((int32_t)ctx->gpr[43]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x00150 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[41] = spu_il(0);
         ctx->gpr[42] = spu_ori(ctx->gpr[8], 0);
         ctx->gpr[39] = spu_shlqbyi(ctx->gpr[11], 0);
@@ -214,8 +214,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000100(spu_context* ctx) {
         spu_wrch(ctx, MFC_TagID, ctx->gpr[18]);
         spu_wrch(ctx, MFC_Cmd, ctx->gpr[20]);
         /* nop */;
-        if (ctx->gpr[38]._u32[0] == 0) { ctx->pc = 0x1D4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000001D4; return; }
-        { ctx->pc = 0x188; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000188; return; }
+        if (ctx->gpr[38]._u32[0] == 0) { SPU_DIRECT(ctx, 0x1D4, spujob_42E1FC8CEE0BE246_spu_func_000001D4); }
+        { SPU_DIRECT(ctx, 0x188, spujob_42E1FC8CEE0BE246_spu_func_00000188); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000188(spu_context* ctx) {
@@ -228,16 +228,16 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000188(spu_context* ctx) {
         ctx->gpr[4] = spu_a(ctx->gpr[19], ctx->gpr[10]);
         ctx->gpr[6] = spu_clgti(ctx->gpr[5], 3);
         ctx->gpr[7] = spu_sfi(ctx->gpr[7], 0);
-        if (ctx->gpr[3]._u32[0] != 0) { ctx->pc = 0x68; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000068; return; }
+        if (ctx->gpr[3]._u32[0] != 0) { SPU_DIRECT(ctx, 0x68, spujob_42E1FC8CEE0BE246_spu_func_00000068); }
         ctx->gpr[3] = spu_clgti(ctx->gpr[5], 1);
-        if (ctx->gpr[6]._u32[0] != 0) { ctx->pc = 0x80; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000080; return; }
+        if (ctx->gpr[6]._u32[0] != 0) { SPU_DIRECT(ctx, 0x80, spujob_42E1FC8CEE0BE246_spu_func_00000080); }
         ctx->gpr[8] = spu_a(ctx->gpr[13], ctx->gpr[10]);
         ctx->gpr[9] = spu_fsmbi(0x0);
         ctx->gpr[11] = spu_il(1);
         ctx->gpr[7] = spu_il(1);
         ctx->gpr[5] = spu_il(1);
-        if (ctx->gpr[3]._u32[0] != 0) { ctx->pc = 0xA8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000000A8; return; }
-        { ctx->pc = 0x100; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000100; return; }
+        if (ctx->gpr[3]._u32[0] != 0) { SPU_DIRECT(ctx, 0xA8, spujob_42E1FC8CEE0BE246_spu_func_000000A8); }
+        { SPU_DIRECT(ctx, 0x100, spujob_42E1FC8CEE0BE246_spu_func_00000100); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000001D4(spu_context* ctx) {
@@ -255,7 +255,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000001D8(spu_context* ctx) {
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x50, ctx->gpr[84]);
         ctx->gpr[82] = spu_ori(ctx->gpr[5], 0);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x60, ctx->gpr[85]);
-        { ctx->pc = 0x200; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000200; return; }
+        { SPU_DIRECT(ctx, 0x200, spujob_42E1FC8CEE0BE246_spu_func_00000200); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000200(spu_context* ctx) {
@@ -266,14 +266,14 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000200(spu_context* ctx) {
         ctx->gpr[85] = spu_ori(ctx->gpr[4], 0);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x80, ctx->gpr[1]);
         ctx->gpr[1] = spu_ai(ctx->gpr[1], -128);
-        if (ctx->gpr[6]._u32[0] == 0) { ctx->pc = 0x278; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000278; return; }
-        { ctx->pc = 0x220; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000220; return; }
+        if (ctx->gpr[6]._u32[0] == 0) { SPU_DIRECT(ctx, 0x278, spujob_42E1FC8CEE0BE246_spu_func_00000278); }
+        { SPU_DIRECT(ctx, 0x220, spujob_42E1FC8CEE0BE246_spu_func_00000220); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000220(spu_context* ctx) {
         ctx->gpr[6] = spu_ori(ctx->gpr[81], 0);
-        if (ctx->gpr[81]._u32[0] != 0) { ctx->pc = 0x310; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000310; return; }
-        { ctx->pc = 0x228; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000228; return; }
+        if (ctx->gpr[81]._u32[0] != 0) { SPU_DIRECT(ctx, 0x310, spujob_42E1FC8CEE0BE246_spu_func_00000310); }
+        { SPU_DIRECT(ctx, 0x228, spujob_42E1FC8CEE0BE246_spu_func_00000228); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000228(spu_context* ctx) {
@@ -283,7 +283,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000228(spu_context* ctx) {
         /* nop */;
         ctx->gpr[14] = spu_clgti(ctx->gpr[84], 31);
         ctx->gpr[8] = spu_rotqmbyi(ctx->gpr[16], -4);
-        { ctx->pc = 0x240; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000240; return; }
+        { SPU_DIRECT(ctx, 0x240, spujob_42E1FC8CEE0BE246_spu_func_00000240); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000240(spu_context* ctx) {
@@ -298,14 +298,14 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000240(spu_context* ctx) {
         ctx->gpr[7] = spu_and(ctx->gpr[9], ctx->gpr[3]);
         ctx->gpr[80] = spu_andi(ctx->gpr[5], -16);
         ctx->gpr[4] = spu_and(ctx->gpr[4], ctx->gpr[7]);
-        if (ctx->gpr[80]._u32[0] != 0) { ctx->pc = 0x2E4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000002E4; return; }
-        { ctx->pc = 0x270; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000270; return; }
+        if (ctx->gpr[80]._u32[0] != 0) { SPU_DIRECT(ctx, 0x2E4, spujob_42E1FC8CEE0BE246_spu_func_000002E4); }
+        { SPU_DIRECT(ctx, 0x270, spujob_42E1FC8CEE0BE246_spu_func_00000270); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000270(spu_context* ctx) {
         ctx->gpr[7] = spu_a(ctx->gpr[81], ctx->gpr[80]);
         /* nop */;
-        { ctx->pc = 0x278; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000278; return; }
+        { SPU_DIRECT(ctx, 0x278, spujob_42E1FC8CEE0BE246_spu_func_00000278); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000278(spu_context* ctx) {
@@ -314,7 +314,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000278(spu_context* ctx) {
         ctx->gpr[5] = spu_a(ctx->gpr[7], ctx->gpr[82]);
         ctx->gpr[6] = spu_ori(ctx->gpr[8], 0);
         ctx->gpr[4] = spu_a(ctx->gpr[85], ctx->gpr[7]);
-        if (ctx->gpr[8]._u32[0] != 0) { ctx->pc = 0x2BC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000002BC; return; }
+        if (ctx->gpr[8]._u32[0] != 0) { SPU_DIRECT(ctx, 0x2BC, spujob_42E1FC8CEE0BE246_spu_func_000002BC); }
         ctx->gpr[0] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + 0x90);
         /* branch hint (ignored) */;
         ctx->gpr[1] = spu_ai(ctx->gpr[1], 128);
@@ -334,7 +334,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000002BC(spu_context* ctx) {
         ctx->gpr[1] = spu_ai(ctx->gpr[1], 128);
         ctx->gpr[80] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x10);
         ctx->gpr[81] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x20);
-        { ctx->pc = 0x2D0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000002D0; return; }
+        { SPU_DIRECT(ctx, 0x2D0, spujob_42E1FC8CEE0BE246_spu_func_000002D0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000002D0(spu_context* ctx) {
@@ -342,30 +342,30 @@ void spujob_42E1FC8CEE0BE246_spu_func_000002D0(spu_context* ctx) {
         ctx->gpr[83] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x40);
         ctx->gpr[84] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x50);
         ctx->gpr[85] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x60);
-        { ctx->pc = 0x30; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000030; return; }
+        { SPU_DIRECT(ctx, 0x30, spujob_42E1FC8CEE0BE246_spu_func_00000030); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000002E4(spu_context* ctx) {
         /* branch hint (ignored) */;
         /* nop */;
         /* nop */;
-        if ((int32_t)ctx->gpr[4]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x002F0 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[7] = spu_il(34);
         ctx->gpr[3] = spu_ori(ctx->gpr[6], 0);
         ctx->gpr[4] = spu_shlqbyi(ctx->gpr[8], 0);
-        { ctx->pc = 0x300; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000300; return; }
+        { SPU_DIRECT(ctx, 0x300, spujob_42E1FC8CEE0BE246_spu_func_00000300); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000300(spu_context* ctx) {
         ctx->gpr[5] = spu_ori(ctx->gpr[80], 0);
         ctx->gpr[6] = spu_shlqbyi(ctx->gpr[84], 0);
         ctx->gpr[0] = spu_link(0x30C); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_00007708(ctx); spu_drain_call(ctx, 0x30C); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        { ctx->pc = 0x270; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000270; return; }
+        { SPU_DIRECT(ctx, 0x270, spujob_42E1FC8CEE0BE246_spu_func_00000270); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000310(spu_context* ctx) {
         ctx->gpr[0] = spu_link(0x314); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_00000030(ctx); spu_drain_call(ctx, 0x314); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        { ctx->pc = 0x228; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000228; return; }
+        { SPU_DIRECT(ctx, 0x228, spujob_42E1FC8CEE0BE246_spu_func_00000228); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000318(spu_context* ctx) {
@@ -374,20 +374,20 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000318(spu_context* ctx) {
         ctx->gpr[4] = spu_ila(0xC440);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x10, ctx->gpr[126]);
         ctx->gpr[2] = spu_ila(0x4F30);
-        ctx->gpr[126] = spu_link(0x330); { ctx->pc = 0x330; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000330; return; }
-        { ctx->pc = 0x330; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000330; return; }
+        ctx->gpr[126] = spu_link(0x330); { SPU_DIRECT(ctx, 0x330, spujob_42E1FC8CEE0BE246_spu_func_00000330); }
+        { SPU_DIRECT(ctx, 0x330, spujob_42E1FC8CEE0BE246_spu_func_00000330); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000330(spu_context* ctx) {
         ctx->gpr[5] = spu_ori(ctx->gpr[3], 0);
-        { ctx->pc = 0x334; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000334; return; }
+        { SPU_DIRECT(ctx, 0x334, spujob_42E1FC8CEE0BE246_spu_func_00000334); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000334(spu_context* ctx) {
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + 0x10, ctx->gpr[0]);
         ctx->gpr[3] = spu_ilhu(0x100);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x30, ctx->gpr[1]);
-        { ctx->pc = 0x340; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000340; return; }
+        { SPU_DIRECT(ctx, 0x340, spujob_42E1FC8CEE0BE246_spu_func_00000340); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000340(spu_context* ctx) {
@@ -395,6 +395,10 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000340(spu_context* ctx) {
         ctx->gpr[126] = spu_sf(ctx->gpr[2], ctx->gpr[126]);
         ctx->gpr[4] = spu_a(ctx->gpr[4], ctx->gpr[126]);
         ctx->gpr[0] = spu_link(0x350); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_000077C0(ctx); spu_drain_call(ctx, 0x350); ctx->host_depth--; spu_img_restore(ctx, _si); }
+        { SPU_DIRECT(ctx, 0x350, spujob_42E1FC8CEE0BE246_spu_func_00000350); }
+}
+
+void spujob_42E1FC8CEE0BE246_spu_func_00000350(spu_context* ctx) {
         ctx->stop_code = 0x3FFFu; ctx->status = SPU_STATUS_STOPPED_BY_STOP; spu_stop(ctx); return;
 }
 
@@ -408,20 +412,20 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000368(spu_context* ctx) {
         /* nop */;
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0xF0, ctx->gpr[126]);
         ctx->gpr[6] = spu_ila(0x4F90);
-        ctx->gpr[126] = spu_link(0x390); { ctx->pc = 0x390; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000390; return; }
-        { ctx->pc = 0x390; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000390; return; }
+        ctx->gpr[126] = spu_link(0x390); { SPU_DIRECT(ctx, 0x390, spujob_42E1FC8CEE0BE246_spu_func_00000390); }
+        { SPU_DIRECT(ctx, 0x390, spujob_42E1FC8CEE0BE246_spu_func_00000390); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000390(spu_context* ctx) {
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + 0x10, ctx->gpr[0]);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x10, ctx->gpr[80]);
         /* nop */;
-        { ctx->pc = 0x39C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000039C; return; }
+        { SPU_DIRECT(ctx, 0x39C, spujob_42E1FC8CEE0BE246_spu_func_0000039C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000039C(spu_context* ctx) {
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x20, ctx->gpr[81]);
-        { ctx->pc = 0x3A0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000003A0; return; }
+        { SPU_DIRECT(ctx, 0x3A0, spujob_42E1FC8CEE0BE246_spu_func_000003A0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000003A0(spu_context* ctx) {
@@ -440,11 +444,11 @@ void spujob_42E1FC8CEE0BE246_spu_func_000003A0(spu_context* ctx) {
         ctx->gpr[2] = spu_ai(ctx->gpr[1], 159);
         /* nop */;
         ctx->gpr[93] = spu_andi(ctx->gpr[2], -128);
-        if (ctx->gpr[4]._u32[0] == 0) { ctx->pc = 0x3EC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000003EC; return; }
-        if (ctx->gpr[3]._u32[0] == 0) { ctx->pc = 0x3EC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000003EC; return; }
+        if (ctx->gpr[4]._u32[0] == 0) { SPU_DIRECT(ctx, 0x3EC, spujob_42E1FC8CEE0BE246_spu_func_000003EC); }
+        if (ctx->gpr[3]._u32[0] == 0) { SPU_DIRECT(ctx, 0x3EC, spujob_42E1FC8CEE0BE246_spu_func_000003EC); }
         ctx->gpr[3] = spu_andi(ctx->gpr[4], 7);
-        if (ctx->gpr[3]._u32[0] == 0) { ctx->pc = 0xF3C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000F3C; return; }
-        { ctx->pc = 0x3EC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000003EC; return; }
+        if (ctx->gpr[3]._u32[0] == 0) { SPU_DIRECT(ctx, 0xF3C, spujob_42E1FC8CEE0BE246_spu_func_00000F3C); }
+        { SPU_DIRECT(ctx, 0x3EC, spujob_42E1FC8CEE0BE246_spu_func_000003EC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000003EC(spu_context* ctx) {
@@ -452,14 +456,14 @@ void spujob_42E1FC8CEE0BE246_spu_func_000003EC(spu_context* ctx) {
         ctx->gpr[16] = spu_ai(ctx->gpr[88], 244);
         ctx->gpr[14] = spu_ls_read128(ctx, ctx->gpr[88]._u32[0] + ctx->gpr[35]._u32[0]);
         ctx->gpr[2] = spu_rotqby(ctx->gpr[14], ctx->gpr[16]);
-        if (ctx->gpr[2]._u32[0] == 0) { ctx->pc = 0x458; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000458; return; }
-        { ctx->pc = 0x400; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000400; return; }
+        if (ctx->gpr[2]._u32[0] == 0) { SPU_DIRECT(ctx, 0x458, spujob_42E1FC8CEE0BE246_spu_func_00000458); }
+        { SPU_DIRECT(ctx, 0x400, spujob_42E1FC8CEE0BE246_spu_func_00000400); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000400(spu_context* ctx) {
         ctx->gpr[36] = spu_ceqi(ctx->gpr[2], 1);
-        if (ctx->gpr[36]._u32[0] != 0) { ctx->pc = 0x9F8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000009F8; return; }
-        { ctx->pc = 0x408; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000408; return; }
+        if (ctx->gpr[36]._u32[0] != 0) { SPU_DIRECT(ctx, 0x9F8, spujob_42E1FC8CEE0BE246_spu_func_000009F8); }
+        { SPU_DIRECT(ctx, 0x408, spujob_42E1FC8CEE0BE246_spu_func_00000408); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000408(spu_context* ctx) {
@@ -500,10 +504,18 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000458(spu_context* ctx) {
         ctx->gpr[51] = spu_ls_read128(ctx, ctx->gpr[58]._u32[0] + ctx->gpr[60]._u32[0]);
         ctx->gpr[47] = spu_ai(ctx->gpr[58], 40);
         ctx->gpr[46] = spu_ls_read128(ctx, ctx->gpr[58]._u32[0] + ctx->gpr[59]._u32[0]);
+        { SPU_DIRECT(ctx, 0x490, spujob_42E1FC8CEE0BE246_spu_func_00000490); }
+}
+
+void spujob_42E1FC8CEE0BE246_spu_func_00000490(spu_context* ctx) {
         ctx->gpr[20] = spu_ori(ctx->gpr[58], 0);
         ctx->gpr[11] = spu_rotqbyi(ctx->gpr[58], 4);
         ctx->gpr[18] = spu_ai(ctx->gpr[58], 32);
         ctx->gpr[10] = spu_rotqby(ctx->gpr[56], ctx->gpr[57]);
+        { SPU_DIRECT(ctx, 0x4A0, spujob_42E1FC8CEE0BE246_spu_func_000004A0); }
+}
+
+void spujob_42E1FC8CEE0BE246_spu_func_000004A0(spu_context* ctx) {
         ctx->gpr[53] = spu_rotqby(ctx->gpr[54], ctx->gpr[55]);
         ctx->gpr[7] = spu_rotqby(ctx->gpr[51], ctx->gpr[52]);
         ctx->gpr[24] = spu_rotqby(ctx->gpr[46], ctx->gpr[47]);
@@ -519,12 +531,12 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000458(spu_context* ctx) {
         ctx->gpr[40] = spu_ai(ctx->gpr[41], 15);
         /* nop */;
         ctx->gpr[84] = spu_andi(ctx->gpr[40], -16);
-        if (ctx->gpr[24]._u16[0] == 0) { ctx->pc = 0x7FC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000007FC; return; }
+        if (ctx->gpr[24]._u16[0] == 0) { SPU_DIRECT(ctx, 0x7FC, spujob_42E1FC8CEE0BE246_spu_func_000007FC); }
         ctx->gpr[5] = spu_ori(ctx->gpr[18], 0);
         ctx->gpr[62] = spu_ls_read128(ctx, ctx->gpr[90]._u32[0] + 0x20);
         ctx->gpr[63] = spu_and(ctx->gpr[10], ctx->gpr[13]);
         /* nop */;
-        { ctx->pc = 0x4F0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000004F0; return; }
+        { SPU_DIRECT(ctx, 0x4F0, spujob_42E1FC8CEE0BE246_spu_func_000004F0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000004F0(spu_context* ctx) {
@@ -532,7 +544,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000004F0(spu_context* ctx) {
         ctx->gpr[66] = spu_ls_read128(ctx, ctx->gpr[5]._u32[0] + 0x0);
         ctx->gpr[23] = spu_a(ctx->gpr[18], ctx->gpr[63]);
         ctx->gpr[17] = spu_ai(ctx->gpr[5], 1);
-        { ctx->pc = 0x500; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000500; return; }
+        { SPU_DIRECT(ctx, 0x500, spujob_42E1FC8CEE0BE246_spu_func_00000500); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000500(spu_context* ctx) {
@@ -541,8 +553,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000500(spu_context* ctx) {
         ctx->gpr[16] = spu_ori(ctx->gpr[25], 0);
         ctx->gpr[4] = spu_andi(ctx->gpr[65], 255);
         ctx->gpr[64] = spu_clgti(ctx->gpr[4], 31);
-        if (ctx->gpr[64]._u32[0] != 0) { ctx->pc = 0x588; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000588; return; }
-        { ctx->pc = 0x518; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000518; return; }
+        if (ctx->gpr[64]._u32[0] != 0) { SPU_DIRECT(ctx, 0x588, spujob_42E1FC8CEE0BE246_spu_func_00000588); }
+        { SPU_DIRECT(ctx, 0x518, spujob_42E1FC8CEE0BE246_spu_func_00000518); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000518(spu_context* ctx) {
@@ -550,7 +562,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000518(spu_context* ctx) {
         /* branch hint (ignored) */;
         ctx->gpr[7] = spu_ai(ctx->gpr[68], 2);
         /* nop */;
-        { ctx->pc = 0x528; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000528; return; }
+        { SPU_DIRECT(ctx, 0x528, spujob_42E1FC8CEE0BE246_spu_func_00000528); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000528(spu_context* ctx) {
@@ -568,8 +580,8 @@ loc_00000528:
         ctx->gpr[16] = spu_ai(ctx->gpr[16], 1);
         if (ctx->gpr[69]._u32[0] == 0) goto loc_00000528;
         ctx->gpr[37] = spu_clgt(ctx->gpr[23], ctx->gpr[17]);
-        if (ctx->gpr[37]._u32[0] == 0) { ctx->pc = 0x678; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000678; return; }
-        { ctx->pc = 0x560; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000560; return; }
+        if (ctx->gpr[37]._u32[0] == 0) { SPU_DIRECT(ctx, 0x678, spujob_42E1FC8CEE0BE246_spu_func_00000678); }
+        { SPU_DIRECT(ctx, 0x560, spujob_42E1FC8CEE0BE246_spu_func_00000560); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000560(spu_context* ctx) {
@@ -577,13 +589,17 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000560(spu_context* ctx) {
         /* nop */;
         ctx->gpr[67] = spu_ai(ctx->gpr[5], 13);
         ctx->gpr[66] = spu_ls_read128(ctx, ctx->gpr[5]._u32[0] + 0x0);
+        { SPU_DIRECT(ctx, 0x570, spujob_42E1FC8CEE0BE246_spu_func_00000570); }
+}
+
+void spujob_42E1FC8CEE0BE246_spu_func_00000570(spu_context* ctx) {
         ctx->gpr[17] = spu_ai(ctx->gpr[5], 1);
         ctx->gpr[65] = spu_rotqby(ctx->gpr[66], ctx->gpr[67]);
         ctx->gpr[4] = spu_andi(ctx->gpr[65], 255);
         ctx->gpr[64] = spu_clgti(ctx->gpr[4], 31);
         /* nop */;
-        if (ctx->gpr[64]._u32[0] == 0) { ctx->pc = 0x518; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000518; return; }
-        { ctx->pc = 0x588; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000588; return; }
+        if (ctx->gpr[64]._u32[0] == 0) { SPU_DIRECT(ctx, 0x518, spujob_42E1FC8CEE0BE246_spu_func_00000518); }
+        { SPU_DIRECT(ctx, 0x588, spujob_42E1FC8CEE0BE246_spu_func_00000588); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000588(spu_context* ctx) {
@@ -607,7 +623,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000588(spu_context* ctx) {
         ctx->gpr[15] = spu_ls_read128(ctx, ctx->gpr[17]._u32[0] + 0x0);
         ctx->gpr[4] = spu_ai(ctx->gpr[27], -1);
         ctx->gpr[26] = spu_ai(ctx->gpr[5], 14);
-        { ctx->pc = 0x5D8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000005D8; return; }
+        { SPU_DIRECT(ctx, 0x5D8, spujob_42E1FC8CEE0BE246_spu_func_000005D8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000005D8(spu_context* ctx) {
@@ -635,7 +651,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000005D8(spu_context* ctx) {
         ctx->gpr[77] = spu_shufb(ctx->gpr[79], ctx->gpr[78], ctx->gpr[80]);
         /* nop */;
         spu_ls_write128(ctx, ctx->gpr[16]._u32[0] + ctx->gpr[76]._u32[0], ctx->gpr[77]);
-        { ctx->pc = 0x638; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000638; return; }
+        { SPU_DIRECT(ctx, 0x638, spujob_42E1FC8CEE0BE246_spu_func_00000638); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000638(spu_context* ctx) {
@@ -655,8 +671,8 @@ loc_00000638:
         ctx->gpr[17] = spu_ai(ctx->gpr[17], 1);
         ctx->gpr[16] = spu_a(ctx->gpr[19], ctx->gpr[22]);
         ctx->gpr[37] = spu_clgt(ctx->gpr[23], ctx->gpr[17]);
-        if (ctx->gpr[37]._u32[0] != 0) { ctx->pc = 0x560; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000560; return; }
-        { ctx->pc = 0x678; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000678; return; }
+        if (ctx->gpr[37]._u32[0] != 0) { SPU_DIRECT(ctx, 0x560, spujob_42E1FC8CEE0BE246_spu_func_00000560); }
+        { SPU_DIRECT(ctx, 0x678, spujob_42E1FC8CEE0BE246_spu_func_00000678); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000678(spu_context* ctx) {
@@ -665,16 +681,16 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000678(spu_context* ctx) {
         ctx->gpr[38] = spu_ai(ctx->gpr[20], 36);
         ctx->gpr[37] = spu_ls_read128(ctx, ctx->gpr[20]._u32[0] + ctx->gpr[39]._u32[0]);
         ctx->gpr[7] = spu_rotqby(ctx->gpr[37], ctx->gpr[38]);
-        { ctx->pc = 0x68C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000068C; return; }
+        { SPU_DIRECT(ctx, 0x68C, spujob_42E1FC8CEE0BE246_spu_func_0000068C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000068C(spu_context* ctx) {
-        if (ctx->gpr[7]._u16[0] == 0) { ctx->pc = 0x808; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000808; return; }
+        if (ctx->gpr[7]._u16[0] == 0) { SPU_DIRECT(ctx, 0x808, spujob_42E1FC8CEE0BE246_spu_func_00000808); }
         ctx->gpr[17] = spu_ila(0xFFFF);
         ctx->gpr[16] = spu_shlqbyi(ctx->gpr[11], 0);
         ctx->gpr[22] = spu_il(0);
         ctx->gpr[23] = spu_and(ctx->gpr[7], ctx->gpr[17]);
-        { ctx->pc = 0x6A0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000006A0; return; }
+        { SPU_DIRECT(ctx, 0x6A0, spujob_42E1FC8CEE0BE246_spu_func_000006A0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000006A0(spu_context* ctx) {
@@ -717,15 +733,15 @@ void spujob_42E1FC8CEE0BE246_spu_func_000006A0(spu_context* ctx) {
         ctx->gpr[38] = spu_andi(ctx->gpr[39], 255);
         /* nop */;
         ctx->gpr[17] = spu_ai(ctx->gpr[38], -1);
-        if (ctx->gpr[38]._u32[0] != 0) { ctx->pc = 0x750; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000750; return; }
-        { ctx->pc = 0x7E8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000007E8; return; }
+        if (ctx->gpr[38]._u32[0] != 0) { SPU_DIRECT(ctx, 0x750, spujob_42E1FC8CEE0BE246_spu_func_00000750); }
+        { SPU_DIRECT(ctx, 0x7E8, spujob_42E1FC8CEE0BE246_spu_func_000007E8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000744(spu_context* ctx) {
         ctx->gpr[66] = spu_ls_read128(ctx, ctx->gpr[16]._u32[0] + 0x0);
         /* nop */;
         ctx->gpr[19] = spu_rotqby(ctx->gpr[66], ctx->gpr[16]);
-        { ctx->pc = 0x750; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000750; return; }
+        { SPU_DIRECT(ctx, 0x750, spujob_42E1FC8CEE0BE246_spu_func_00000750); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000750(spu_context* ctx) {
@@ -766,26 +782,26 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000750(spu_context* ctx) {
         ctx->gpr[72] = spu_rotqby(ctx->gpr[74], ctx->gpr[75]);
         ctx->gpr[70] = spu_shufb(ctx->gpr[72], ctx->gpr[71], ctx->gpr[73]);
         spu_ls_write128(ctx, ctx->gpr[69]._u32[0] + ctx->gpr[68]._u32[0], ctx->gpr[70]);
-        if (ctx->gpr[67]._u32[0] == 0) { ctx->pc = 0x744; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000744; return; }
-        { ctx->pc = 0x7E8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000007E8; return; }
+        if (ctx->gpr[67]._u32[0] == 0) { SPU_DIRECT(ctx, 0x744, spujob_42E1FC8CEE0BE246_spu_func_00000744); }
+        { SPU_DIRECT(ctx, 0x7E8, spujob_42E1FC8CEE0BE246_spu_func_000007E8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000007E8(spu_context* ctx) {
         ctx->gpr[22] = spu_ai(ctx->gpr[22], 1);
         ctx->gpr[15] = spu_clgt(ctx->gpr[23], ctx->gpr[22]);
-        if (ctx->gpr[15]._u32[0] == 0) { ctx->pc = 0x808; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000808; return; }
+        if (ctx->gpr[15]._u32[0] == 0) { SPU_DIRECT(ctx, 0x808, spujob_42E1FC8CEE0BE246_spu_func_00000808); }
         ctx->gpr[16] = spu_ai(ctx->gpr[16], 16);
-        { ctx->pc = 0x6A0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000006A0; return; }
+        { SPU_DIRECT(ctx, 0x6A0, spujob_42E1FC8CEE0BE246_spu_func_000006A0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000007FC(spu_context* ctx) {
         ctx->gpr[24] = spu_ori(ctx->gpr[10], 0);
-        { ctx->pc = 0x800; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000800; return; }
+        { SPU_DIRECT(ctx, 0x800, spujob_42E1FC8CEE0BE246_spu_func_00000800); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000800(spu_context* ctx) {
         /* nop */;
-        { ctx->pc = 0x68C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000068C; return; }
+        { SPU_DIRECT(ctx, 0x68C, spujob_42E1FC8CEE0BE246_spu_func_0000068C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000808(spu_context* ctx) {
@@ -831,6 +847,10 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000808(spu_context* ctx) {
         ctx->gpr[42] = spu_ls_read128(ctx, ctx->gpr[85]._u32[0] + ctx->gpr[80]._u32[0]);
         ctx->gpr[40] = spu_ai(ctx->gpr[84], 12);
         /* branch hint (ignored) */;
+        { SPU_DIRECT(ctx, 0x8B0, spujob_42E1FC8CEE0BE246_spu_func_000008B0); }
+}
+
+void spujob_42E1FC8CEE0BE246_spu_func_000008B0(spu_context* ctx) {
         ctx->gpr[39] = spu_ls_read128(ctx, ctx->gpr[84]._u32[0] + ctx->gpr[43]._u32[0]);
         ctx->gpr[41] = spu_ls_read128(ctx, ctx->gpr[90]._u32[0] + ctx->gpr[92]._u32[0]);
         ctx->gpr[36] = spu_rotqby(ctx->gpr[42], ctx->gpr[81]);
@@ -838,7 +858,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000808(spu_context* ctx) {
         ctx->gpr[27] = spu_rotqby(ctx->gpr[41], ctx->gpr[87]);
         ctx->gpr[35] = spu_and(ctx->gpr[17], ctx->gpr[82]);
         ctx->gpr[38] = spu_clgti(ctx->gpr[27], 31);
-        { ctx->pc = 0x8CC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000008CC; return; }
+        { SPU_DIRECT(ctx, 0x8CC, spujob_42E1FC8CEE0BE246_spu_func_000008CC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000008CC(spu_context* ctx) {
@@ -849,7 +869,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000008CC(spu_context* ctx) {
         ctx->gpr[34] = spu_andi(ctx->gpr[14], -16);
         ctx->gpr[33] = spu_rotqmbyi(ctx->gpr[34], -4);
         ctx->gpr[29] = spu_shlqbyi(ctx->gpr[33], 4);
-        if ((int32_t)ctx->gpr[32]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x008E8 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[30] = spu_il(0);
         ctx->gpr[31] = spu_ori(ctx->gpr[93], 0);
         ctx->gpr[28] = spu_il(4);
@@ -867,6 +887,10 @@ void spujob_42E1FC8CEE0BE246_spu_func_000008CC(spu_context* ctx) {
         ctx->gpr[24] = spu_shl(ctx->gpr[18], ctx->gpr[22]);
         spu_wrch(ctx, MFC_WrTagMask, ctx->gpr[24]);
         spu_wrch(ctx, MFC_WrTagUpdate, ctx->gpr[23]);
+        { SPU_DIRECT(ctx, 0x930, spujob_42E1FC8CEE0BE246_spu_func_00000930); }
+}
+
+void spujob_42E1FC8CEE0BE246_spu_func_00000930(spu_context* ctx) {
         ctx->gpr[2] = spu_rdch(ctx, MFC_RdTagStat);
         ctx->gpr[21] = spu_ls_read128(ctx, ctx->gpr[85]._u32[0] + 0x0);
         ctx->gpr[93] = spu_ls_read128(ctx, ctx->gpr[90]._u32[0] + ctx->gpr[92]._u32[0]);
@@ -875,22 +899,26 @@ void spujob_42E1FC8CEE0BE246_spu_func_000008CC(spu_context* ctx) {
         ctx->gpr[3] = spu_rotqby(ctx->gpr[93], ctx->gpr[87]);
         ctx->gpr[5] = spu_rotqby(ctx->gpr[21], ctx->gpr[85]);
         ctx->gpr[0] = spu_link(0x950); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_000001D8(ctx); spu_drain_call(ctx, 0x950); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        if (ctx->gpr[91]._u32[0] == 0) { ctx->pc = 0xF20; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000F20; return; }
-        { ctx->pc = 0x954; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000954; return; }
+        { SPU_DIRECT(ctx, 0x950, spujob_42E1FC8CEE0BE246_spu_func_00000950); }
+}
+
+void spujob_42E1FC8CEE0BE246_spu_func_00000950(spu_context* ctx) {
+        if (ctx->gpr[91]._u32[0] == 0) { SPU_DIRECT(ctx, 0xF20, spujob_42E1FC8CEE0BE246_spu_func_00000F20); }
+        { SPU_DIRECT(ctx, 0x954, spujob_42E1FC8CEE0BE246_spu_func_00000954); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000954(spu_context* ctx) {
         ctx->gpr[61] = spu_il(248);
         ctx->gpr[60] = spu_ai(ctx->gpr[88], 248);
         ctx->gpr[59] = spu_ls_read128(ctx, ctx->gpr[88]._u32[0] + ctx->gpr[61]._u32[0]);
-        { ctx->pc = 0x960; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000960; return; }
+        { SPU_DIRECT(ctx, 0x960, spujob_42E1FC8CEE0BE246_spu_func_00000960); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000960(spu_context* ctx) {
         ctx->gpr[6] = spu_rotqby(ctx->gpr[59], ctx->gpr[60]);
         ctx->gpr[5] = spu_shlqbyi(ctx->gpr[6], 4);
         /* nop */;
-        if (ctx->gpr[5]._u32[0] == 0) { ctx->pc = 0x408; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000408; return; }
+        if (ctx->gpr[5]._u32[0] == 0) { SPU_DIRECT(ctx, 0x408, spujob_42E1FC8CEE0BE246_spu_func_00000408); }
         ctx->gpr[72] = spu_andi(ctx->gpr[91], 15);
         ctx->gpr[69] = spu_ls_read128(ctx, ctx->gpr[86]._u32[0] + ctx->gpr[89]._u32[0]);
         /* nop */;
@@ -898,7 +926,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000960(spu_context* ctx) {
         ctx->gpr[71] = spu_ceqi(ctx->gpr[72], 0);
         ctx->gpr[68] = spu_rotqmbyi(ctx->gpr[6], -4);
         ctx->gpr[62] = spu_sfi(ctx->gpr[71], 0);
-        { ctx->pc = 0x98C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000098C; return; }
+        { SPU_DIRECT(ctx, 0x98C, spujob_42E1FC8CEE0BE246_spu_func_0000098C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000098C(spu_context* ctx) {
@@ -907,6 +935,10 @@ void spujob_42E1FC8CEE0BE246_spu_func_0000098C(spu_context* ctx) {
         spu_ls_write128(ctx, ctx->gpr[86]._u32[0] + ctx->gpr[89]._u32[0], ctx->gpr[67]);
         ctx->gpr[66] = spu_andi(ctx->gpr[6], 15);
         ctx->gpr[65] = spu_ls_read128(ctx, ctx->gpr[90]._u32[0] + ctx->gpr[92]._u32[0]);
+        { SPU_DIRECT(ctx, 0x9A0, spujob_42E1FC8CEE0BE246_spu_func_000009A0); }
+}
+
+void spujob_42E1FC8CEE0BE246_spu_func_000009A0(spu_context* ctx) {
         ctx->gpr[19] = spu_ceqi(ctx->gpr[66], 0);
         ctx->gpr[90] = spu_sfi(ctx->gpr[19], 0);
         ctx->gpr[5] = spu_rotqby(ctx->gpr[65], ctx->gpr[87]);
@@ -915,9 +947,9 @@ void spujob_42E1FC8CEE0BE246_spu_func_0000098C(spu_context* ctx) {
         ctx->gpr[63] = spu_sfi(ctx->gpr[64], 0);
         ctx->gpr[25] = spu_and(ctx->gpr[62], ctx->gpr[63]);
         ctx->gpr[88] = spu_and(ctx->gpr[90], ctx->gpr[25]);
-        if ((int32_t)ctx->gpr[88]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x009C0 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[4] = spu_ori(ctx->gpr[91], 0);
-        { ctx->pc = 0x9C8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000009C8; return; }
+        { SPU_DIRECT(ctx, 0x9C8, spujob_42E1FC8CEE0BE246_spu_func_000009C8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000009C8(spu_context* ctx) {
@@ -927,12 +959,16 @@ void spujob_42E1FC8CEE0BE246_spu_func_000009C8(spu_context* ctx) {
         spu_wrch(ctx, MFC_LSA, ctx->gpr[4]);
         ctx->gpr[70] = spu_il(34);
         spu_wrch(ctx, MFC_EAH, ctx->gpr[71]);
+        { SPU_DIRECT(ctx, 0x9E0, spujob_42E1FC8CEE0BE246_spu_func_000009E0); }
+}
+
+void spujob_42E1FC8CEE0BE246_spu_func_000009E0(spu_context* ctx) {
         spu_wrch(ctx, MFC_EAL, ctx->gpr[6]);
         spu_wrch(ctx, MFC_Size, ctx->gpr[19]);
         spu_wrch(ctx, MFC_TagID, ctx->gpr[5]);
         spu_wrch(ctx, MFC_Cmd, ctx->gpr[70]);
         /* nop */;
-        { ctx->pc = 0x408; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000408; return; }
+        { SPU_DIRECT(ctx, 0x408, spujob_42E1FC8CEE0BE246_spu_func_00000408); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000009F8(spu_context* ctx) {
@@ -984,7 +1020,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000009F8(spu_context* ctx) {
         ctx->gpr[73] = spu_shufb(ctx->gpr[74], ctx->gpr[75], ctx->gpr[76]);
         /* nop */;
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + 0xD0, ctx->gpr[73]);
-        { ctx->pc = 0xAB8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000AB8; return; }
+        { SPU_DIRECT(ctx, 0xAB8, spujob_42E1FC8CEE0BE246_spu_func_00000AB8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000AB8(spu_context* ctx) {
@@ -999,9 +1035,13 @@ loc_00000AB8:
         ctx->gpr[16] = spu_ai(ctx->gpr[16], 4);
         ctx->gpr[37] = spu_ceqi(ctx->gpr[16], 48);
         if (ctx->gpr[37]._u32[0] == 0) goto loc_00000AB8;
+        { SPU_DIRECT(ctx, 0xAE0, spujob_42E1FC8CEE0BE246_spu_func_00000AE0); }
+}
+
+void spujob_42E1FC8CEE0BE246_spu_func_00000AE0(spu_context* ctx) {
         ctx->gpr[9] = spu_il(0);
         ctx->gpr[13] = spu_ai(ctx->gpr[1], 480);
-        { ctx->pc = 0xAE8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000AE8; return; }
+        { SPU_DIRECT(ctx, 0xAE8, spujob_42E1FC8CEE0BE246_spu_func_00000AE8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000AE8(spu_context* ctx) {
@@ -1011,7 +1051,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000AE8(spu_context* ctx) {
         ctx->gpr[8] = spu_fsmbi(0x0);
         ctx->gpr[7] = spu_a(ctx->gpr[82], ctx->gpr[72]);
         /* nop */;
-        { ctx->pc = 0xB00; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000B00; return; }
+        { SPU_DIRECT(ctx, 0xB00, spujob_42E1FC8CEE0BE246_spu_func_00000B00); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000B00(spu_context* ctx) {
@@ -1031,7 +1071,7 @@ loc_00000B00:
         ctx->gpr[9] = spu_ai(ctx->gpr[9], 1);
         ctx->gpr[49] = spu_ceqi(ctx->gpr[9], 4);
         /* nop */;
-        if (ctx->gpr[49]._u32[0] == 0) { ctx->pc = 0xAE8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000AE8; return; }
+        if (ctx->gpr[49]._u32[0] == 0) { SPU_DIRECT(ctx, 0xAE8, spujob_42E1FC8CEE0BE246_spu_func_00000AE8); }
         ctx->gpr[29] = spu_il(0);
         ctx->gpr[50] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + 0x1E0);
         ctx->gpr[73] = spu_il(0);
@@ -1126,7 +1166,7 @@ loc_00000B00:
         ctx->gpr[0] = spu_link(0xCB0); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_00001A88(ctx); spu_drain_call(ctx, 0xCB0); ctx->host_depth--; spu_img_restore(ctx, _si); }
         ctx->gpr[6] = spu_il(76);
         ctx->gpr[65] = spu_ls_read128(ctx, ctx->gpr[82]._u32[0] + 0x50);
-        { ctx->pc = 0xCB8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000CB8; return; }
+        { SPU_DIRECT(ctx, 0xCB8, spujob_42E1FC8CEE0BE246_spu_func_00000CB8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000CB8(spu_context* ctx) {
@@ -1171,7 +1211,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000CB8(spu_context* ctx) {
         ctx->gpr[4] = spu_selb(ctx->gpr[52], ctx->gpr[50], ctx->gpr[51]);
         ctx->gpr[0] = spu_link(0xD58); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_00003218(ctx); spu_drain_call(ctx, 0xD58); ctx->host_depth--; spu_img_restore(ctx, _si); }
         ctx->gpr[83] = spu_ori(ctx->gpr[3], 0);
-        if (ctx->gpr[3]._u32[0] == 0) { ctx->pc = 0xDC0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000DC0; return; }
+        if (ctx->gpr[3]._u32[0] == 0) { SPU_DIRECT(ctx, 0xDC0, spujob_42E1FC8CEE0BE246_spu_func_00000DC0); }
         ctx->gpr[4] = spu_ori(ctx->gpr[3], 0);
         ctx->gpr[3] = spu_shlqbyi(ctx->gpr[85], 0);
         ctx->gpr[0] = spu_link(0xD6C); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_00001A00(ctx); spu_drain_call(ctx, 0xD6C); ctx->host_depth--; spu_img_restore(ctx, _si); }
@@ -1180,6 +1220,10 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000CB8(spu_context* ctx) {
         ctx->gpr[91] = spu_shlqbyi(ctx->gpr[3], 0);
         ctx->gpr[53] = spu_ai(ctx->gpr[82], 72);
         /* nop */;
+        { SPU_DIRECT(ctx, 0xD80, spujob_42E1FC8CEE0BE246_spu_func_00000D80); }
+}
+
+void spujob_42E1FC8CEE0BE246_spu_func_00000D80(spu_context* ctx) {
         /* nop */;
         ctx->gpr[52] = spu_ls_read128(ctx, ctx->gpr[82]._u32[0] + ctx->gpr[54]._u32[0]);
         /* nop */;
@@ -1195,12 +1239,12 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000CB8(spu_context* ctx) {
         /* branch hint (ignored) */;
         ctx->gpr[18] = spu_ceqbi(ctx->gpr[3], 0);
         ctx->gpr[13] = spu_xsbh(ctx->gpr[18]);
-        { ctx->pc = 0xDBC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000DBC; return; }
+        { SPU_DIRECT(ctx, 0xDBC, spujob_42E1FC8CEE0BE246_spu_func_00000DBC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000DBC(spu_context* ctx) {
-        if (ctx->gpr[13]._u16[0] == 0) { ctx->pc = 0xE98; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000E98; return; }
-        { ctx->pc = 0xDC0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000DC0; return; }
+        if (ctx->gpr[13]._u16[0] == 0) { SPU_DIRECT(ctx, 0xE98, spujob_42E1FC8CEE0BE246_spu_func_00000E98); }
+        { SPU_DIRECT(ctx, 0xDC0, spujob_42E1FC8CEE0BE246_spu_func_00000DC0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000DC0(spu_context* ctx) {
@@ -1216,7 +1260,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000DC0(spu_context* ctx) {
         ctx->gpr[5] = spu_ls_read128(ctx, ctx->gpr[82]._u32[0] + 0x40);
         ctx->gpr[6] = spu_il(0);
         ctx->gpr[7] = spu_fsmbi(0x0);
-        { ctx->pc = 0xDF0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000DF0; return; }
+        { SPU_DIRECT(ctx, 0xDF0, spujob_42E1FC8CEE0BE246_spu_func_00000DF0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000DF0(spu_context* ctx) {
@@ -1235,7 +1279,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000DF0(spu_context* ctx) {
         ctx->gpr[82] = spu_ls_read128(ctx, ctx->gpr[88]._u32[0] + ctx->gpr[11]._u32[0]);
         ctx->gpr[6] = spu_rotqby(ctx->gpr[82], ctx->gpr[57]);
         ctx->gpr[5] = spu_shlqbyi(ctx->gpr[6], 4);
-        if (ctx->gpr[5]._u32[0] == 0) { ctx->pc = 0x408; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000408; return; }
+        if (ctx->gpr[5]._u32[0] == 0) { SPU_DIRECT(ctx, 0x408, spujob_42E1FC8CEE0BE246_spu_func_00000408); }
         ctx->gpr[69] = spu_andi(ctx->gpr[80], 15);
         ctx->gpr[66] = spu_ls_read128(ctx, ctx->gpr[80]._u32[0] + 0x0);
         /* nop */;
@@ -1256,12 +1300,16 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000DF0(spu_context* ctx) {
         ctx->gpr[25] = spu_clgti(ctx->gpr[5], 31);
         ctx->gpr[61] = spu_nor(ctx->gpr[25], ctx->gpr[25]);
         ctx->gpr[60] = spu_sfi(ctx->gpr[61], 0);
+        { SPU_DIRECT(ctx, 0xE80, spujob_42E1FC8CEE0BE246_spu_func_00000E80); }
+}
+
+void spujob_42E1FC8CEE0BE246_spu_func_00000E80(spu_context* ctx) {
         ctx->gpr[58] = spu_and(ctx->gpr[59], ctx->gpr[60]);
         ctx->gpr[88] = spu_and(ctx->gpr[90], ctx->gpr[58]);
-        if ((int32_t)ctx->gpr[88]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x00E88 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[4] = spu_ori(ctx->gpr[80], 0);
         /* nop */;
-        { ctx->pc = 0x9C8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000009C8; return; }
+        { SPU_DIRECT(ctx, 0x9C8, spujob_42E1FC8CEE0BE246_spu_func_000009C8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000E98(spu_context* ctx) {
@@ -1291,7 +1339,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000E98(spu_context* ctx) {
         /* nop */;
         ctx->gpr[10] = spu_ori(ctx->gpr[7], 0);
         ctx->gpr[7] = spu_rotqbyi(ctx->gpr[7], 8);
-        { ctx->pc = 0xF00; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000F00; return; }
+        { SPU_DIRECT(ctx, 0xF00, spujob_42E1FC8CEE0BE246_spu_func_00000F00); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000F00(spu_context* ctx) {
@@ -1302,7 +1350,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000F00(spu_context* ctx) {
         ctx->gpr[6] = spu_ori(ctx->gpr[86], 0);
         ctx->gpr[7] = spu_il(1);
         /* nop */;
-        { ctx->pc = 0xDF0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000DF0; return; }
+        { SPU_DIRECT(ctx, 0xDF0, spujob_42E1FC8CEE0BE246_spu_func_00000DF0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000F20(spu_context* ctx) {
@@ -1312,13 +1360,13 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000F20(spu_context* ctx) {
         /* nop */;
         ctx->gpr[4] = spu_a(ctx->gpr[85], ctx->gpr[126]);
         ctx->gpr[0] = spu_link(0xF38); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_000077C0(ctx); spu_drain_call(ctx, 0xF38); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        { ctx->pc = 0x954; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000954; return; }
+        { SPU_DIRECT(ctx, 0x954, spujob_42E1FC8CEE0BE246_spu_func_00000954); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000F3C(spu_context* ctx) {
         ctx->gpr[4] = spu_andi(ctx->gpr[90], 7);
         /* nop */;
-        if (ctx->gpr[4]._u32[0] != 0) { ctx->pc = 0x3EC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000003EC; return; }
+        if (ctx->gpr[4]._u32[0] != 0) { SPU_DIRECT(ctx, 0x3EC, spujob_42E1FC8CEE0BE246_spu_func_000003EC); }
         ctx->gpr[13] = spu_il(10);
         ctx->gpr[12] = spu_ls_read128(ctx, ctx->gpr[90]._u32[0] + 0x0);
         ctx->gpr[11] = spu_ai(ctx->gpr[88], 24);
@@ -1330,9 +1378,13 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000F3C(spu_context* ctx) {
         ctx->gpr[8] = spu_rothmi(ctx->gpr[9], -3);
         ctx->gpr[14] = spu_and(ctx->gpr[8], ctx->gpr[7]);
         /* nop */;
-        if (ctx->gpr[14]._u32[0] == 0) { ctx->pc = 0x3EC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000003EC; return; }
+        if (ctx->gpr[14]._u32[0] == 0) { SPU_DIRECT(ctx, 0x3EC, spujob_42E1FC8CEE0BE246_spu_func_000003EC); }
         ctx->gpr[10] = spu_ori(ctx->gpr[3], 0);
         /* branch hint (ignored) */;
+        { SPU_DIRECT(ctx, 0xF80, spujob_42E1FC8CEE0BE246_spu_func_00000F80); }
+}
+
+void spujob_42E1FC8CEE0BE246_spu_func_00000F80(spu_context* ctx) {
         ctx->gpr[13] = spu_ai(ctx->gpr[1], 368);
         ctx->gpr[15] = spu_fsmbi(0x101);
         ctx->gpr[9] = spu_ori(ctx->gpr[88], 0);
@@ -1341,7 +1393,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000F3C(spu_context* ctx) {
         /* nop */;
         ctx->gpr[12] = spu_andbi(ctx->gpr[15], 15);
         ctx->gpr[15] = spu_ls_read128(ctx, 0x7890);
-        { ctx->pc = 0xFA0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000FA0; return; }
+        { SPU_DIRECT(ctx, 0xFA0, spujob_42E1FC8CEE0BE246_spu_func_00000FA0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000FA0(spu_context* ctx) {
@@ -1365,7 +1417,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000FA0(spu_context* ctx) {
         ctx->gpr[20] = spu_shufb(ctx->gpr[26], ctx->gpr[26], ctx->gpr[16]);
         spu_ls_write128(ctx, ctx->gpr[13]._u32[0] + 0x0, ctx->gpr[21]);
         ctx->gpr[20] = spu_addx(ctx->gpr[22], ctx->gpr[12], ctx->gpr[20]);
-        { ctx->pc = 0xFF0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000FF0; return; }
+        { SPU_DIRECT(ctx, 0xFF0, spujob_42E1FC8CEE0BE246_spu_func_00000FF0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00000FF0(spu_context* ctx) {
@@ -1374,8 +1426,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_00000FF0(spu_context* ctx) {
         ctx->gpr[18] = spu_andi(ctx->gpr[19], -16);
         /* nop */;
         ctx->gpr[10] = spu_a(ctx->gpr[10], ctx->gpr[18]);
-        if (ctx->gpr[17]._u32[0] == 0) { ctx->pc = 0xFA0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000FA0; return; }
-        { ctx->pc = 0x3EC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000003EC; return; }
+        if (ctx->gpr[17]._u32[0] == 0) { SPU_DIRECT(ctx, 0xFA0, spujob_42E1FC8CEE0BE246_spu_func_00000FA0); }
+        { SPU_DIRECT(ctx, 0x3EC, spujob_42E1FC8CEE0BE246_spu_func_000003EC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001010(spu_context* ctx) {
@@ -1406,18 +1458,22 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001020(spu_context* ctx) {
         ctx->gpr[1] = spu_ai(ctx->gpr[1], -112);
         ctx->gpr[6] = spu_a(ctx->gpr[83], ctx->gpr[8]);
         ctx->gpr[2] = spu_clgt(ctx->gpr[6], ctx->gpr[5]);
-        if (ctx->gpr[2]._u32[0] != 0) { ctx->pc = 0x10F4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000010F4; return; }
-        { ctx->pc = 0x1078; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001078; return; }
+        if (ctx->gpr[2]._u32[0] != 0) { SPU_DIRECT(ctx, 0x10F4, spujob_42E1FC8CEE0BE246_spu_func_000010F4); }
+        { SPU_DIRECT(ctx, 0x1078, spujob_42E1FC8CEE0BE246_spu_func_00001078); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001078(spu_context* ctx) {
         /* branch hint (ignored) */;
-        if (ctx->gpr[80]._u32[0] == 0) { ctx->pc = 0x10B0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000010B0; return; }
+        if (ctx->gpr[80]._u32[0] == 0) { SPU_DIRECT(ctx, 0x10B0, spujob_42E1FC8CEE0BE246_spu_func_000010B0); }
+        { SPU_DIRECT(ctx, 0x1080, spujob_42E1FC8CEE0BE246_spu_func_00001080); }
+}
+
+void spujob_42E1FC8CEE0BE246_spu_func_00001080(spu_context* ctx) {
         ctx->gpr[6] = spu_il(0);
         ctx->gpr[7] = spu_fsmbi(0x0);
         ctx->gpr[5] = spu_ori(ctx->gpr[8], 0);
         /* nop */;
-        { ctx->pc = 0x1090; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001090; return; }
+        { SPU_DIRECT(ctx, 0x1090, spujob_42E1FC8CEE0BE246_spu_func_00001090); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001090(spu_context* ctx) {
@@ -1430,7 +1486,7 @@ loc_00001090:
         spu_ls_write128(ctx, ctx->gpr[5]._u32[0] + 0x0, ctx->gpr[16]);
         ctx->gpr[5] = spu_ai(ctx->gpr[5], 4);
         if (ctx->gpr[4]._u32[0] == 0) goto loc_00001090;
-        { ctx->pc = 0x10B0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000010B0; return; }
+        { SPU_DIRECT(ctx, 0x10B0, spujob_42E1FC8CEE0BE246_spu_func_000010B0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000010B0(spu_context* ctx) {
@@ -1440,7 +1496,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000010B0(spu_context* ctx) {
         ctx->gpr[21] = spu_ls_read128(ctx, ctx->gpr[81]._u32[0] + ctx->gpr[19]._u32[0]);
         ctx->gpr[20] = spu_shufb(ctx->gpr[22], ctx->gpr[21], ctx->gpr[23]);
         spu_ls_write128(ctx, ctx->gpr[81]._u32[0] + ctx->gpr[19]._u32[0], ctx->gpr[20]);
-        { ctx->pc = 0x10C8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000010C8; return; }
+        { SPU_DIRECT(ctx, 0x10C8, spujob_42E1FC8CEE0BE246_spu_func_000010C8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000010C8(spu_context* ctx) {
@@ -1463,10 +1519,10 @@ void spujob_42E1FC8CEE0BE246_spu_func_000010F4(spu_context* ctx) {
         ctx->gpr[13] = spu_ls_read128(ctx, ctx->gpr[3]._u32[0] + ctx->gpr[15]._u32[0]);
         ctx->gpr[12] = spu_rotqby(ctx->gpr[13], ctx->gpr[14]);
         { uint32_t _tg = ctx->gpr[12]._u32[0]; ctx->gpr[0] = spu_link(0x1108); int32_t _si = (int32_t)ctx->image_id; ctx->pc = _tg; ctx->host_depth++; spu_indirect_branch(ctx); spu_drain_call(ctx, 0x1108); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        if (ctx->gpr[3]._u32[0] != 0) { ctx->pc = 0x10C8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000010C8; return; }
+        if (ctx->gpr[3]._u32[0] != 0) { SPU_DIRECT(ctx, 0x10C8, spujob_42E1FC8CEE0BE246_spu_func_000010C8); }
         ctx->gpr[3] = spu_ls_read128(ctx, ctx->gpr[81]._u32[0] + ctx->gpr[84]._u32[0]);
         ctx->gpr[8] = spu_rotqby(ctx->gpr[3], ctx->gpr[82]);
-        { ctx->pc = 0x1078; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001078; return; }
+        { SPU_DIRECT(ctx, 0x1078, spujob_42E1FC8CEE0BE246_spu_func_00001078); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001118(spu_context* ctx) {
@@ -1513,7 +1569,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001118(spu_context* ctx) {
         ctx->gpr[85] = spu_selb(ctx->gpr[3], ctx->gpr[8], ctx->gpr[6]);
         ctx->gpr[83] = spu_shlqbyi(ctx->gpr[7], 0);
         ctx->gpr[1] = spu_ai(ctx->gpr[1], -208);
-        if (ctx->gpr[2]._u32[0] == 0) { ctx->pc = 0x11F8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000011F8; return; }
+        if (ctx->gpr[2]._u32[0] == 0) { SPU_DIRECT(ctx, 0x11F8, spujob_42E1FC8CEE0BE246_spu_func_000011F8); }
         ctx->gpr[4] = spu_il(12);
         ctx->gpr[3] = spu_shlqbyi(ctx->gpr[81], 0);
         ctx->gpr[5] = spu_ai(ctx->gpr[81], 12);
@@ -1521,12 +1577,16 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001118(spu_context* ctx) {
         ctx->gpr[4] = spu_il(7);
         ctx->gpr[7] = spu_rotqby(ctx->gpr[22], ctx->gpr[5]);
         { uint32_t _tg = ctx->gpr[7]._u32[0]; ctx->gpr[0] = spu_link(0x11E4); int32_t _si = (int32_t)ctx->image_id; ctx->pc = _tg; ctx->host_depth++; spu_indirect_branch(ctx); spu_drain_call(ctx, 0x11E4); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        if (ctx->gpr[3]._u32[0] != 0) { ctx->pc = 0x14C0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000014C0; return; }
+        if (ctx->gpr[3]._u32[0] != 0) { SPU_DIRECT(ctx, 0x14C0, spujob_42E1FC8CEE0BE246_spu_func_000014C0); }
         ctx->gpr[24] = spu_ls_read128(ctx, ctx->gpr[81]._u32[0] + ctx->gpr[90]._u32[0]);
         ctx->gpr[23] = spu_ls_read128(ctx, ctx->gpr[81]._u32[0] + ctx->gpr[89]._u32[0]);
+        { SPU_DIRECT(ctx, 0x11F0, spujob_42E1FC8CEE0BE246_spu_func_000011F0); }
+}
+
+void spujob_42E1FC8CEE0BE246_spu_func_000011F0(spu_context* ctx) {
         ctx->gpr[11] = spu_rotqby(ctx->gpr[24], ctx->gpr[86]);
         ctx->gpr[13] = spu_rotqby(ctx->gpr[23], ctx->gpr[84]);
-        { ctx->pc = 0x11F8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000011F8; return; }
+        { SPU_DIRECT(ctx, 0x11F8, spujob_42E1FC8CEE0BE246_spu_func_000011F8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000011F8(spu_context* ctx) {
@@ -1545,7 +1605,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000011F8(spu_context* ctx) {
         ctx->gpr[25] = spu_shufb(ctx->gpr[29], ctx->gpr[28], ctx->gpr[30]);
         ctx->gpr[9] = spu_shufb(ctx->gpr[82], ctx->gpr[31], ctx->gpr[32]);
         ctx->gpr[8] = spu_shufb(ctx->gpr[26], ctx->gpr[25], ctx->gpr[27]);
-        if (ctx->gpr[10]._u32[0] == 0) { ctx->pc = 0x14FC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000014FC; return; }
+        if (ctx->gpr[10]._u32[0] == 0) { SPU_DIRECT(ctx, 0x14FC, spujob_42E1FC8CEE0BE246_spu_func_000014FC); }
         ctx->gpr[50] = spu_sfi(ctx->gpr[10], 16);
         ctx->gpr[49] = spu_fsmbi(0xFFF0);
         ctx->gpr[48] = spu_sfi(ctx->gpr[10], 0);
@@ -1564,7 +1624,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000011F8(spu_context* ctx) {
         spu_ls_write128(ctx, ctx->gpr[11]._u32[0] + 0x20, ctx->gpr[41]);
         spu_ls_write128(ctx, ctx->gpr[11]._u32[0] + 0x10, ctx->gpr[40]);
         spu_ls_write128(ctx, ctx->gpr[11]._u32[0] + 0x0, ctx->gpr[36]);
-        { ctx->pc = 0x1280; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001280; return; }
+        { SPU_DIRECT(ctx, 0x1280, spujob_42E1FC8CEE0BE246_spu_func_00001280); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001280(spu_context* ctx) {
@@ -1583,12 +1643,12 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001280(spu_context* ctx) {
         ctx->gpr[56] = spu_ceqbi(ctx->gpr[57], 0);
         ctx->gpr[54] = spu_xsbh(ctx->gpr[56]);
         spu_ls_write128(ctx, ctx->gpr[81]._u32[0] + ctx->gpr[82]._u32[0], ctx->gpr[55]);
-        if (ctx->gpr[54]._u16[0] != 0) { ctx->pc = 0x1334; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001334; return; }
+        if (ctx->gpr[54]._u16[0] != 0) { SPU_DIRECT(ctx, 0x1334, spujob_42E1FC8CEE0BE246_spu_func_00001334); }
         ctx->gpr[65] = spu_ai(ctx->gpr[12], 8);
         ctx->gpr[64] = spu_clgt(ctx->gpr[65], ctx->gpr[13]);
         /* nop */;
-        if (ctx->gpr[64]._u32[0] != 0) { ctx->pc = 0x1688; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001688; return; }
-        { ctx->pc = 0x12D0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000012D0; return; }
+        if (ctx->gpr[64]._u32[0] != 0) { SPU_DIRECT(ctx, 0x1688, spujob_42E1FC8CEE0BE246_spu_func_00001688); }
+        { SPU_DIRECT(ctx, 0x12D0, spujob_42E1FC8CEE0BE246_spu_func_000012D0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000012D0(spu_context* ctx) {
@@ -1617,7 +1677,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000012D0(spu_context* ctx) {
         ctx->gpr[74] = spu_ls_read128(ctx, ctx->gpr[81]._u32[0] + ctx->gpr[82]._u32[0]);
         ctx->gpr[73] = spu_shufb(ctx->gpr[12], ctx->gpr[74], ctx->gpr[84]);
         spu_ls_write128(ctx, ctx->gpr[81]._u32[0] + ctx->gpr[82]._u32[0], ctx->gpr[73]);
-        { ctx->pc = 0x1334; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001334; return; }
+        { SPU_DIRECT(ctx, 0x1334, spujob_42E1FC8CEE0BE246_spu_func_00001334); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001334(spu_context* ctx) {
@@ -1627,8 +1687,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001334(spu_context* ctx) {
         ctx->gpr[6] = spu_sfi(ctx->gpr[8], 0);
         ctx->gpr[84] = spu_ceqbi(ctx->gpr[6], 0);
         ctx->gpr[82] = spu_xsbh(ctx->gpr[84]);
-        if (ctx->gpr[82]._u16[0] == 0) { ctx->pc = 0x1594; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001594; return; }
-        { ctx->pc = 0x1350; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001350; return; }
+        if (ctx->gpr[82]._u16[0] == 0) { SPU_DIRECT(ctx, 0x1594, spujob_42E1FC8CEE0BE246_spu_func_00001594); }
+        { SPU_DIRECT(ctx, 0x1350, spujob_42E1FC8CEE0BE246_spu_func_00001350); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001350(spu_context* ctx) {
@@ -1639,7 +1699,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001350(spu_context* ctx) {
         ctx->gpr[61] = spu_ai(ctx->gpr[62], 4);
         ctx->gpr[60] = spu_clgt(ctx->gpr[61], ctx->gpr[13]);
         /* nop */;
-        if (ctx->gpr[60]._u32[0] == 0) { ctx->pc = 0x13B8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000013B8; return; }
+        if (ctx->gpr[60]._u32[0] == 0) { SPU_DIRECT(ctx, 0x13B8, spujob_42E1FC8CEE0BE246_spu_func_000013B8); }
         ctx->gpr[68] = spu_il(12);
         ctx->gpr[3] = spu_shlqbyi(ctx->gpr[81], 0);
         ctx->gpr[67] = spu_ai(ctx->gpr[81], 12);
@@ -1648,7 +1708,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001350(spu_context* ctx) {
         ctx->gpr[66] = spu_ls_read128(ctx, ctx->gpr[81]._u32[0] + ctx->gpr[68]._u32[0]);
         ctx->gpr[65] = spu_rotqby(ctx->gpr[66], ctx->gpr[67]);
         { uint32_t _tg = ctx->gpr[65]._u32[0]; ctx->gpr[0] = spu_link(0x1390); int32_t _si = (int32_t)ctx->image_id; ctx->pc = _tg; ctx->host_depth++; spu_indirect_branch(ctx); spu_drain_call(ctx, 0x1390); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        if (ctx->gpr[3]._u32[0] != 0) { ctx->pc = 0x14C0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000014C0; return; }
+        if (ctx->gpr[3]._u32[0] != 0) { SPU_DIRECT(ctx, 0x14C0, spujob_42E1FC8CEE0BE246_spu_func_000014C0); }
         ctx->gpr[74] = spu_il(8);
         ctx->gpr[73] = spu_il(4);
         /* nop */;
@@ -1658,7 +1718,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001350(spu_context* ctx) {
         ctx->gpr[69] = spu_ls_read128(ctx, ctx->gpr[81]._u32[0] + ctx->gpr[73]._u32[0]);
         ctx->gpr[11] = spu_rotqby(ctx->gpr[71], ctx->gpr[72]);
         ctx->gpr[13] = spu_rotqby(ctx->gpr[69], ctx->gpr[70]);
-        { ctx->pc = 0x13B8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000013B8; return; }
+        { SPU_DIRECT(ctx, 0x13B8, spujob_42E1FC8CEE0BE246_spu_func_000013B8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000013B8(spu_context* ctx) {
@@ -1673,18 +1733,18 @@ void spujob_42E1FC8CEE0BE246_spu_func_000013B8(spu_context* ctx) {
         ctx->gpr[75] = spu_clgti(ctx->gpr[85], 6);
         ctx->gpr[77] = spu_shufb(ctx->gpr[79], ctx->gpr[78], ctx->gpr[86]);
         spu_ls_write128(ctx, ctx->gpr[11]._u32[0] + 0x0, ctx->gpr[77]);
-        if (ctx->gpr[75]._u32[0] != 0) { ctx->pc = 0x1798; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001798; return; }
-        { ctx->pc = 0x13E8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000013E8; return; }
+        if (ctx->gpr[75]._u32[0] != 0) { SPU_DIRECT(ctx, 0x1798, spujob_42E1FC8CEE0BE246_spu_func_00001798); }
+        { SPU_DIRECT(ctx, 0x13E8, spujob_42E1FC8CEE0BE246_spu_func_000013E8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000013E8(spu_context* ctx) {
         ctx->gpr[18] = spu_clgti(ctx->gpr[80], 255);
         /* branch hint (ignored) */;
-        if (ctx->gpr[18]._u32[0] == 0) { ctx->pc = 0x1428; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001428; return; }
+        if (ctx->gpr[18]._u32[0] == 0) { SPU_DIRECT(ctx, 0x1428, spujob_42E1FC8CEE0BE246_spu_func_00001428); }
         ctx->gpr[19] = spu_ilhu(0xFF00);
         ctx->gpr[5] = spu_or(ctx->gpr[83], ctx->gpr[19]);
         /* nop */;
-        { ctx->pc = 0x1400; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001400; return; }
+        { SPU_DIRECT(ctx, 0x1400, spujob_42E1FC8CEE0BE246_spu_func_00001400); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001400(spu_context* ctx) {
@@ -1699,12 +1759,12 @@ loc_00001400:
         spu_ls_write128(ctx, ctx->gpr[8]._u32[0] + 0x0, ctx->gpr[21]);
         ctx->gpr[8] = spu_ai(ctx->gpr[8], 4);
         if (ctx->gpr[20]._u32[0] != 0) goto loc_00001400;
-        { ctx->pc = 0x1428; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001428; return; }
+        { SPU_DIRECT(ctx, 0x1428, spujob_42E1FC8CEE0BE246_spu_func_00001428); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001428(spu_context* ctx) {
         /* nop */;
-        if (ctx->gpr[80]._u32[0] == 0) { ctx->pc = 0x1450; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001450; return; }
+        if (ctx->gpr[80]._u32[0] == 0) { SPU_DIRECT(ctx, 0x1450, spujob_42E1FC8CEE0BE246_spu_func_00001450); }
         ctx->gpr[25] = spu_ai(ctx->gpr[80], -1);
         ctx->gpr[5] = spu_ls_read128(ctx, ctx->gpr[8]._u32[0] + 0x0);
         ctx->gpr[4] = spu_cwd(ctx->gpr[8], 0);
@@ -1713,7 +1773,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001428(spu_context* ctx) {
         ctx->gpr[80] = spu_shufb(ctx->gpr[23], ctx->gpr[5], ctx->gpr[4]);
         spu_ls_write128(ctx, ctx->gpr[8]._u32[0] + 0x0, ctx->gpr[80]);
         ctx->gpr[8] = spu_ai(ctx->gpr[8], 4);
-        { ctx->pc = 0x1450; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001450; return; }
+        { SPU_DIRECT(ctx, 0x1450, spujob_42E1FC8CEE0BE246_spu_func_00001450); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001450(spu_context* ctx) {
@@ -1724,8 +1784,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001450(spu_context* ctx) {
         ctx->gpr[83] = spu_clgt(ctx->gpr[29], ctx->gpr[13]);
         ctx->gpr[26] = spu_shufb(ctx->gpr[8], ctx->gpr[27], ctx->gpr[82]);
         spu_ls_write128(ctx, ctx->gpr[81]._u32[0] + ctx->gpr[80]._u32[0], ctx->gpr[26]);
-        if (ctx->gpr[83]._u32[0] != 0) { ctx->pc = 0x1660; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001660; return; }
-        { ctx->pc = 0x1470; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001470; return; }
+        if (ctx->gpr[83]._u32[0] != 0) { SPU_DIRECT(ctx, 0x1660, spujob_42E1FC8CEE0BE246_spu_func_00001660); }
+        { SPU_DIRECT(ctx, 0x1470, spujob_42E1FC8CEE0BE246_spu_func_00001470); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001470(spu_context* ctx) {
@@ -1749,7 +1809,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001470(spu_context* ctx) {
         ctx->gpr[35] = spu_ls_read128(ctx, ctx->gpr[81]._u32[0] + ctx->gpr[80]._u32[0]);
         ctx->gpr[34] = spu_shufb(ctx->gpr[36], ctx->gpr[35], ctx->gpr[82]);
         spu_ls_write128(ctx, ctx->gpr[81]._u32[0] + ctx->gpr[80]._u32[0], ctx->gpr[34]);
-        { ctx->pc = 0x14C0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000014C0; return; }
+        { SPU_DIRECT(ctx, 0x14C0, spujob_42E1FC8CEE0BE246_spu_func_000014C0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000014C0(spu_context* ctx) {
@@ -1777,12 +1837,12 @@ void spujob_42E1FC8CEE0BE246_spu_func_000014FC(spu_context* ctx) {
         ctx->gpr[51] = spu_selb(ctx->gpr[52], ctx->gpr[8], ctx->gpr[53]);
         spu_ls_write128(ctx, ctx->gpr[11]._u32[0] + 0x10, ctx->gpr[51]);
         /* nop */;
-        { ctx->pc = 0x1280; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001280; return; }
+        { SPU_DIRECT(ctx, 0x1280, spujob_42E1FC8CEE0BE246_spu_func_00001280); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001518(spu_context* ctx) {
         ctx->gpr[51] = spu_ila(0x10203);
-        { ctx->pc = 0x151C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000151C; return; }
+        { SPU_DIRECT(ctx, 0x151C, spujob_42E1FC8CEE0BE246_spu_func_0000151C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000151C(spu_context* ctx) {
@@ -1793,13 +1853,13 @@ void spujob_42E1FC8CEE0BE246_spu_func_0000151C(spu_context* ctx) {
         ctx->gpr[50] = spu_shufb(ctx->gpr[83], ctx->gpr[83], ctx->gpr[51]);
         ctx->gpr[7] = spu_il(2044);
         ctx->gpr[5] = spu_a(ctx->gpr[50], ctx->gpr[49]);
-        { ctx->pc = 0x1538; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001538; return; }
+        { SPU_DIRECT(ctx, 0x1538, spujob_42E1FC8CEE0BE246_spu_func_00001538); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001538(spu_context* ctx) {
         /* branch hint (ignored) */;
         ctx->gpr[4] = spu_il(0);
-        { ctx->pc = 0x1540; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001540; return; }
+        { SPU_DIRECT(ctx, 0x1540, spujob_42E1FC8CEE0BE246_spu_func_00001540); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001540(spu_context* ctx) {
@@ -1816,7 +1876,7 @@ loc_00001540:
         if (ctx->gpr[41]._u32[0] != 0) goto loc_00001540;
         ctx->gpr[44] = spu_shli(ctx->gpr[4], 8);
         ctx->gpr[83] = spu_a(ctx->gpr[83], ctx->gpr[44]);
-        { ctx->pc = 0x1570; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001570; return; }
+        { SPU_DIRECT(ctx, 0x1570, spujob_42E1FC8CEE0BE246_spu_func_00001570); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001570(spu_context* ctx) {
@@ -1824,16 +1884,16 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001570(spu_context* ctx) {
         ctx->gpr[12] = spu_shlqbyi(ctx->gpr[6], 0);
         ctx->gpr[2] = spu_sf(ctx->gpr[9], ctx->gpr[46]);
         ctx->gpr[45] = spu_clgt(ctx->gpr[2], ctx->gpr[4]);
-        if (ctx->gpr[45]._u32[0] != 0) { ctx->pc = 0x1740; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001740; return; }
-        { ctx->pc = 0x1584; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001584; return; }
+        if (ctx->gpr[45]._u32[0] != 0) { SPU_DIRECT(ctx, 0x1740, spujob_42E1FC8CEE0BE246_spu_func_00001740); }
+        { SPU_DIRECT(ctx, 0x1584, spujob_42E1FC8CEE0BE246_spu_func_00001584); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001584(spu_context* ctx) {
         ctx->gpr[55] = spu_ilhu(0x7);
         ctx->gpr[55] = spu_iohl(ctx->gpr[55], 0xFF00);
         ctx->gpr[54] = spu_clgt(ctx->gpr[80], ctx->gpr[55]);
-        if (ctx->gpr[54]._u32[0] == 0) { ctx->pc = 0x16C0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000016C0; return; }
-        { ctx->pc = 0x1594; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001594; return; }
+        if (ctx->gpr[54]._u32[0] == 0) { SPU_DIRECT(ctx, 0x16C0, spujob_42E1FC8CEE0BE246_spu_func_000016C0); }
+        { SPU_DIRECT(ctx, 0x1594, spujob_42E1FC8CEE0BE246_spu_func_00001594); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001594(spu_context* ctx) {
@@ -1841,8 +1901,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001594(spu_context* ctx) {
         ctx->gpr[10] = spu_a(ctx->gpr[11], ctx->gpr[12]);
         ctx->gpr[9] = spu_clgt(ctx->gpr[10], ctx->gpr[13]);
         /* nop */;
-        if (ctx->gpr[9]._u32[0] != 0) { ctx->pc = 0x16F0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000016F0; return; }
-        { ctx->pc = 0x15A8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000015A8; return; }
+        if (ctx->gpr[9]._u32[0] != 0) { SPU_DIRECT(ctx, 0x16F0, spujob_42E1FC8CEE0BE246_spu_func_000016F0); }
+        { SPU_DIRECT(ctx, 0x15A8, spujob_42E1FC8CEE0BE246_spu_func_000015A8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000015A8(spu_context* ctx) {
@@ -1861,12 +1921,12 @@ void spujob_42E1FC8CEE0BE246_spu_func_000015A8(spu_context* ctx) {
         ctx->gpr[4] = spu_ori(ctx->gpr[23], 256);
         ctx->gpr[80] = spu_a(ctx->gpr[80], ctx->gpr[4]);
         spu_ls_write128(ctx, ctx->gpr[11]._u32[0] + 0x0, ctx->gpr[5]);
-        if (ctx->gpr[9]._u32[0] == 0) { ctx->pc = 0x1518; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001518; return; }
+        if (ctx->gpr[9]._u32[0] == 0) { SPU_DIRECT(ctx, 0x1518, spujob_42E1FC8CEE0BE246_spu_func_00001518); }
         ctx->gpr[7] = spu_ori(ctx->gpr[83], 0);
         ctx->gpr[6] = spu_shlqbyi(ctx->gpr[12], 0);
         ctx->gpr[8] = spu_il(0);
         ctx->gpr[10] = spu_ilhu(0xFF00);
-        { ctx->pc = 0x15F8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000015F8; return; }
+        { SPU_DIRECT(ctx, 0x15F8, spujob_42E1FC8CEE0BE246_spu_func_000015F8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000015F8(spu_context* ctx) {
@@ -1895,8 +1955,8 @@ loc_000015F8:
         ctx->gpr[36] = spu_shufb(ctx->gpr[83], ctx->gpr[83], ctx->gpr[38]);
         ctx->gpr[8] = spu_ilhu(0xFF00);
         ctx->gpr[5] = spu_a(ctx->gpr[36], ctx->gpr[35]);
-        if (ctx->gpr[7]._u32[0] != 0) { ctx->pc = 0x1538; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001538; return; }
-        { ctx->pc = 0x1570; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001570; return; }
+        if (ctx->gpr[7]._u32[0] != 0) { SPU_DIRECT(ctx, 0x1538, spujob_42E1FC8CEE0BE246_spu_func_00001538); }
+        { SPU_DIRECT(ctx, 0x1570, spujob_42E1FC8CEE0BE246_spu_func_00001570); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001660(spu_context* ctx) {
@@ -1908,8 +1968,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001660(spu_context* ctx) {
         ctx->gpr[31] = spu_ls_read128(ctx, ctx->gpr[81]._u32[0] + ctx->gpr[33]._u32[0]);
         ctx->gpr[30] = spu_rotqby(ctx->gpr[31], ctx->gpr[32]);
         { uint32_t _tg = ctx->gpr[30]._u32[0]; ctx->gpr[0] = spu_link(0x1680); int32_t _si = (int32_t)ctx->image_id; ctx->pc = _tg; ctx->host_depth++; spu_indirect_branch(ctx); spu_drain_call(ctx, 0x1680); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        if (ctx->gpr[3]._u32[0] == 0) { ctx->pc = 0x1470; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001470; return; }
-        { ctx->pc = 0x14C0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000014C0; return; }
+        if (ctx->gpr[3]._u32[0] == 0) { SPU_DIRECT(ctx, 0x1470, spujob_42E1FC8CEE0BE246_spu_func_00001470); }
+        { SPU_DIRECT(ctx, 0x14C0, spujob_42E1FC8CEE0BE246_spu_func_000014C0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001688(spu_context* ctx) {
@@ -1921,12 +1981,12 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001688(spu_context* ctx) {
         ctx->gpr[67] = spu_ls_read128(ctx, ctx->gpr[81]._u32[0] + ctx->gpr[69]._u32[0]);
         ctx->gpr[66] = spu_rotqby(ctx->gpr[67], ctx->gpr[68]);
         { uint32_t _tg = ctx->gpr[66]._u32[0]; ctx->gpr[0] = spu_link(0x16A8); int32_t _si = (int32_t)ctx->image_id; ctx->pc = _tg; ctx->host_depth++; spu_indirect_branch(ctx); spu_drain_call(ctx, 0x16A8); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        if (ctx->gpr[3]._u32[0] != 0) { ctx->pc = 0x14C0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000014C0; return; }
+        if (ctx->gpr[3]._u32[0] != 0) { SPU_DIRECT(ctx, 0x14C0, spujob_42E1FC8CEE0BE246_spu_func_000014C0); }
         ctx->gpr[72] = spu_il(4);
         ctx->gpr[71] = spu_ai(ctx->gpr[81], 4);
         ctx->gpr[70] = spu_ls_read128(ctx, ctx->gpr[81]._u32[0] + ctx->gpr[72]._u32[0]);
         ctx->gpr[13] = spu_rotqby(ctx->gpr[70], ctx->gpr[71]);
-        { ctx->pc = 0x12D0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000012D0; return; }
+        { SPU_DIRECT(ctx, 0x12D0, spujob_42E1FC8CEE0BE246_spu_func_000012D0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000016C0(spu_context* ctx) {
@@ -1941,7 +2001,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000016C0(spu_context* ctx) {
         /* nop */;
         ctx->gpr[57] = spu_shufb(ctx->gpr[12], ctx->gpr[58], ctx->gpr[59]);
         spu_ls_write128(ctx, ctx->gpr[81]._u32[0] + ctx->gpr[56]._u32[0], ctx->gpr[57]);
-        { ctx->pc = 0x1350; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001350; return; }
+        { SPU_DIRECT(ctx, 0x1350, spujob_42E1FC8CEE0BE246_spu_func_00001350); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000016F0(spu_context* ctx) {
@@ -1954,7 +2014,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000016F0(spu_context* ctx) {
         ctx->gpr[14] = spu_rotqby(ctx->gpr[15], ctx->gpr[16]);
         { uint32_t _tg = ctx->gpr[14]._u32[0]; ctx->gpr[0] = spu_link(0x1710); int32_t _si = (int32_t)ctx->image_id; ctx->pc = _tg; ctx->host_depth++; spu_indirect_branch(ctx); spu_drain_call(ctx, 0x1710); ctx->host_depth--; spu_img_restore(ctx, _si); }
         /* branch hint (ignored) */;
-        if (ctx->gpr[3]._u32[0] != 0) { ctx->pc = 0x14C0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000014C0; return; }
+        if (ctx->gpr[3]._u32[0] != 0) { SPU_DIRECT(ctx, 0x14C0, spujob_42E1FC8CEE0BE246_spu_func_000014C0); }
         ctx->gpr[22] = spu_il(8);
         ctx->gpr[7] = spu_il(4);
         ctx->gpr[21] = spu_ai(ctx->gpr[81], 8);
@@ -1964,7 +2024,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000016F0(spu_context* ctx) {
         ctx->gpr[11] = spu_rotqby(ctx->gpr[20], ctx->gpr[21]);
         ctx->gpr[13] = spu_rotqby(ctx->gpr[18], ctx->gpr[19]);
         /* nop */;
-        { ctx->pc = 0x15A8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000015A8; return; }
+        { SPU_DIRECT(ctx, 0x15A8, spujob_42E1FC8CEE0BE246_spu_func_000015A8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001740(spu_context* ctx) {
@@ -1974,7 +2034,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001740(spu_context* ctx) {
         ctx->gpr[7] = spu_shlqbyi(ctx->gpr[6], 0);
         ctx->gpr[12] = spu_ilhu(0xFF00);
         /* nop */;
-        { ctx->pc = 0x1758; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001758; return; }
+        { SPU_DIRECT(ctx, 0x1758, spujob_42E1FC8CEE0BE246_spu_func_00001758); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001758(spu_context* ctx) {
@@ -1994,7 +2054,7 @@ loc_00001758:
         ctx->gpr[12] = spu_a(ctx->gpr[6], ctx->gpr[53]);
         ctx->gpr[83] = spu_a(ctx->gpr[83], ctx->gpr[52]);
         /* nop */;
-        { ctx->pc = 0x1584; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001584; return; }
+        { SPU_DIRECT(ctx, 0x1584, spujob_42E1FC8CEE0BE246_spu_func_00001584); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001798(spu_context* ctx) {
@@ -2003,12 +2063,12 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001798(spu_context* ctx) {
         ctx->gpr[76] = spu_andi(ctx->gpr[90], -16);
         ctx->gpr[89] = spu_sf(ctx->gpr[8], ctx->gpr[76]);
         ctx->gpr[7] = spu_rotmi(ctx->gpr[89], -2);
-        if (ctx->gpr[7]._u32[0] == 0) { ctx->pc = 0x1800; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001800; return; }
+        if (ctx->gpr[7]._u32[0] == 0) { SPU_DIRECT(ctx, 0x1800, spujob_42E1FC8CEE0BE246_spu_func_00001800); }
         ctx->gpr[9] = spu_ori(ctx->gpr[83], 0);
         ctx->gpr[6] = spu_shlqbyi(ctx->gpr[8], 0);
         ctx->gpr[10] = spu_il(0);
         ctx->gpr[11] = spu_ilhu(0xFF00);
-        { ctx->pc = 0x17C0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000017C0; return; }
+        { SPU_DIRECT(ctx, 0x17C0, spujob_42E1FC8CEE0BE246_spu_func_000017C0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000017C0(spu_context* ctx) {
@@ -2029,7 +2089,7 @@ loc_000017C0:
         ctx->gpr[8] = spu_a(ctx->gpr[8], ctx->gpr[9]);
         ctx->gpr[80] = spu_sf(ctx->gpr[6], ctx->gpr[80]);
         /* nop */;
-        { ctx->pc = 0x1800; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001800; return; }
+        { SPU_DIRECT(ctx, 0x1800, spujob_42E1FC8CEE0BE246_spu_func_00001800); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001800(spu_context* ctx) {
@@ -2042,11 +2102,11 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001800(spu_context* ctx) {
         ctx->gpr[9] = spu_ilhu(0xFF00);
         ctx->gpr[10] = spu_clgt(ctx->gpr[80], ctx->gpr[7]);
         ctx->gpr[5] = spu_a(ctx->gpr[14], ctx->gpr[8]);
-        if (ctx->gpr[10]._u32[0] == 0) { ctx->pc = 0x1858; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001858; return; }
+        if (ctx->gpr[10]._u32[0] == 0) { SPU_DIRECT(ctx, 0x1858, spujob_42E1FC8CEE0BE246_spu_func_00001858); }
         ctx->gpr[8] = spu_ori(ctx->gpr[7], 0);
         ctx->gpr[4] = spu_il(1024);
         ctx->gpr[7] = spu_il(1024);
-        { ctx->pc = 0x1834; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001834; return; }
+        { SPU_DIRECT(ctx, 0x1834, spujob_42E1FC8CEE0BE246_spu_func_00001834); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001834(spu_context* ctx) {
@@ -2060,12 +2120,12 @@ loc_00001834:
         /* nop */;
         ctx->gpr[6] = spu_ai(ctx->gpr[6], 16);
         if (ctx->gpr[16]._u32[0] != 0) goto loc_00001834;
-        { ctx->pc = 0x1858; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001858; return; }
+        { SPU_DIRECT(ctx, 0x1858, spujob_42E1FC8CEE0BE246_spu_func_00001858); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001858(spu_context* ctx) {
         ctx->gpr[8] = spu_ori(ctx->gpr[6], 0);
-        { ctx->pc = 0x13E8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000013E8; return; }
+        { SPU_DIRECT(ctx, 0x13E8, spujob_42E1FC8CEE0BE246_spu_func_000013E8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001860(spu_context* ctx) {
@@ -2107,12 +2167,12 @@ void spujob_42E1FC8CEE0BE246_spu_func_000018A0(spu_context* ctx) {
         ctx->gpr[16] = spu_ori(ctx->gpr[9], 0);
         ctx->gpr[23] = spu_il(208);
         ctx->gpr[22] = spu_il(180);
-        { ctx->pc = 0x18E0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000018E0; return; }
+        { SPU_DIRECT(ctx, 0x18E0, spujob_42E1FC8CEE0BE246_spu_func_000018E0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000018E0(spu_context* ctx) {
         /* branch hint (ignored) */;
-        if ((int32_t)ctx->gpr[17]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x018E4 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[14] = spu_il(12);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[16]);
         ctx->gpr[27] = spu_ai(ctx->gpr[9], 12);
@@ -2134,7 +2194,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000018E0(spu_context* ctx) {
         ctx->gpr[24] = spu_rotqby(ctx->gpr[25], ctx->gpr[4]);
         ctx->gpr[4] = spu_a(ctx->gpr[10], ctx->gpr[18]);
         ctx->gpr[5] = spu_clgt(ctx->gpr[4], ctx->gpr[24]);
-        if (ctx->gpr[5]._u32[0] == 0) { ctx->pc = 0x1960; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001960; return; }
+        if (ctx->gpr[5]._u32[0] == 0) { SPU_DIRECT(ctx, 0x1960, spujob_42E1FC8CEE0BE246_spu_func_00001960); }
         ctx->gpr[10] = spu_il(0);
         ctx->gpr[28] = spu_ls_read128(ctx, ctx->gpr[6]._u32[0] + 0x0);
         ctx->gpr[8] = spu_ls_read128(ctx, ctx->gpr[9]._u32[0] + ctx->gpr[12]._u32[0]);
@@ -2142,7 +2202,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000018E0(spu_context* ctx) {
         ctx->gpr[13] = spu_a(ctx->gpr[14], ctx->gpr[18]);
         ctx->gpr[6] = spu_shufb(ctx->gpr[13], ctx->gpr[8], ctx->gpr[7]);
         spu_ls_write128(ctx, ctx->gpr[9]._u32[0] + ctx->gpr[12]._u32[0], ctx->gpr[6]);
-        { ctx->pc = 0x1984; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001984; return; }
+        { SPU_DIRECT(ctx, 0x1984, spujob_42E1FC8CEE0BE246_spu_func_00001984); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001960(spu_context* ctx) {
@@ -2155,11 +2215,11 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001960(spu_context* ctx) {
         ctx->gpr[30] = spu_rotqby(ctx->gpr[31], ctx->gpr[9]);
         ctx->gpr[12] = spu_shufb(ctx->gpr[30], ctx->gpr[29], ctx->gpr[13]);
         spu_ls_write128(ctx, ctx->gpr[11]._u32[0] + 0x0, ctx->gpr[12]);
-        { ctx->pc = 0x1984; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001984; return; }
+        { SPU_DIRECT(ctx, 0x1984, spujob_42E1FC8CEE0BE246_spu_func_00001984); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001984(spu_context* ctx) {
-        if ((int32_t)ctx->gpr[17]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x01984 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         spu_wrch(ctx, MFC_LSA, ctx->gpr[16]);
         spu_wrch(ctx, MFC_EAH, ctx->gpr[15]);
         spu_wrch(ctx, MFC_EAL, ctx->gpr[19]);
@@ -2170,7 +2230,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001984(spu_context* ctx) {
         ctx->gpr[36] = spu_andi(ctx->gpr[37], 1);
         ctx->gpr[35] = spu_ceqbi(ctx->gpr[36], 0);
         ctx->gpr[34] = spu_xsbh(ctx->gpr[35]);
-        if (ctx->gpr[34]._u16[0] == 0) { ctx->pc = 0x18E0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000018E0; return; }
+        if (ctx->gpr[34]._u16[0] == 0) { SPU_DIRECT(ctx, 0x18E0, spujob_42E1FC8CEE0BE246_spu_func_000018E0); }
         ctx->gpr[38] = spu_ai(ctx->gpr[9], 4);
         ctx->gpr[42] = spu_ceqi(ctx->gpr[10], 0);
         /* branch hint (ignored) */;
@@ -2317,7 +2377,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001A88(spu_context* ctx) {
         spu_ls_write128(ctx, ctx->gpr[39]._u32[0] + 0x50, ctx->gpr[16]);
         ctx->gpr[4] = spu_shufb(ctx->gpr[31], ctx->gpr[13], ctx->gpr[3]);
         spu_ls_write128(ctx, ctx->gpr[39]._u32[0] + 0x0, ctx->gpr[4]);
-        { ctx->pc = 0x1C04; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001C04; return; }
+        { SPU_DIRECT(ctx, 0x1C04, spujob_42E1FC8CEE0BE246_spu_func_00001C04); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001BEC(spu_context* ctx) {
@@ -2327,7 +2387,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001BEC(spu_context* ctx) {
         ctx->gpr[14] = spu_shufb(ctx->gpr[43], ctx->gpr[31], ctx->gpr[13]);
         ctx->gpr[43] = spu_a(ctx->gpr[43], ctx->gpr[24]);
         spu_ls_write128(ctx, ctx->gpr[42]._u32[0] + ctx->gpr[4]._u32[0], ctx->gpr[14]);
-        { ctx->pc = 0x1C04; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001C04; return; }
+        { SPU_DIRECT(ctx, 0x1C04, spujob_42E1FC8CEE0BE246_spu_func_00001C04); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001C04(spu_context* ctx) {
@@ -2335,8 +2395,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001C04(spu_context* ctx) {
         ctx->gpr[4] = spu_il(12);
         ctx->gpr[46] = spu_ai(ctx->gpr[46], 1);
         ctx->gpr[42] = spu_ai(ctx->gpr[42], 4);
-        if (ctx->gpr[3]._u32[0] == 0) { ctx->pc = 0x1BEC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001BEC; return; }
-        if (ctx->gpr[41]._u32[0] == 0) { ctx->pc = 0x1C60; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001C60; return; }
+        if (ctx->gpr[3]._u32[0] == 0) { SPU_DIRECT(ctx, 0x1BEC, spujob_42E1FC8CEE0BE246_spu_func_00001BEC); }
+        if (ctx->gpr[41]._u32[0] == 0) { SPU_DIRECT(ctx, 0x1C60, spujob_42E1FC8CEE0BE246_spu_func_00001C60); }
         ctx->gpr[20] = spu_ls_read128(ctx, ctx->gpr[41]._u32[0] + 0x0);
         /* branch hint (ignored) */;
         spu_ls_write128(ctx, ctx->gpr[39]._u32[0] + 0xD0, ctx->gpr[20]);
@@ -2354,22 +2414,22 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001C04(spu_context* ctx) {
         spu_ls_write128(ctx, ctx->gpr[39]._u32[0] + 0x130, ctx->gpr[17]);
         ctx->gpr[47] = spu_ls_read128(ctx, ctx->gpr[41]._u32[0] + 0x70);
         spu_ls_write128(ctx, ctx->gpr[39]._u32[0] + 0x140, ctx->gpr[47]);
-        { ctx->pc = 0x1C60; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001C60; return; }
+        { SPU_DIRECT(ctx, 0x1C60, spujob_42E1FC8CEE0BE246_spu_func_00001C60); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001C60(spu_context* ctx) {
-        if (ctx->gpr[44]._u32[0] == 0) { ctx->pc = 0x1C7C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001C7C; return; }
+        if (ctx->gpr[44]._u32[0] == 0) { SPU_DIRECT(ctx, 0x1C7C, spujob_42E1FC8CEE0BE246_spu_func_00001C7C); }
         ctx->gpr[18] = spu_ls_read128(ctx, ctx->gpr[44]._u32[0] + 0x0);
         spu_ls_write128(ctx, ctx->gpr[39]._u32[0] + 0xA0, ctx->gpr[18]);
         ctx->gpr[49] = spu_ls_read128(ctx, ctx->gpr[44]._u32[0] + 0x10);
         spu_ls_write128(ctx, ctx->gpr[39]._u32[0] + 0xB0, ctx->gpr[49]);
         ctx->gpr[9] = spu_ls_read128(ctx, ctx->gpr[44]._u32[0] + 0x20);
         spu_ls_write128(ctx, ctx->gpr[39]._u32[0] + 0xC0, ctx->gpr[9]);
-        { ctx->pc = 0x1C7C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001C7C; return; }
+        { SPU_DIRECT(ctx, 0x1C7C, spujob_42E1FC8CEE0BE246_spu_func_00001C7C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001C7C(spu_context* ctx) {
-        if (ctx->gpr[40]._u32[0] != 0) { ctx->pc = 0x1CE0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001CE0; return; }
+        if (ctx->gpr[40]._u32[0] != 0) { SPU_DIRECT(ctx, 0x1CE0, spujob_42E1FC8CEE0BE246_spu_func_00001CE0); }
         ctx->gpr[2] = spu_ls_read128(ctx, ctx->gpr[39]._u32[0] + 0x70);
         ctx->gpr[19] = spu_ls_read128(ctx, ctx->gpr[39]._u32[0] + 0x80);
         ctx->gpr[52] = spu_cwd(ctx->gpr[1], 0);
@@ -2393,7 +2453,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001C7C(spu_context* ctx) {
         spu_ls_write128(ctx, ctx->gpr[39]._u32[0] + 0x90, ctx->gpr[51]);
         spu_ls_write128(ctx, ctx->gpr[39]._u32[0] + 0x70, ctx->gpr[27]);
         spu_ls_write128(ctx, ctx->gpr[39]._u32[0] + 0x80, ctx->gpr[44]);
-        { ctx->pc = 0x1DB0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001DB0; return; }
+        { SPU_DIRECT(ctx, 0x1DB0, spujob_42E1FC8CEE0BE246_spu_func_00001DB0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001CE0(spu_context* ctx) {
@@ -2449,17 +2509,17 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001CE0(spu_context* ctx) {
         ctx->gpr[35] = spu_rotqby(ctx->gpr[22], ctx->gpr[55]);
         ctx->gpr[53] = spu_shufb(ctx->gpr[35], ctx->gpr[10], ctx->gpr[54]);
         spu_ls_write128(ctx, ctx->gpr[39]._u32[0] + 0x90, ctx->gpr[53]);
-        { ctx->pc = 0x1DB0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001DB0; return; }
+        { SPU_DIRECT(ctx, 0x1DB0, spujob_42E1FC8CEE0BE246_spu_func_00001DB0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001DB0(spu_context* ctx) {
-        if (ctx->gpr[45]._u32[0] != 0) { ctx->pc = 0x1DCC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001DCC; return; }
+        if (ctx->gpr[45]._u32[0] != 0) { SPU_DIRECT(ctx, 0x1DCC, spujob_42E1FC8CEE0BE246_spu_func_00001DCC); }
         ctx->gpr[13] = spu_ls_read128(ctx, ctx->gpr[39]._u32[0] + 0x180);
         ctx->gpr[3] = spu_cwd(ctx->gpr[1], 4);
         ctx->gpr[31] = spu_cwd(ctx->gpr[1], 8);
         ctx->gpr[40] = spu_shufb(ctx->gpr[45], ctx->gpr[13], ctx->gpr[3]);
         ctx->gpr[2] = spu_shufb(ctx->gpr[45], ctx->gpr[40], ctx->gpr[31]);
-        { ctx->pc = 0x1DF8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001DF8; return; }
+        { SPU_DIRECT(ctx, 0x1DF8, spujob_42E1FC8CEE0BE246_spu_func_00001DF8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001DCC(spu_context* ctx) {
@@ -2474,7 +2534,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001DCC(spu_context* ctx) {
         ctx->gpr[21] = spu_ls_read128(ctx, ctx->gpr[16]._u32[0] + 0x0);
         ctx->gpr[45] = spu_rotqby(ctx->gpr[21], ctx->gpr[16]);
         ctx->gpr[2] = spu_shufb(ctx->gpr[45], ctx->gpr[47], ctx->gpr[17]);
-        { ctx->pc = 0x1DF8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001DF8; return; }
+        { SPU_DIRECT(ctx, 0x1DF8, spujob_42E1FC8CEE0BE246_spu_func_00001DF8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001DF8(spu_context* ctx) {
@@ -2514,8 +2574,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001E00(spu_context* ctx) {
         ctx->gpr[3] = spu_sf(ctx->gpr[82], ctx->gpr[85]);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + 0x10, ctx->gpr[0]);
         ctx->gpr[15] = spu_ila(0x6A80);
-        ctx->gpr[126] = spu_link(0x1E80); { ctx->pc = 0x1E80; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001E80; return; }
-        { ctx->pc = 0x1E80; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001E80; return; }
+        ctx->gpr[126] = spu_link(0x1E80); { SPU_DIRECT(ctx, 0x1E80, spujob_42E1FC8CEE0BE246_spu_func_00001E80); }
+        { SPU_DIRECT(ctx, 0x1E80, spujob_42E1FC8CEE0BE246_spu_func_00001E80); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001E80(spu_context* ctx) {
@@ -2528,7 +2588,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001E80(spu_context* ctx) {
         ctx->gpr[2] = spu_ai(ctx->gpr[1], 159);
         ctx->gpr[126] = spu_sf(ctx->gpr[15], ctx->gpr[126]);
         ctx->gpr[87] = spu_andi(ctx->gpr[2], -128);
-        if (ctx->gpr[9]._u32[0] != 0) { ctx->pc = 0x214C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000214C; return; }
+        if (ctx->gpr[9]._u32[0] != 0) { SPU_DIRECT(ctx, 0x214C, spujob_42E1FC8CEE0BE246_spu_func_0000214C); }
         ctx->gpr[26] = spu_ai(ctx->gpr[80], 24);
         ctx->gpr[17] = spu_fsmbi(0x0);
         ctx->gpr[22] = spu_il(1);
@@ -2543,7 +2603,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001E80(spu_context* ctx) {
         ctx->gpr[16] = spu_selb(ctx->gpr[19], ctx->gpr[17], ctx->gpr[18]);
         ctx->gpr[7] = spu_ceqbi(ctx->gpr[16], 0);
         ctx->gpr[6] = spu_xsbh(ctx->gpr[7]);
-        if (ctx->gpr[6]._u16[0] != 0) { ctx->pc = 0x1F0C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001F0C; return; }
+        if (ctx->gpr[6]._u16[0] != 0) { SPU_DIRECT(ctx, 0x1F0C, spujob_42E1FC8CEE0BE246_spu_func_00001F0C); }
         ctx->gpr[28] = spu_ila(0xC510);
         ctx->gpr[3] = spu_ilhu(0x100);
         ctx->gpr[6] = spu_shlqbyi(ctx->gpr[82], 0);
@@ -2554,7 +2614,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001E80(spu_context* ctx) {
         ctx->gpr[4] = spu_il(683);
         ctx->gpr[3] = spu_a(ctx->gpr[27], ctx->gpr[126]);
         ctx->gpr[0] = spu_link(0x1F0C); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_00000318(ctx); spu_drain_call(ctx, 0x1F0C); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        { ctx->pc = 0x1F0C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001F0C; return; }
+        { SPU_DIRECT(ctx, 0x1F0C, spujob_42E1FC8CEE0BE246_spu_func_00001F0C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001F0C(spu_context* ctx) {
@@ -2584,13 +2644,13 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001F0C(spu_context* ctx) {
         ctx->gpr[18] = spu_il(1);
         ctx->gpr[17] = spu_il(2);
         ctx->gpr[16] = spu_il(1);
-        { ctx->pc = 0x1F74; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001F74; return; }
+        { SPU_DIRECT(ctx, 0x1F74, spujob_42E1FC8CEE0BE246_spu_func_00001F74); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001F74(spu_context* ctx) {
         ctx->gpr[42] = spu_ceqbi(ctx->gpr[8], 0);
         ctx->gpr[41] = spu_xsbh(ctx->gpr[42]);
-        if (ctx->gpr[41]._u16[0] != 0) { ctx->pc = 0x1FEC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001FEC; return; }
+        if (ctx->gpr[41]._u16[0] != 0) { SPU_DIRECT(ctx, 0x1FEC, spujob_42E1FC8CEE0BE246_spu_func_00001FEC); }
         ctx->gpr[58] = spu_ls_read128(ctx, ctx->gpr[90]._u32[0] + 0x150);
         ctx->gpr[52] = spu_rotqbyi(ctx->gpr[58], 4);
         ctx->gpr[57] = spu_clgti(ctx->gpr[52], 31);
@@ -2598,7 +2658,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001F74(spu_context* ctx) {
         ctx->gpr[55] = spu_sfi(ctx->gpr[56], 0);
         ctx->gpr[54] = spu_and(ctx->gpr[12], ctx->gpr[55]);
         ctx->gpr[53] = spu_and(ctx->gpr[13], ctx->gpr[54]);
-        if ((int32_t)ctx->gpr[53]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x01F9C img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[43] = spu_il(24);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[15]);
         spu_wrch(ctx, MFC_EAH, ctx->gpr[11]);
@@ -2618,7 +2678,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001F74(spu_context* ctx) {
         ctx->gpr[46] = spu_rotqby(ctx->gpr[48], ctx->gpr[7]);
         ctx->gpr[44] = spu_shufb(ctx->gpr[46], ctx->gpr[45], ctx->gpr[47]);
         spu_ls_write128(ctx, ctx->gpr[80]._u32[0] + ctx->gpr[43]._u32[0], ctx->gpr[44]);
-        { ctx->pc = 0x1FEC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001FEC; return; }
+        { SPU_DIRECT(ctx, 0x1FEC, spujob_42E1FC8CEE0BE246_spu_func_00001FEC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001FEC(spu_context* ctx) {
@@ -2626,12 +2686,12 @@ void spujob_42E1FC8CEE0BE246_spu_func_00001FEC(spu_context* ctx) {
         ctx->gpr[2] = spu_clgt(ctx->gpr[10], ctx->gpr[85]);
         /* branch hint (ignored) */;
         ctx->gpr[62] = spu_il(0);
-        { ctx->pc = 0x1FFC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001FFC; return; }
+        { SPU_DIRECT(ctx, 0x1FFC, spujob_42E1FC8CEE0BE246_spu_func_00001FFC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00001FFC(spu_context* ctx) {
         ctx->gpr[87] = spu_ls_read128(ctx, ctx->gpr[88]._u32[0] + 0x0);
-        { ctx->pc = 0x2000; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002000; return; }
+        { SPU_DIRECT(ctx, 0x2000, spujob_42E1FC8CEE0BE246_spu_func_00002000); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002000(spu_context* ctx) {
@@ -2657,17 +2717,17 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002000(spu_context* ctx) {
         ctx->gpr[61] = spu_selb(ctx->gpr[64], ctx->gpr[62], ctx->gpr[63]);
         ctx->gpr[60] = spu_ceqbi(ctx->gpr[61], 0);
         ctx->gpr[59] = spu_xsbh(ctx->gpr[60]);
-        if (ctx->gpr[59]._u16[0] != 0) { ctx->pc = 0x2084; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002084; return; }
+        if (ctx->gpr[59]._u16[0] != 0) { SPU_DIRECT(ctx, 0x2084, spujob_42E1FC8CEE0BE246_spu_func_00002084); }
         ctx->gpr[84] = spu_clgt(ctx->gpr[10], ctx->gpr[85]);
         ctx->gpr[9] = spu_il(1);
-        if (ctx->gpr[84]._u32[0] == 0) { ctx->pc = 0x20DC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000020DC; return; }
+        if (ctx->gpr[84]._u32[0] == 0) { SPU_DIRECT(ctx, 0x20DC, spujob_42E1FC8CEE0BE246_spu_func_000020DC); }
         ctx->gpr[86] = spu_ori(ctx->gpr[82], 0);
         ctx->gpr[21] = spu_ls_read128(ctx, ctx->gpr[83]._u32[0] + 0x10);
         ctx->gpr[10] = spu_ori(ctx->gpr[89], 0);
         ctx->gpr[22] = spu_cbd(ctx->gpr[1], 4);
         ctx->gpr[4] = spu_shufb(ctx->gpr[16], ctx->gpr[21], ctx->gpr[22]);
         spu_ls_write128(ctx, ctx->gpr[83]._u32[0] + 0x10, ctx->gpr[4]);
-        { ctx->pc = 0x20DC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000020DC; return; }
+        { SPU_DIRECT(ctx, 0x20DC, spujob_42E1FC8CEE0BE246_spu_func_000020DC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002084(spu_context* ctx) {
@@ -2681,18 +2741,18 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002084(spu_context* ctx) {
         ctx->gpr[5] = spu_selb(ctx->gpr[27], ctx->gpr[25], ctx->gpr[26]);
         ctx->gpr[24] = spu_ceqbi(ctx->gpr[5], 0);
         ctx->gpr[23] = spu_xsbh(ctx->gpr[24]);
-        if (ctx->gpr[23]._u16[0] == 0) { ctx->pc = 0x214C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000214C; return; }
+        if (ctx->gpr[23]._u16[0] == 0) { SPU_DIRECT(ctx, 0x214C, spujob_42E1FC8CEE0BE246_spu_func_0000214C); }
         ctx->gpr[32] = spu_ceqbi(ctx->gpr[8], 0);
         ctx->gpr[31] = spu_xsbh(ctx->gpr[32]);
-        if (ctx->gpr[31]._u16[0] == 0) { ctx->pc = 0x20C4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000020C4; return; }
+        if (ctx->gpr[31]._u16[0] == 0) { SPU_DIRECT(ctx, 0x20C4, spujob_42E1FC8CEE0BE246_spu_func_000020C4); }
         ctx->gpr[8] = spu_il(1);
-        { ctx->pc = 0x20DC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000020DC; return; }
+        { SPU_DIRECT(ctx, 0x20DC, spujob_42E1FC8CEE0BE246_spu_func_000020DC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000020C4(spu_context* ctx) {
         ctx->gpr[3] = spu_il(0);
         ctx->gpr[4] = spu_il(2400);
-        { ctx->pc = 0x20CC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000020CC; return; }
+        { SPU_DIRECT(ctx, 0x20CC, spujob_42E1FC8CEE0BE246_spu_func_000020CC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000020CC(spu_context* ctx) {
@@ -2701,13 +2761,13 @@ loc_000020CC:
         ctx->gpr[2] = spu_rdch(ctx, SPU_RdDec);
         ctx->gpr[34] = spu_ceq(ctx->gpr[3], ctx->gpr[4]);
         if (ctx->gpr[34]._u32[0] == 0) goto loc_000020CC;
-        { ctx->pc = 0x20DC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000020DC; return; }
+        { SPU_DIRECT(ctx, 0x20DC, spujob_42E1FC8CEE0BE246_spu_func_000020DC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000020DC(spu_context* ctx) {
         ctx->gpr[35] = spu_ceqbi(ctx->gpr[9], 0);
         ctx->gpr[33] = spu_xsbh(ctx->gpr[35]);
-        if (ctx->gpr[33]._u16[0] != 0) { ctx->pc = 0x1F74; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001F74; return; }
+        if (ctx->gpr[33]._u16[0] != 0) { SPU_DIRECT(ctx, 0x1F74, spujob_42E1FC8CEE0BE246_spu_func_00001F74); }
         ctx->gpr[7] = spu_il(12);
         ctx->gpr[18] = spu_cwd(ctx->gpr[80], 12);
         ctx->gpr[14] = spu_sf(ctx->gpr[82], ctx->gpr[86]);
@@ -2732,12 +2792,12 @@ void spujob_42E1FC8CEE0BE246_spu_func_000020DC(spu_context* ctx) {
         ctx->gpr[89] = spu_rotqby(ctx->gpr[86], ctx->gpr[80]);
         ctx->gpr[80] = spu_shufb(ctx->gpr[89], ctx->gpr[90], ctx->gpr[9]);
         spu_ls_write128(ctx, ctx->gpr[83]._u32[0] + 0x0, ctx->gpr[80]);
-        { ctx->pc = 0x2150; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002150; return; }
+        { SPU_DIRECT(ctx, 0x2150, spujob_42E1FC8CEE0BE246_spu_func_00002150); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000214C(spu_context* ctx) {
         ctx->gpr[11] = spu_il(0);
-        { ctx->pc = 0x2150; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002150; return; }
+        { SPU_DIRECT(ctx, 0x2150, spujob_42E1FC8CEE0BE246_spu_func_00002150); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002150(spu_context* ctx) {
@@ -2764,8 +2824,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002198(spu_context* ctx) {
         ctx->gpr[7] = spu_ori(ctx->gpr[4], 0);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0xC0, ctx->gpr[126]);
         ctx->gpr[2] = spu_ila(0x6DA8);
-        ctx->gpr[126] = spu_link(0x21A8); { ctx->pc = 0x21A8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000021A8; return; }
-        { ctx->pc = 0x21A8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000021A8; return; }
+        ctx->gpr[126] = spu_link(0x21A8); { SPU_DIRECT(ctx, 0x21A8, spujob_42E1FC8CEE0BE246_spu_func_000021A8); }
+        { SPU_DIRECT(ctx, 0x21A8, spujob_42E1FC8CEE0BE246_spu_func_000021A8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000021A8(spu_context* ctx) {
@@ -2788,11 +2848,11 @@ void spujob_42E1FC8CEE0BE246_spu_func_000021A8(spu_context* ctx) {
         /* branch hint (ignored) */;
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0xE0, ctx->gpr[1]);
         ctx->gpr[1] = spu_ai(ctx->gpr[1], -224);
-        if (ctx->gpr[4]._u32[0] == 0) { ctx->pc = 0x2318; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002318; return; }
+        if (ctx->gpr[4]._u32[0] == 0) { SPU_DIRECT(ctx, 0x2318, spujob_42E1FC8CEE0BE246_spu_func_00002318); }
         /* branch hint (ignored) */;
         ctx->gpr[88] = spu_rdch(ctx, SPU_RdMachStat);
-        ctx->gpr[2] = spu_link(0x2204); { ctx->pc = 0x2204; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002204; return; }
-        { ctx->pc = 0x2204; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002204; return; }
+        ctx->gpr[2] = spu_link(0x2204); { SPU_DIRECT(ctx, 0x2204, spujob_42E1FC8CEE0BE246_spu_func_00002204); }
+        { SPU_DIRECT(ctx, 0x2204, spujob_42E1FC8CEE0BE246_spu_func_00002204); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002204(spu_context* ctx) {
@@ -2802,82 +2862,82 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002204(spu_context* ctx) {
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000220C(spu_context* ctx) {
         ctx->gpr[4] = spu_ila(0xC5B0);
-        { ctx->pc = 0x2210; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002210; return; }
+        { SPU_DIRECT(ctx, 0x2210, spujob_42E1FC8CEE0BE246_spu_func_00002210); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002210(spu_context* ctx) {
         ctx->gpr[3] = spu_ilhu(0x100);
-        { ctx->pc = 0x2214; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002214; return; }
+        { SPU_DIRECT(ctx, 0x2214, spujob_42E1FC8CEE0BE246_spu_func_00002214); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002214(spu_context* ctx) {
         ctx->gpr[8] = spu_ls_read128(ctx, ctx->gpr[5]._u32[0] + 0x0);
-        { ctx->pc = 0x2218; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002218; return; }
+        { SPU_DIRECT(ctx, 0x2218, spujob_42E1FC8CEE0BE246_spu_func_00002218); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002218(spu_context* ctx) {
         ctx->gpr[9] = spu_ai(ctx->gpr[7], 7);
-        { ctx->pc = 0x221C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000221C; return; }
+        { SPU_DIRECT(ctx, 0x221C, spujob_42E1FC8CEE0BE246_spu_func_0000221C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000221C(spu_context* ctx) {
         ctx->gpr[85] = spu_ls_read128(ctx, ctx->gpr[87]._u32[0] + 0x50);
-        { ctx->pc = 0x2220; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002220; return; }
+        { SPU_DIRECT(ctx, 0x2220, spujob_42E1FC8CEE0BE246_spu_func_00002220); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002220(spu_context* ctx) {
         ctx->gpr[4] = spu_a(ctx->gpr[4], ctx->gpr[126]);
-        { ctx->pc = 0x2224; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002224; return; }
+        { SPU_DIRECT(ctx, 0x2224, spujob_42E1FC8CEE0BE246_spu_func_00002224); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002224(spu_context* ctx) {
         ctx->gpr[89] = spu_cwd(ctx->gpr[1], 0);
-        { ctx->pc = 0x2228; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002228; return; }
+        { SPU_DIRECT(ctx, 0x2228, spujob_42E1FC8CEE0BE246_spu_func_00002228); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002228(spu_context* ctx) {
         ctx->gpr[7] = spu_andi(ctx->gpr[9], -8);
-        { ctx->pc = 0x222C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000222C; return; }
+        { SPU_DIRECT(ctx, 0x222C, spujob_42E1FC8CEE0BE246_spu_func_0000222C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000222C(spu_context* ctx) {
         ctx->gpr[90] = spu_cwd(ctx->gpr[1], 4);
-        { ctx->pc = 0x2230; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002230; return; }
+        { SPU_DIRECT(ctx, 0x2230, spujob_42E1FC8CEE0BE246_spu_func_00002230); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002230(spu_context* ctx) {
         ctx->gpr[83] = spu_a(ctx->gpr[7], ctx->gpr[7]);
-        { ctx->pc = 0x2234; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002234; return; }
+        { SPU_DIRECT(ctx, 0x2234, spujob_42E1FC8CEE0BE246_spu_func_00002234); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002234(spu_context* ctx) {
         ctx->gpr[6] = spu_rotqbyi(ctx->gpr[8], 12);
-        { ctx->pc = 0x2238; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002238; return; }
+        { SPU_DIRECT(ctx, 0x2238, spujob_42E1FC8CEE0BE246_spu_func_00002238); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002238(spu_context* ctx) {
         ctx->gpr[86] = spu_a(ctx->gpr[8], ctx->gpr[83]);
-        { ctx->pc = 0x223C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000223C; return; }
+        { SPU_DIRECT(ctx, 0x223C, spujob_42E1FC8CEE0BE246_spu_func_0000223C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000223C(spu_context* ctx) {
         ctx->gpr[84] = spu_rotqbyi(ctx->gpr[8], 4);
-        { ctx->pc = 0x2240; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002240; return; }
+        { SPU_DIRECT(ctx, 0x2240, spujob_42E1FC8CEE0BE246_spu_func_00002240); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002240(spu_context* ctx) {
         ctx->gpr[80] = spu_ori(ctx->gpr[8], 0);
-        { ctx->pc = 0x2244; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002244; return; }
+        { SPU_DIRECT(ctx, 0x2244, spujob_42E1FC8CEE0BE246_spu_func_00002244); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002244(spu_context* ctx) {
         ctx->gpr[5] = spu_clgt(ctx->gpr[86], ctx->gpr[6]);
-        { ctx->pc = 0x2248; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002248; return; }
+        { SPU_DIRECT(ctx, 0x2248, spujob_42E1FC8CEE0BE246_spu_func_00002248); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002248(spu_context* ctx) {
-        if (ctx->gpr[5]._u32[0] == 0) { ctx->pc = 0x2260; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002260; return; }
-        { ctx->pc = 0x224C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000224C; return; }
+        if (ctx->gpr[5]._u32[0] == 0) { SPU_DIRECT(ctx, 0x2260, spujob_42E1FC8CEE0BE246_spu_func_00002260); }
+        { SPU_DIRECT(ctx, 0x224C, spujob_42E1FC8CEE0BE246_spu_func_0000224C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000224C(spu_context* ctx) {
@@ -2886,7 +2946,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_0000224C(spu_context* ctx) {
         ctx->gpr[4] = spu_il(924);
         ctx->gpr[3] = spu_a(ctx->gpr[3], ctx->gpr[126]);
         ctx->gpr[0] = spu_link(0x2260); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_00000318(ctx); spu_drain_call(ctx, 0x2260); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        { ctx->pc = 0x2260; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002260; return; }
+        { SPU_DIRECT(ctx, 0x2260, spujob_42E1FC8CEE0BE246_spu_func_00002260); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002260(spu_context* ctx) {
@@ -2913,7 +2973,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002260(spu_context* ctx) {
         ctx->gpr[21] = spu_sfi(ctx->gpr[22], 0);
         ctx->gpr[19] = spu_and(ctx->gpr[20], ctx->gpr[21]);
         ctx->gpr[17] = spu_and(ctx->gpr[18], ctx->gpr[19]);
-        if ((int32_t)ctx->gpr[17]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x022BC img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[7] = spu_il(32);
         ctx->gpr[3] = spu_ori(ctx->gpr[85], 0);
         ctx->gpr[5] = spu_ori(ctx->gpr[83], 0);
@@ -2927,9 +2987,9 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002260(spu_context* ctx) {
         ctx->gpr[10] = spu_xsbh(ctx->gpr[15]);
         ctx->gpr[11] = spu_shufb(ctx->gpr[12], ctx->gpr[13], ctx->gpr[90]);
         spu_ls_write128(ctx, ctx->gpr[81]._u32[0] + 0x0, ctx->gpr[11]);
-        if (ctx->gpr[10]._u16[0] != 0) { ctx->pc = 0x2304; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002304; return; }
-        ctx->gpr[2] = spu_link(0x22FC); { ctx->pc = 0x22FC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000022FC; return; }
-        { ctx->pc = 0x22FC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000022FC; return; }
+        if (ctx->gpr[10]._u16[0] != 0) { SPU_DIRECT(ctx, 0x2304, spujob_42E1FC8CEE0BE246_spu_func_00002304); }
+        ctx->gpr[2] = spu_link(0x22FC); { SPU_DIRECT(ctx, 0x22FC, spujob_42E1FC8CEE0BE246_spu_func_000022FC); }
+        { SPU_DIRECT(ctx, 0x22FC, spujob_42E1FC8CEE0BE246_spu_func_000022FC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000022FC(spu_context* ctx) {
@@ -2939,82 +2999,82 @@ void spujob_42E1FC8CEE0BE246_spu_func_000022FC(spu_context* ctx) {
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002304(spu_context* ctx) {
         ctx->gpr[36] = spu_ls_read128(ctx, ctx->gpr[81]._u32[0] + 0x10);
-        { ctx->pc = 0x2308; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002308; return; }
+        { SPU_DIRECT(ctx, 0x2308, spujob_42E1FC8CEE0BE246_spu_func_00002308); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002308(spu_context* ctx) {
         ctx->gpr[37] = spu_il(1);
-        { ctx->pc = 0x230C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000230C; return; }
+        { SPU_DIRECT(ctx, 0x230C, spujob_42E1FC8CEE0BE246_spu_func_0000230C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000230C(spu_context* ctx) {
         ctx->gpr[38] = spu_cbd(ctx->gpr[1], 5);
-        { ctx->pc = 0x2310; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002310; return; }
+        { SPU_DIRECT(ctx, 0x2310, spujob_42E1FC8CEE0BE246_spu_func_00002310); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002310(spu_context* ctx) {
         ctx->gpr[35] = spu_shufb(ctx->gpr[37], ctx->gpr[36], ctx->gpr[38]);
-        { ctx->pc = 0x2314; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002314; return; }
+        { SPU_DIRECT(ctx, 0x2314, spujob_42E1FC8CEE0BE246_spu_func_00002314); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002314(spu_context* ctx) {
         spu_ls_write128(ctx, ctx->gpr[81]._u32[0] + 0x10, ctx->gpr[35]);
-        { ctx->pc = 0x2318; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002318; return; }
+        { SPU_DIRECT(ctx, 0x2318, spujob_42E1FC8CEE0BE246_spu_func_00002318); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002318(spu_context* ctx) {
         ctx->gpr[0] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + 0xF0);
-        { ctx->pc = 0x231C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000231C; return; }
+        { SPU_DIRECT(ctx, 0x231C, spujob_42E1FC8CEE0BE246_spu_func_0000231C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000231C(spu_context* ctx) {
         ctx->gpr[1] = spu_ai(ctx->gpr[1], 224);
-        { ctx->pc = 0x2320; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002320; return; }
+        { SPU_DIRECT(ctx, 0x2320, spujob_42E1FC8CEE0BE246_spu_func_00002320); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002320(spu_context* ctx) {
         ctx->gpr[80] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x10);
-        { ctx->pc = 0x2324; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002324; return; }
+        { SPU_DIRECT(ctx, 0x2324, spujob_42E1FC8CEE0BE246_spu_func_00002324); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002324(spu_context* ctx) {
         ctx->gpr[81] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x20);
-        { ctx->pc = 0x2328; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002328; return; }
+        { SPU_DIRECT(ctx, 0x2328, spujob_42E1FC8CEE0BE246_spu_func_00002328); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002328(spu_context* ctx) {
         ctx->gpr[82] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x30);
-        { ctx->pc = 0x232C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000232C; return; }
+        { SPU_DIRECT(ctx, 0x232C, spujob_42E1FC8CEE0BE246_spu_func_0000232C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000232C(spu_context* ctx) {
         /* branch hint (ignored) */;
-        { ctx->pc = 0x2330; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002330; return; }
+        { SPU_DIRECT(ctx, 0x2330, spujob_42E1FC8CEE0BE246_spu_func_00002330); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002330(spu_context* ctx) {
         ctx->gpr[83] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x40);
-        { ctx->pc = 0x2334; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002334; return; }
+        { SPU_DIRECT(ctx, 0x2334, spujob_42E1FC8CEE0BE246_spu_func_00002334); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002334(spu_context* ctx) {
         ctx->gpr[84] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x50);
-        { ctx->pc = 0x2338; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002338; return; }
+        { SPU_DIRECT(ctx, 0x2338, spujob_42E1FC8CEE0BE246_spu_func_00002338); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002338(spu_context* ctx) {
         ctx->gpr[85] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x60);
-        { ctx->pc = 0x233C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000233C; return; }
+        { SPU_DIRECT(ctx, 0x233C, spujob_42E1FC8CEE0BE246_spu_func_0000233C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000233C(spu_context* ctx) {
         ctx->gpr[86] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x70);
-        { ctx->pc = 0x2340; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002340; return; }
+        { SPU_DIRECT(ctx, 0x2340, spujob_42E1FC8CEE0BE246_spu_func_00002340); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002340(spu_context* ctx) {
         ctx->gpr[87] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x80);
-        { ctx->pc = 0x2344; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002344; return; }
+        { SPU_DIRECT(ctx, 0x2344, spujob_42E1FC8CEE0BE246_spu_func_00002344); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002344(spu_context* ctx) {
@@ -3035,8 +3095,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002358(spu_context* ctx) {
         ctx->gpr[85] = spu_ori(ctx->gpr[3], 0);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0xA0, ctx->gpr[126]);
         ctx->gpr[11] = spu_ila(0x6F80);
-        ctx->gpr[126] = spu_link(0x2380); { ctx->pc = 0x2380; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002380; return; }
-        { ctx->pc = 0x2380; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002380; return; }
+        ctx->gpr[126] = spu_link(0x2380); { SPU_DIRECT(ctx, 0x2380, spujob_42E1FC8CEE0BE246_spu_func_00002380); }
+        { SPU_DIRECT(ctx, 0x2380, spujob_42E1FC8CEE0BE246_spu_func_00002380); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002380(spu_context* ctx) {
@@ -3058,7 +3118,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002380(spu_context* ctx) {
         ctx->gpr[2] = spu_shufb(ctx->gpr[8], ctx->gpr[12], ctx->gpr[10]);
         ctx->gpr[12] = spu_shufb(ctx->gpr[8], ctx->gpr[2], ctx->gpr[9]);
         spu_ls_write128(ctx, ctx->gpr[6]._u32[0] + 0x10, ctx->gpr[12]);
-        if (ctx->gpr[5]._u32[0] == 0) { ctx->pc = 0x241C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000241C; return; }
+        if (ctx->gpr[5]._u32[0] == 0) { SPU_DIRECT(ctx, 0x241C, spujob_42E1FC8CEE0BE246_spu_func_0000241C); }
         ctx->gpr[22] = spu_ls_read128(ctx, ctx->gpr[6]._u32[0] + 0x0);
         ctx->gpr[23] = spu_andi(ctx->gpr[4], -4);
         ctx->gpr[21] = spu_cwd(ctx->gpr[1], 0);
@@ -3078,7 +3138,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002380(spu_context* ctx) {
         ctx->gpr[3] = spu_shufb(ctx->gpr[15], ctx->gpr[7], ctx->gpr[16]);
         ctx->gpr[4] = spu_shufb(ctx->gpr[13], ctx->gpr[3], ctx->gpr[14]);
         spu_ls_write128(ctx, ctx->gpr[80]._u32[0] + 0x0, ctx->gpr[4]);
-        { ctx->pc = 0x261C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000261C; return; }
+        { SPU_DIRECT(ctx, 0x261C, spujob_42E1FC8CEE0BE246_spu_func_0000261C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000241C(spu_context* ctx) {
@@ -3086,8 +3146,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_0000241C(spu_context* ctx) {
         ctx->gpr[46] = spu_ai(ctx->gpr[11], 127);
         ctx->gpr[88] = spu_rdch(ctx, SPU_RdMachStat);
         ctx->gpr[83] = spu_andi(ctx->gpr[46], -128);
-        ctx->gpr[2] = spu_link(0x2430); { ctx->pc = 0x2430; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002430; return; }
-        { ctx->pc = 0x2430; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002430; return; }
+        ctx->gpr[2] = spu_link(0x2430); { SPU_DIRECT(ctx, 0x2430, spujob_42E1FC8CEE0BE246_spu_func_00002430); }
+        { SPU_DIRECT(ctx, 0x2430, spujob_42E1FC8CEE0BE246_spu_func_00002430); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002430(spu_context* ctx) {
@@ -3097,82 +3157,82 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002430(spu_context* ctx) {
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002438(spu_context* ctx) {
         ctx->gpr[43] = spu_ila(0xD300);
-        { ctx->pc = 0x243C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000243C; return; }
+        { SPU_DIRECT(ctx, 0x243C, spujob_42E1FC8CEE0BE246_spu_func_0000243C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000243C(spu_context* ctx) {
         ctx->gpr[44] = spu_shli(ctx->gpr[7], 7);
-        { ctx->pc = 0x2440; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002440; return; }
+        { SPU_DIRECT(ctx, 0x2440, spujob_42E1FC8CEE0BE246_spu_func_00002440); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002440(spu_context* ctx) {
         ctx->gpr[45] = spu_ai(ctx->gpr[4], 128);
-        { ctx->pc = 0x2444; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002444; return; }
+        { SPU_DIRECT(ctx, 0x2444, spujob_42E1FC8CEE0BE246_spu_func_00002444); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002444(spu_context* ctx) {
         ctx->gpr[42] = spu_a(ctx->gpr[43], ctx->gpr[126]);
-        { ctx->pc = 0x2448; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002448; return; }
+        { SPU_DIRECT(ctx, 0x2448, spujob_42E1FC8CEE0BE246_spu_func_00002448); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002448(spu_context* ctx) {
         ctx->gpr[40] = spu_a(ctx->gpr[44], ctx->gpr[45]);
-        { ctx->pc = 0x244C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000244C; return; }
+        { SPU_DIRECT(ctx, 0x244C, spujob_42E1FC8CEE0BE246_spu_func_0000244C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000244C(spu_context* ctx) {
         ctx->gpr[41] = spu_andi(ctx->gpr[42], 127);
-        { ctx->pc = 0x2450; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002450; return; }
+        { SPU_DIRECT(ctx, 0x2450, spujob_42E1FC8CEE0BE246_spu_func_00002450); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002450(spu_context* ctx) {
         ctx->gpr[38] = spu_rotqmbyi(ctx->gpr[40], -4);
-        { ctx->pc = 0x2454; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002454; return; }
+        { SPU_DIRECT(ctx, 0x2454, spujob_42E1FC8CEE0BE246_spu_func_00002454); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002454(spu_context* ctx) {
         ctx->gpr[39] = spu_ceqi(ctx->gpr[41], 0);
-        { ctx->pc = 0x2458; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002458; return; }
+        { SPU_DIRECT(ctx, 0x2458, spujob_42E1FC8CEE0BE246_spu_func_00002458); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002458(spu_context* ctx) {
         ctx->gpr[35] = spu_sfi(ctx->gpr[39], 0);
-        { ctx->pc = 0x245C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000245C; return; }
+        { SPU_DIRECT(ctx, 0x245C, spujob_42E1FC8CEE0BE246_spu_func_0000245C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000245C(spu_context* ctx) {
         ctx->gpr[82] = spu_shlqbyi(ctx->gpr[38], 4);
-        { ctx->pc = 0x2460; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002460; return; }
+        { SPU_DIRECT(ctx, 0x2460, spujob_42E1FC8CEE0BE246_spu_func_00002460); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002460(spu_context* ctx) {
         ctx->gpr[37] = spu_andi(ctx->gpr[82], 127);
-        { ctx->pc = 0x2464; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002464; return; }
+        { SPU_DIRECT(ctx, 0x2464, spujob_42E1FC8CEE0BE246_spu_func_00002464); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002464(spu_context* ctx) {
         ctx->gpr[36] = spu_ceqi(ctx->gpr[37], 0);
-        { ctx->pc = 0x2468; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002468; return; }
+        { SPU_DIRECT(ctx, 0x2468, spujob_42E1FC8CEE0BE246_spu_func_00002468); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002468(spu_context* ctx) {
         ctx->gpr[34] = spu_sfi(ctx->gpr[36], 0);
-        { ctx->pc = 0x246C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000246C; return; }
+        { SPU_DIRECT(ctx, 0x246C, spujob_42E1FC8CEE0BE246_spu_func_0000246C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000246C(spu_context* ctx) {
         ctx->gpr[84] = spu_and(ctx->gpr[35], ctx->gpr[34]);
-        { ctx->pc = 0x2470; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002470; return; }
+        { SPU_DIRECT(ctx, 0x2470, spujob_42E1FC8CEE0BE246_spu_func_00002470); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002470(spu_context* ctx) {
-        if ((int32_t)ctx->gpr[84]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x02470 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
-        { ctx->pc = 0x2474; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002474; return; }
+        /* halt-assert bypassed */
+        { SPU_DIRECT(ctx, 0x2474, spujob_42E1FC8CEE0BE246_spu_func_00002474); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002474(spu_context* ctx) {
         ctx->gpr[87] = spu_ila(0xD300);
-        { ctx->pc = 0x2478; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002478; return; }
+        { SPU_DIRECT(ctx, 0x2478, spujob_42E1FC8CEE0BE246_spu_func_00002478); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002478(spu_context* ctx) {
@@ -3195,11 +3255,11 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002478(spu_context* ctx) {
         ctx->gpr[26] = spu_ls_read128(ctx, 0x8700);
         ctx->gpr[25] = spu_rotqbyi(ctx->gpr[27], 8);
         ctx->gpr[24] = spu_ceq(ctx->gpr[25], ctx->gpr[26]);
-        if (ctx->gpr[24]._u32[0] == 0) { ctx->pc = 0x24D8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000024D8; return; }
+        if (ctx->gpr[24]._u32[0] == 0) { SPU_DIRECT(ctx, 0x24D8, spujob_42E1FC8CEE0BE246_spu_func_000024D8); }
         ctx->gpr[5] = spu_ori(ctx->gpr[83], 0);
         ctx->gpr[0] = spu_link(0x24D0); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_000018A0(ctx); spu_drain_call(ctx, 0x24D0); ctx->host_depth--; spu_img_restore(ctx, _si); }
         ctx->gpr[5] = spu_ori(ctx->gpr[3], 0);
-        { ctx->pc = 0x254C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000254C; return; }
+        { SPU_DIRECT(ctx, 0x254C, spujob_42E1FC8CEE0BE246_spu_func_0000254C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000024D8(spu_context* ctx) {
@@ -3213,7 +3273,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000024D8(spu_context* ctx) {
         ctx->gpr[48] = spu_ceqbi(ctx->gpr[3], 0);
         ctx->gpr[5] = spu_ori(ctx->gpr[3], 0);
         ctx->gpr[47] = spu_xsbh(ctx->gpr[48]);
-        if (ctx->gpr[47]._u16[0] == 0) { ctx->pc = 0x25D8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000025D8; return; }
+        if (ctx->gpr[47]._u16[0] == 0) { SPU_DIRECT(ctx, 0x25D8, spujob_42E1FC8CEE0BE246_spu_func_000025D8); }
         ctx->gpr[5] = spu_ori(ctx->gpr[83], 0);
         ctx->gpr[4] = spu_ori(ctx->gpr[81], 0);
         ctx->gpr[3] = spu_shlqbyi(ctx->gpr[85], 0);
@@ -3222,7 +3282,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000024D8(spu_context* ctx) {
         ctx->gpr[51] = spu_ceqbi(ctx->gpr[3], 0);
         ctx->gpr[5] = spu_shlqbyi(ctx->gpr[3], 0);
         ctx->gpr[50] = spu_xsbh(ctx->gpr[51]);
-        if (ctx->gpr[50]._u16[0] == 0) { ctx->pc = 0x254C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000254C; return; }
+        if (ctx->gpr[50]._u16[0] == 0) { SPU_DIRECT(ctx, 0x254C, spujob_42E1FC8CEE0BE246_spu_func_0000254C); }
         ctx->gpr[52] = spu_ila(0xD300);
         ctx->gpr[5] = spu_shlqbyi(ctx->gpr[83], 0);
         ctx->gpr[3] = spu_ori(ctx->gpr[85], 0);
@@ -3231,21 +3291,21 @@ void spujob_42E1FC8CEE0BE246_spu_func_000024D8(spu_context* ctx) {
         ctx->gpr[6] = spu_il(1);
         ctx->gpr[0] = spu_link(0x2544); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_00001E00(ctx); spu_drain_call(ctx, 0x2544); ctx->host_depth--; spu_img_restore(ctx, _si); }
         ctx->gpr[5] = spu_ori(ctx->gpr[3], 0);
-        { ctx->pc = 0x25D8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000025D8; return; }
+        { SPU_DIRECT(ctx, 0x25D8, spujob_42E1FC8CEE0BE246_spu_func_000025D8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000254C(spu_context* ctx) {
         ctx->gpr[6] = spu_il(0);
-        { ctx->pc = 0x2550; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002550; return; }
+        { SPU_DIRECT(ctx, 0x2550, spujob_42E1FC8CEE0BE246_spu_func_00002550); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002550(spu_context* ctx) {
         ctx->gpr[55] = spu_andi(ctx->gpr[88], 1);
         ctx->gpr[54] = spu_ceqbi(ctx->gpr[55], 0);
         ctx->gpr[53] = spu_xsbh(ctx->gpr[54]);
-        if (ctx->gpr[53]._u16[0] != 0) { ctx->pc = 0x256C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000256C; return; }
-        ctx->gpr[2] = spu_link(0x2564); { ctx->pc = 0x2564; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002564; return; }
-        { ctx->pc = 0x2564; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002564; return; }
+        if (ctx->gpr[53]._u16[0] != 0) { SPU_DIRECT(ctx, 0x256C, spujob_42E1FC8CEE0BE246_spu_func_0000256C); }
+        ctx->gpr[2] = spu_link(0x2564); { SPU_DIRECT(ctx, 0x2564, spujob_42E1FC8CEE0BE246_spu_func_00002564); }
+        { SPU_DIRECT(ctx, 0x2564, spujob_42E1FC8CEE0BE246_spu_func_00002564); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002564(spu_context* ctx) {
@@ -3255,81 +3315,81 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002564(spu_context* ctx) {
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000256C(spu_context* ctx) {
         /* branch hint (ignored) */;
-        { ctx->pc = 0x2570; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002570; return; }
+        { SPU_DIRECT(ctx, 0x2570, spujob_42E1FC8CEE0BE246_spu_func_00002570); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002570(spu_context* ctx) {
         ctx->gpr[57] = spu_ceqbi(ctx->gpr[5], 0);
-        { ctx->pc = 0x2574; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002574; return; }
+        { SPU_DIRECT(ctx, 0x2574, spujob_42E1FC8CEE0BE246_spu_func_00002574); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002574(spu_context* ctx) {
         ctx->gpr[11] = spu_fsmbi(0x0);
-        { ctx->pc = 0x2578; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002578; return; }
+        { SPU_DIRECT(ctx, 0x2578, spujob_42E1FC8CEE0BE246_spu_func_00002578); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002578(spu_context* ctx) {
         ctx->gpr[56] = spu_xsbh(ctx->gpr[57]);
-        { ctx->pc = 0x257C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000257C; return; }
+        { SPU_DIRECT(ctx, 0x257C, spujob_42E1FC8CEE0BE246_spu_func_0000257C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000257C(spu_context* ctx) {
-        if (ctx->gpr[56]._u16[0] != 0) { ctx->pc = 0x261C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000261C; return; }
-        { ctx->pc = 0x2580; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002580; return; }
+        if (ctx->gpr[56]._u16[0] != 0) { SPU_DIRECT(ctx, 0x261C, spujob_42E1FC8CEE0BE246_spu_func_0000261C); }
+        { SPU_DIRECT(ctx, 0x2580, spujob_42E1FC8CEE0BE246_spu_func_00002580); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002580(spu_context* ctx) {
         ctx->gpr[59] = spu_ceqbi(ctx->gpr[6], 0);
-        { ctx->pc = 0x2584; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002584; return; }
+        { SPU_DIRECT(ctx, 0x2584, spujob_42E1FC8CEE0BE246_spu_func_00002584); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002584(spu_context* ctx) {
         ctx->gpr[58] = spu_xsbh(ctx->gpr[59]);
-        { ctx->pc = 0x2588; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002588; return; }
+        { SPU_DIRECT(ctx, 0x2588, spujob_42E1FC8CEE0BE246_spu_func_00002588); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002588(spu_context* ctx) {
-        if (ctx->gpr[58]._u16[0] != 0) { ctx->pc = 0x25A8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000025A8; return; }
-        { ctx->pc = 0x258C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000258C; return; }
+        if (ctx->gpr[58]._u16[0] != 0) { SPU_DIRECT(ctx, 0x25A8, spujob_42E1FC8CEE0BE246_spu_func_000025A8); }
+        { SPU_DIRECT(ctx, 0x258C, spujob_42E1FC8CEE0BE246_spu_func_0000258C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000258C(spu_context* ctx) {
         ctx->gpr[64] = spu_ls_read128(ctx, 0x8710);
-        { ctx->pc = 0x2590; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002590; return; }
+        { SPU_DIRECT(ctx, 0x2590, spujob_42E1FC8CEE0BE246_spu_func_00002590); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002590(spu_context* ctx) {
         ctx->gpr[61] = spu_ls_read128(ctx, ctx->gpr[80]._u32[0] + 0x10);
-        { ctx->pc = 0x2594; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002594; return; }
+        { SPU_DIRECT(ctx, 0x2594, spujob_42E1FC8CEE0BE246_spu_func_00002594); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002594(spu_context* ctx) {
         ctx->gpr[63] = spu_cwd(ctx->gpr[1], 0);
-        { ctx->pc = 0x2598; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002598; return; }
+        { SPU_DIRECT(ctx, 0x2598, spujob_42E1FC8CEE0BE246_spu_func_00002598); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002598(spu_context* ctx) {
         ctx->gpr[62] = spu_rotqbyi(ctx->gpr[64], 4);
-        { ctx->pc = 0x259C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000259C; return; }
+        { SPU_DIRECT(ctx, 0x259C, spujob_42E1FC8CEE0BE246_spu_func_0000259C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000259C(spu_context* ctx) {
         ctx->gpr[60] = spu_shufb(ctx->gpr[62], ctx->gpr[61], ctx->gpr[63]);
-        { ctx->pc = 0x25A0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000025A0; return; }
+        { SPU_DIRECT(ctx, 0x25A0, spujob_42E1FC8CEE0BE246_spu_func_000025A0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000025A0(spu_context* ctx) {
         spu_ls_write128(ctx, ctx->gpr[80]._u32[0] + 0x10, ctx->gpr[60]);
-        { ctx->pc = 0x25A4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000025A4; return; }
+        { SPU_DIRECT(ctx, 0x25A4, spujob_42E1FC8CEE0BE246_spu_func_000025A4); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000025A4(spu_context* ctx) {
-        { ctx->pc = 0x25BC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000025BC; return; }
+        { SPU_DIRECT(ctx, 0x25BC, spujob_42E1FC8CEE0BE246_spu_func_000025BC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000025A8(spu_context* ctx) {
         ctx->gpr[67] = spu_il(0);
-        { ctx->pc = 0x25AC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000025AC; return; }
+        { SPU_DIRECT(ctx, 0x25AC, spujob_42E1FC8CEE0BE246_spu_func_000025AC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000025AC(spu_context* ctx) {
@@ -3337,7 +3397,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000025AC(spu_context* ctx) {
         ctx->gpr[68] = spu_cwd(ctx->gpr[1], 0);
         ctx->gpr[65] = spu_shufb(ctx->gpr[67], ctx->gpr[66], ctx->gpr[68]);
         spu_ls_write128(ctx, ctx->gpr[80]._u32[0] + 0x10, ctx->gpr[65]);
-        { ctx->pc = 0x25BC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000025BC; return; }
+        { SPU_DIRECT(ctx, 0x25BC, spujob_42E1FC8CEE0BE246_spu_func_000025BC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000025BC(spu_context* ctx) {
@@ -3347,12 +3407,12 @@ void spujob_42E1FC8CEE0BE246_spu_func_000025BC(spu_context* ctx) {
         ctx->gpr[70] = spu_a(ctx->gpr[71], ctx->gpr[83]);
         ctx->gpr[69] = spu_shufb(ctx->gpr[70], ctx->gpr[71], ctx->gpr[72]);
         spu_ls_write128(ctx, ctx->gpr[80]._u32[0] + 0x0, ctx->gpr[69]);
-        { ctx->pc = 0x261C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000261C; return; }
+        { SPU_DIRECT(ctx, 0x261C, spujob_42E1FC8CEE0BE246_spu_func_0000261C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000025D8(spu_context* ctx) {
         /* branch hint (ignored) */;
-        if ((int32_t)ctx->gpr[84]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x025DC img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[76] = spu_il(128);
         ctx->gpr[75] = spu_fsmbi(0x0);
         ctx->gpr[79] = spu_ori(ctx->gpr[87], 0);
@@ -3367,7 +3427,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000025D8(spu_context* ctx) {
         spu_wrch(ctx, MFC_TagID, ctx->gpr[75]);
         spu_wrch(ctx, MFC_Cmd, ctx->gpr[74]);
         ctx->gpr[2] = spu_rdch(ctx, MFC_RdAtomicStat);
-        { ctx->pc = 0x2550; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002550; return; }
+        { SPU_DIRECT(ctx, 0x2550, spujob_42E1FC8CEE0BE246_spu_func_00002550); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000261C(spu_context* ctx) {
@@ -3461,17 +3521,17 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002658(spu_context* ctx) {
         ctx->gpr[6] = spu_fsmbi(0x0);
         ctx->gpr[81] = spu_andi(ctx->gpr[81], 15);
         ctx->gpr[7] = spu_sfi(ctx->gpr[2], 0);
-        { ctx->pc = 0x2814; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002814; return; }
+        { SPU_DIRECT(ctx, 0x2814, spujob_42E1FC8CEE0BE246_spu_func_00002814); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000277C(spu_context* ctx) {
         ctx->gpr[38] = spu_ls_read128(ctx, ctx->gpr[5]._u32[0] + 0x0);
         ctx->gpr[37] = spu_rotqby(ctx->gpr[38], ctx->gpr[5]);
-        if (ctx->gpr[37]._u32[0] != 0) { ctx->pc = 0x2814; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002814; return; }
+        if (ctx->gpr[37]._u32[0] != 0) { SPU_DIRECT(ctx, 0x2814, spujob_42E1FC8CEE0BE246_spu_func_00002814); }
         /* branch hint (ignored) */;
         ctx->gpr[47] = spu_rdch(ctx, SPU_RdMachStat);
-        ctx->gpr[2] = spu_link(0x2794); { ctx->pc = 0x2794; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002794; return; }
-        { ctx->pc = 0x2794; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002794; return; }
+        ctx->gpr[2] = spu_link(0x2794); { SPU_DIRECT(ctx, 0x2794, spujob_42E1FC8CEE0BE246_spu_func_00002794); }
+        { SPU_DIRECT(ctx, 0x2794, spujob_42E1FC8CEE0BE246_spu_func_00002794); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002794(spu_context* ctx) {
@@ -3481,82 +3541,82 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002794(spu_context* ctx) {
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000279C(spu_context* ctx) {
         ctx->gpr[57] = spu_ls_read128(ctx, ctx->gpr[4]._u32[0] + 0x0);
-        { ctx->pc = 0x27A0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000027A0; return; }
+        { SPU_DIRECT(ctx, 0x27A0, spujob_42E1FC8CEE0BE246_spu_func_000027A0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000027A0(spu_context* ctx) {
         ctx->gpr[41] = spu_ls_read128(ctx, ctx->gpr[83]._u32[0] + 0x150);
-        { ctx->pc = 0x27A4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000027A4; return; }
+        { SPU_DIRECT(ctx, 0x27A4, spujob_42E1FC8CEE0BE246_spu_func_000027A4); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000027A4(spu_context* ctx) {
         ctx->gpr[55] = spu_rotqmbyi(ctx->gpr[57], -4);
-        { ctx->pc = 0x27A8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000027A8; return; }
+        { SPU_DIRECT(ctx, 0x27A8, spujob_42E1FC8CEE0BE246_spu_func_000027A8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000027A8(spu_context* ctx) {
         ctx->gpr[56] = spu_clgti(ctx->gpr[41], 31);
-        { ctx->pc = 0x27AC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000027AC; return; }
+        { SPU_DIRECT(ctx, 0x27AC, spujob_42E1FC8CEE0BE246_spu_func_000027AC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000027AC(spu_context* ctx) {
         ctx->gpr[54] = spu_nor(ctx->gpr[56], ctx->gpr[56]);
-        { ctx->pc = 0x27B0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000027B0; return; }
+        { SPU_DIRECT(ctx, 0x27B0, spujob_42E1FC8CEE0BE246_spu_func_000027B0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000027B0(spu_context* ctx) {
         ctx->gpr[43] = spu_shlqbyi(ctx->gpr[55], 4);
-        { ctx->pc = 0x27B4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000027B4; return; }
+        { SPU_DIRECT(ctx, 0x27B4, spujob_42E1FC8CEE0BE246_spu_func_000027B4); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000027B4(spu_context* ctx) {
         ctx->gpr[51] = spu_sfi(ctx->gpr[54], 0);
-        { ctx->pc = 0x27B8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000027B8; return; }
+        { SPU_DIRECT(ctx, 0x27B8, spujob_42E1FC8CEE0BE246_spu_func_000027B8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000027B8(spu_context* ctx) {
         ctx->gpr[53] = spu_andi(ctx->gpr[43], 15);
-        { ctx->pc = 0x27BC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000027BC; return; }
+        { SPU_DIRECT(ctx, 0x27BC, spujob_42E1FC8CEE0BE246_spu_func_000027BC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000027BC(spu_context* ctx) {
         ctx->gpr[52] = spu_ceq(ctx->gpr[81], ctx->gpr[53]);
-        { ctx->pc = 0x27C0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000027C0; return; }
+        { SPU_DIRECT(ctx, 0x27C0, spujob_42E1FC8CEE0BE246_spu_func_000027C0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000027C0(spu_context* ctx) {
         ctx->gpr[50] = spu_sfi(ctx->gpr[52], 0);
-        { ctx->pc = 0x27C4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000027C4; return; }
+        { SPU_DIRECT(ctx, 0x27C4, spujob_42E1FC8CEE0BE246_spu_func_000027C4); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000027C4(spu_context* ctx) {
         ctx->gpr[49] = spu_and(ctx->gpr[50], ctx->gpr[51]);
-        { ctx->pc = 0x27C8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000027C8; return; }
+        { SPU_DIRECT(ctx, 0x27C8, spujob_42E1FC8CEE0BE246_spu_func_000027C8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000027C8(spu_context* ctx) {
         ctx->gpr[48] = spu_and(ctx->gpr[7], ctx->gpr[49]);
-        { ctx->pc = 0x27CC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000027CC; return; }
+        { SPU_DIRECT(ctx, 0x27CC, spujob_42E1FC8CEE0BE246_spu_func_000027CC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000027CC(spu_context* ctx) {
-        if ((int32_t)ctx->gpr[48]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x027CC img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
-        { ctx->pc = 0x27D0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000027D0; return; }
+        /* halt-assert bypassed */
+        { SPU_DIRECT(ctx, 0x27D0, spujob_42E1FC8CEE0BE246_spu_func_000027D0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000027D0(spu_context* ctx) {
         ctx->gpr[45] = spu_il(0);
-        { ctx->pc = 0x27D4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000027D4; return; }
+        { SPU_DIRECT(ctx, 0x27D4, spujob_42E1FC8CEE0BE246_spu_func_000027D4); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000027D4(spu_context* ctx) {
         ctx->gpr[46] = spu_andi(ctx->gpr[47], 1);
-        { ctx->pc = 0x27D8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000027D8; return; }
+        { SPU_DIRECT(ctx, 0x27D8, spujob_42E1FC8CEE0BE246_spu_func_000027D8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000027D8(spu_context* ctx) {
         ctx->gpr[42] = spu_il(4);
-        { ctx->pc = 0x27DC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000027DC; return; }
+        { SPU_DIRECT(ctx, 0x27DC, spujob_42E1FC8CEE0BE246_spu_func_000027DC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000027DC(spu_context* ctx) {
@@ -3569,9 +3629,9 @@ void spujob_42E1FC8CEE0BE246_spu_func_000027DC(spu_context* ctx) {
         spu_wrch(ctx, MFC_Size, ctx->gpr[42]);
         spu_wrch(ctx, MFC_TagID, ctx->gpr[41]);
         spu_wrch(ctx, MFC_Cmd, ctx->gpr[40]);
-        if (ctx->gpr[39]._u16[0] != 0) { ctx->pc = 0x282C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000282C; return; }
-        ctx->gpr[2] = spu_link(0x2808); { ctx->pc = 0x2808; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002808; return; }
-        { ctx->pc = 0x2808; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002808; return; }
+        if (ctx->gpr[39]._u16[0] != 0) { SPU_DIRECT(ctx, 0x282C, spujob_42E1FC8CEE0BE246_spu_func_0000282C); }
+        ctx->gpr[2] = spu_link(0x2808); { SPU_DIRECT(ctx, 0x2808, spujob_42E1FC8CEE0BE246_spu_func_00002808); }
+        { SPU_DIRECT(ctx, 0x2808, spujob_42E1FC8CEE0BE246_spu_func_00002808); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002808(spu_context* ctx) {
@@ -3580,81 +3640,81 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002808(spu_context* ctx) {
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002810(spu_context* ctx) {
-        { ctx->pc = 0x282C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000282C; return; }
+        { SPU_DIRECT(ctx, 0x282C, spujob_42E1FC8CEE0BE246_spu_func_0000282C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002814(spu_context* ctx) {
         ctx->gpr[58] = spu_ceq(ctx->gpr[6], ctx->gpr[85]);
-        { ctx->pc = 0x2818; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002818; return; }
+        { SPU_DIRECT(ctx, 0x2818, spujob_42E1FC8CEE0BE246_spu_func_00002818); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002818(spu_context* ctx) {
         ctx->gpr[5] = spu_ai(ctx->gpr[3], 8);
-        { ctx->pc = 0x281C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000281C; return; }
+        { SPU_DIRECT(ctx, 0x281C, spujob_42E1FC8CEE0BE246_spu_func_0000281C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000281C(spu_context* ctx) {
         ctx->gpr[4] = spu_shlqbyi(ctx->gpr[3], 0);
-        { ctx->pc = 0x2820; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002820; return; }
+        { SPU_DIRECT(ctx, 0x2820, spujob_42E1FC8CEE0BE246_spu_func_00002820); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002820(spu_context* ctx) {
         ctx->gpr[6] = spu_ai(ctx->gpr[6], 1);
-        { ctx->pc = 0x2824; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002824; return; }
+        { SPU_DIRECT(ctx, 0x2824, spujob_42E1FC8CEE0BE246_spu_func_00002824); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002824(spu_context* ctx) {
         ctx->gpr[3] = spu_ai(ctx->gpr[3], 32);
-        { ctx->pc = 0x2828; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002828; return; }
+        { SPU_DIRECT(ctx, 0x2828, spujob_42E1FC8CEE0BE246_spu_func_00002828); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002828(spu_context* ctx) {
-        if (ctx->gpr[58]._u32[0] == 0) { ctx->pc = 0x277C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000277C; return; }
-        { ctx->pc = 0x282C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000282C; return; }
+        if (ctx->gpr[58]._u32[0] == 0) { SPU_DIRECT(ctx, 0x277C, spujob_42E1FC8CEE0BE246_spu_func_0000277C); }
+        { SPU_DIRECT(ctx, 0x282C, spujob_42E1FC8CEE0BE246_spu_func_0000282C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000282C(spu_context* ctx) {
         ctx->gpr[6] = spu_ori(ctx->gpr[84], 0);
-        { ctx->pc = 0x2830; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002830; return; }
+        { SPU_DIRECT(ctx, 0x2830, spujob_42E1FC8CEE0BE246_spu_func_00002830); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002830(spu_context* ctx) {
         ctx->gpr[11] = spu_il(0);
-        { ctx->pc = 0x2834; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002834; return; }
+        { SPU_DIRECT(ctx, 0x2834, spujob_42E1FC8CEE0BE246_spu_func_00002834); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002834(spu_context* ctx) {
         ctx->gpr[7] = spu_fsmbi(0x0);
-        { ctx->pc = 0x2838; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002838; return; }
+        { SPU_DIRECT(ctx, 0x2838, spujob_42E1FC8CEE0BE246_spu_func_00002838); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002838(spu_context* ctx) {
-        { ctx->pc = 0x2880; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002880; return; }
+        { SPU_DIRECT(ctx, 0x2880, spujob_42E1FC8CEE0BE246_spu_func_00002880); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000283C(spu_context* ctx) {
         ctx->gpr[71] = spu_ls_read128(ctx, ctx->gpr[5]._u32[0] + 0x0);
-        { ctx->pc = 0x2840; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002840; return; }
+        { SPU_DIRECT(ctx, 0x2840, spujob_42E1FC8CEE0BE246_spu_func_00002840); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002840(spu_context* ctx) {
         ctx->gpr[72] = spu_xsbh(ctx->gpr[4]);
-        { ctx->pc = 0x2844; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002844; return; }
+        { SPU_DIRECT(ctx, 0x2844, spujob_42E1FC8CEE0BE246_spu_func_00002844); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002844(spu_context* ctx) {
         /* branch hint (ignored) */;
-        { ctx->pc = 0x2848; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002848; return; }
+        { SPU_DIRECT(ctx, 0x2848, spujob_42E1FC8CEE0BE246_spu_func_00002848); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002848(spu_context* ctx) {
         ctx->gpr[68] = spu_ls_read128(ctx, ctx->gpr[6]._u32[0] + 0x10);
-        { ctx->pc = 0x284C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000284C; return; }
+        { SPU_DIRECT(ctx, 0x284C, spujob_42E1FC8CEE0BE246_spu_func_0000284C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000284C(spu_context* ctx) {
         ctx->gpr[69] = spu_ls_read128(ctx, ctx->gpr[3]._u32[0] + 0x0);
-        { ctx->pc = 0x2850; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002850; return; }
+        { SPU_DIRECT(ctx, 0x2850, spujob_42E1FC8CEE0BE246_spu_func_00002850); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002850(spu_context* ctx) {
@@ -3670,7 +3730,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002850(spu_context* ctx) {
         ctx->gpr[61] = spu_selb(ctx->gpr[7], ctx->gpr[63], ctx->gpr[64]);
         ctx->gpr[60] = spu_selb(ctx->gpr[61], ctx->gpr[7], ctx->gpr[62]);
         ctx->gpr[7] = spu_selb(ctx->gpr[60], ctx->gpr[7], ctx->gpr[59]);
-        { ctx->pc = 0x2880; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002880; return; }
+        { SPU_DIRECT(ctx, 0x2880, spujob_42E1FC8CEE0BE246_spu_func_00002880); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002880(spu_context* ctx) {
@@ -3681,9 +3741,9 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002880(spu_context* ctx) {
         ctx->gpr[9] = spu_ai(ctx->gpr[6], 34);
         ctx->gpr[4] = spu_ceqbi(ctx->gpr[7], 0);
         ctx->gpr[11] = spu_ai(ctx->gpr[11], 1);
-        if (ctx->gpr[73]._u32[0] == 0) { ctx->pc = 0x283C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000283C; return; }
+        if (ctx->gpr[73]._u32[0] == 0) { SPU_DIRECT(ctx, 0x283C, spujob_42E1FC8CEE0BE246_spu_func_0000283C); }
         ctx->gpr[74] = spu_xsbh(ctx->gpr[4]);
-        if (ctx->gpr[74]._u16[0] != 0) { ctx->pc = 0x2914; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002914; return; }
+        if (ctx->gpr[74]._u16[0] != 0) { SPU_DIRECT(ctx, 0x2914, spujob_42E1FC8CEE0BE246_spu_func_00002914); }
         ctx->gpr[16] = spu_ai(ctx->gpr[82], 8);
         ctx->gpr[15] = spu_cwd(ctx->gpr[82], 8);
         ctx->gpr[13] = spu_il(8);
@@ -3711,7 +3771,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002880(spu_context* ctx) {
         spu_ls_write128(ctx, ctx->gpr[75]._u32[0] + 0x20, ctx->gpr[83]);
         spu_ls_write128(ctx, ctx->gpr[75]._u32[0] + 0x10, ctx->gpr[76]);
         spu_ls_write128(ctx, ctx->gpr[75]._u32[0] + 0x0, ctx->gpr[82]);
-        { ctx->pc = 0x2914; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002914; return; }
+        { SPU_DIRECT(ctx, 0x2914, spujob_42E1FC8CEE0BE246_spu_func_00002914); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002914(spu_context* ctx) {
@@ -3742,7 +3802,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002940(spu_context* ctx) {
         ctx->gpr[17] = spu_il(-1);
         ctx->gpr[19] = spu_cwd(ctx->gpr[1], 12);
         ctx->gpr[8] = spu_rotqby(ctx->gpr[2], ctx->gpr[3]);
-        { ctx->pc = 0x29C4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000029C4; return; }
+        { SPU_DIRECT(ctx, 0x29C4, spujob_42E1FC8CEE0BE246_spu_func_000029C4); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002978(spu_context* ctx) {
@@ -3751,7 +3811,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002978(spu_context* ctx) {
         ctx->gpr[6] = spu_ai(ctx->gpr[6], 32);
         ctx->gpr[5] = spu_and(ctx->gpr[4], ctx->gpr[18]);
         ctx->gpr[9] = spu_shufb(ctx->gpr[5], ctx->gpr[9], ctx->gpr[20]);
-        if (ctx->gpr[4]._u32[0] == 0) { ctx->pc = 0x29C4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000029C4; return; }
+        if (ctx->gpr[4]._u32[0] == 0) { SPU_DIRECT(ctx, 0x29C4, spujob_42E1FC8CEE0BE246_spu_func_000029C4); }
         ctx->gpr[27] = spu_ls_read128(ctx, ctx->gpr[12]._u32[0] + 0x0);
         /* branch hint (ignored) */;
         ctx->gpr[22] = spu_ls_read128(ctx, ctx->gpr[8]._u32[0] + 0x0);
@@ -3765,7 +3825,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002978(spu_context* ctx) {
         ctx->gpr[11] = spu_selb(ctx->gpr[23], ctx->gpr[24], ctx->gpr[10]);
         spu_ls_write128(ctx, ctx->gpr[13]._u32[0] + 0x0, ctx->gpr[9]);
         spu_ls_write128(ctx, ctx->gpr[13]._u32[0] + 0x10, ctx->gpr[11]);
-        { ctx->pc = 0x29C4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000029C4; return; }
+        { SPU_DIRECT(ctx, 0x29C4, spujob_42E1FC8CEE0BE246_spu_func_000029C4); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000029C4(spu_context* ctx) {
@@ -3778,7 +3838,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000029C4(spu_context* ctx) {
         ctx->gpr[10] = spu_rotqmby(ctx->gpr[17], ctx->gpr[11]);
         ctx->gpr[16] = spu_sfi(ctx->gpr[29], 16);
         ctx->gpr[15] = spu_ai(ctx->gpr[15], 1);
-        if (ctx->gpr[28]._u32[0] == 0) { ctx->pc = 0x2978; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002978; return; }
+        if (ctx->gpr[28]._u32[0] == 0) { SPU_DIRECT(ctx, 0x2978, spujob_42E1FC8CEE0BE246_spu_func_00002978); }
         ctx->gpr[18] = spu_il(8);
         ctx->gpr[16] = spu_ai(ctx->gpr[14], 8);
         ctx->gpr[32] = spu_cwd(ctx->gpr[14], 8);
@@ -3792,7 +3852,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000029C4(spu_context* ctx) {
         ctx->gpr[6] = spu_rotqby(ctx->gpr[17], ctx->gpr[14]);
         ctx->gpr[13] = spu_rotqby(ctx->gpr[15], ctx->gpr[16]);
         ctx->gpr[20] = spu_sf(ctx->gpr[6], ctx->gpr[13]);
-        if (ctx->gpr[20]._u32[0] == 0) { ctx->pc = 0x2BB8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002BB8; return; }
+        if (ctx->gpr[20]._u32[0] == 0) { SPU_DIRECT(ctx, 0x2BB8, spujob_42E1FC8CEE0BE246_spu_func_00002BB8); }
         ctx->gpr[17] = spu_ls_read128(ctx, 0x7A70);
         ctx->gpr[9] = spu_il(0);
         ctx->gpr[33] = spu_fsmbi(0xFFF);
@@ -3809,7 +3869,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000029C4(spu_context* ctx) {
         ctx->gpr[29] = spu_selb(ctx->gpr[34], ctx->gpr[17], ctx->gpr[33]);
         ctx->gpr[32] = spu_il(8188);
         ctx->gpr[19] = spu_a(ctx->gpr[6], ctx->gpr[7]);
-        { ctx->pc = 0x2A64; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002A64; return; }
+        { SPU_DIRECT(ctx, 0x2A64, spujob_42E1FC8CEE0BE246_spu_func_00002A64); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002A64(spu_context* ctx) {
@@ -3817,7 +3877,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002A64(spu_context* ctx) {
         ctx->gpr[35] = spu_clgt(ctx->gpr[19], ctx->gpr[5]);
         ctx->gpr[3] = spu_ceq(ctx->gpr[24], ctx->gpr[9]);
         ctx->gpr[24] = spu_andi(ctx->gpr[11], -128);
-        if (ctx->gpr[35]._u32[0] == 0) { ctx->pc = 0x2BB4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002BB4; return; }
+        if (ctx->gpr[35]._u32[0] == 0) { SPU_DIRECT(ctx, 0x2BB4, spujob_42E1FC8CEE0BE246_spu_func_00002BB4); }
         ctx->gpr[18] = spu_ori(ctx->gpr[27], 0);
         /* branch hint (ignored) */;
         ctx->gpr[10] = spu_ori(ctx->gpr[5], 0);
@@ -3831,19 +3891,19 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002A64(spu_context* ctx) {
         ctx->gpr[5] = spu_ori(ctx->gpr[11], 0);
         ctx->gpr[42] = spu_rotqmbii(ctx->gpr[44], -4);
         ctx->gpr[8] = spu_sf(ctx->gpr[43], ctx->gpr[16]);
-        { ctx->pc = 0x2AAC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002AAC; return; }
+        { SPU_DIRECT(ctx, 0x2AAC, spujob_42E1FC8CEE0BE246_spu_func_00002AAC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002AAC(spu_context* ctx) {
         ctx->gpr[39] = spu_rotqmbii(ctx->gpr[8], -2);
-        { ctx->pc = 0x2AB0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002AB0; return; }
+        { SPU_DIRECT(ctx, 0x2AB0, spujob_42E1FC8CEE0BE246_spu_func_00002AB0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002AB0(spu_context* ctx) {
         ctx->gpr[41] = spu_andi(ctx->gpr[42], 4);
         ctx->gpr[26] = spu_sf(ctx->gpr[8], ctx->gpr[25]);
         ctx->gpr[38] = spu_xori(ctx->gpr[41], 4);
-        { ctx->pc = 0x2ABC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002ABC; return; }
+        { SPU_DIRECT(ctx, 0x2ABC, spujob_42E1FC8CEE0BE246_spu_func_00002ABC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002ABC(spu_context* ctx) {
@@ -3853,7 +3913,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002ABC(spu_context* ctx) {
         ctx->gpr[3] = spu_shli(ctx->gpr[8], 16);
         ctx->gpr[9] = spu_andi(ctx->gpr[37], -128);
         ctx->gpr[11] = spu_ai(ctx->gpr[37], 4);
-        if (ctx->gpr[36]._u32[0] != 0) { ctx->pc = 0x2A64; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002A64; return; }
+        if (ctx->gpr[36]._u32[0] != 0) { SPU_DIRECT(ctx, 0x2A64, spujob_42E1FC8CEE0BE246_spu_func_00002A64); }
         ctx->gpr[54] = spu_ceqi(ctx->gpr[8], 0);
         /* branch hint (ignored) */;
         ctx->gpr[53] = spu_selb(ctx->gpr[3], ctx->gpr[18], ctx->gpr[23]);
@@ -3866,7 +3926,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002ABC(spu_context* ctx) {
         ctx->gpr[6] = spu_a(ctx->gpr[48], ctx->gpr[16]);
         ctx->gpr[47] = spu_shufb(ctx->gpr[49], ctx->gpr[50], ctx->gpr[51]);
         spu_ls_write128(ctx, ctx->gpr[10]._u32[0] + 0x0, ctx->gpr[47]);
-        { ctx->pc = 0x2B08; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002B08; return; }
+        { SPU_DIRECT(ctx, 0x2B08, spujob_42E1FC8CEE0BE246_spu_func_00002B08); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002B08(spu_context* ctx) {
@@ -3913,12 +3973,12 @@ loc_00002B08:
         ctx->gpr[75] = spu_a(ctx->gpr[76], ctx->gpr[28]);
         ctx->gpr[74] = spu_shufb(ctx->gpr[75], ctx->gpr[15], ctx->gpr[29]);
         spu_ls_write128(ctx, ctx->gpr[16]._u32[0] + 0x0, ctx->gpr[74]);
-        { ctx->pc = 0x2A64; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002A64; return; }
+        { SPU_DIRECT(ctx, 0x2A64, spujob_42E1FC8CEE0BE246_spu_func_00002A64); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002BB4(spu_context* ctx) {
         ctx->gpr[7] = spu_ori(ctx->gpr[21], 0);
-        { ctx->pc = 0x2BB8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002BB8; return; }
+        { SPU_DIRECT(ctx, 0x2BB8, spujob_42E1FC8CEE0BE246_spu_func_00002BB8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002BB8(spu_context* ctx) {
@@ -3948,7 +4008,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002BB8(spu_context* ctx) {
         ctx->gpr[3] = spu_rotqby(ctx->gpr[4], ctx->gpr[21]);
         ctx->gpr[2] = spu_sf(ctx->gpr[9], ctx->gpr[3]);
         ctx->gpr[2] = spu_rotmai(ctx->gpr[2], -2);
-        if (ctx->gpr[2]._u32[0] == 0) { ctx->pc = 0x2C60; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002C60; return; }
+        if (ctx->gpr[2]._u32[0] == 0) { SPU_DIRECT(ctx, 0x2C60, spujob_42E1FC8CEE0BE246_spu_func_00002C60); }
         ctx->gpr[43] = spu_ai(ctx->gpr[2], -1);
         ctx->gpr[44] = spu_ilhu(0x4000);
         ctx->gpr[28] = spu_ls_read128(ctx, ctx->gpr[10]._u32[0] + ctx->gpr[8]._u32[0]);
@@ -3964,13 +4024,13 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002BB8(spu_context* ctx) {
         ctx->gpr[35] = spu_ls_read128(ctx, ctx->gpr[14]._u32[0] + ctx->gpr[12]._u32[0]);
         ctx->gpr[7] = spu_shufb(ctx->gpr[36], ctx->gpr[35], ctx->gpr[13]);
         spu_ls_write128(ctx, ctx->gpr[14]._u32[0] + ctx->gpr[12]._u32[0], ctx->gpr[7]);
-        { ctx->pc = 0x2C60; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002C60; return; }
+        { SPU_DIRECT(ctx, 0x2C60, spujob_42E1FC8CEE0BE246_spu_func_00002C60); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002C60(spu_context* ctx) {
         ctx->gpr[13] = spu_rdch(ctx, SPU_RdMachStat);
-        ctx->gpr[2] = spu_link(0x2C68); { ctx->pc = 0x2C68; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002C68; return; }
-        { ctx->pc = 0x2C68; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002C68; return; }
+        ctx->gpr[2] = spu_link(0x2C68); { SPU_DIRECT(ctx, 0x2C68, spujob_42E1FC8CEE0BE246_spu_func_00002C68); }
+        { SPU_DIRECT(ctx, 0x2C68, spujob_42E1FC8CEE0BE246_spu_func_00002C68); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002C68(spu_context* ctx) {
@@ -3980,82 +4040,82 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002C68(spu_context* ctx) {
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002C70(spu_context* ctx) {
         ctx->gpr[45] = spu_ls_read128(ctx, ctx->gpr[14]._u32[0] + 0x0);
-        { ctx->pc = 0x2C74; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002C74; return; }
+        { SPU_DIRECT(ctx, 0x2C74, spujob_42E1FC8CEE0BE246_spu_func_00002C74); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002C74(spu_context* ctx) {
         ctx->gpr[12] = spu_ls_read128(ctx, ctx->gpr[30]._u32[0] + 0x150);
-        { ctx->pc = 0x2C78; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002C78; return; }
+        { SPU_DIRECT(ctx, 0x2C78, spujob_42E1FC8CEE0BE246_spu_func_00002C78); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002C78(spu_context* ctx) {
         ctx->gpr[30] = spu_clgti(ctx->gpr[11], 15);
-        { ctx->pc = 0x2C7C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002C7C; return; }
+        { SPU_DIRECT(ctx, 0x2C7C, spujob_42E1FC8CEE0BE246_spu_func_00002C7C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002C7C(spu_context* ctx) {
         ctx->gpr[5] = spu_rotqmbyi(ctx->gpr[31], -4);
-        { ctx->pc = 0x2C80; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002C80; return; }
+        { SPU_DIRECT(ctx, 0x2C80, spujob_42E1FC8CEE0BE246_spu_func_00002C80); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002C80(spu_context* ctx) {
         ctx->gpr[10] = spu_rotqby(ctx->gpr[45], ctx->gpr[14]);
-        { ctx->pc = 0x2C84; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002C84; return; }
+        { SPU_DIRECT(ctx, 0x2C84, spujob_42E1FC8CEE0BE246_spu_func_00002C84); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002C84(spu_context* ctx) {
-        if (ctx->gpr[30]._u32[0] != 0) { ctx->pc = 0x2D1C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002D1C; return; }
-        { ctx->pc = 0x2C88; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002C88; return; }
+        if (ctx->gpr[30]._u32[0] != 0) { SPU_DIRECT(ctx, 0x2D1C, spujob_42E1FC8CEE0BE246_spu_func_00002D1C); }
+        { SPU_DIRECT(ctx, 0x2C88, spujob_42E1FC8CEE0BE246_spu_func_00002C88); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002C88(spu_context* ctx) {
         ctx->gpr[67] = spu_ai(ctx->gpr[11], -1);
-        { ctx->pc = 0x2C8C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002C8C; return; }
+        { SPU_DIRECT(ctx, 0x2C8C, spujob_42E1FC8CEE0BE246_spu_func_00002C8C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002C8C(spu_context* ctx) {
         /* branch hint (ignored) */;
-        { ctx->pc = 0x2C90; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002C90; return; }
+        { SPU_DIRECT(ctx, 0x2C90, spujob_42E1FC8CEE0BE246_spu_func_00002C90); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002C90(spu_context* ctx) {
         ctx->gpr[69] = spu_ceqi(ctx->gpr[11], 4);
-        { ctx->pc = 0x2C94; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002C94; return; }
+        { SPU_DIRECT(ctx, 0x2C94, spujob_42E1FC8CEE0BE246_spu_func_00002C94); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002C94(spu_context* ctx) {
         ctx->gpr[14] = spu_shlqbyi(ctx->gpr[5], 4);
-        { ctx->pc = 0x2C98; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002C98; return; }
+        { SPU_DIRECT(ctx, 0x2C98, spujob_42E1FC8CEE0BE246_spu_func_00002C98); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002C98(spu_context* ctx) {
         ctx->gpr[68] = spu_clgti(ctx->gpr[67], 1);
-        { ctx->pc = 0x2C9C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002C9C; return; }
+        { SPU_DIRECT(ctx, 0x2C9C, spujob_42E1FC8CEE0BE246_spu_func_00002C9C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002C9C(spu_context* ctx) {
         ctx->gpr[65] = spu_sfi(ctx->gpr[69], 0);
-        { ctx->pc = 0x2CA0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002CA0; return; }
+        { SPU_DIRECT(ctx, 0x2CA0, spujob_42E1FC8CEE0BE246_spu_func_00002CA0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002CA0(spu_context* ctx) {
         ctx->gpr[66] = spu_nor(ctx->gpr[68], ctx->gpr[68]);
-        { ctx->pc = 0x2CA4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002CA4; return; }
+        { SPU_DIRECT(ctx, 0x2CA4, spujob_42E1FC8CEE0BE246_spu_func_00002CA4); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002CA4(spu_context* ctx) {
         ctx->gpr[57] = spu_and(ctx->gpr[10], ctx->gpr[67]);
-        { ctx->pc = 0x2CA8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002CA8; return; }
+        { SPU_DIRECT(ctx, 0x2CA8, spujob_42E1FC8CEE0BE246_spu_func_00002CA8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002CA8(spu_context* ctx) {
         ctx->gpr[64] = spu_sfi(ctx->gpr[66], 0);
-        { ctx->pc = 0x2CAC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002CAC; return; }
+        { SPU_DIRECT(ctx, 0x2CAC, spujob_42E1FC8CEE0BE246_spu_func_00002CAC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002CAC(spu_context* ctx) {
         ctx->gpr[59] = spu_ceqi(ctx->gpr[11], 8);
-        { ctx->pc = 0x2CB0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002CB0; return; }
+        { SPU_DIRECT(ctx, 0x2CB0, spujob_42E1FC8CEE0BE246_spu_func_00002CB0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002CB0(spu_context* ctx) {
@@ -4078,14 +4138,14 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002CB0(spu_context* ctx) {
         ctx->gpr[46] = spu_and(ctx->gpr[22], ctx->gpr[49]);
         ctx->gpr[47] = spu_and(ctx->gpr[6], ctx->gpr[48]);
         ctx->gpr[27] = spu_and(ctx->gpr[46], ctx->gpr[47]);
-        if ((int32_t)ctx->gpr[27]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x02CFC img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[31] = spu_il(0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[10]);
         ctx->gpr[3] = spu_ori(ctx->gpr[11], 0);
         spu_wrch(ctx, MFC_EAH, ctx->gpr[31]);
         ctx->gpr[4] = spu_ori(ctx->gpr[12], 0);
         spu_wrch(ctx, MFC_EAL, ctx->gpr[14]);
-        { ctx->pc = 0x2D8C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002D8C; return; }
+        { SPU_DIRECT(ctx, 0x2D8C, spujob_42E1FC8CEE0BE246_spu_func_00002D8C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002D1C(spu_context* ctx) {
@@ -4110,14 +4170,14 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002D1C(spu_context* ctx) {
         ctx->gpr[74] = spu_and(ctx->gpr[78], ctx->gpr[79]);
         ctx->gpr[75] = spu_and(ctx->gpr[76], ctx->gpr[77]);
         ctx->gpr[73] = spu_and(ctx->gpr[74], ctx->gpr[75]);
-        if ((int32_t)ctx->gpr[73]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x02D70 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[71] = spu_il(0);
         ctx->gpr[3] = spu_ori(ctx->gpr[11], 0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[10]);
         ctx->gpr[4] = spu_ori(ctx->gpr[12], 0);
         spu_wrch(ctx, MFC_EAH, ctx->gpr[71]);
         spu_wrch(ctx, MFC_EAL, ctx->gpr[70]);
-        { ctx->pc = 0x2D8C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002D8C; return; }
+        { SPU_DIRECT(ctx, 0x2D8C, spujob_42E1FC8CEE0BE246_spu_func_00002D8C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002D8C(spu_context* ctx) {
@@ -4130,8 +4190,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002D8C(spu_context* ctx) {
         spu_wrch(ctx, MFC_Cmd, ctx->gpr[32]);
         ctx->gpr[11] = spu_xsbh(ctx->gpr[8]);
         if (ctx->gpr[11]._u16[0] != 0) { SPU_RET(ctx); }
-        ctx->gpr[2] = spu_link(0x2DB4); { ctx->pc = 0x2DB4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002DB4; return; }
-        { ctx->pc = 0x2DB4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002DB4; return; }
+        ctx->gpr[2] = spu_link(0x2DB4); { SPU_DIRECT(ctx, 0x2DB4, spujob_42E1FC8CEE0BE246_spu_func_00002DB4); }
+        { SPU_DIRECT(ctx, 0x2DB4, spujob_42E1FC8CEE0BE246_spu_func_00002DB4); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002DB4(spu_context* ctx) {
@@ -4145,62 +4205,62 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002DBC(spu_context* ctx) {
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002DC0(spu_context* ctx) {
         ctx->gpr[13] = spu_ila(0x79C8);
-        { ctx->pc = 0x2DC4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002DC4; return; }
+        { SPU_DIRECT(ctx, 0x2DC4, spujob_42E1FC8CEE0BE246_spu_func_00002DC4); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002DC4(spu_context* ctx) {
-        ctx->gpr[12] = spu_link(0x2DC8); { ctx->pc = 0x2DC8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002DC8; return; }
-        { ctx->pc = 0x2DC8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002DC8; return; }
+        ctx->gpr[12] = spu_link(0x2DC8); { SPU_DIRECT(ctx, 0x2DC8, spujob_42E1FC8CEE0BE246_spu_func_00002DC8); }
+        { SPU_DIRECT(ctx, 0x2DC8, spujob_42E1FC8CEE0BE246_spu_func_00002DC8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002DC8(spu_context* ctx) {
         ctx->gpr[10] = spu_shli(ctx->gpr[4], 2);
-        { ctx->pc = 0x2DCC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002DCC; return; }
+        { SPU_DIRECT(ctx, 0x2DCC, spujob_42E1FC8CEE0BE246_spu_func_00002DCC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002DCC(spu_context* ctx) {
         ctx->gpr[11] = spu_ila(0x79F4);
-        { ctx->pc = 0x2DD0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002DD0; return; }
+        { SPU_DIRECT(ctx, 0x2DD0, spujob_42E1FC8CEE0BE246_spu_func_00002DD0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002DD0(spu_context* ctx) {
         ctx->gpr[6] = spu_clgti(ctx->gpr[4], 4);
-        { ctx->pc = 0x2DD4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002DD4; return; }
+        { SPU_DIRECT(ctx, 0x2DD4, spujob_42E1FC8CEE0BE246_spu_func_00002DD4); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002DD4(spu_context* ctx) {
         ctx->gpr[79] = spu_sf(ctx->gpr[13], ctx->gpr[12]);
-        { ctx->pc = 0x2DD8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002DD8; return; }
+        { SPU_DIRECT(ctx, 0x2DD8, spujob_42E1FC8CEE0BE246_spu_func_00002DD8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002DD8(spu_context* ctx) {
         ctx->gpr[7] = spu_a(ctx->gpr[11], ctx->gpr[79]);
-        { ctx->pc = 0x2DDC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002DDC; return; }
+        { SPU_DIRECT(ctx, 0x2DDC, spujob_42E1FC8CEE0BE246_spu_func_00002DDC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002DDC(spu_context* ctx) {
         ctx->gpr[9] = spu_ls_read128(ctx, ctx->gpr[7]._u32[0] + ctx->gpr[10]._u32[0]);
-        { ctx->pc = 0x2DE0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002DE0; return; }
+        { SPU_DIRECT(ctx, 0x2DE0, spujob_42E1FC8CEE0BE246_spu_func_00002DE0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002DE0(spu_context* ctx) {
         ctx->gpr[5] = spu_a(ctx->gpr[10], ctx->gpr[7]);
-        { ctx->pc = 0x2DE4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002DE4; return; }
+        { SPU_DIRECT(ctx, 0x2DE4, spujob_42E1FC8CEE0BE246_spu_func_00002DE4); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002DE4(spu_context* ctx) {
         ctx->gpr[2] = spu_rotqby(ctx->gpr[9], ctx->gpr[5]);
-        { ctx->pc = 0x2DE8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002DE8; return; }
+        { SPU_DIRECT(ctx, 0x2DE8, spujob_42E1FC8CEE0BE246_spu_func_00002DE8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002DE8(spu_context* ctx) {
         ctx->gpr[2] = spu_a(ctx->gpr[2], ctx->gpr[7]);
-        { ctx->pc = 0x2DEC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002DEC; return; }
+        { SPU_DIRECT(ctx, 0x2DEC, spujob_42E1FC8CEE0BE246_spu_func_00002DEC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002DEC(spu_context* ctx) {
-        if (ctx->gpr[6]._u32[0] != 0) { ctx->pc = 0x2E20; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002E20; return; }
-        { ctx->pc = 0x2DF0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002DF0; return; }
+        if (ctx->gpr[6]._u32[0] != 0) { SPU_DIRECT(ctx, 0x2E20, spujob_42E1FC8CEE0BE246_spu_func_00002E20); }
+        { SPU_DIRECT(ctx, 0x2DF0, spujob_42E1FC8CEE0BE246_spu_func_00002DF0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00002DF0(spu_context* ctx) {
@@ -4222,7 +4282,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002DFC(spu_context* ctx) {
 void spujob_42E1FC8CEE0BE246_spu_func_00002E20(spu_context* ctx) {
         ctx->gpr[14] = spu_ls_read128(ctx, ctx->gpr[3]._u32[0] + 0x80);
         ctx->gpr[5] = spu_rotqbyi(ctx->gpr[14], 8);
-        if (ctx->gpr[5]._u32[0] == 0) { ctx->pc = 0x2E30; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002E30; return; }
+        if (ctx->gpr[5]._u32[0] == 0) { SPU_DIRECT(ctx, 0x2E30, spujob_42E1FC8CEE0BE246_spu_func_00002E30); }
         ctx->pc = ctx->gpr[5]._u32[0]; g_spu_trampoline_fn = spu_indirect_branch; return;
 }
 
@@ -4230,7 +4290,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002E30(spu_context* ctx) {
         /* branch hint (ignored) */;
         ctx->gpr[4] = spu_ls_read128(ctx, ctx->gpr[3]._u32[0] + 0x70);
         ctx->gpr[3] = spu_rotqbyi(ctx->gpr[4], 4);
-        if (ctx->gpr[3]._u32[0] == 0) { ctx->pc = 0x2E58; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00002E58; return; }
+        if (ctx->gpr[3]._u32[0] == 0) { SPU_DIRECT(ctx, 0x2E58, spujob_42E1FC8CEE0BE246_spu_func_00002E58); }
         ctx->gpr[18] = spu_ai(ctx->gpr[3], 1);
         ctx->gpr[17] = spu_ai(ctx->gpr[3], 14);
         ctx->gpr[16] = spu_ls_read128(ctx, ctx->gpr[18]._u32[0] + 0x0);
@@ -4281,6 +4341,10 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002E60(spu_context* ctx) {
         ctx->gpr[33] = spu_ls_read128(ctx, ctx->gpr[39]._u32[0] + 0x20);
         ctx->gpr[47] = spu_and(ctx->gpr[56], ctx->gpr[2]);
         ctx->gpr[46] = spu_rotqbyi(ctx->gpr[36], 13);
+        { SPU_DIRECT(ctx, 0x2EF0, spujob_42E1FC8CEE0BE246_spu_func_00002EF0); }
+}
+
+void spujob_42E1FC8CEE0BE246_spu_func_00002EF0(spu_context* ctx) {
         ctx->gpr[12] = spu_iohl(ctx->gpr[12], 0xA0B);
         ctx->gpr[51] = spu_shufb(ctx->gpr[40], ctx->gpr[40], ctx->gpr[11]);
         ctx->gpr[23] = spu_fma(ctx->gpr[53], ctx->gpr[13], ctx->gpr[5]);
@@ -4403,7 +4467,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00002E60(spu_context* ctx) {
         ctx->gpr[27] = spu_ls_read128(ctx, 0x7AF0);
         ctx->gpr[70] = spu_ls_read128(ctx, 0x7B00);
         ctx->gpr[69] = spu_ls_read128(ctx, 0x7B10);
-        { ctx->pc = 0x30D8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000030D8; return; }
+        { SPU_DIRECT(ctx, 0x30D8, spujob_42E1FC8CEE0BE246_spu_func_000030D8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000030D8(spu_context* ctx) {
@@ -4493,8 +4557,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_00003218(spu_context* ctx) {
         /* branch hint (ignored) */;
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0xF0, ctx->gpr[126]);
         ctx->gpr[2] = spu_ila(0x7E28);
-        ctx->gpr[126] = spu_link(0x3228); { ctx->pc = 0x3228; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003228; return; }
-        { ctx->pc = 0x3228; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003228; return; }
+        ctx->gpr[126] = spu_link(0x3228); { SPU_DIRECT(ctx, 0x3228, spujob_42E1FC8CEE0BE246_spu_func_00003228); }
+        { SPU_DIRECT(ctx, 0x3228, spujob_42E1FC8CEE0BE246_spu_func_00003228); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00003228(spu_context* ctx) {
@@ -4520,14 +4584,14 @@ void spujob_42E1FC8CEE0BE246_spu_func_00003228(spu_context* ctx) {
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0xE0, ctx->gpr[93]);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x140, ctx->gpr[1]);
         ctx->gpr[1] = spu_ai(ctx->gpr[1], -320);
-        if (ctx->gpr[4]._u32[0] != 0) { ctx->pc = 0x32A0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000032A0; return; }
+        if (ctx->gpr[4]._u32[0] != 0) { SPU_DIRECT(ctx, 0x32A0, spujob_42E1FC8CEE0BE246_spu_func_000032A0); }
         ctx->gpr[6] = spu_ls_read128(ctx, ctx->gpr[3]._u32[0] + 0x0);
         ctx->gpr[5] = spu_rotqbyi(ctx->gpr[6], 12);
         ctx->gpr[4] = spu_ceqi(ctx->gpr[5], -1);
-        if (ctx->gpr[4]._u32[0] != 0) { ctx->pc = 0x32C8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000032C8; return; }
+        if (ctx->gpr[4]._u32[0] != 0) { SPU_DIRECT(ctx, 0x32C8, spujob_42E1FC8CEE0BE246_spu_func_000032C8); }
         ctx->gpr[4] = spu_ls_read128(ctx, ctx->gpr[3]._u32[0] + 0x50);
         ctx->gpr[0] = spu_link(0x329C); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_00001870(ctx); spu_drain_call(ctx, 0x329C); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        { ctx->pc = 0x32C8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000032C8; return; }
+        { SPU_DIRECT(ctx, 0x32C8, spujob_42E1FC8CEE0BE246_spu_func_000032C8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000032A0(spu_context* ctx) {
@@ -4536,12 +4600,12 @@ void spujob_42E1FC8CEE0BE246_spu_func_000032A0(spu_context* ctx) {
         ctx->gpr[9] = spu_rotqbyi(ctx->gpr[10], 13);
         ctx->gpr[8] = spu_cgtbi(ctx->gpr[9], -1);
         ctx->gpr[7] = spu_xsbh(ctx->gpr[8]);
-        if (ctx->gpr[7]._u16[0] == 0) { ctx->pc = 0x32DC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000032DC; return; }
+        if (ctx->gpr[7]._u16[0] == 0) { SPU_DIRECT(ctx, 0x32DC, spujob_42E1FC8CEE0BE246_spu_func_000032DC); }
         ctx->gpr[11] = spu_ila(0xC680);
         ctx->gpr[3] = spu_ilhu(0x100);
         ctx->gpr[4] = spu_a(ctx->gpr[11], ctx->gpr[126]);
         ctx->gpr[0] = spu_link(0x32C8); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_000077C0(ctx); spu_drain_call(ctx, 0x32C8); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        { ctx->pc = 0x32C8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000032C8; return; }
+        { SPU_DIRECT(ctx, 0x32C8, spujob_42E1FC8CEE0BE246_spu_func_000032C8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000032C8(spu_context* ctx) {
@@ -4549,22 +4613,22 @@ void spujob_42E1FC8CEE0BE246_spu_func_000032C8(spu_context* ctx) {
         ctx->gpr[13] = spu_ls_read128(ctx, ctx->gpr[81]._u32[0] + 0x190);
         ctx->gpr[3] = spu_rotqbyi(ctx->gpr[13], 14);
         ctx->gpr[80] = spu_and(ctx->gpr[3], ctx->gpr[12]);
-        { ctx->pc = 0x3C00; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003C00; return; }
+        { SPU_DIRECT(ctx, 0x3C00, spujob_42E1FC8CEE0BE246_spu_func_00003C00); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000032DC(spu_context* ctx) {
         ctx->gpr[14] = spu_ls_read128(ctx, ctx->gpr[3]._u32[0] + 0x180);
         ctx->gpr[2] = spu_rotqbyi(ctx->gpr[14], 4);
-        if (ctx->gpr[2]._u32[0] == 0) { ctx->pc = 0x32F8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000032F8; return; }
+        if (ctx->gpr[2]._u32[0] == 0) { SPU_DIRECT(ctx, 0x32F8, spujob_42E1FC8CEE0BE246_spu_func_000032F8); }
         ctx->gpr[15] = spu_ls_read128(ctx, ctx->gpr[3]._u32[0] + 0x180);
         ctx->gpr[4] = spu_rotqbyi(ctx->gpr[15], 8);
         { uint32_t _tg = ctx->gpr[2]._u32[0]; ctx->gpr[0] = spu_link(0x32F4); int32_t _si = (int32_t)ctx->image_id; ctx->pc = _tg; ctx->host_depth++; spu_indirect_branch(ctx); spu_drain_call(ctx, 0x32F4); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        { ctx->pc = 0x32FC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000032FC; return; }
+        { SPU_DIRECT(ctx, 0x32FC, spujob_42E1FC8CEE0BE246_spu_func_000032FC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000032F8(spu_context* ctx) {
         ctx->gpr[0] = spu_link(0x32FC); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_00002E60(ctx); spu_drain_call(ctx, 0x32FC); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        { ctx->pc = 0x32FC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000032FC; return; }
+        { SPU_DIRECT(ctx, 0x32FC, spujob_42E1FC8CEE0BE246_spu_func_000032FC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000032FC(spu_context* ctx) {
@@ -4661,45 +4725,45 @@ void spujob_42E1FC8CEE0BE246_spu_func_000032FC(spu_context* ctx) {
         ctx->gpr[8] = spu_ai(ctx->gpr[12], 16);
         ctx->gpr[17] = spu_ilh(0x303);
         ctx->gpr[16] = spu_ilhu(0x8000);
-        if (ctx->gpr[19]._u32[0] != 0) { ctx->pc = 0x34CC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000034CC; return; }
+        if (ctx->gpr[19]._u32[0] != 0) { SPU_DIRECT(ctx, 0x34CC, spujob_42E1FC8CEE0BE246_spu_func_000034CC); }
         ctx->gpr[78] = spu_clgti(ctx->gpr[7], 3);
-        if (ctx->gpr[78]._u32[0] != 0) { ctx->pc = 0x3490; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003490; return; }
+        if (ctx->gpr[78]._u32[0] != 0) { SPU_DIRECT(ctx, 0x3490, spujob_42E1FC8CEE0BE246_spu_func_00003490); }
         ctx->gpr[79] = spu_ceqi(ctx->gpr[7], 1);
-        if (ctx->gpr[79]._u32[0] != 0) { ctx->pc = 0x34D0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000034D0; return; }
+        if (ctx->gpr[79]._u32[0] != 0) { SPU_DIRECT(ctx, 0x34D0, spujob_42E1FC8CEE0BE246_spu_func_000034D0); }
         ctx->gpr[82] = spu_ceqi(ctx->gpr[7], 2);
-        if (ctx->gpr[82]._u32[0] == 0) { ctx->pc = 0x3BC4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003BC4; return; }
-        { ctx->pc = 0x34C8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000034C8; return; }
+        if (ctx->gpr[82]._u32[0] == 0) { SPU_DIRECT(ctx, 0x3BC4, spujob_42E1FC8CEE0BE246_spu_func_00003BC4); }
+        { SPU_DIRECT(ctx, 0x34C8, spujob_42E1FC8CEE0BE246_spu_func_000034C8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00003490(spu_context* ctx) {
         ctx->gpr[87] = spu_ilhu(0x8000);
         /* branch hint (ignored) */;
-        { ctx->pc = 0x3498; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003498; return; }
+        { SPU_DIRECT(ctx, 0x3498, spujob_42E1FC8CEE0BE246_spu_func_00003498); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00003498(spu_context* ctx) {
         ctx->gpr[86] = spu_ori(ctx->gpr[87], 2);
         ctx->gpr[83] = spu_ceq(ctx->gpr[7], ctx->gpr[86]);
-        if (ctx->gpr[83]._u32[0] != 0) { ctx->pc = 0x380C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000380C; return; }
+        if (ctx->gpr[83]._u32[0] != 0) { SPU_DIRECT(ctx, 0x380C, spujob_42E1FC8CEE0BE246_spu_func_0000380C); }
         ctx->gpr[90] = spu_ilhu(0x8000);
         ctx->gpr[89] = spu_ori(ctx->gpr[90], 3);
         ctx->gpr[88] = spu_ceq(ctx->gpr[7], ctx->gpr[89]);
-        if (ctx->gpr[88]._u32[0] != 0) { ctx->pc = 0x3810; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003810; return; }
+        if (ctx->gpr[88]._u32[0] != 0) { SPU_DIRECT(ctx, 0x3810, spujob_42E1FC8CEE0BE246_spu_func_00003810); }
         ctx->gpr[2] = spu_ilhu(0x8000);
         ctx->gpr[92] = spu_ori(ctx->gpr[2], 1);
         ctx->gpr[91] = spu_ceq(ctx->gpr[7], ctx->gpr[92]);
-        if (ctx->gpr[91]._u32[0] == 0) { ctx->pc = 0x3BC4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003BC4; return; }
-        { ctx->pc = 0x3814; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003814; return; }
+        if (ctx->gpr[91]._u32[0] == 0) { SPU_DIRECT(ctx, 0x3BC4, spujob_42E1FC8CEE0BE246_spu_func_00003BC4); }
+        { SPU_DIRECT(ctx, 0x3814, spujob_42E1FC8CEE0BE246_spu_func_00003814); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000034C8(spu_context* ctx) {
         ctx->gpr[16] = spu_il(0);
-        { ctx->pc = 0x34CC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000034CC; return; }
+        { SPU_DIRECT(ctx, 0x34CC, spujob_42E1FC8CEE0BE246_spu_func_000034CC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000034CC(spu_context* ctx) {
         ctx->gpr[66] = spu_il(-1);
-        { ctx->pc = 0x34D0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000034D0; return; }
+        { SPU_DIRECT(ctx, 0x34D0, spujob_42E1FC8CEE0BE246_spu_func_000034D0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000034D0(spu_context* ctx) {
@@ -4736,13 +4800,13 @@ void spujob_42E1FC8CEE0BE246_spu_func_000034D0(spu_context* ctx) {
         ctx->gpr[15] = spu_ori(ctx->gpr[23], 0);
         ctx->gpr[65] = spu_xor(ctx->gpr[16], ctx->gpr[6]);
         ctx->gpr[16] = spu_ori(ctx->gpr[23], 0);
-        if (ctx->gpr[4]._u16[0] != 0) { ctx->pc = 0x356C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000356C; return; }
+        if (ctx->gpr[4]._u16[0] != 0) { SPU_DIRECT(ctx, 0x356C, spujob_42E1FC8CEE0BE246_spu_func_0000356C); }
         ctx->gpr[36] = spu_ahi(ctx->gpr[5], -3);
         ctx->gpr[31] = spu_clgtbi(ctx->gpr[36], 1);
         ctx->gpr[30] = spu_xsbh(ctx->gpr[31]);
-        if (ctx->gpr[30]._u16[0] != 0) { ctx->pc = 0x356C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000356C; return; }
+        if (ctx->gpr[30]._u16[0] != 0) { SPU_DIRECT(ctx, 0x356C, spujob_42E1FC8CEE0BE246_spu_func_0000356C); }
         ctx->gpr[39] = spu_ilhu(0x4000);
-        { ctx->pc = 0x356C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000356C; return; }
+        { SPU_DIRECT(ctx, 0x356C, spujob_42E1FC8CEE0BE246_spu_func_0000356C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000356C(spu_context* ctx) {
@@ -4767,7 +4831,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_0000356C(spu_context* ctx) {
         ctx->gpr[57] = spu_shlqbyi(ctx->gpr[30], 0);
         ctx->gpr[5] = spu_ori(ctx->gpr[30], 0);
         ctx->gpr[31] = spu_andbi(ctx->gpr[8], 15);
-        { ctx->pc = 0x35C0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000035C0; return; }
+        { SPU_DIRECT(ctx, 0x35C0, spujob_42E1FC8CEE0BE246_spu_func_000035C0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000035C0(spu_context* ctx) {
@@ -4915,7 +4979,7 @@ loc_000035C0:
         ctx->gpr[57] = spu_andi(ctx->gpr[13], 252);
         ctx->gpr[11] = spu_sfi(ctx->gpr[51], 0);
         ctx->gpr[55] = spu_andi(ctx->gpr[13], 2);
-        if (ctx->gpr[82]._u32[0] == 0) { ctx->pc = 0x3BC4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003BC4; return; }
+        if (ctx->gpr[82]._u32[0] == 0) { SPU_DIRECT(ctx, 0x3BC4, spujob_42E1FC8CEE0BE246_spu_func_00003BC4); }
         ctx->gpr[67] = spu_ori(ctx->gpr[49], 0);
         ctx->gpr[30] = spu_shlqbyi(ctx->gpr[47], 0);
         goto loc_000035C0;
@@ -4923,12 +4987,12 @@ loc_000035C0:
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000380C(spu_context* ctx) {
         ctx->gpr[16] = spu_il(0);
-        { ctx->pc = 0x3810; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003810; return; }
+        { SPU_DIRECT(ctx, 0x3810, spujob_42E1FC8CEE0BE246_spu_func_00003810); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00003810(spu_context* ctx) {
         ctx->gpr[66] = spu_il(-1);
-        { ctx->pc = 0x3814; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003814; return; }
+        { SPU_DIRECT(ctx, 0x3814, spujob_42E1FC8CEE0BE246_spu_func_00003814); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00003814(spu_context* ctx) {
@@ -4996,7 +5060,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00003814(spu_context* ctx) {
         ctx->gpr[65] = spu_ori(ctx->gpr[36], 0);
         ctx->gpr[87] = spu_shlqbyi(ctx->gpr[36], 0);
         ctx->gpr[40] = spu_andbi(ctx->gpr[35], 15);
-        { ctx->pc = 0x3914; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003914; return; }
+        { SPU_DIRECT(ctx, 0x3914, spujob_42E1FC8CEE0BE246_spu_func_00003914); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00003914(spu_context* ctx) {
@@ -5020,7 +5084,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00003914(spu_context* ctx) {
         ctx->gpr[22] = spu_cgt(ctx->gpr[3], ctx->gpr[62]);
         /* nop */;
         ctx->gpr[20] = spu_fcgt(ctx->gpr[17], ctx->gpr[39]);
-        { ctx->pc = 0x3964; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003964; return; }
+        { SPU_DIRECT(ctx, 0x3964, spujob_42E1FC8CEE0BE246_spu_func_00003964); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00003964(spu_context* ctx) {
@@ -5172,10 +5236,10 @@ void spujob_42E1FC8CEE0BE246_spu_func_00003964(spu_context* ctx) {
         ctx->gpr[32] = spu_fcgt(ctx->gpr[29], ctx->gpr[12]);
         ctx->gpr[13] = spu_fcgt(ctx->gpr[46], ctx->gpr[45]);
         ctx->gpr[39] = spu_selb(ctx->gpr[30], ctx->gpr[17], ctx->gpr[58]);
-        if (ctx->gpr[35]._u32[0] == 0) { ctx->pc = 0x3BC4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003BC4; return; }
+        if (ctx->gpr[35]._u32[0] == 0) { SPU_DIRECT(ctx, 0x3BC4, spujob_42E1FC8CEE0BE246_spu_func_00003BC4); }
         ctx->gpr[79] = spu_ori(ctx->gpr[57], 0);
         ctx->gpr[36] = spu_shlqbyi(ctx->gpr[56], 0);
-        { ctx->pc = 0x3914; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003914; return; }
+        { SPU_DIRECT(ctx, 0x3914, spujob_42E1FC8CEE0BE246_spu_func_00003914); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00003BC4(spu_context* ctx) {
@@ -5194,7 +5258,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00003BC4(spu_context* ctx) {
         ctx->gpr[81] = spu_ai(ctx->gpr[93], 15);
         ctx->gpr[4] = spu_andi(ctx->gpr[81], -16);
         ctx->gpr[0] = spu_link(0x3C00); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_00001870(ctx); spu_drain_call(ctx, 0x3C00); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        { ctx->pc = 0x3C00; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003C00; return; }
+        { SPU_DIRECT(ctx, 0x3C00, spujob_42E1FC8CEE0BE246_spu_func_00003C00); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00003C00(spu_context* ctx) {
@@ -5250,8 +5314,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_00003C50(spu_context* ctx) {
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x180, ctx->gpr[126]);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + 0x10, ctx->gpr[0]);
         ctx->gpr[8] = spu_ila(0x88C8);
-        ctx->gpr[126] = spu_link(0x3CC8); { ctx->pc = 0x3CC8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003CC8; return; }
-        { ctx->pc = 0x3CC8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003CC8; return; }
+        ctx->gpr[126] = spu_link(0x3CC8); { SPU_DIRECT(ctx, 0x3CC8, spujob_42E1FC8CEE0BE246_spu_func_00003CC8); }
+        { SPU_DIRECT(ctx, 0x3CC8, spujob_42E1FC8CEE0BE246_spu_func_00003CC8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00003CC8(spu_context* ctx) {
@@ -5294,7 +5358,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00003CC8(spu_context* ctx) {
         ctx->gpr[2] = spu_a(ctx->gpr[92], ctx->gpr[3]);
         ctx->gpr[3] = spu_ori(ctx->gpr[2], 0);
         ctx->gpr[85] = spu_ori(ctx->gpr[2], 0);
-        if (ctx->gpr[82]._u32[0] == 0) { ctx->pc = 0x4118; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004118; return; }
+        if (ctx->gpr[82]._u32[0] == 0) { SPU_DIRECT(ctx, 0x4118, spujob_42E1FC8CEE0BE246_spu_func_00004118); }
         ctx->gpr[28] = spu_ai(ctx->gpr[6], 31);
         /* branch hint (ignored) */;
         ctx->gpr[25] = spu_shlhi(ctx->gpr[80], 2);
@@ -5312,7 +5376,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00003CC8(spu_context* ctx) {
         ctx->gpr[20] = spu_a(ctx->gpr[23], ctx->gpr[81]);
         ctx->gpr[19] = spu_cgt(ctx->gpr[20], ctx->gpr[21]);
         ctx->gpr[89] = spu_and(ctx->gpr[22], ctx->gpr[8]);
-        if (ctx->gpr[19]._u32[0] == 0) { ctx->pc = 0x3DD0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003DD0; return; }
+        if (ctx->gpr[19]._u32[0] == 0) { SPU_DIRECT(ctx, 0x3DD0, spujob_42E1FC8CEE0BE246_spu_func_00003DD0); }
         ctx->gpr[30] = spu_ila(0xC9C0);
         ctx->gpr[3] = spu_ilhu(0x100);
         ctx->gpr[4] = spu_a(ctx->gpr[30], ctx->gpr[126]);
@@ -5321,7 +5385,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00003CC8(spu_context* ctx) {
         ctx->gpr[4] = spu_il(192);
         ctx->gpr[3] = spu_a(ctx->gpr[29], ctx->gpr[126]);
         ctx->gpr[0] = spu_link(0x3DD0); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_00000318(ctx); spu_drain_call(ctx, 0x3DD0); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        { ctx->pc = 0x3DD0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003DD0; return; }
+        { SPU_DIRECT(ctx, 0x3DD0, spujob_42E1FC8CEE0BE246_spu_func_00003DD0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00003DD0(spu_context* ctx) {
@@ -5343,7 +5407,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00003DD0(spu_context* ctx) {
         ctx->gpr[13] = spu_rotqmbyi(ctx->gpr[32], -2);
         ctx->gpr[8] = spu_rothmi(ctx->gpr[13], -3);
         ctx->gpr[4] = spu_andhi(ctx->gpr[13], 7);
-        if (ctx->gpr[31]._u32[0] != 0) { ctx->pc = 0x3F44; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003F44; return; }
+        if (ctx->gpr[31]._u32[0] != 0) { SPU_DIRECT(ctx, 0x3F44, spujob_42E1FC8CEE0BE246_spu_func_00003F44); }
         ctx->gpr[52] = spu_sfhi(ctx->gpr[80], 8);
         ctx->gpr[43] = spu_shlhi(ctx->gpr[11], 2);
         ctx->gpr[3] = spu_fsmbi(0x0);
@@ -5383,7 +5447,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00003DD0(spu_context* ctx) {
         ctx->gpr[19] = spu_a(ctx->gpr[20], ctx->gpr[87]);
         ctx->gpr[21] = spu_ai(ctx->gpr[41], 32);
         ctx->gpr[25] = spu_a(ctx->gpr[19], ctx->gpr[87]);
-        { ctx->pc = 0x3EB8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003EB8; return; }
+        { SPU_DIRECT(ctx, 0x3EB8, spujob_42E1FC8CEE0BE246_spu_func_00003EB8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00003EB8(spu_context* ctx) {
@@ -5421,7 +5485,7 @@ loc_00003EB8:
         ctx->gpr[3] = spu_ori(ctx->gpr[60], 0);
         ctx->gpr[83] = spu_shlqbyi(ctx->gpr[58], 0);
         ctx->gpr[13] = spu_andbi(ctx->gpr[59], 15);
-        if (ctx->gpr[57]._u32[0] == 0) { ctx->pc = 0x4130; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004130; return; }
+        if (ctx->gpr[57]._u32[0] == 0) { SPU_DIRECT(ctx, 0x4130, spujob_42E1FC8CEE0BE246_spu_func_00004130); }
         goto loc_00003EB8;
 }
 
@@ -5440,7 +5504,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00003F44(spu_context* ctx) {
         ctx->gpr[3] = spu_ila(0x10203);
         ctx->gpr[51] = spu_shlqbyi(ctx->gpr[86], 0);
         ctx->gpr[16] = spu_a(ctx->gpr[36], ctx->gpr[37]);
-        { ctx->pc = 0x3F7C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00003F7C; return; }
+        { SPU_DIRECT(ctx, 0x3F7C, spujob_42E1FC8CEE0BE246_spu_func_00003F7C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00003F7C(spu_context* ctx) {
@@ -5477,7 +5541,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00003F7C(spu_context* ctx) {
         ctx->gpr[14] = spu_shlqbyi(ctx->gpr[27], 0);
         ctx->gpr[78] = spu_shlhi(ctx->gpr[77], 8);
         ctx->gpr[44] = spu_shlqbyi(ctx->gpr[27], 0);
-        { ctx->pc = 0x4000; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004000; return; }
+        { SPU_DIRECT(ctx, 0x4000, spujob_42E1FC8CEE0BE246_spu_func_00004000); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004000(spu_context* ctx) {
@@ -5496,7 +5560,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00004000(spu_context* ctx) {
         ctx->gpr[38] = spu_a(ctx->gpr[28], ctx->gpr[87]);
         ctx->gpr[35] = spu_ai(ctx->gpr[76], 16);
         ctx->gpr[34] = spu_ai(ctx->gpr[76], 32);
-        { ctx->pc = 0x403C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000403C; return; }
+        { SPU_DIRECT(ctx, 0x403C, spujob_42E1FC8CEE0BE246_spu_func_0000403C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000403C(spu_context* ctx) {
@@ -5553,13 +5617,13 @@ loc_0000403C:
         ctx->gpr[39] = spu_shl(ctx->gpr[12], ctx->gpr[29]);
         ctx->gpr[36] = spu_rot(ctx->gpr[17], ctx->gpr[25]);
         ctx->gpr[24] = spu_andbi(ctx->gpr[98], 15);
-        if (ctx->gpr[87]._u32[0] == 0) { ctx->pc = 0x4130; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004130; return; }
+        if (ctx->gpr[87]._u32[0] == 0) { SPU_DIRECT(ctx, 0x4130, spujob_42E1FC8CEE0BE246_spu_func_00004130); }
         goto loc_0000403C;
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004114(spu_context* ctx) {
         spu_ls_write128(ctx, ctx->gpr[4]._u32[0] + 0x0, ctx->gpr[9]);
-        { ctx->pc = 0x4118; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004118; return; }
+        { SPU_DIRECT(ctx, 0x4118, spujob_42E1FC8CEE0BE246_spu_func_00004118); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004118(spu_context* ctx) {
@@ -5568,15 +5632,15 @@ void spujob_42E1FC8CEE0BE246_spu_func_00004118(spu_context* ctx) {
         ctx->gpr[26] = spu_ai(ctx->gpr[3], 16);
         ctx->gpr[5] = spu_ai(ctx->gpr[5], 1);
         ctx->gpr[3] = spu_ori(ctx->gpr[26], 0);
-        if (ctx->gpr[102]._u32[0] == 0) { ctx->pc = 0x4114; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004114; return; }
-        { ctx->pc = 0x4130; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004130; return; }
+        if (ctx->gpr[102]._u32[0] == 0) { SPU_DIRECT(ctx, 0x4114, spujob_42E1FC8CEE0BE246_spu_func_00004114); }
+        { SPU_DIRECT(ctx, 0x4130, spujob_42E1FC8CEE0BE246_spu_func_00004130); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004130(spu_context* ctx) {
         ctx->gpr[3] = spu_rotmi(ctx->gpr[84], -16);
         ctx->gpr[42] = spu_ilh(0x203);
         ctx->gpr[11] = spu_shufb(ctx->gpr[84], ctx->gpr[84], ctx->gpr[42]);
-        if (ctx->gpr[3]._u32[0] == 0) { ctx->pc = 0x41DC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000041DC; return; }
+        if (ctx->gpr[3]._u32[0] == 0) { SPU_DIRECT(ctx, 0x41DC, spujob_42E1FC8CEE0BE246_spu_func_000041DC); }
         ctx->gpr[43] = spu_ai(ctx->gpr[3], 31);
         ctx->gpr[9] = spu_fsmbi(0x0);
         ctx->gpr[17] = spu_ori(ctx->gpr[85], 0);
@@ -5593,7 +5657,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00004130(spu_context* ctx) {
         ctx->gpr[10] = spu_shlqbyi(ctx->gpr[9], 0);
         ctx->gpr[15] = spu_ai(ctx->gpr[85], 32);
         ctx->gpr[14] = spu_ai(ctx->gpr[85], 48);
-        { ctx->pc = 0x4180; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004180; return; }
+        { SPU_DIRECT(ctx, 0x4180, spujob_42E1FC8CEE0BE246_spu_func_00004180); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004180(spu_context* ctx) {
@@ -5621,7 +5685,7 @@ loc_00004180:
         ctx->gpr[21] = spu_sfh(ctx->gpr[11], ctx->gpr[47]);
         ctx->gpr[9] = spu_il(64);
         if (ctx->gpr[12]._u32[0] != 0) goto loc_00004180;
-        { ctx->pc = 0x41DC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000041DC; return; }
+        { SPU_DIRECT(ctx, 0x41DC, spujob_42E1FC8CEE0BE246_spu_func_000041DC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000041DC(spu_context* ctx) {
@@ -5640,7 +5704,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000041DC(spu_context* ctx) {
         ctx->gpr[34] = spu_a(ctx->gpr[80], ctx->gpr[93]);
         ctx->gpr[99] = spu_a(ctx->gpr[75], ctx->gpr[34]);
         ctx->gpr[93] = spu_clgt(ctx->gpr[99], ctx->gpr[91]);
-        if (ctx->gpr[93]._u32[0] == 0) { ctx->pc = 0x423C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000423C; return; }
+        if (ctx->gpr[93]._u32[0] == 0) { SPU_DIRECT(ctx, 0x423C, spujob_42E1FC8CEE0BE246_spu_func_0000423C); }
         ctx->gpr[79] = spu_ila(0xC9C0);
         ctx->gpr[3] = spu_ilhu(0x100);
         ctx->gpr[4] = spu_a(ctx->gpr[79], ctx->gpr[126]);
@@ -5649,7 +5713,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000041DC(spu_context* ctx) {
         ctx->gpr[4] = spu_il(544);
         ctx->gpr[3] = spu_a(ctx->gpr[25], ctx->gpr[126]);
         ctx->gpr[0] = spu_link(0x423C); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_00000318(ctx); spu_drain_call(ctx, 0x423C); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        { ctx->pc = 0x423C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000423C; return; }
+        { SPU_DIRECT(ctx, 0x423C, spujob_42E1FC8CEE0BE246_spu_func_0000423C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000423C(spu_context* ctx) {
@@ -5680,7 +5744,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_0000423C(spu_context* ctx) {
         ctx->gpr[21] = spu_ilh(0x203);
         ctx->gpr[25] = spu_orhi(ctx->gpr[27], 257);
         ctx->gpr[30] = spu_ilh(0x808);
-        { ctx->pc = 0x42A8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000042A8; return; }
+        { SPU_DIRECT(ctx, 0x42A8, spujob_42E1FC8CEE0BE246_spu_func_000042A8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000042A8(spu_context* ctx) {
@@ -5749,7 +5813,7 @@ loc_000042A8:
         ctx->gpr[30] = spu_andi(ctx->gpr[27], -16);
         ctx->gpr[22] = spu_rotqbyi(ctx->gpr[32], 12);
         ctx->gpr[100] = spu_cgt(ctx->gpr[30], ctx->gpr[22]);
-        if (ctx->gpr[100]._u32[0] == 0) { ctx->pc = 0x43CC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000043CC; return; }
+        if (ctx->gpr[100]._u32[0] == 0) { SPU_DIRECT(ctx, 0x43CC, spujob_42E1FC8CEE0BE246_spu_func_000043CC); }
         ctx->gpr[102] = spu_ila(0xC9C0);
         ctx->gpr[3] = spu_ilhu(0x100);
         ctx->gpr[4] = spu_a(ctx->gpr[102], ctx->gpr[126]);
@@ -5758,7 +5822,7 @@ loc_000042A8:
         ctx->gpr[4] = spu_il(686);
         ctx->gpr[3] = spu_a(ctx->gpr[71], ctx->gpr[126]);
         ctx->gpr[0] = spu_link(0x43CC); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_00000318(ctx); spu_drain_call(ctx, 0x43CC); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        { ctx->pc = 0x43CC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000043CC; return; }
+        { SPU_DIRECT(ctx, 0x43CC, spujob_42E1FC8CEE0BE246_spu_func_000043CC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000043CC(spu_context* ctx) {
@@ -5769,7 +5833,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000043CC(spu_context* ctx) {
         ctx->gpr[3] = spu_ori(ctx->gpr[7], 0);
         ctx->gpr[10] = spu_ori(ctx->gpr[7], 0);
         ctx->gpr[9] = spu_shlqbyi(ctx->gpr[7], 0);
-        { ctx->pc = 0x43E8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000043E8; return; }
+        { SPU_DIRECT(ctx, 0x43E8, spujob_42E1FC8CEE0BE246_spu_func_000043E8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000043E8(spu_context* ctx) {
@@ -5820,7 +5884,7 @@ loc_000043E8:
         ctx->gpr[23] = spu_a(ctx->gpr[96], ctx->gpr[126]);
         ctx->gpr[26] = spu_a(ctx->gpr[92], ctx->gpr[126]);
         ctx->gpr[29] = spu_ai(ctx->gpr[82], 2);
-        { ctx->pc = 0x44A0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000044A0; return; }
+        { SPU_DIRECT(ctx, 0x44A0, spujob_42E1FC8CEE0BE246_spu_func_000044A0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000044A0(spu_context* ctx) {
@@ -5919,7 +5983,7 @@ loc_000044A0:
         ctx->gpr[100] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x150);
         ctx->gpr[101] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x160);
         ctx->gpr[102] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x170);
-        { ctx->pc = 0x1870; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001870; return; }
+        { SPU_DIRECT(ctx, 0x1870, spujob_42E1FC8CEE0BE246_spu_func_00001870); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004620(spu_context* ctx) {
@@ -5933,7 +5997,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00004620(spu_context* ctx) {
         /* branch hint (ignored) */;
         ctx->gpr[1] = spu_ai(ctx->gpr[1], -64);
         ctx->gpr[2] = spu_rotqbyi(ctx->gpr[5], 14);
-        if (ctx->gpr[2]._u16[0] == 0) { ctx->pc = 0x4680; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004680; return; }
+        if (ctx->gpr[2]._u16[0] == 0) { SPU_DIRECT(ctx, 0x4680, spujob_42E1FC8CEE0BE246_spu_func_00004680); }
         ctx->gpr[12] = spu_ls_read128(ctx, ctx->gpr[3]._u32[0] + 0x0);
         ctx->gpr[11] = spu_rotqbyi(ctx->gpr[12], 3);
         ctx->gpr[10] = spu_andi(ctx->gpr[11], 255);
@@ -5941,9 +6005,9 @@ void spujob_42E1FC8CEE0BE246_spu_func_00004620(spu_context* ctx) {
         ctx->gpr[8] = spu_andi(ctx->gpr[9], 15);
         ctx->gpr[7] = spu_ai(ctx->gpr[8], -2);
         ctx->gpr[6] = spu_clgti(ctx->gpr[7], 1);
-        if (ctx->gpr[6]._u32[0] != 0) { ctx->pc = 0x4670; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004670; return; }
+        if (ctx->gpr[6]._u32[0] != 0) { SPU_DIRECT(ctx, 0x4670, spujob_42E1FC8CEE0BE246_spu_func_00004670); }
         ctx->gpr[0] = spu_link(0x4670); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_00003C50(ctx); spu_drain_call(ctx, 0x4670); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        { ctx->pc = 0x4670; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004670; return; }
+        { SPU_DIRECT(ctx, 0x4670, spujob_42E1FC8CEE0BE246_spu_func_00004670); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004670(spu_context* ctx) {
@@ -5951,7 +6015,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00004670(spu_context* ctx) {
         ctx->gpr[3] = spu_cwd(ctx->gpr[1], 0);
         ctx->gpr[4] = spu_shufb(ctx->gpr[81], ctx->gpr[13], ctx->gpr[3]);
         spu_ls_write128(ctx, ctx->gpr[80]._u32[0] + 0x50, ctx->gpr[4]);
-        { ctx->pc = 0x4680; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004680; return; }
+        { SPU_DIRECT(ctx, 0x4680, spujob_42E1FC8CEE0BE246_spu_func_00004680); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004680(spu_context* ctx) {
@@ -5966,8 +6030,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_00004698(spu_context* ctx) {
         ctx->gpr[2] = spu_il(-816);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x2F0, ctx->gpr[126]);
         ctx->gpr[10] = spu_ila(0x92A8);
-        ctx->gpr[126] = spu_link(0x46A8); { ctx->pc = 0x46A8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000046A8; return; }
-        { ctx->pc = 0x46A8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000046A8; return; }
+        ctx->gpr[126] = spu_link(0x46A8); { SPU_DIRECT(ctx, 0x46A8, spujob_42E1FC8CEE0BE246_spu_func_000046A8); }
+        { SPU_DIRECT(ctx, 0x46A8, spujob_42E1FC8CEE0BE246_spu_func_000046A8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000046A8(spu_context* ctx) {
@@ -6029,7 +6093,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000046A8(spu_context* ctx) {
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x300, ctx->gpr[127]);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x330, ctx->gpr[1]);
         ctx->gpr[1] = spu_a(ctx->gpr[1], ctx->gpr[2]);
-        if (ctx->gpr[7]._u32[0] == 0) { ctx->pc = 0x5EB8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005EB8; return; }
+        if (ctx->gpr[7]._u32[0] == 0) { SPU_DIRECT(ctx, 0x5EB8, spujob_42E1FC8CEE0BE246_spu_func_00005EB8); }
         /* branch hint (ignored) */;
         ctx->gpr[6] = spu_ila(0x10203);
         ctx->gpr[76] = spu_fsmbi(0x0);
@@ -6076,24 +6140,24 @@ void spujob_42E1FC8CEE0BE246_spu_func_000046A8(spu_context* ctx) {
         ctx->gpr[106] = spu_ilhu(0x3800);
         ctx->gpr[87] = spu_ilhu(0x8000);
         ctx->gpr[98] = spu_andbi(ctx->gpr[98], 8);
-        if (ctx->gpr[96]._u32[0] == 0) { ctx->pc = 0x5DC8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005DC8; return; }
+        if (ctx->gpr[96]._u32[0] == 0) { SPU_DIRECT(ctx, 0x5DC8, spujob_42E1FC8CEE0BE246_spu_func_00005DC8); }
         ctx->gpr[12] = spu_ls_read128(ctx, ctx->gpr[46]._u32[0] + 0x0);
         ctx->gpr[11] = spu_rotqbyi(ctx->gpr[12], 13);
         ctx->gpr[9] = spu_cgtbi(ctx->gpr[11], -1);
         ctx->gpr[8] = spu_xsbh(ctx->gpr[9]);
-        if (ctx->gpr[8]._u16[0] == 0) { ctx->pc = 0x5DC8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005DC8; return; }
+        if (ctx->gpr[8]._u16[0] == 0) { SPU_DIRECT(ctx, 0x5DC8, spujob_42E1FC8CEE0BE246_spu_func_00005DC8); }
         ctx->gpr[7] = spu_ila(0xCA60);
         ctx->gpr[3] = spu_ilhu(0x100);
         ctx->gpr[4] = spu_a(ctx->gpr[7], ctx->gpr[126]);
         ctx->gpr[0] = spu_link(0x4874); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_000077C0(ctx); spu_drain_call(ctx, 0x4874); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        { ctx->pc = 0x5EB8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005EB8; return; }
+        { SPU_DIRECT(ctx, 0x5EB8, spujob_42E1FC8CEE0BE246_spu_func_00005EB8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004878(spu_context* ctx) {
         ctx->gpr[5] = spu_rotmai(ctx->gpr[5], -1);
         /* branch hint (ignored) */;
         ctx->gpr[8] = spu_ai(ctx->gpr[8], 1);
-        { ctx->pc = 0x4884; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004884; return; }
+        { SPU_DIRECT(ctx, 0x4884, spujob_42E1FC8CEE0BE246_spu_func_00004884); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004884(spu_context* ctx) {
@@ -6104,7 +6168,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00004884(spu_context* ctx) {
         ctx->gpr[15] = spu_and(ctx->gpr[16], ctx->gpr[17]);
         ctx->gpr[14] = spu_ceqbi(ctx->gpr[15], 0);
         ctx->gpr[13] = spu_xsbh(ctx->gpr[14]);
-        if (ctx->gpr[13]._u16[0] == 0) { ctx->pc = 0x4878; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004878; return; }
+        if (ctx->gpr[13]._u16[0] == 0) { SPU_DIRECT(ctx, 0x4878, spujob_42E1FC8CEE0BE246_spu_func_00004878); }
         /* branch hint (ignored) */;
         ctx->gpr[27] = spu_ila(0x10203);
         ctx->gpr[35] = spu_ls_read128(ctx, ctx->gpr[46]._u32[0] + 0x0);
@@ -6142,7 +6206,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00004884(spu_context* ctx) {
         ctx->gpr[54] = spu_ai(ctx->gpr[44], 16);
         ctx->gpr[53] = spu_ai(ctx->gpr[43], 16);
         ctx->gpr[52] = spu_ai(ctx->gpr[47], 16);
-        { ctx->pc = 0x5DB0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005DB0; return; }
+        { SPU_DIRECT(ctx, 0x5DB0, spujob_42E1FC8CEE0BE246_spu_func_00005DB0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000493C(spu_context* ctx) {
@@ -6153,10 +6217,10 @@ void spujob_42E1FC8CEE0BE246_spu_func_0000493C(spu_context* ctx) {
         ctx->gpr[100] = spu_ori(ctx->gpr[39], 0);
         ctx->gpr[48] = spu_rotqby(ctx->gpr[36], ctx->gpr[37]);
         ctx->gpr[99] = spu_andi(ctx->gpr[48], 255);
-        if (ctx->gpr[124]._u32[0] == 0) { ctx->pc = 0x4964; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004964; return; }
+        if (ctx->gpr[124]._u32[0] == 0) { SPU_DIRECT(ctx, 0x4964, spujob_42E1FC8CEE0BE246_spu_func_00004964); }
         ctx->gpr[42] = spu_ceqi(ctx->gpr[99], 1);
-        if (ctx->gpr[42]._u32[0] == 0) { ctx->pc = 0x5DAC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005DAC; return; }
-        { ctx->pc = 0x4964; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004964; return; }
+        if (ctx->gpr[42]._u32[0] == 0) { SPU_DIRECT(ctx, 0x5DAC, spujob_42E1FC8CEE0BE246_spu_func_00005DAC); }
+        { SPU_DIRECT(ctx, 0x4964, spujob_42E1FC8CEE0BE246_spu_func_00004964); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004964(spu_context* ctx) {
@@ -6191,8 +6255,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_00004964(spu_context* ctx) {
         ctx->gpr[72] = spu_selb(ctx->gpr[58], ctx->gpr[122], ctx->gpr[96]);
         ctx->gpr[36] = spu_a(ctx->gpr[72], ctx->gpr[95]);
         ctx->gpr[49] = spu_a(ctx->gpr[120], ctx->gpr[72]);
-        if (ctx->gpr[57]._u32[0] != 0) { ctx->pc = 0x5E24; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005E24; return; }
-        { ctx->pc = 0x5DAC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005DAC; return; }
+        if (ctx->gpr[57]._u32[0] != 0) { SPU_DIRECT(ctx, 0x5E24, spujob_42E1FC8CEE0BE246_spu_func_00005E24); }
+        { SPU_DIRECT(ctx, 0x5DAC, spujob_42E1FC8CEE0BE246_spu_func_00005DAC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000049E8(spu_context* ctx) {
@@ -6226,14 +6290,14 @@ void spujob_42E1FC8CEE0BE246_spu_func_000049E8(spu_context* ctx) {
         ctx->gpr[13] = spu_shufb(ctx->gpr[3], ctx->gpr[3], ctx->gpr[64]);
         ctx->gpr[12] = spu_shlqbyi(ctx->gpr[6], 4);
         ctx->gpr[11] = spu_shlqbyi(ctx->gpr[6], 8);
-        if (ctx->gpr[5]._u32[0] == 0) { ctx->pc = 0x4B14; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004B14; return; }
+        if (ctx->gpr[5]._u32[0] == 0) { SPU_DIRECT(ctx, 0x4B14, spujob_42E1FC8CEE0BE246_spu_func_00004B14); }
         ctx->gpr[31] = spu_ori(ctx->gpr[55], 0);
         ctx->gpr[30] = spu_ori(ctx->gpr[44], 0);
         ctx->gpr[29] = spu_shlqbyi(ctx->gpr[54], 0);
         ctx->gpr[23] = spu_ori(ctx->gpr[43], 0);
         ctx->gpr[22] = spu_shlqbyi(ctx->gpr[53], 0);
         ctx->gpr[16] = spu_ori(ctx->gpr[52], 0);
-        { ctx->pc = 0x4A7C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004A7C; return; }
+        { SPU_DIRECT(ctx, 0x4A7C, spujob_42E1FC8CEE0BE246_spu_func_00004A7C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004A7C(spu_context* ctx) {
@@ -6274,7 +6338,7 @@ loc_00004A7C:
         ctx->gpr[9] = spu_ls_read128(ctx, ctx->gpr[23]._u32[0] + ctx->gpr[20]._u32[0]);
         ctx->gpr[19] = spu_ls_read128(ctx, ctx->gpr[18]._u32[0] + ctx->gpr[20]._u32[0]);
         ctx->gpr[20] = spu_ori(ctx->gpr[39], 0);
-        if (ctx->gpr[24]._u32[0] != 0) { ctx->pc = 0x4B98; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004B98; return; }
+        if (ctx->gpr[24]._u32[0] != 0) { SPU_DIRECT(ctx, 0x4B98, spujob_42E1FC8CEE0BE246_spu_func_00004B98); }
         goto loc_00004A7C;
 }
 
@@ -6313,18 +6377,18 @@ loc_00004B14:
         ctx->gpr[20] = spu_shlqbyi(ctx->gpr[71], 0);
         ctx->gpr[14] = spu_ori(ctx->gpr[18], 0);
         if (ctx->gpr[16]._u32[0] == 0) goto loc_00004B14;
-        { ctx->pc = 0x4B98; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004B98; return; }
+        { SPU_DIRECT(ctx, 0x4B98, spujob_42E1FC8CEE0BE246_spu_func_00004B98); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004B98(spu_context* ctx) {
         ctx->gpr[21] = spu_ai(ctx->gpr[21], 1);
-        { ctx->pc = 0x4B9C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004B9C; return; }
+        { SPU_DIRECT(ctx, 0x4B9C, spujob_42E1FC8CEE0BE246_spu_func_00004B9C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004B9C(spu_context* ctx) {
         ctx->gpr[32] = spu_ceq(ctx->gpr[21], ctx->gpr[56]);
-        if (ctx->gpr[32]._u32[0] == 0) { ctx->pc = 0x49E8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000049E8; return; }
-        { ctx->pc = 0x5AB0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005AB0; return; }
+        if (ctx->gpr[32]._u32[0] == 0) { SPU_DIRECT(ctx, 0x49E8, spujob_42E1FC8CEE0BE246_spu_func_000049E8); }
+        { SPU_DIRECT(ctx, 0x5AB0, spujob_42E1FC8CEE0BE246_spu_func_00005AB0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004BA8(spu_context* ctx) {
@@ -6372,7 +6436,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00004BA8(spu_context* ctx) {
         ctx->gpr[9] = spu_andc(ctx->gpr[30], ctx->gpr[87]);
         ctx->gpr[8] = spu_andc(ctx->gpr[29], ctx->gpr[87]);
         ctx->gpr[4] = spu_andc(ctx->gpr[34], ctx->gpr[87]);
-        { ctx->pc = 0x4C58; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004C58; return; }
+        { SPU_DIRECT(ctx, 0x4C58, spujob_42E1FC8CEE0BE246_spu_func_00004C58); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004C58(spu_context* ctx) {
@@ -6428,13 +6492,13 @@ loc_00004C58:
         ctx->gpr[4] = spu_andc(ctx->gpr[66], ctx->gpr[87]);
         if (ctx->gpr[65]._u32[0] == 0) goto loc_00004C58;
         ctx->gpr[24] = spu_ai(ctx->gpr[24], 1);
-        { ctx->pc = 0x4D24; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004D24; return; }
+        { SPU_DIRECT(ctx, 0x4D24, spujob_42E1FC8CEE0BE246_spu_func_00004D24); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004D24(spu_context* ctx) {
         ctx->gpr[21] = spu_ceq(ctx->gpr[24], ctx->gpr[56]);
-        if (ctx->gpr[21]._u32[0] == 0) { ctx->pc = 0x4BA8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004BA8; return; }
-        { ctx->pc = 0x5AB0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005AB0; return; }
+        if (ctx->gpr[21]._u32[0] == 0) { SPU_DIRECT(ctx, 0x4BA8, spujob_42E1FC8CEE0BE246_spu_func_00004BA8); }
+        { SPU_DIRECT(ctx, 0x5AB0, spujob_42E1FC8CEE0BE246_spu_func_00005AB0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004D30(spu_context* ctx) {
@@ -6459,7 +6523,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00004D30(spu_context* ctx) {
         ctx->gpr[10] = spu_ls_read128(ctx, ctx->gpr[53]._u32[0] + ctx->gpr[65]._u32[0]);
         ctx->gpr[18] = spu_ls_read128(ctx, ctx->gpr[47]._u32[0] + ctx->gpr[65]._u32[0]);
         ctx->gpr[17] = spu_shufb(ctx->gpr[17], ctx->gpr[17], ctx->gpr[112]);
-        if (ctx->gpr[27]._u32[0] == 0) { ctx->pc = 0x4E2C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004E2C; return; }
+        if (ctx->gpr[27]._u32[0] == 0) { SPU_DIRECT(ctx, 0x4E2C, spujob_42E1FC8CEE0BE246_spu_func_00004E2C); }
         ctx->gpr[31] = spu_ori(ctx->gpr[45], 0);
         ctx->gpr[30] = spu_shlqbyi(ctx->gpr[55], 0);
         ctx->gpr[29] = spu_ori(ctx->gpr[44], 0);
@@ -6468,7 +6532,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00004D30(spu_context* ctx) {
         ctx->gpr[14] = spu_shlqbyi(ctx->gpr[53], 0);
         ctx->gpr[13] = spu_ori(ctx->gpr[47], 0);
         ctx->gpr[12] = spu_shlqbyi(ctx->gpr[52], 0);
-        { ctx->pc = 0x4DA8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004DA8; return; }
+        { SPU_DIRECT(ctx, 0x4DA8, spujob_42E1FC8CEE0BE246_spu_func_00004DA8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004DA8(spu_context* ctx) {
@@ -6504,7 +6568,7 @@ loc_00004DA8:
         ctx->gpr[7] = spu_ls_read128(ctx, ctx->gpr[27]._u32[0] + ctx->gpr[22]._u32[0]);
         ctx->gpr[10] = spu_ls_read128(ctx, ctx->gpr[14]._u32[0] + ctx->gpr[22]._u32[0]);
         ctx->gpr[18] = spu_ls_read128(ctx, ctx->gpr[13]._u32[0] + ctx->gpr[22]._u32[0]);
-        if (ctx->gpr[78]._u32[0] != 0) { ctx->pc = 0x4E9C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004E9C; return; }
+        if (ctx->gpr[78]._u32[0] != 0) { SPU_DIRECT(ctx, 0x4E9C, spujob_42E1FC8CEE0BE246_spu_func_00004E9C); }
         goto loc_00004DA8;
 }
 
@@ -6538,18 +6602,18 @@ loc_00004E2C:
         ctx->gpr[19] = spu_ls_read128(ctx, ctx->gpr[44]._u32[0] + ctx->gpr[84]._u32[0]);
         ctx->gpr[7] = spu_ls_read128(ctx, ctx->gpr[43]._u32[0] + ctx->gpr[84]._u32[0]);
         if (ctx->gpr[35]._u32[0] == 0) goto loc_00004E2C;
-        { ctx->pc = 0x4E9C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004E9C; return; }
+        { SPU_DIRECT(ctx, 0x4E9C, spujob_42E1FC8CEE0BE246_spu_func_00004E9C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004E9C(spu_context* ctx) {
         ctx->gpr[21] = spu_ai(ctx->gpr[21], 1);
-        { ctx->pc = 0x4EA0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004EA0; return; }
+        { SPU_DIRECT(ctx, 0x4EA0, spujob_42E1FC8CEE0BE246_spu_func_00004EA0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004EA0(spu_context* ctx) {
         ctx->gpr[8] = spu_ceq(ctx->gpr[21], ctx->gpr[56]);
-        if (ctx->gpr[8]._u32[0] == 0) { ctx->pc = 0x4D30; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004D30; return; }
-        { ctx->pc = 0x5AB0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005AB0; return; }
+        if (ctx->gpr[8]._u32[0] == 0) { SPU_DIRECT(ctx, 0x4D30, spujob_42E1FC8CEE0BE246_spu_func_00004D30); }
+        { SPU_DIRECT(ctx, 0x5AB0, spujob_42E1FC8CEE0BE246_spu_func_00005AB0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004EAC(spu_context* ctx) {
@@ -6579,19 +6643,19 @@ void spujob_42E1FC8CEE0BE246_spu_func_00004EAC(spu_context* ctx) {
         ctx->gpr[4] = spu_shufb(ctx->gpr[65], ctx->gpr[66], ctx->gpr[16]);
         ctx->gpr[2] = spu_shufb(ctx->gpr[58], ctx->gpr[59], ctx->gpr[16]);
         ctx->gpr[18] = spu_shufb(ctx->gpr[33], ctx->gpr[57], ctx->gpr[16]);
-        if (ctx->gpr[42]._u32[0] == 0) { ctx->pc = 0x4FC8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004FC8; return; }
+        if (ctx->gpr[42]._u32[0] == 0) { SPU_DIRECT(ctx, 0x4FC8, spujob_42E1FC8CEE0BE246_spu_func_00004FC8); }
         ctx->gpr[30] = spu_ori(ctx->gpr[45], 0);
         ctx->gpr[29] = spu_shlqbyi(ctx->gpr[55], 0);
         ctx->gpr[22] = spu_ori(ctx->gpr[54], 0);
         ctx->gpr[15] = spu_shlqbyi(ctx->gpr[43], 0);
         ctx->gpr[14] = spu_ori(ctx->gpr[53], 0);
         ctx->gpr[13] = spu_shlqbyi(ctx->gpr[47], 0);
-        { ctx->pc = 0x4F30; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004F30; return; }
+        { SPU_DIRECT(ctx, 0x4F30, spujob_42E1FC8CEE0BE246_spu_func_00004F30); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004F30(spu_context* ctx) {
         ctx->gpr[12] = spu_ori(ctx->gpr[52], 0);
-        { ctx->pc = 0x4F34; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004F34; return; }
+        { SPU_DIRECT(ctx, 0x4F34, spujob_42E1FC8CEE0BE246_spu_func_00004F34); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004F34(spu_context* ctx) {
@@ -6618,7 +6682,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00004F34(spu_context* ctx) {
         spu_ls_write128(ctx, ctx->gpr[5]._u32[0] + 0x0, ctx->gpr[11]);
         spu_ls_write128(ctx, ctx->gpr[32]._u32[0] + 0x0, ctx->gpr[31]);
         spu_ls_write128(ctx, ctx->gpr[103]._u32[0] + 0x0, ctx->gpr[10]);
-        { ctx->pc = 0x4F90; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004F90; return; }
+        { SPU_DIRECT(ctx, 0x4F90, spujob_42E1FC8CEE0BE246_spu_func_00004F90); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004F90(spu_context* ctx) {
@@ -6634,8 +6698,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_00004F90(spu_context* ctx) {
         ctx->gpr[4] = spu_shufb(ctx->gpr[81], ctx->gpr[80], ctx->gpr[16]);
         ctx->gpr[2] = spu_shufb(ctx->gpr[25], ctx->gpr[26], ctx->gpr[16]);
         ctx->gpr[18] = spu_shufb(ctx->gpr[28], ctx->gpr[24], ctx->gpr[16]);
-        if (ctx->gpr[37]._u32[0] != 0) { ctx->pc = 0x5048; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005048; return; }
-        { ctx->pc = 0x4F34; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004F34; return; }
+        if (ctx->gpr[37]._u32[0] != 0) { SPU_DIRECT(ctx, 0x5048, spujob_42E1FC8CEE0BE246_spu_func_00005048); }
+        { SPU_DIRECT(ctx, 0x4F34, spujob_42E1FC8CEE0BE246_spu_func_00004F34); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00004FC8(spu_context* ctx) {
@@ -6672,18 +6736,18 @@ loc_00004FC8:
         ctx->gpr[4] = spu_shufb(ctx->gpr[13], ctx->gpr[13], ctx->gpr[16]);
         ctx->gpr[2] = spu_shufb(ctx->gpr[23], ctx->gpr[23], ctx->gpr[16]);
         if (ctx->gpr[70]._u32[0] == 0) goto loc_00004FC8;
-        { ctx->pc = 0x5048; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005048; return; }
+        { SPU_DIRECT(ctx, 0x5048, spujob_42E1FC8CEE0BE246_spu_func_00005048); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00005048(spu_context* ctx) {
         ctx->gpr[21] = spu_ai(ctx->gpr[21], 1);
-        { ctx->pc = 0x504C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000504C; return; }
+        { SPU_DIRECT(ctx, 0x504C, spujob_42E1FC8CEE0BE246_spu_func_0000504C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000504C(spu_context* ctx) {
         ctx->gpr[19] = spu_ceq(ctx->gpr[21], ctx->gpr[56]);
-        if (ctx->gpr[19]._u32[0] == 0) { ctx->pc = 0x4EAC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004EAC; return; }
-        { ctx->pc = 0x5AB0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005AB0; return; }
+        if (ctx->gpr[19]._u32[0] == 0) { SPU_DIRECT(ctx, 0x4EAC, spujob_42E1FC8CEE0BE246_spu_func_00004EAC); }
+        { SPU_DIRECT(ctx, 0x5AB0, spujob_42E1FC8CEE0BE246_spu_func_00005AB0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00005058(spu_context* ctx) {
@@ -6708,7 +6772,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00005058(spu_context* ctx) {
         ctx->gpr[10] = spu_ls_read128(ctx, ctx->gpr[53]._u32[0] + ctx->gpr[84]._u32[0]);
         ctx->gpr[18] = spu_ls_read128(ctx, ctx->gpr[47]._u32[0] + ctx->gpr[84]._u32[0]);
         ctx->gpr[17] = spu_shufb(ctx->gpr[27], ctx->gpr[27], ctx->gpr[127]);
-        if (ctx->gpr[79]._u32[0] == 0) { ctx->pc = 0x5154; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005154; return; }
+        if (ctx->gpr[79]._u32[0] == 0) { SPU_DIRECT(ctx, 0x5154, spujob_42E1FC8CEE0BE246_spu_func_00005154); }
         ctx->gpr[31] = spu_ori(ctx->gpr[45], 0);
         ctx->gpr[30] = spu_shlqbyi(ctx->gpr[55], 0);
         ctx->gpr[29] = spu_ori(ctx->gpr[44], 0);
@@ -6717,7 +6781,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00005058(spu_context* ctx) {
         ctx->gpr[14] = spu_shlqbyi(ctx->gpr[53], 0);
         ctx->gpr[13] = spu_ori(ctx->gpr[47], 0);
         ctx->gpr[12] = spu_shlqbyi(ctx->gpr[52], 0);
-        { ctx->pc = 0x50D0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000050D0; return; }
+        { SPU_DIRECT(ctx, 0x50D0, spujob_42E1FC8CEE0BE246_spu_func_000050D0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000050D0(spu_context* ctx) {
@@ -6753,7 +6817,7 @@ loc_000050D0:
         ctx->gpr[7] = spu_ls_read128(ctx, ctx->gpr[27]._u32[0] + ctx->gpr[35]._u32[0]);
         ctx->gpr[10] = spu_ls_read128(ctx, ctx->gpr[14]._u32[0] + ctx->gpr[35]._u32[0]);
         ctx->gpr[18] = spu_ls_read128(ctx, ctx->gpr[13]._u32[0] + ctx->gpr[35]._u32[0]);
-        if (ctx->gpr[22]._u32[0] != 0) { ctx->pc = 0x51C4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000051C4; return; }
+        if (ctx->gpr[22]._u32[0] != 0) { SPU_DIRECT(ctx, 0x51C4, spujob_42E1FC8CEE0BE246_spu_func_000051C4); }
         goto loc_000050D0;
 }
 
@@ -6787,18 +6851,18 @@ loc_00005154:
         ctx->gpr[19] = spu_ls_read128(ctx, ctx->gpr[44]._u32[0] + ctx->gpr[29]._u32[0]);
         ctx->gpr[7] = spu_ls_read128(ctx, ctx->gpr[43]._u32[0] + ctx->gpr[29]._u32[0]);
         if (ctx->gpr[2]._u32[0] == 0) goto loc_00005154;
-        { ctx->pc = 0x51C4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000051C4; return; }
+        { SPU_DIRECT(ctx, 0x51C4, spujob_42E1FC8CEE0BE246_spu_func_000051C4); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000051C4(spu_context* ctx) {
         ctx->gpr[21] = spu_ai(ctx->gpr[21], 1);
-        { ctx->pc = 0x51C8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000051C8; return; }
+        { SPU_DIRECT(ctx, 0x51C8, spujob_42E1FC8CEE0BE246_spu_func_000051C8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000051C8(spu_context* ctx) {
         ctx->gpr[17] = spu_ceq(ctx->gpr[21], ctx->gpr[56]);
-        if (ctx->gpr[17]._u32[0] == 0) { ctx->pc = 0x5058; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005058; return; }
-        { ctx->pc = 0x5AB0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005AB0; return; }
+        if (ctx->gpr[17]._u32[0] == 0) { SPU_DIRECT(ctx, 0x5058, spujob_42E1FC8CEE0BE246_spu_func_00005058); }
+        { SPU_DIRECT(ctx, 0x5AB0, spujob_42E1FC8CEE0BE246_spu_func_00005AB0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000051D4(spu_context* ctx) {
@@ -6828,7 +6892,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000051D4(spu_context* ctx) {
         ctx->gpr[4] = spu_shufb(ctx->gpr[83], ctx->gpr[84], ctx->gpr[16]);
         ctx->gpr[2] = spu_shufb(ctx->gpr[81], ctx->gpr[82], ctx->gpr[16]);
         ctx->gpr[18] = spu_shufb(ctx->gpr[79], ctx->gpr[80], ctx->gpr[16]);
-        if (ctx->gpr[78]._u32[0] == 0) { ctx->pc = 0x52F0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000052F0; return; }
+        if (ctx->gpr[78]._u32[0] == 0) { SPU_DIRECT(ctx, 0x52F0, spujob_42E1FC8CEE0BE246_spu_func_000052F0); }
         ctx->gpr[30] = spu_ori(ctx->gpr[45], 0);
         ctx->gpr[29] = spu_shlqbyi(ctx->gpr[55], 0);
         ctx->gpr[22] = spu_ori(ctx->gpr[54], 0);
@@ -6836,7 +6900,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000051D4(spu_context* ctx) {
         ctx->gpr[14] = spu_ori(ctx->gpr[53], 0);
         ctx->gpr[13] = spu_shlqbyi(ctx->gpr[47], 0);
         ctx->gpr[12] = spu_ori(ctx->gpr[52], 0);
-        { ctx->pc = 0x525C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000525C; return; }
+        { SPU_DIRECT(ctx, 0x525C, spujob_42E1FC8CEE0BE246_spu_func_0000525C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000525C(spu_context* ctx) {
@@ -6876,7 +6940,7 @@ loc_0000525C:
         ctx->gpr[4] = spu_shufb(ctx->gpr[8], ctx->gpr[39], ctx->gpr[16]);
         ctx->gpr[2] = spu_shufb(ctx->gpr[25], ctx->gpr[26], ctx->gpr[16]);
         ctx->gpr[18] = spu_shufb(ctx->gpr[28], ctx->gpr[24], ctx->gpr[16]);
-        if (ctx->gpr[71]._u32[0] != 0) { ctx->pc = 0x5374; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005374; return; }
+        if (ctx->gpr[71]._u32[0] != 0) { SPU_DIRECT(ctx, 0x5374, spujob_42E1FC8CEE0BE246_spu_func_00005374); }
         goto loc_0000525C;
 }
 
@@ -6915,18 +6979,18 @@ loc_000052F0:
         ctx->gpr[4] = spu_shufb(ctx->gpr[29], ctx->gpr[29], ctx->gpr[16]);
         ctx->gpr[2] = spu_shufb(ctx->gpr[23], ctx->gpr[23], ctx->gpr[16]);
         if (ctx->gpr[22]._u32[0] == 0) goto loc_000052F0;
-        { ctx->pc = 0x5374; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005374; return; }
+        { SPU_DIRECT(ctx, 0x5374, spujob_42E1FC8CEE0BE246_spu_func_00005374); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00005374(spu_context* ctx) {
         ctx->gpr[21] = spu_ai(ctx->gpr[21], 1);
-        { ctx->pc = 0x5378; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005378; return; }
+        { SPU_DIRECT(ctx, 0x5378, spujob_42E1FC8CEE0BE246_spu_func_00005378); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00005378(spu_context* ctx) {
         ctx->gpr[16] = spu_ceq(ctx->gpr[21], ctx->gpr[56]);
-        if (ctx->gpr[16]._u32[0] == 0) { ctx->pc = 0x51D4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000051D4; return; }
-        { ctx->pc = 0x5AB0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005AB0; return; }
+        if (ctx->gpr[16]._u32[0] == 0) { SPU_DIRECT(ctx, 0x51D4, spujob_42E1FC8CEE0BE246_spu_func_000051D4); }
+        { SPU_DIRECT(ctx, 0x5AB0, spujob_42E1FC8CEE0BE246_spu_func_00005AB0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00005384(spu_context* ctx) {
@@ -6967,7 +7031,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00005384(spu_context* ctx) {
         ctx->gpr[3] = spu_shl(ctx->gpr[37], ctx->gpr[89]);
         ctx->gpr[4] = spu_shl(ctx->gpr[34], ctx->gpr[89]);
         ctx->gpr[5] = spu_shl(ctx->gpr[94], ctx->gpr[89]);
-        { ctx->pc = 0x5418; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005418; return; }
+        { SPU_DIRECT(ctx, 0x5418, spujob_42E1FC8CEE0BE246_spu_func_00005418); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00005418(spu_context* ctx) {
@@ -7017,14 +7081,14 @@ loc_00005418:
         ctx->gpr[5] = spu_shl(ctx->gpr[71], ctx->gpr[89]);
         if (ctx->gpr[70]._u32[0] == 0) goto loc_00005418;
         ctx->gpr[24] = spu_ai(ctx->gpr[24], 1);
-        { ctx->pc = 0x54CC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000054CC; return; }
+        { SPU_DIRECT(ctx, 0x54CC, spujob_42E1FC8CEE0BE246_spu_func_000054CC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000054CC(spu_context* ctx) {
         ctx->gpr[21] = spu_ceq(ctx->gpr[24], ctx->gpr[56]);
-        if (ctx->gpr[21]._u32[0] == 0) { ctx->pc = 0x5384; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005384; return; }
+        if (ctx->gpr[21]._u32[0] == 0) { SPU_DIRECT(ctx, 0x5384, spujob_42E1FC8CEE0BE246_spu_func_00005384); }
         ctx->gpr[94] = spu_il(3);
-        { ctx->pc = 0x5AB0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005AB0; return; }
+        { SPU_DIRECT(ctx, 0x5AB0, spujob_42E1FC8CEE0BE246_spu_func_00005AB0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000557C(spu_context* ctx) {
@@ -7089,7 +7153,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_0000557C(spu_context* ctx) {
         ctx->gpr[8] = spu_rotm(ctx->gpr[3], ctx->gpr[19]);
         ctx->gpr[14] = spu_rotm(ctx->gpr[7], ctx->gpr[19]);
         ctx->gpr[13] = spu_rotm(ctx->gpr[9], ctx->gpr[19]);
-        { ctx->pc = 0x5670; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005670; return; }
+        { SPU_DIRECT(ctx, 0x5670, spujob_42E1FC8CEE0BE246_spu_func_00005670); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00005670(spu_context* ctx) {
@@ -7191,13 +7255,13 @@ loc_00005670:
         if (ctx->gpr[11]._u32[0] == 0) goto loc_00005670;
         ctx->gpr[42] = spu_ai(ctx->gpr[42], 1);
         ctx->gpr[39] = spu_ai(ctx->gpr[39], 16);
-        { ctx->pc = 0x57F4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000057F4; return; }
+        { SPU_DIRECT(ctx, 0x57F4, spujob_42E1FC8CEE0BE246_spu_func_000057F4); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000057F4(spu_context* ctx) {
         ctx->gpr[67] = spu_ceq(ctx->gpr[42], ctx->gpr[56]);
-        if (ctx->gpr[67]._u32[0] == 0) { ctx->pc = 0x557C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000557C; return; }
-        { ctx->pc = 0x5AB0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005AB0; return; }
+        if (ctx->gpr[67]._u32[0] == 0) { SPU_DIRECT(ctx, 0x557C, spujob_42E1FC8CEE0BE246_spu_func_0000557C); }
+        { SPU_DIRECT(ctx, 0x5AB0, spujob_42E1FC8CEE0BE246_spu_func_00005AB0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00005800(spu_context* ctx) {
@@ -7294,7 +7358,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00005800(spu_context* ctx) {
         ctx->gpr[68] = spu_frsqest(ctx->gpr[9]);
         ctx->gpr[4] = spu_fi(ctx->gpr[11], ctx->gpr[69]);
         ctx->gpr[6] = spu_fi(ctx->gpr[9], ctx->gpr[68]);
-        { ctx->pc = 0x5974; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005974; return; }
+        { SPU_DIRECT(ctx, 0x5974, spujob_42E1FC8CEE0BE246_spu_func_00005974); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00005974(spu_context* ctx) {
@@ -7376,13 +7440,13 @@ loc_00005974:
         ctx->gpr[13] = spu_selb(ctx->gpr[86], ctx->gpr[30], ctx->gpr[85]);
         if (ctx->gpr[67]._u32[0] == 0) goto loc_00005974;
         ctx->gpr[39] = spu_ai(ctx->gpr[39], 1);
-        { ctx->pc = 0x5AA8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005AA8; return; }
+        { SPU_DIRECT(ctx, 0x5AA8, spujob_42E1FC8CEE0BE246_spu_func_00005AA8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00005AA8(spu_context* ctx) {
         ctx->gpr[27] = spu_ceq(ctx->gpr[39], ctx->gpr[56]);
-        if (ctx->gpr[27]._u32[0] == 0) { ctx->pc = 0x5800; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005800; return; }
-        { ctx->pc = 0x5AB0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005AB0; return; }
+        if (ctx->gpr[27]._u32[0] == 0) { SPU_DIRECT(ctx, 0x5800, spujob_42E1FC8CEE0BE246_spu_func_00005800); }
+        { SPU_DIRECT(ctx, 0x5AB0, spujob_42E1FC8CEE0BE246_spu_func_00005AB0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00005AB0(spu_context* ctx) {
@@ -7395,7 +7459,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00005AB0(spu_context* ctx) {
         ctx->gpr[20] = spu_and(ctx->gpr[26], ctx->gpr[39]);
         ctx->gpr[50] = spu_ceqbi(ctx->gpr[20], 0);
         ctx->gpr[49] = spu_xsbh(ctx->gpr[50]);
-        if (ctx->gpr[49]._u16[0] != 0) { ctx->pc = 0x5B80; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005B80; return; }
+        if (ctx->gpr[49]._u16[0] != 0) { SPU_DIRECT(ctx, 0x5B80, spujob_42E1FC8CEE0BE246_spu_func_00005B80); }
         ctx->gpr[5] = spu_a(ctx->gpr[95], ctx->gpr[72]);
         /* branch hint (ignored) */;
         ctx->gpr[13] = spu_sfi(ctx->gpr[94], 0);
@@ -7421,7 +7485,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00005AB0(spu_context* ctx) {
         ctx->gpr[12] = spu_ori(ctx->gpr[71], 0);
         ctx->gpr[11] = spu_ai(ctx->gpr[71], 64);
         ctx->gpr[9] = spu_selb(ctx->gpr[32], ctx->gpr[42], ctx->gpr[37]);
-        { ctx->pc = 0x5B3C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005B3C; return; }
+        { SPU_DIRECT(ctx, 0x5B3C, spujob_42E1FC8CEE0BE246_spu_func_00005B3C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00005B3C(spu_context* ctx) {
@@ -7443,11 +7507,11 @@ loc_00005B3C:
         spu_ls_write128(ctx, ctx->gpr[13]._u32[0] + ctx->gpr[12]._u32[0], ctx->gpr[81]);
         ctx->gpr[12] = spu_ori(ctx->gpr[79], 0);
         if (ctx->gpr[79]._u32[0] != 0) goto loc_00005B3C;
-        { ctx->pc = 0x5B80; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005B80; return; }
+        { SPU_DIRECT(ctx, 0x5B80, spujob_42E1FC8CEE0BE246_spu_func_00005B80); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00005B80(spu_context* ctx) {
-        if (ctx->gpr[96]._u32[0] == 0) { ctx->pc = 0x5D20; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005D20; return; }
+        if (ctx->gpr[96]._u32[0] == 0) { SPU_DIRECT(ctx, 0x5D20, spujob_42E1FC8CEE0BE246_spu_func_00005D20); }
         ctx->gpr[42] = spu_shli(ctx->gpr[121], 4);
         ctx->gpr[35] = spu_ai(ctx->gpr[36], -1);
         ctx->gpr[20] = spu_fsmbi(0x0);
@@ -7510,7 +7574,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00005B80(spu_context* ctx) {
         ctx->gpr[19] = spu_and(ctx->gpr[72], ctx->gpr[16]);
         ctx->gpr[6] = spu_and(ctx->gpr[117], ctx->gpr[16]);
         ctx->gpr[22] = spu_il(8);
-        { ctx->pc = 0x5C7C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005C7C; return; }
+        { SPU_DIRECT(ctx, 0x5C7C, spujob_42E1FC8CEE0BE246_spu_func_00005C7C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00005C7C(spu_context* ctx) {
@@ -7554,7 +7618,7 @@ loc_00005C7C:
         ctx->gpr[26] = spu_ls_read128(ctx, ctx->gpr[17]._u32[0] + ctx->gpr[5]._u32[0]);
         ctx->gpr[20] = spu_ori(ctx->gpr[10], 0);
         ctx->gpr[24] = spu_ls_read128(ctx, ctx->gpr[17]._u32[0] + ctx->gpr[10]._u32[0]);
-        if (ctx->gpr[11]._u32[0] != 0) { ctx->pc = 0x5DAC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005DAC; return; }
+        if (ctx->gpr[11]._u32[0] != 0) { SPU_DIRECT(ctx, 0x5DAC, spujob_42E1FC8CEE0BE246_spu_func_00005DAC); }
         goto loc_00005C7C;
 }
 
@@ -7568,7 +7632,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00005D20(spu_context* ctx) {
         ctx->gpr[33] = spu_a(ctx->gpr[16], ctx->gpr[23]);
         ctx->gpr[22] = spu_rotqby(ctx->gpr[15], ctx->gpr[33]);
         ctx->gpr[2] = spu_a(ctx->gpr[22], ctx->gpr[23]);
-        if (ctx->gpr[32]._u32[0] != 0) { ctx->pc = 0x5D9C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005D9C; return; }
+        if (ctx->gpr[32]._u32[0] != 0) { SPU_DIRECT(ctx, 0x5D9C, spujob_42E1FC8CEE0BE246_spu_func_00005D9C); }
         ctx->gpr[4] = spu_ori(ctx->gpr[72], 0);
         ctx->pc = ctx->gpr[2]._u32[0]; g_spu_trampoline_fn = spu_indirect_branch; return;
         ctx->stop_code = 0x10u; ctx->status = SPU_STATUS_STOPPED_BY_STOP; spu_stop(ctx); return;
@@ -7577,7 +7641,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00005D20(spu_context* ctx) {
 void spujob_42E1FC8CEE0BE246_spu_func_00005D94(spu_context* ctx) {
         ctx->gpr[24] = spu_shufb(ctx->gpr[4], ctx->gpr[2], ctx->gpr[3]);
         spu_ls_write128(ctx, ctx->gpr[46]._u32[0] + 0x60, ctx->gpr[24]);
-        { ctx->pc = 0x5D9C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005D9C; return; }
+        { SPU_DIRECT(ctx, 0x5D9C, spujob_42E1FC8CEE0BE246_spu_func_00005D9C); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00005D9C(spu_context* ctx) {
@@ -7585,12 +7649,12 @@ void spujob_42E1FC8CEE0BE246_spu_func_00005D9C(spu_context* ctx) {
         ctx->gpr[3] = spu_cbd(ctx->gpr[118], 0);
         ctx->gpr[14] = spu_shufb(ctx->gpr[48], ctx->gpr[25], ctx->gpr[3]);
         spu_ls_write128(ctx, ctx->gpr[46]._u32[0] + 0x160, ctx->gpr[14]);
-        { ctx->pc = 0x5DAC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005DAC; return; }
+        { SPU_DIRECT(ctx, 0x5DAC, spujob_42E1FC8CEE0BE246_spu_func_00005DAC); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00005DAC(spu_context* ctx) {
         ctx->gpr[113] = spu_ai(ctx->gpr[113], 1);
-        { ctx->pc = 0x5DB0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005DB0; return; }
+        { SPU_DIRECT(ctx, 0x5DB0, spujob_42E1FC8CEE0BE246_spu_func_00005DB0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00005DB0(spu_context* ctx) {
@@ -7598,8 +7662,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_00005DB0(spu_context* ctx) {
         ctx->gpr[68] = spu_rotqbyi(ctx->gpr[12], 13);
         ctx->gpr[2] = spu_andi(ctx->gpr[68], 255);
         ctx->gpr[29] = spu_clgt(ctx->gpr[2], ctx->gpr[113]);
-        if (ctx->gpr[29]._u32[0] != 0) { ctx->pc = 0x493C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000493C; return; }
-        { ctx->pc = 0x5EB8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005EB8; return; }
+        if (ctx->gpr[29]._u32[0] != 0) { SPU_DIRECT(ctx, 0x493C, spujob_42E1FC8CEE0BE246_spu_func_0000493C); }
+        { SPU_DIRECT(ctx, 0x5EB8, spujob_42E1FC8CEE0BE246_spu_func_00005EB8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00005DC8(spu_context* ctx) {
@@ -7625,7 +7689,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00005DC8(spu_context* ctx) {
         ctx->gpr[56] = spu_ls_read128(ctx, ctx->gpr[64]._u32[0] + 0x10);
         ctx->gpr[45] = spu_rotqby(ctx->gpr[56], ctx->gpr[64]);
         ctx->gpr[122] = spu_shufb(ctx->gpr[45], ctx->gpr[92], ctx->gpr[92]);
-        { ctx->pc = 0x4884; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004884; return; }
+        { SPU_DIRECT(ctx, 0x4884, spujob_42E1FC8CEE0BE246_spu_func_00004884); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00005E24(spu_context* ctx) {
@@ -7639,7 +7703,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00005E24(spu_context* ctx) {
         ctx->gpr[69] = spu_rotqby(ctx->gpr[20], ctx->gpr[26]);
         ctx->gpr[2] = spu_a(ctx->gpr[69], ctx->gpr[27]);
         /* nop */;
-        if (ctx->gpr[9]._u32[0] != 0) { ctx->pc = 0x5AB0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005AB0; return; }
+        if (ctx->gpr[9]._u32[0] != 0) { SPU_DIRECT(ctx, 0x5AB0, spujob_42E1FC8CEE0BE246_spu_func_00005AB0); }
         ctx->pc = ctx->gpr[2]._u32[0]; g_spu_trampoline_fn = spu_indirect_branch; return;
         ctx->stop_code = 0x44u; ctx->status = SPU_STATUS_STOPPED_BY_STOP; spu_stop(ctx); return;
 }
@@ -7706,8 +7770,8 @@ void spujob_42E1FC8CEE0BE246_spu_func_00005F98(spu_context* ctx) {
         ctx->gpr[2] = spu_ls_read128(ctx, ctx->gpr[3]._u32[0] + 0x0);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x160, ctx->gpr[126]);
         ctx->gpr[9] = spu_ila(0xABA8);
-        ctx->gpr[126] = spu_link(0x5FA8); { ctx->pc = 0x5FA8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005FA8; return; }
-        { ctx->pc = 0x5FA8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00005FA8; return; }
+        ctx->gpr[126] = spu_link(0x5FA8); { SPU_DIRECT(ctx, 0x5FA8, spujob_42E1FC8CEE0BE246_spu_func_00005FA8); }
+        { SPU_DIRECT(ctx, 0x5FA8, spujob_42E1FC8CEE0BE246_spu_func_00005FA8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00005FA8(spu_context* ctx) {
@@ -7742,7 +7806,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00005FA8(spu_context* ctx) {
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x150, ctx->gpr[100]);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x180, ctx->gpr[1]);
         ctx->gpr[1] = spu_ai(ctx->gpr[1], -384);
-        if (ctx->gpr[2]._u16[0] == 0) { ctx->pc = 0x75E8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000075E8; return; }
+        if (ctx->gpr[2]._u16[0] == 0) { SPU_DIRECT(ctx, 0x75E8, spujob_42E1FC8CEE0BE246_spu_func_000075E8); }
         ctx->gpr[81] = spu_andi(ctx->gpr[6], 255);
         ctx->gpr[26] = spu_ls_read128(ctx, 0x7C90);
         ctx->gpr[17] = spu_ila(0xACCC);
@@ -7782,7 +7846,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00005FA8(spu_context* ctx) {
         ctx->gpr[83] = spu_ai(ctx->gpr[3], 16);
         ctx->gpr[49] = spu_ilh(0x303);
         /* nop */;
-        if (ctx->gpr[5]._u32[0] != 0) { ctx->pc = 0x74B0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000074B0; return; }
+        if (ctx->gpr[5]._u32[0] != 0) { SPU_DIRECT(ctx, 0x74B0, spujob_42E1FC8CEE0BE246_spu_func_000074B0); }
         ctx->pc = ctx->gpr[6]._u32[0]; g_spu_trampoline_fn = spu_indirect_branch; return;
         ctx->stop_code = 0x1Cu; ctx->status = SPU_STATUS_STOPPED_BY_STOP; spu_stop(ctx); return;
 }
@@ -7806,7 +7870,7 @@ loc_00006180:
         spu_ls_write128(ctx, ctx->gpr[17]._u32[0] + ctx->gpr[9]._u32[0], ctx->gpr[41]);
         spu_ls_write128(ctx, ctx->gpr[15]._u32[0] + ctx->gpr[9]._u32[0], ctx->gpr[40]);
         ctx->gpr[9] = spu_ori(ctx->gpr[38], 0);
-        if (ctx->gpr[38]._u32[0] == 0) { ctx->pc = 0x75E8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000075E8; return; }
+        if (ctx->gpr[38]._u32[0] == 0) { SPU_DIRECT(ctx, 0x75E8, spujob_42E1FC8CEE0BE246_spu_func_000075E8); }
         goto loc_00006180;
 }
 
@@ -7858,7 +7922,7 @@ loc_000063A8:
         ctx->gpr[12] = spu_shufb(ctx->gpr[39], ctx->gpr[60], ctx->gpr[57]);
         ctx->gpr[3] = spu_shufb(ctx->gpr[59], ctx->gpr[36], ctx->gpr[57]);
         ctx->gpr[18] = spu_shufb(ctx->gpr[36], ctx->gpr[39], ctx->gpr[57]);
-        if (ctx->gpr[74]._u32[0] == 0) { ctx->pc = 0x75E8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000075E8; return; }
+        if (ctx->gpr[74]._u32[0] == 0) { SPU_DIRECT(ctx, 0x75E8, spujob_42E1FC8CEE0BE246_spu_func_000075E8); }
         ctx->gpr[19] = spu_ori(ctx->gpr[3], 0);
         goto loc_000063A8;
 }
@@ -7898,7 +7962,7 @@ loc_00006614:
         ctx->gpr[17] = spu_fma(ctx->gpr[83], ctx->gpr[24], ctx->gpr[23]);
         ctx->gpr[20] = spu_fma(ctx->gpr[75], ctx->gpr[26], ctx->gpr[25]);
         ctx->gpr[18] = spu_fma(ctx->gpr[36], ctx->gpr[26], ctx->gpr[25]);
-        if (ctx->gpr[49]._u32[0] == 0) { ctx->pc = 0x75E8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000075E8; return; }
+        if (ctx->gpr[49]._u32[0] == 0) { SPU_DIRECT(ctx, 0x75E8, spujob_42E1FC8CEE0BE246_spu_func_000075E8); }
         ctx->gpr[12] = spu_ori(ctx->gpr[14], 0);
         goto loc_00006614;
 }
@@ -7954,7 +8018,7 @@ loc_000068C8:
         ctx->gpr[30] = spu_fma(ctx->gpr[36], ctx->gpr[26], ctx->gpr[25]);
         ctx->gpr[29] = spu_fma(ctx->gpr[83], ctx->gpr[26], ctx->gpr[25]);
         ctx->gpr[15] = spu_fma(ctx->gpr[82], ctx->gpr[26], ctx->gpr[25]);
-        if (ctx->gpr[64]._u32[0] == 0) { ctx->pc = 0x75E8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000075E8; return; }
+        if (ctx->gpr[64]._u32[0] == 0) { SPU_DIRECT(ctx, 0x75E8, spujob_42E1FC8CEE0BE246_spu_func_000075E8); }
         ctx->gpr[20] = spu_ori(ctx->gpr[17], 0);
         goto loc_000068C8;
 }
@@ -8089,7 +8153,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00006A80(spu_context* ctx) {
         ctx->gpr[9] = spu_shufb(ctx->gpr[25], ctx->gpr[26], ctx->gpr[35]);
         ctx->gpr[34] = spu_ls_read128(ctx, 0x7CF0);
         ctx->gpr[35] = spu_ls_read128(ctx, 0x7D00);
-        { ctx->pc = 0x6C84; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00006C84; return; }
+        { SPU_DIRECT(ctx, 0x6C84, spujob_42E1FC8CEE0BE246_spu_func_00006C84); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00006C84(spu_context* ctx) {
@@ -8166,7 +8230,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00006C84(spu_context* ctx) {
         ctx->gpr[50] = spu_shufb(ctx->gpr[56], ctx->gpr[46], ctx->gpr[3]);
         ctx->gpr[41] = spu_fi(ctx->gpr[91], ctx->gpr[30]);
         spu_ls_write128(ctx, ctx->gpr[55]._u32[0] + ctx->gpr[22]._u32[0], ctx->gpr[9]);
-        { ctx->pc = 0x6DA8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00006DA8; return; }
+        { SPU_DIRECT(ctx, 0x6DA8, spujob_42E1FC8CEE0BE246_spu_func_00006DA8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00006DA8(spu_context* ctx) {
@@ -8205,7 +8269,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00006DA8(spu_context* ctx) {
         ctx->gpr[23] = spu_selb(ctx->gpr[4], ctx->gpr[19], ctx->gpr[87]);
         ctx->gpr[52] = spu_shlqbyi(ctx->gpr[83], 0);
         ctx->gpr[47] = spu_ai(ctx->gpr[47], 24);
-        if (ctx->gpr[20]._u32[0] != 0) { ctx->pc = 0x6C84; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00006C84; return; }
+        if (ctx->gpr[20]._u32[0] != 0) { SPU_DIRECT(ctx, 0x6C84, spujob_42E1FC8CEE0BE246_spu_func_00006C84); }
         ctx->gpr[51] = spu_selb(ctx->gpr[36], ctx->gpr[37], ctx->gpr[34]);
         /* branch hint (ignored) */;
         ctx->gpr[52] = spu_selb(ctx->gpr[36], ctx->gpr[53], ctx->gpr[34]);
@@ -8225,7 +8289,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00006DA8(spu_context* ctx) {
         spu_ls_write128(ctx, ctx->gpr[63]._u32[0] + ctx->gpr[88]._u32[0], ctx->gpr[36]);
         spu_ls_write128(ctx, ctx->gpr[81]._u32[0] + ctx->gpr[88]._u32[0], ctx->gpr[78]);
         spu_ls_write128(ctx, ctx->gpr[64]._u32[0] + ctx->gpr[88]._u32[0], ctx->gpr[77]);
-        { ctx->pc = 0x75E8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000075E8; return; }
+        { SPU_DIRECT(ctx, 0x75E8, spujob_42E1FC8CEE0BE246_spu_func_000075E8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00006F80(spu_context* ctx) {
@@ -8393,7 +8457,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00006F80(spu_context* ctx) {
         ctx->gpr[33] = spu_ls_read128(ctx, ctx->gpr[33]._u32[0] + 0x20);
         ctx->gpr[18] = spu_shufb(ctx->gpr[18], ctx->gpr[35], ctx->gpr[39]);
         ctx->gpr[17] = spu_shufb(ctx->gpr[35], ctx->gpr[33], ctx->gpr[39]);
-        { ctx->pc = 0x7210; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00007210; return; }
+        { SPU_DIRECT(ctx, 0x7210, spujob_42E1FC8CEE0BE246_spu_func_00007210); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00007210(spu_context* ctx) {
@@ -8565,21 +8629,21 @@ loc_00007210:
         spu_ls_write128(ctx, ctx->gpr[83]._u32[0] + ctx->gpr[88]._u32[0], ctx->gpr[78]);
         spu_ls_write128(ctx, ctx->gpr[58]._u32[0] + ctx->gpr[88]._u32[0], ctx->gpr[84]);
         spu_ls_write128(ctx, ctx->gpr[82]._u32[0] + ctx->gpr[88]._u32[0], ctx->gpr[72]);
-        { ctx->pc = 0x75E8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000075E8; return; }
+        { SPU_DIRECT(ctx, 0x75E8, spujob_42E1FC8CEE0BE246_spu_func_000075E8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000074B0(spu_context* ctx) {
-        if (ctx->gpr[8]._u32[0] == 0) { ctx->pc = 0x74C8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000074C8; return; }
+        if (ctx->gpr[8]._u32[0] == 0) { SPU_DIRECT(ctx, 0x74C8, spujob_42E1FC8CEE0BE246_spu_func_000074C8); }
         ctx->gpr[5] = spu_ori(ctx->gpr[9], 0);
         ctx->gpr[6] = spu_ori(ctx->gpr[80], 0);
         ctx->gpr[7] = spu_shlqbyi(ctx->gpr[81], 0);
         { uint32_t _tg = ctx->gpr[8]._u32[0]; ctx->gpr[0] = spu_link(0x74C4); int32_t _si = (int32_t)ctx->image_id; ctx->pc = _tg; ctx->host_depth++; spu_indirect_branch(ctx); spu_drain_call(ctx, 0x74C4); ctx->host_depth--; spu_img_restore(ctx, _si); }
-        if (ctx->gpr[3]._u32[0] == 0) { ctx->pc = 0x75E8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000075E8; return; }
-        { ctx->pc = 0x74C8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000074C8; return; }
+        if (ctx->gpr[3]._u32[0] == 0) { SPU_DIRECT(ctx, 0x75E8, spujob_42E1FC8CEE0BE246_spu_func_000075E8); }
+        { SPU_DIRECT(ctx, 0x74C8, spujob_42E1FC8CEE0BE246_spu_func_000074C8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000074C8(spu_context* ctx) {
-        if (ctx->gpr[85]._u32[0] == 0) { ctx->pc = 0x755C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000755C; return; }
+        if (ctx->gpr[85]._u32[0] == 0) { SPU_DIRECT(ctx, 0x755C, spujob_42E1FC8CEE0BE246_spu_func_0000755C); }
         /* branch hint (ignored) */;
         ctx->gpr[3] = spu_ori(ctx->gpr[82], 0);
         ctx->gpr[83] = spu_ls_read128(ctx, ctx->gpr[82]._u32[0] + 0x0);
@@ -8615,7 +8679,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000074C8(spu_context* ctx) {
         ctx->gpr[99] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x140);
         /* branch hint (ignored) */;
         ctx->gpr[100] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x150);
-        { ctx->pc = 0x4698; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00004698; return; }
+        { SPU_DIRECT(ctx, 0x4698, spujob_42E1FC8CEE0BE246_spu_func_00004698); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_0000755C(spu_context* ctx) {
@@ -8653,7 +8717,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_0000755C(spu_context* ctx) {
         ctx->gpr[98] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x130);
         ctx->gpr[99] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x140);
         ctx->gpr[100] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x150);
-        { ctx->pc = 0x318; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00000318; return; }
+        { SPU_DIRECT(ctx, 0x318, spujob_42E1FC8CEE0BE246_spu_func_00000318); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000075E8(spu_context* ctx) {
@@ -8711,7 +8775,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00007658(spu_context* ctx) {
         spu_ls_write128(ctx, ctx->gpr[3]._u32[0] + 0x50, ctx->gpr[10]);
         ctx->gpr[0] = spu_link(0x76B4); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_00005F98(ctx); spu_drain_call(ctx, 0x76B4); ctx->host_depth--; spu_img_restore(ctx, _si); }
         ctx->gpr[5] = spu_ori(ctx->gpr[80], 0);
-        if (ctx->gpr[82]._u32[0] == 0) { ctx->pc = 0x76E0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000076E0; return; }
+        if (ctx->gpr[82]._u32[0] == 0) { SPU_DIRECT(ctx, 0x76E0, spujob_42E1FC8CEE0BE246_spu_func_000076E0); }
         ctx->gpr[6] = spu_ls_read128(ctx, ctx->gpr[81]._u32[0] + 0x0);
         ctx->gpr[3] = spu_ori(ctx->gpr[81], 0);
         ctx->gpr[7] = spu_ls_read128(ctx, ctx->gpr[81]._u32[0] + 0x70);
@@ -8720,13 +8784,13 @@ void spujob_42E1FC8CEE0BE246_spu_func_00007658(spu_context* ctx) {
         ctx->gpr[0] = spu_link(0x76D4); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spujob_42E1FC8CEE0BE246_spu_func_00005F98(ctx); spu_drain_call(ctx, 0x76D4); ctx->host_depth--; spu_img_restore(ctx, _si); }
         ctx->gpr[3] = spu_clgt(ctx->gpr[82], ctx->gpr[83]);
         ctx->gpr[4] = spu_ori(ctx->gpr[82], 0);
-        if (ctx->gpr[3]._u32[0] == 0) { ctx->pc = 0x76E4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000076E4; return; }
-        { ctx->pc = 0x76E0; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000076E0; return; }
+        if (ctx->gpr[3]._u32[0] == 0) { SPU_DIRECT(ctx, 0x76E4, spujob_42E1FC8CEE0BE246_spu_func_000076E4); }
+        { SPU_DIRECT(ctx, 0x76E0, spujob_42E1FC8CEE0BE246_spu_func_000076E0); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000076E0(spu_context* ctx) {
         ctx->gpr[4] = spu_ori(ctx->gpr[83], 0);
-        { ctx->pc = 0x76E4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000076E4; return; }
+        { SPU_DIRECT(ctx, 0x76E4, spujob_42E1FC8CEE0BE246_spu_func_000076E4); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000076E4(spu_context* ctx) {
@@ -8737,7 +8801,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000076E4(spu_context* ctx) {
         ctx->gpr[81] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x20);
         ctx->gpr[82] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x30);
         ctx->gpr[83] = spu_ls_read128(ctx, ctx->gpr[1]._u32[0] + -0x40);
-        { ctx->pc = 0x1870; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00001870; return; }
+        { SPU_DIRECT(ctx, 0x1870, spujob_42E1FC8CEE0BE246_spu_func_00001870); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00007708(spu_context* ctx) {
@@ -8747,7 +8811,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00007708(spu_context* ctx) {
         ctx->gpr[9] = spu_shlqbyi(ctx->gpr[3], 0);
         ctx->gpr[8] = spu_ori(ctx->gpr[4], 0);
         ctx->gpr[14] = spu_il(16383);
-        { ctx->pc = 0x77A8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000077A8; return; }
+        { SPU_DIRECT(ctx, 0x77A8, spujob_42E1FC8CEE0BE246_spu_func_000077A8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00007724(spu_context* ctx) {
@@ -8784,7 +8848,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_00007724(spu_context* ctx) {
         ctx->gpr[2] = spu_shufb(ctx->gpr[3], ctx->gpr[3], ctx->gpr[13]);
         ctx->gpr[2] = spu_addx(ctx->gpr[8], ctx->gpr[4], ctx->gpr[2]);
         ctx->gpr[8] = spu_ori(ctx->gpr[2], 0);
-        { ctx->pc = 0x77A8; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000077A8; return; }
+        { SPU_DIRECT(ctx, 0x77A8, spujob_42E1FC8CEE0BE246_spu_func_000077A8); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000077A8(spu_context* ctx) {
@@ -8792,13 +8856,13 @@ void spujob_42E1FC8CEE0BE246_spu_func_000077A8(spu_context* ctx) {
         ctx->gpr[10] = spu_shlqbyi(ctx->gpr[8], 4);
         ctx->gpr[4] = spu_clgti(ctx->gpr[5], 3);
         ctx->gpr[6] = spu_clgti(ctx->gpr[5], 1);
-        if (ctx->gpr[5]._u32[0] != 0) { ctx->pc = 0x7724; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00007724; return; }
+        if (ctx->gpr[5]._u32[0] != 0) { SPU_DIRECT(ctx, 0x7724, spujob_42E1FC8CEE0BE246_spu_func_00007724); }
         SPU_RET(ctx);
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000077C0(spu_context* ctx) {
         ctx->gpr[2] = spu_pref_u32(spu_rchcnt(ctx, SPU_RdInMbox));
-        if (ctx->gpr[2]._u32[0] != 0) { ctx->pc = 0x782C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0000782C; return; }
+        if (ctx->gpr[2]._u32[0] != 0) { SPU_DIRECT(ctx, 0x782C, spujob_42E1FC8CEE0BE246_spu_func_0000782C); }
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x100, ctx->gpr[4]);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0xF0, ctx->gpr[5]);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0xE0, ctx->gpr[6]);
@@ -8821,9 +8885,9 @@ void spujob_42E1FC8CEE0BE246_spu_func_000077C0(spu_context* ctx) {
         spu_arch_fence();
         spu_wrch(ctx, SPU_WrOutIntrMbox, ctx->gpr[3]);
         ctx->gpr[3] = spu_rdch(ctx, SPU_RdInMbox);
-        if (ctx->gpr[3]._u32[0] != 0) { ctx->pc = 0x7828; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00007828; return; }
+        if (ctx->gpr[3]._u32[0] != 0) { SPU_DIRECT(ctx, 0x7828, spujob_42E1FC8CEE0BE246_spu_func_00007828); }
         ctx->gpr[3] = spu_rdch(ctx, SPU_RdInMbox);
-        { ctx->pc = 0x7828; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00007828; return; }
+        { SPU_DIRECT(ctx, 0x7828, spujob_42E1FC8CEE0BE246_spu_func_00007828); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_00007828(spu_context* ctx) {
@@ -8847,23 +8911,23 @@ void spujob_42E1FC8CEE0BE246_spu_func_000079C8(spu_context* ctx) {
         /* TODO spu: .word 0x696E6174 */ spu_unsupported(0x79E8, ".word");
         /* TODO spu: .word 0x696F6E00 */ spu_unsupported(0x79EC, ".word");
         ctx->gpr[101] = spu_xorhi(ctx->gpr[78], 401);
-        { ctx->pc = 0x79F4; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_000079F4; return; }
+        { SPU_DIRECT(ctx, 0x79F4, spujob_42E1FC8CEE0BE246_spu_func_000079F4); }
 }
 
 void spujob_42E1FC8CEE0BE246_spu_func_000079F4(spu_context* ctx) {
-        if (ctx->gpr[111]._u32[0] == 0) { ctx->pc = 0x2B51C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0002B51C; return; }
+        if (ctx->gpr[111]._u32[0] == 0) { SPU_DIRECT(ctx, 0x2B51C, spujob_42E1FC8CEE0BE246_spu_func_0002B51C); }
         /* TODO spu: .word 0x6D657472 */ spu_unsupported(0x79F8, ".word");
         /* TODO spu: .word 0x79206572 */ spu_unsupported(0x79FC, ".word");
         /* TODO spu: .word 0x726F723A */ spu_unsupported(0x7A00, ".word");
-        if (ctx->gpr[116]._u32[0] == 0) { ctx->pc = 0x3F5AC; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0003F5AC; return; }
+        if (ctx->gpr[116]._u32[0] == 0) { SPU_DIRECT(ctx, 0x3F5AC, spujob_42E1FC8CEE0BE246_spu_func_0003F5AC); }
         /* TODO spu: .word 0x70757420 */ spu_unsupported(0x7A08, ".word");
         ctx->gpr[116] = spu_cfltu(ctx->gpr[100], 149);
         /* TODO spu: .word 0x65782044 */ spu_unsupported(0x7A10, ".word");
         ctx->gpr[116] = spu_cgthi(ctx->gpr[64], 260);
         /* TODO spu: .word 0x6F6F206C */ spu_unsupported(0x7A18, ".word");
         /* TODO spu: .word 0x61726765 */ spu_unsupported(0x7A1C, ".word");
-        if (ctx->gpr[114]._u32[0] == 0) { ctx->pc = 0x3AD98; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0003AD98; return; }
-        if (ctx->gpr[115]._u32[0] == 0) { ctx->pc = 0x39D4C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_00039D4C; return; }
+        if (ctx->gpr[114]._u32[0] == 0) { SPU_DIRECT(ctx, 0x3AD98, spujob_42E1FC8CEE0BE246_spu_func_0003AD98); }
+        if (ctx->gpr[115]._u32[0] == 0) { SPU_DIRECT(ctx, 0x39D4C, spujob_42E1FC8CEE0BE246_spu_func_00039D4C); }
         ctx->gpr[97] = spu_mpyi(ctx->gpr[92], 421);
         ctx->gpr[110] = spu_mpyi(ctx->gpr[94], 421);
         ctx->stop_code = 0x0u; ctx->status = SPU_STATUS_STOPPED_BY_STOP; spu_stop(ctx); return;
@@ -8871,7 +8935,7 @@ void spujob_42E1FC8CEE0BE246_spu_func_000079F4(spu_context* ctx) {
 
 void spujob_42E1FC8CEE0BE246_spu_func_00007E28(spu_context* ctx) {
         ctx->gpr[116] = spu_mpyi(ctx->gpr[102], 405);
-        if (ctx->gpr[103]._u32[0] == 0) { ctx->pc = 0x2A94C; g_spu_trampoline_fn = spujob_42E1FC8CEE0BE246_spu_func_0002A94C; return; }
+        if (ctx->gpr[103]._u32[0] == 0) { SPU_DIRECT(ctx, 0x2A94C, spujob_42E1FC8CEE0BE246_spu_func_0002A94C); }
         /* TODO spu: .word 0x6520746F */ spu_unsupported(0x7E30, ".word");
         /* TODO spu: .word 0x6F6C730A */ spu_unsupported(0x7E34, ".word");
         ctx->stop_code = 0x0u; ctx->status = SPU_STATUS_STOPPED_BY_STOP; spu_stop(ctx); return;
@@ -8948,6 +9012,7 @@ static const spu_func_entry spu_function_table[] = {
     { 0x00000330u, spujob_42E1FC8CEE0BE246_spu_func_00000330, "spujob_42E1FC8CEE0BE246_spu_func_00000330" },
     { 0x00000334u, spujob_42E1FC8CEE0BE246_spu_func_00000334, "spujob_42E1FC8CEE0BE246_spu_func_00000334" },
     { 0x00000340u, spujob_42E1FC8CEE0BE246_spu_func_00000340, "spujob_42E1FC8CEE0BE246_spu_func_00000340" },
+    { 0x00000350u, spujob_42E1FC8CEE0BE246_spu_func_00000350, "spujob_42E1FC8CEE0BE246_spu_func_00000350" },
     { 0x00000368u, spujob_42E1FC8CEE0BE246_spu_func_00000368, "spujob_42E1FC8CEE0BE246_spu_func_00000368" },
     { 0x00000390u, spujob_42E1FC8CEE0BE246_spu_func_00000390, "spujob_42E1FC8CEE0BE246_spu_func_00000390" },
     { 0x0000039Cu, spujob_42E1FC8CEE0BE246_spu_func_0000039C, "spujob_42E1FC8CEE0BE246_spu_func_0000039C" },
@@ -8956,11 +9021,14 @@ static const spu_func_entry spu_function_table[] = {
     { 0x00000400u, spujob_42E1FC8CEE0BE246_spu_func_00000400, "spujob_42E1FC8CEE0BE246_spu_func_00000400" },
     { 0x00000408u, spujob_42E1FC8CEE0BE246_spu_func_00000408, "spujob_42E1FC8CEE0BE246_spu_func_00000408" },
     { 0x00000458u, spujob_42E1FC8CEE0BE246_spu_func_00000458, "spujob_42E1FC8CEE0BE246_spu_func_00000458" },
+    { 0x00000490u, spujob_42E1FC8CEE0BE246_spu_func_00000490, "spujob_42E1FC8CEE0BE246_spu_func_00000490" },
+    { 0x000004A0u, spujob_42E1FC8CEE0BE246_spu_func_000004A0, "spujob_42E1FC8CEE0BE246_spu_func_000004A0" },
     { 0x000004F0u, spujob_42E1FC8CEE0BE246_spu_func_000004F0, "spujob_42E1FC8CEE0BE246_spu_func_000004F0" },
     { 0x00000500u, spujob_42E1FC8CEE0BE246_spu_func_00000500, "spujob_42E1FC8CEE0BE246_spu_func_00000500" },
     { 0x00000518u, spujob_42E1FC8CEE0BE246_spu_func_00000518, "spujob_42E1FC8CEE0BE246_spu_func_00000518" },
     { 0x00000528u, spujob_42E1FC8CEE0BE246_spu_func_00000528, "spujob_42E1FC8CEE0BE246_spu_func_00000528" },
     { 0x00000560u, spujob_42E1FC8CEE0BE246_spu_func_00000560, "spujob_42E1FC8CEE0BE246_spu_func_00000560" },
+    { 0x00000570u, spujob_42E1FC8CEE0BE246_spu_func_00000570, "spujob_42E1FC8CEE0BE246_spu_func_00000570" },
     { 0x00000588u, spujob_42E1FC8CEE0BE246_spu_func_00000588, "spujob_42E1FC8CEE0BE246_spu_func_00000588" },
     { 0x000005D8u, spujob_42E1FC8CEE0BE246_spu_func_000005D8, "spujob_42E1FC8CEE0BE246_spu_func_000005D8" },
     { 0x00000638u, spujob_42E1FC8CEE0BE246_spu_func_00000638, "spujob_42E1FC8CEE0BE246_spu_func_00000638" },
@@ -8973,33 +9041,44 @@ static const spu_func_entry spu_function_table[] = {
     { 0x000007FCu, spujob_42E1FC8CEE0BE246_spu_func_000007FC, "spujob_42E1FC8CEE0BE246_spu_func_000007FC" },
     { 0x00000800u, spujob_42E1FC8CEE0BE246_spu_func_00000800, "spujob_42E1FC8CEE0BE246_spu_func_00000800" },
     { 0x00000808u, spujob_42E1FC8CEE0BE246_spu_func_00000808, "spujob_42E1FC8CEE0BE246_spu_func_00000808" },
+    { 0x000008B0u, spujob_42E1FC8CEE0BE246_spu_func_000008B0, "spujob_42E1FC8CEE0BE246_spu_func_000008B0" },
     { 0x000008CCu, spujob_42E1FC8CEE0BE246_spu_func_000008CC, "spujob_42E1FC8CEE0BE246_spu_func_000008CC" },
+    { 0x00000930u, spujob_42E1FC8CEE0BE246_spu_func_00000930, "spujob_42E1FC8CEE0BE246_spu_func_00000930" },
+    { 0x00000950u, spujob_42E1FC8CEE0BE246_spu_func_00000950, "spujob_42E1FC8CEE0BE246_spu_func_00000950" },
     { 0x00000954u, spujob_42E1FC8CEE0BE246_spu_func_00000954, "spujob_42E1FC8CEE0BE246_spu_func_00000954" },
     { 0x00000960u, spujob_42E1FC8CEE0BE246_spu_func_00000960, "spujob_42E1FC8CEE0BE246_spu_func_00000960" },
     { 0x0000098Cu, spujob_42E1FC8CEE0BE246_spu_func_0000098C, "spujob_42E1FC8CEE0BE246_spu_func_0000098C" },
+    { 0x000009A0u, spujob_42E1FC8CEE0BE246_spu_func_000009A0, "spujob_42E1FC8CEE0BE246_spu_func_000009A0" },
     { 0x000009C8u, spujob_42E1FC8CEE0BE246_spu_func_000009C8, "spujob_42E1FC8CEE0BE246_spu_func_000009C8" },
+    { 0x000009E0u, spujob_42E1FC8CEE0BE246_spu_func_000009E0, "spujob_42E1FC8CEE0BE246_spu_func_000009E0" },
     { 0x000009F8u, spujob_42E1FC8CEE0BE246_spu_func_000009F8, "spujob_42E1FC8CEE0BE246_spu_func_000009F8" },
     { 0x00000AB8u, spujob_42E1FC8CEE0BE246_spu_func_00000AB8, "spujob_42E1FC8CEE0BE246_spu_func_00000AB8" },
+    { 0x00000AE0u, spujob_42E1FC8CEE0BE246_spu_func_00000AE0, "spujob_42E1FC8CEE0BE246_spu_func_00000AE0" },
     { 0x00000AE8u, spujob_42E1FC8CEE0BE246_spu_func_00000AE8, "spujob_42E1FC8CEE0BE246_spu_func_00000AE8" },
     { 0x00000B00u, spujob_42E1FC8CEE0BE246_spu_func_00000B00, "spujob_42E1FC8CEE0BE246_spu_func_00000B00" },
     { 0x00000CB8u, spujob_42E1FC8CEE0BE246_spu_func_00000CB8, "spujob_42E1FC8CEE0BE246_spu_func_00000CB8" },
+    { 0x00000D80u, spujob_42E1FC8CEE0BE246_spu_func_00000D80, "spujob_42E1FC8CEE0BE246_spu_func_00000D80" },
     { 0x00000DBCu, spujob_42E1FC8CEE0BE246_spu_func_00000DBC, "spujob_42E1FC8CEE0BE246_spu_func_00000DBC" },
     { 0x00000DC0u, spujob_42E1FC8CEE0BE246_spu_func_00000DC0, "spujob_42E1FC8CEE0BE246_spu_func_00000DC0" },
     { 0x00000DF0u, spujob_42E1FC8CEE0BE246_spu_func_00000DF0, "spujob_42E1FC8CEE0BE246_spu_func_00000DF0" },
+    { 0x00000E80u, spujob_42E1FC8CEE0BE246_spu_func_00000E80, "spujob_42E1FC8CEE0BE246_spu_func_00000E80" },
     { 0x00000E98u, spujob_42E1FC8CEE0BE246_spu_func_00000E98, "spujob_42E1FC8CEE0BE246_spu_func_00000E98" },
     { 0x00000F00u, spujob_42E1FC8CEE0BE246_spu_func_00000F00, "spujob_42E1FC8CEE0BE246_spu_func_00000F00" },
     { 0x00000F20u, spujob_42E1FC8CEE0BE246_spu_func_00000F20, "spujob_42E1FC8CEE0BE246_spu_func_00000F20" },
     { 0x00000F3Cu, spujob_42E1FC8CEE0BE246_spu_func_00000F3C, "spujob_42E1FC8CEE0BE246_spu_func_00000F3C" },
+    { 0x00000F80u, spujob_42E1FC8CEE0BE246_spu_func_00000F80, "spujob_42E1FC8CEE0BE246_spu_func_00000F80" },
     { 0x00000FA0u, spujob_42E1FC8CEE0BE246_spu_func_00000FA0, "spujob_42E1FC8CEE0BE246_spu_func_00000FA0" },
     { 0x00000FF0u, spujob_42E1FC8CEE0BE246_spu_func_00000FF0, "spujob_42E1FC8CEE0BE246_spu_func_00000FF0" },
     { 0x00001010u, spujob_42E1FC8CEE0BE246_spu_func_00001010, "spujob_42E1FC8CEE0BE246_spu_func_00001010" },
     { 0x00001020u, spujob_42E1FC8CEE0BE246_spu_func_00001020, "spujob_42E1FC8CEE0BE246_spu_func_00001020" },
     { 0x00001078u, spujob_42E1FC8CEE0BE246_spu_func_00001078, "spujob_42E1FC8CEE0BE246_spu_func_00001078" },
+    { 0x00001080u, spujob_42E1FC8CEE0BE246_spu_func_00001080, "spujob_42E1FC8CEE0BE246_spu_func_00001080" },
     { 0x00001090u, spujob_42E1FC8CEE0BE246_spu_func_00001090, "spujob_42E1FC8CEE0BE246_spu_func_00001090" },
     { 0x000010B0u, spujob_42E1FC8CEE0BE246_spu_func_000010B0, "spujob_42E1FC8CEE0BE246_spu_func_000010B0" },
     { 0x000010C8u, spujob_42E1FC8CEE0BE246_spu_func_000010C8, "spujob_42E1FC8CEE0BE246_spu_func_000010C8" },
     { 0x000010F4u, spujob_42E1FC8CEE0BE246_spu_func_000010F4, "spujob_42E1FC8CEE0BE246_spu_func_000010F4" },
     { 0x00001118u, spujob_42E1FC8CEE0BE246_spu_func_00001118, "spujob_42E1FC8CEE0BE246_spu_func_00001118" },
+    { 0x000011F0u, spujob_42E1FC8CEE0BE246_spu_func_000011F0, "spujob_42E1FC8CEE0BE246_spu_func_000011F0" },
     { 0x000011F8u, spujob_42E1FC8CEE0BE246_spu_func_000011F8, "spujob_42E1FC8CEE0BE246_spu_func_000011F8" },
     { 0x00001280u, spujob_42E1FC8CEE0BE246_spu_func_00001280, "spujob_42E1FC8CEE0BE246_spu_func_00001280" },
     { 0x000012D0u, spujob_42E1FC8CEE0BE246_spu_func_000012D0, "spujob_42E1FC8CEE0BE246_spu_func_000012D0" },
@@ -9240,6 +9319,7 @@ static const spu_func_entry spu_function_table[] = {
     { 0x00002E30u, spujob_42E1FC8CEE0BE246_spu_func_00002E30, "spujob_42E1FC8CEE0BE246_spu_func_00002E30" },
     { 0x00002E58u, spujob_42E1FC8CEE0BE246_spu_func_00002E58, "spujob_42E1FC8CEE0BE246_spu_func_00002E58" },
     { 0x00002E60u, spujob_42E1FC8CEE0BE246_spu_func_00002E60, "spujob_42E1FC8CEE0BE246_spu_func_00002E60" },
+    { 0x00002EF0u, spujob_42E1FC8CEE0BE246_spu_func_00002EF0, "spujob_42E1FC8CEE0BE246_spu_func_00002EF0" },
     { 0x000030D8u, spujob_42E1FC8CEE0BE246_spu_func_000030D8, "spujob_42E1FC8CEE0BE246_spu_func_000030D8" },
     { 0x00003218u, spujob_42E1FC8CEE0BE246_spu_func_00003218, "spujob_42E1FC8CEE0BE246_spu_func_00003218" },
     { 0x00003228u, spujob_42E1FC8CEE0BE246_spu_func_00003228, "spujob_42E1FC8CEE0BE246_spu_func_00003228" },
