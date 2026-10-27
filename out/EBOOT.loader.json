@@ -1,0 +1,12 @@
+{
+ "entry_opd": "0x1994138",
+ "entry_code": "0x961ca0",
+ "entry_toc": "0x19af8f8",
+ "module_toc": "0x19af8f8",
+ "opd_base": "0x195a660",
+ "opd_size": "0x4d298",
+ "opd_count": 39507,
+ "function_count": 30350,
+ "e_type": 2,
+ "load_segments": 2
+}

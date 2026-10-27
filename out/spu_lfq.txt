@@ -1,0 +1,29 @@
+=== FUNCION EN 8837 (lineas 8817..8844) ===
+08817: void spu_0001_at_017C1F00_spu_func_00009C30(spu_context* ctx) {
+08818:         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x10, ctx->gpr[80]);
+08819:         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x20, ctx->gpr[81]);
+08820:         ctx->gpr[80] = spu_ori(ctx->gpr[3], 0);
+08821:         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + 0x10, ctx->gpr[0]);
+08822:         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x40, ctx->gpr[1]);
+08823:         ctx->gpr[1] = spu_ai(ctx->gpr[1], -64);
+08824:         ctx->gpr[0] = spu_link(0x9C4C); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spu_0001_at_017C1F00_spu_func_000095F0(ctx); spu_drain_call(ctx, 0x9C4C); ctx->host_depth--; spu_img_restore(ctx, _si); }
+08825:         ctx->gpr[81] = spu_cdd(ctx->gpr[1], 8);
+08826:         ctx->gpr[4] = spu_ori(ctx->gpr[3], 0);
+08827:         ctx->gpr[3] = spu_il(2);
+08828:         if (ctx->gpr[4]._u32[0] != 0) { ctx->pc = 0x9C94; g_spu_trampoline_fn = spu_0001_at_017C1F00_spu_func_00009C94; return; }
+08829:         ctx->gpr[10] = spu_ls_read128(ctx, 0x2FB0);
+08830:         ctx->gpr[11] = spu_ls_read128(ctx, 0x2FD0);
+08831:         ctx->gpr[9] = spu_rotqbyi(ctx->gpr[10], 8);
+08832:         ctx->gpr[8] = spu_shufb(ctx->gpr[80], ctx->gpr[11], ctx->gpr[81]);
+08833:         ctx->gpr[4] = spu_ai(ctx->gpr[9], 196);
+08834:         spu_ls_write128(ctx, 0x2FD0, ctx->gpr[8]);
+08835:         ctx->gpr[7] = spu_ls_read128(ctx, ctx->gpr[4]._u32[0] + 0x0);
+08836:         ctx->gpr[6] = spu_rotqby(ctx->gpr[7], ctx->gpr[4]);
+08837:         { uint32_t _tg = ctx->gpr[6]._u32[0]; ctx->gpr[0] = spu_link(0x9C80); int32_t _si = (int32_t)ctx->image_id; ctx->pc = _tg; ctx->host_depth++; spu_indirect_branch(ctx); spu_drain_call(ctx, 0x9C80); ctx->host_depth--; spu_img_restore(ctx, _si); }
+08838:         ctx->gpr[5] = spu_ls_read128(ctx, 0x2FD0);
+08839:         ctx->gpr[4] = spu_ori(ctx->gpr[3], 0);
+08840:         ctx->gpr[3] = spu_il(0);
+08841:         ctx->gpr[2] = spu_shufb(ctx->gpr[3], ctx->gpr[5], ctx->gpr[81]);
+08842:         spu_ls_write128(ctx, 0x2FD0, ctx->gpr[2]);
+08843:         { ctx->pc = 0x9C94; g_spu_trampoline_fn = spu_0001_at_017C1F00_spu_func_00009C94; return; }
+08844: }
