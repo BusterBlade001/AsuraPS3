@@ -4213,7 +4213,7 @@ static u32 draw_filter_tex(const char* e)
 static void screen_copy_capture(u32 fi)
 {
     static int en = -1;
-    if (en < 0) { const char* e = getenv("SCREEN_AS_TEX"); en = e ? atoi(e) : 1; }
+    if (en < 0) { const char* e = getenv("SCREEN_AS_TEX"); en = e ? atoi(e) : 0; }
     if (!en || !s_d3d.device) return;
             if (!s_screen_copy) {
                 D3D12_HEAP_PROPERTIES hp = {0}; hp.Type = D3D12_HEAP_TYPE_DEFAULT;
