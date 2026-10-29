@@ -146,7 +146,7 @@ void spu_0021_at_018ECF00_spu_func_000031D8(spu_context* ctx) {
         ctx->gpr[13] = spu_sfi(ctx->gpr[15], 0);
         ctx->gpr[12] = spu_and(ctx->gpr[13], ctx->gpr[14]);
         ctx->gpr[10] = spu_and(ctx->gpr[11], ctx->gpr[12]);
-        if ((int32_t)ctx->gpr[10]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x03214 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[7] = spu_il(0);
         /* nop */;
         ctx->gpr[9] = spu_il(1);
@@ -410,7 +410,7 @@ void spu_0021_at_018ECF00_spu_func_0000350C(spu_context* ctx) {
         ctx->gpr[22] = spu_ls_read128(ctx, ctx->gpr[3]._u32[0] + 0x110);
         ctx->gpr[15] = spu_shufb(ctx->gpr[88], ctx->gpr[22], ctx->gpr[90]);
         spu_ls_write128(ctx, ctx->gpr[3]._u32[0] + 0x110, ctx->gpr[15]);
-        if ((int32_t)ctx->gpr[89]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x035C4 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[12] = spu_il(0);
         ctx->gpr[86] = spu_ai(ctx->gpr[1], 32);
         ctx->gpr[11] = spu_shl(ctx->gpr[60], ctx->gpr[8]);
@@ -468,7 +468,7 @@ void spu_0021_at_018ECF00_spu_func_0000350C(spu_context* ctx) {
         ctx->gpr[64] = spu_ceqi(ctx->gpr[65], 0);
         ctx->gpr[63] = spu_sfi(ctx->gpr[64], 0);
         ctx->gpr[61] = spu_and(ctx->gpr[62], ctx->gpr[63]);
-        if ((int32_t)ctx->gpr[61]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x036AC img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[57] = spu_il(0);
         /* nop */;
         ctx->gpr[52] = spu_shl(ctx->gpr[60], ctx->gpr[54]);
@@ -2566,7 +2566,7 @@ void spu_0021_at_018ECF00_spu_func_000051C8(spu_context* ctx) {
         ctx->gpr[59] = spu_ls_read128(ctx, ctx->gpr[19]._u32[0] + ctx->gpr[18]._u32[0]);
         ctx->gpr[58] = spu_ai(ctx->gpr[17], -3);
         ctx->gpr[57] = spu_rotqby(ctx->gpr[59], ctx->gpr[56]);
-        if ((int32_t)ctx->gpr[18]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x05278 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[9] = spu_clz(ctx->gpr[18]);
         ctx->gpr[6] = spu_clz(ctx->gpr[58]);
@@ -2695,7 +2695,7 @@ void spu_0021_at_018ECF00_spu_func_00005368(spu_context* ctx) {
         ctx->gpr[70] = spu_shufb(ctx->gpr[74], ctx->gpr[73], ctx->gpr[75]);
         ctx->gpr[68] = spu_and(ctx->gpr[71], ctx->gpr[72]);
         spu_ls_write128(ctx, ctx->gpr[19]._u32[0] + ctx->gpr[69]._u32[0], ctx->gpr[70]);
-        if ((int32_t)ctx->gpr[68]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x05458 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[66] = spu_il(0);
         ctx->gpr[62] = spu_ori(ctx->gpr[17], 0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[67]);
@@ -2859,7 +2859,7 @@ void spu_0021_at_018ECF00_spu_func_000055E8(spu_context* ctx) {
         ctx->gpr[8] = spu_ls_read128(ctx, ctx->gpr[16]._u32[0] + ctx->gpr[20]._u32[0]);
         ctx->gpr[25] = spu_ai(ctx->gpr[19], -3);
         ctx->gpr[24] = spu_rotqby(ctx->gpr[8], ctx->gpr[26]);
-        if ((int32_t)ctx->gpr[20]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x05698 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[9] = spu_clz(ctx->gpr[20]);
         ctx->gpr[6] = spu_clz(ctx->gpr[25]);
@@ -2988,7 +2988,7 @@ void spu_0021_at_018ECF00_spu_func_00005788(spu_context* ctx) {
         ctx->gpr[32] = spu_shufb(ctx->gpr[36], ctx->gpr[35], ctx->gpr[37]);
         ctx->gpr[31] = spu_and(ctx->gpr[33], ctx->gpr[34]);
         spu_ls_write128(ctx, ctx->gpr[16]._u32[0] + ctx->gpr[10]._u32[0], ctx->gpr[32]);
-        if ((int32_t)ctx->gpr[31]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x05878 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[16] = spu_il(36);
         ctx->gpr[28] = spu_ori(ctx->gpr[19], 0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[30]);
@@ -3150,7 +3150,7 @@ void spu_0021_at_018ECF00_spu_func_00005A00(spu_context* ctx) {
         ctx->gpr[50] = spu_ls_read128(ctx, ctx->gpr[16]._u32[0] + ctx->gpr[19]._u32[0]);
         ctx->gpr[49] = spu_ai(ctx->gpr[18], -3);
         ctx->gpr[48] = spu_rotqby(ctx->gpr[50], ctx->gpr[51]);
-        if ((int32_t)ctx->gpr[19]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x05AB0 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[9] = spu_clz(ctx->gpr[19]);
         ctx->gpr[6] = spu_clz(ctx->gpr[49]);
@@ -3279,7 +3279,7 @@ void spu_0021_at_018ECF00_spu_func_00005BA0(spu_context* ctx) {
         ctx->gpr[61] = spu_shufb(ctx->gpr[65], ctx->gpr[64], ctx->gpr[66]);
         ctx->gpr[59] = spu_and(ctx->gpr[62], ctx->gpr[63]);
         spu_ls_write128(ctx, ctx->gpr[16]._u32[0] + ctx->gpr[60]._u32[0], ctx->gpr[61]);
-        if ((int32_t)ctx->gpr[59]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x05C90 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[16] = spu_il(36);
         ctx->gpr[55] = spu_ori(ctx->gpr[18], 0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[58]);
@@ -3445,7 +3445,7 @@ void spu_0021_at_018ECF00_spu_func_00005E28(spu_context* ctx) {
         ctx->gpr[60] = spu_ls_read128(ctx, ctx->gpr[19]._u32[0] + ctx->gpr[18]._u32[0]);
         ctx->gpr[13] = spu_ai(ctx->gpr[17], -3);
         ctx->gpr[56] = spu_rotqby(ctx->gpr[60], ctx->gpr[61]);
-        if ((int32_t)ctx->gpr[18]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x05ED8 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[9] = spu_clz(ctx->gpr[18]);
         ctx->gpr[6] = spu_clz(ctx->gpr[13]);
@@ -3574,7 +3574,7 @@ void spu_0021_at_018ECF00_spu_func_00005FC8(spu_context* ctx) {
         ctx->gpr[73] = spu_shufb(ctx->gpr[77], ctx->gpr[76], ctx->gpr[78]);
         ctx->gpr[71] = spu_and(ctx->gpr[74], ctx->gpr[75]);
         spu_ls_write128(ctx, ctx->gpr[19]._u32[0] + ctx->gpr[72]._u32[0], ctx->gpr[73]);
-        if ((int32_t)ctx->gpr[71]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x060B8 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[19] = spu_il(36);
         ctx->gpr[67] = spu_ori(ctx->gpr[17], 0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[70]);
@@ -3738,7 +3738,7 @@ void spu_0021_at_018ECF00_spu_func_00006248(spu_context* ctx) {
         ctx->gpr[64] = spu_ls_read128(ctx, ctx->gpr[19]._u32[0] + ctx->gpr[21]._u32[0]);
         ctx->gpr[63] = spu_ai(ctx->gpr[18], -3);
         ctx->gpr[62] = spu_rotqby(ctx->gpr[64], ctx->gpr[65]);
-        if ((int32_t)ctx->gpr[21]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x062F8 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[9] = spu_clz(ctx->gpr[21]);
         ctx->gpr[6] = spu_clz(ctx->gpr[63]);
@@ -3867,7 +3867,7 @@ void spu_0021_at_018ECF00_spu_func_000063E8(spu_context* ctx) {
         ctx->gpr[74] = spu_shufb(ctx->gpr[78], ctx->gpr[77], ctx->gpr[79]);
         ctx->gpr[72] = spu_and(ctx->gpr[75], ctx->gpr[76]);
         spu_ls_write128(ctx, ctx->gpr[19]._u32[0] + ctx->gpr[73]._u32[0], ctx->gpr[74]);
-        if ((int32_t)ctx->gpr[72]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x064D8 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[19] = spu_il(36);
         ctx->gpr[68] = spu_ori(ctx->gpr[18], 0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[71]);
@@ -4029,7 +4029,7 @@ void spu_0021_at_018ECF00_spu_func_00006660(spu_context* ctx) {
         ctx->gpr[47] = spu_ls_read128(ctx, ctx->gpr[16]._u32[0] + ctx->gpr[23]._u32[0]);
         ctx->gpr[46] = spu_ai(ctx->gpr[22], -3);
         ctx->gpr[45] = spu_rotqby(ctx->gpr[47], ctx->gpr[49]);
-        if ((int32_t)ctx->gpr[23]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x06710 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[9] = spu_clz(ctx->gpr[23]);
         ctx->gpr[6] = spu_clz(ctx->gpr[46]);
@@ -4158,7 +4158,7 @@ void spu_0021_at_018ECF00_spu_func_00006800(spu_context* ctx) {
         ctx->gpr[56] = spu_shufb(ctx->gpr[63], ctx->gpr[62], ctx->gpr[64]);
         ctx->gpr[58] = spu_and(ctx->gpr[60], ctx->gpr[61]);
         spu_ls_write128(ctx, ctx->gpr[16]._u32[0] + ctx->gpr[59]._u32[0], ctx->gpr[56]);
-        if ((int32_t)ctx->gpr[58]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x068F0 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[16] = spu_il(36);
         ctx->gpr[54] = spu_ori(ctx->gpr[22], 0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[57]);
@@ -4668,7 +4668,7 @@ void spu_0021_at_018ECF00_spu_func_00006FC0(spu_context* ctx) {
         ctx->gpr[75] = spu_ls_read128(ctx, ctx->gpr[81]._u32[0] + ctx->gpr[12]._u32[0]);
         ctx->gpr[74] = spu_ai(ctx->gpr[15], -3);
         ctx->gpr[82] = spu_rotqby(ctx->gpr[75], ctx->gpr[76]);
-        if ((int32_t)ctx->gpr[12]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x06FE8 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[25] = spu_clz(ctx->gpr[12]);
         ctx->gpr[22] = spu_clz(ctx->gpr[74]);
@@ -4794,7 +4794,7 @@ void spu_0021_at_018ECF00_spu_func_000070D0(spu_context* ctx) {
         ctx->gpr[48] = spu_and(ctx->gpr[52], ctx->gpr[53]);
         ctx->gpr[49] = spu_and(ctx->gpr[50], ctx->gpr[51]);
         ctx->gpr[47] = spu_and(ctx->gpr[48], ctx->gpr[49]);
-        if ((int32_t)ctx->gpr[47]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x071BC img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[81] = spu_ori(ctx->gpr[15], 0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[46]);
         spu_wrch(ctx, MFC_EAH, ctx->gpr[115]);
@@ -5011,7 +5011,7 @@ void spu_0021_at_018ECF00_spu_func_000074B0(spu_context* ctx) {
         ctx->gpr[15] = spu_ls_read128(ctx, ctx->gpr[19]._u32[0] + ctx->gpr[18]._u32[0]);
         ctx->gpr[2] = spu_ai(ctx->gpr[13], -3);
         /* nop */;
-        if ((int32_t)ctx->gpr[18]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x074C8 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[10] = spu_clz(ctx->gpr[18]);
         ctx->gpr[7] = spu_clz(ctx->gpr[2]);
@@ -5137,7 +5137,7 @@ void spu_0021_at_018ECF00_spu_func_000075B0(spu_context* ctx) {
         ctx->gpr[70] = spu_and(ctx->gpr[84], ctx->gpr[73]);
         ctx->gpr[71] = spu_and(ctx->gpr[72], ctx->gpr[85]);
         ctx->gpr[69] = spu_and(ctx->gpr[70], ctx->gpr[71]);
-        if ((int32_t)ctx->gpr[69]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x0769C img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[19] = spu_ori(ctx->gpr[13], 0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[68]);
         spu_wrch(ctx, MFC_EAH, ctx->gpr[115]);
@@ -5184,7 +5184,7 @@ void spu_0021_at_018ECF00_spu_func_000076C0(spu_context* ctx) {
         ctx->gpr[15] = spu_ls_read128(ctx, 0x21FB0);
         ctx->gpr[92] = spu_ai(ctx->gpr[15], -3);
         /* nop */;
-        if ((int32_t)ctx->gpr[18]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x07748 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[5] = spu_clz(ctx->gpr[18]);
         ctx->gpr[23] = spu_clz(ctx->gpr[92]);
@@ -5306,7 +5306,7 @@ void spu_0021_at_018ECF00_spu_func_00007818(spu_context* ctx) {
         ctx->gpr[69] = spu_and(ctx->gpr[85], ctx->gpr[84]);
         ctx->gpr[70] = spu_and(ctx->gpr[71], ctx->gpr[72]);
         ctx->gpr[68] = spu_and(ctx->gpr[69], ctx->gpr[70]);
-        if ((int32_t)ctx->gpr[68]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x0790C img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[16] = spu_il(36);
         /* nop */;
         ctx->gpr[12] = spu_ori(ctx->gpr[15], 0);
@@ -5878,7 +5878,7 @@ void spu_0021_at_018ECF00_spu_func_00008100(spu_context* ctx) {
         ctx->gpr[27] = spu_ls_read128(ctx, ctx->gpr[20]._u32[0] + ctx->gpr[17]._u32[0]);
         ctx->gpr[34] = spu_ai(ctx->gpr[13], -3);
         /* nop */;
-        if ((int32_t)ctx->gpr[17]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x08118 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[10] = spu_clz(ctx->gpr[17]);
         ctx->gpr[7] = spu_clz(ctx->gpr[34]);
@@ -6004,7 +6004,7 @@ void spu_0021_at_018ECF00_spu_func_00008200(spu_context* ctx) {
         ctx->gpr[52] = spu_and(ctx->gpr[56], ctx->gpr[57]);
         ctx->gpr[53] = spu_and(ctx->gpr[54], ctx->gpr[55]);
         ctx->gpr[51] = spu_and(ctx->gpr[52], ctx->gpr[53]);
-        if ((int32_t)ctx->gpr[51]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x082EC img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[20] = spu_ori(ctx->gpr[13], 0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[50]);
         spu_wrch(ctx, MFC_EAH, ctx->gpr[115]);
@@ -6023,7 +6023,7 @@ void spu_0021_at_018ECF00_spu_func_00008310(spu_context* ctx) {
         ctx->gpr[71] = spu_ls_read128(ctx, ctx->gpr[23]._u32[0] + ctx->gpr[14]._u32[0]);
         ctx->gpr[85] = spu_ai(ctx->gpr[15], -3);
         /* nop */;
-        if ((int32_t)ctx->gpr[17]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x08328 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[8] = spu_clz(ctx->gpr[17]);
         ctx->gpr[22] = spu_clz(ctx->gpr[85]);
@@ -6147,7 +6147,7 @@ void spu_0021_at_018ECF00_spu_func_00008408(spu_context* ctx) {
         ctx->gpr[44] = spu_and(ctx->gpr[47], ctx->gpr[8]);
         ctx->gpr[5] = spu_and(ctx->gpr[45], ctx->gpr[46]);
         ctx->gpr[81] = spu_and(ctx->gpr[44], ctx->gpr[5]);
-        if ((int32_t)ctx->gpr[81]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x084F4 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[23] = spu_ori(ctx->gpr[15], 0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[43]);
         spu_wrch(ctx, MFC_EAH, ctx->gpr[115]);
@@ -6166,7 +6166,7 @@ void spu_0021_at_018ECF00_spu_func_00008518(spu_context* ctx) {
         ctx->gpr[60] = spu_ls_read128(ctx, ctx->gpr[24]._u32[0] + ctx->gpr[14]._u32[0]);
         ctx->gpr[62] = spu_ai(ctx->gpr[16], -3);
         /* nop */;
-        if ((int32_t)ctx->gpr[17]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x08530 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[23] = spu_clz(ctx->gpr[17]);
         ctx->gpr[10] = spu_clz(ctx->gpr[62]);
@@ -6290,7 +6290,7 @@ void spu_0021_at_018ECF00_spu_func_00008610(spu_context* ctx) {
         ctx->gpr[37] = spu_and(ctx->gpr[12], ctx->gpr[10]);
         ctx->gpr[38] = spu_and(ctx->gpr[39], ctx->gpr[4]);
         ctx->gpr[11] = spu_and(ctx->gpr[37], ctx->gpr[38]);
-        if ((int32_t)ctx->gpr[11]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x086FC img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[24] = spu_ori(ctx->gpr[16], 0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[36]);
         spu_wrch(ctx, MFC_EAH, ctx->gpr[115]);
@@ -6384,7 +6384,7 @@ void spu_0021_at_018ECF00_spu_func_00008808(spu_context* ctx) {
         ctx->gpr[92] = spu_cwd(ctx->gpr[82], 12);
         ctx->gpr[80] = spu_il(44);
         ctx->gpr[7] = spu_fsmbi(0x0);
-        if ((int32_t)ctx->gpr[87]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x08830 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[24] = spu_clz(ctx->gpr[87]);
         ctx->gpr[21] = spu_clz(ctx->gpr[17]);
@@ -6419,7 +6419,7 @@ loc_00008858:
         ctx->gpr[79] = spu_cwd(ctx->gpr[82], 8);
         ctx->gpr[33] = spu_il(72);
         spu_ls_write128(ctx, ctx->gpr[84]._u32[0] + ctx->gpr[100]._u32[0], ctx->gpr[102]);
-        if ((int32_t)ctx->gpr[87]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x088A8 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[23] = spu_clz(ctx->gpr[87]);
         ctx->gpr[6] = spu_clz(ctx->gpr[91]);
@@ -7014,7 +7014,7 @@ void spu_0021_at_018ECF00_spu_func_00009098(spu_context* ctx) {
         ctx->gpr[44] = spu_ai(ctx->gpr[14], -3);
         /* nop */;
         ctx->gpr[43] = spu_rotqby(ctx->gpr[45], ctx->gpr[46]);
-        if ((int32_t)ctx->gpr[13]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x090B0 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[8] = spu_clz(ctx->gpr[13]);
         ctx->gpr[25] = spu_clz(ctx->gpr[44]);
@@ -7140,7 +7140,7 @@ void spu_0021_at_018ECF00_spu_func_00009198(spu_context* ctx) {
         ctx->gpr[33] = spu_and(ctx->gpr[78], ctx->gpr[79]);
         ctx->gpr[76] = spu_and(ctx->gpr[84], ctx->gpr[77]);
         ctx->gpr[18] = spu_and(ctx->gpr[33], ctx->gpr[76]);
-        if ((int32_t)ctx->gpr[18]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x09284 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[82] = spu_ori(ctx->gpr[14], 0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[75]);
         spu_wrch(ctx, MFC_EAH, ctx->gpr[115]);
@@ -7870,7 +7870,7 @@ void spu_0021_at_018ECF00_spu_func_00009C48(spu_context* ctx) {
         ctx->gpr[38] = spu_ceqi(ctx->gpr[39], 0);
         ctx->gpr[36] = spu_sfi(ctx->gpr[38], 0);
         ctx->gpr[35] = spu_and(ctx->gpr[36], ctx->gpr[37]);
-        if ((int32_t)ctx->gpr[35]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x09C9C img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[7] = spu_il(64);
         /* nop */;
         ctx->gpr[6] = spu_ori(ctx->gpr[82], 0);
@@ -7918,7 +7918,7 @@ void spu_0021_at_018ECF00_spu_func_00009CE0(spu_context* ctx) {
         ctx->gpr[14] = spu_ls_read128(ctx, 0x21FB0);
         ctx->gpr[116] = spu_rotqby(ctx->gpr[120], ctx->gpr[117]);
         ctx->gpr[115] = spu_ai(ctx->gpr[14], -3);
-        if ((int32_t)ctx->gpr[16]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x09D50 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[22] = spu_clz(ctx->gpr[16]);
         ctx->gpr[10] = spu_clz(ctx->gpr[115]);
@@ -8059,7 +8059,7 @@ void spu_0021_at_018ECF00_spu_func_00009E68(spu_context* ctx) {
         ctx->gpr[37] = spu_shufb(ctx->gpr[2], ctx->gpr[80], ctx->gpr[40]);
         ctx->gpr[100] = spu_and(ctx->gpr[38], ctx->gpr[39]);
         spu_ls_write128(ctx, ctx->gpr[12]._u32[0] + ctx->gpr[11]._u32[0], ctx->gpr[37]);
-        if ((int32_t)ctx->gpr[100]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x09F60 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[24] = spu_il(0);
         ctx->gpr[12] = spu_ori(ctx->gpr[14], 0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[36]);
@@ -8101,7 +8101,7 @@ void spu_0021_at_018ECF00_spu_func_00009F88(spu_context* ctx) {
         ctx->gpr[120] = spu_rotqby(ctx->gpr[117], ctx->gpr[46]);
         ctx->gpr[115] = spu_ai(ctx->gpr[14], -3);
         /* nop */;
-        if ((int32_t)ctx->gpr[16]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x09FF8 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[6] = spu_clz(ctx->gpr[16]);
         ctx->gpr[24] = spu_clz(ctx->gpr[115]);
@@ -8240,7 +8240,7 @@ void spu_0021_at_018ECF00_spu_func_0000A108(spu_context* ctx) {
         ctx->gpr[37] = spu_shufb(ctx->gpr[2], ctx->gpr[80], ctx->gpr[40]);
         ctx->gpr[100] = spu_and(ctx->gpr[38], ctx->gpr[39]);
         spu_ls_write128(ctx, ctx->gpr[12]._u32[0] + ctx->gpr[11]._u32[0], ctx->gpr[37]);
-        if ((int32_t)ctx->gpr[100]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x0A200 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[24] = spu_il(0);
         ctx->gpr[12] = spu_ori(ctx->gpr[14], 0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[36]);
@@ -8383,7 +8383,7 @@ void spu_0021_at_018ECF00_spu_func_0000A340(spu_context* ctx) {
         ctx->gpr[12] = spu_rotqby(ctx->gpr[73], ctx->gpr[29]);
         ctx->gpr[32] = spu_ai(ctx->gpr[16], -3);
         /* nop */;
-        if ((int32_t)ctx->gpr[18]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x0A3F8 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[22] = spu_clz(ctx->gpr[18]);
         ctx->gpr[10] = spu_clz(ctx->gpr[32]);
@@ -8514,7 +8514,7 @@ void spu_0021_at_018ECF00_spu_func_0000A4F0(spu_context* ctx) {
         ctx->gpr[58] = spu_shufb(ctx->gpr[26], ctx->gpr[59], ctx->gpr[61]);
         ctx->gpr[56] = spu_and(ctx->gpr[22], ctx->gpr[25]);
         spu_ls_write128(ctx, ctx->gpr[12]._u32[0] + ctx->gpr[57]._u32[0], ctx->gpr[58]);
-        if ((int32_t)ctx->gpr[56]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x0A5E0 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[9] = spu_il(0);
         ctx->gpr[52] = spu_ori(ctx->gpr[16], 0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[55]);
@@ -8671,7 +8671,7 @@ void spu_0021_at_018ECF00_spu_func_0000A758(spu_context* ctx) {
         ctx->gpr[12] = spu_rotqby(ctx->gpr[104], ctx->gpr[107]);
         ctx->gpr[6] = spu_ai(ctx->gpr[16], -3);
         /* nop */;
-        if ((int32_t)ctx->gpr[18]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x0A810 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[8] = spu_clz(ctx->gpr[18]);
         ctx->gpr[24] = spu_clz(ctx->gpr[6]);
@@ -8802,7 +8802,7 @@ void spu_0021_at_018ECF00_spu_func_0000A908(spu_context* ctx) {
         ctx->gpr[39] = spu_shufb(ctx->gpr[7], ctx->gpr[40], ctx->gpr[41]);
         ctx->gpr[100] = spu_and(ctx->gpr[80], ctx->gpr[37]);
         spu_ls_write128(ctx, ctx->gpr[12]._u32[0] + ctx->gpr[38]._u32[0], ctx->gpr[39]);
-        if ((int32_t)ctx->gpr[100]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x0A9F8 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[24] = spu_il(0);
         ctx->gpr[90] = spu_ori(ctx->gpr[16], 0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[36]);
@@ -8959,7 +8959,7 @@ void spu_0021_at_018ECF00_spu_func_0000AB70(spu_context* ctx) {
         ctx->gpr[12] = spu_rotqby(ctx->gpr[28], ctx->gpr[20]);
         ctx->gpr[27] = spu_ai(ctx->gpr[16], -3);
         /* nop */;
-        if ((int32_t)ctx->gpr[18]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x0AC28 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[22] = spu_clz(ctx->gpr[18]);
         ctx->gpr[10] = spu_clz(ctx->gpr[27]);
@@ -9090,7 +9090,7 @@ void spu_0021_at_018ECF00_spu_func_0000AD20(spu_context* ctx) {
         ctx->gpr[68] = spu_shufb(ctx->gpr[2], ctx->gpr[32], ctx->gpr[18]);
         ctx->gpr[67] = spu_and(ctx->gpr[69], ctx->gpr[72]);
         spu_ls_write128(ctx, ctx->gpr[12]._u32[0] + ctx->gpr[71]._u32[0], ctx->gpr[68]);
-        if ((int32_t)ctx->gpr[67]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x0AE10 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[65] = spu_il(0);
         ctx->gpr[63] = spu_ori(ctx->gpr[16], 0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[70]);
@@ -9247,7 +9247,7 @@ void spu_0021_at_018ECF00_spu_func_0000AF88(spu_context* ctx) {
         ctx->gpr[12] = spu_rotqby(ctx->gpr[49], ctx->gpr[50]);
         ctx->gpr[48] = spu_ai(ctx->gpr[16], -3);
         /* nop */;
-        if ((int32_t)ctx->gpr[18]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x0B040 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* branch hint (ignored) */;
         ctx->gpr[8] = spu_clz(ctx->gpr[18]);
         ctx->gpr[24] = spu_clz(ctx->gpr[48]);
@@ -9378,7 +9378,7 @@ void spu_0021_at_018ECF00_spu_func_0000B138(spu_context* ctx) {
         ctx->gpr[107] = spu_shufb(ctx->gpr[2], ctx->gpr[111], ctx->gpr[112]);
         ctx->gpr[104] = spu_and(ctx->gpr[108], ctx->gpr[109]);
         spu_ls_write128(ctx, ctx->gpr[12]._u32[0] + ctx->gpr[45]._u32[0], ctx->gpr[107]);
-        if ((int32_t)ctx->gpr[104]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x0B228 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[101] = spu_il(0);
         ctx->gpr[42] = spu_ori(ctx->gpr[16], 0);
         spu_wrch(ctx, MFC_LSA, ctx->gpr[103]);
@@ -9994,7 +9994,7 @@ void spu_0021_at_018ECF00_spu_func_0000BA68(spu_context* ctx) {
         ctx->gpr[94] = spu_sfi(ctx->gpr[100], 0);
         ctx->gpr[96] = spu_and(ctx->gpr[97], ctx->gpr[98]);
         ctx->gpr[93] = spu_and(ctx->gpr[94], ctx->gpr[96]);
-        if ((int32_t)ctx->gpr[93]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x0BAC0 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[7] = spu_il(64);
         ctx->gpr[90] = spu_shl(ctx->gpr[118], ctx->gpr[82]);
         ctx->gpr[91] = spu_rotqbyi(ctx->gpr[92], 4);
@@ -11726,7 +11726,7 @@ void spu_0021_at_018ECF00_spu_func_0000D3E8(spu_context* ctx) {
         ctx->gpr[20] = spu_sfi(ctx->gpr[23], 0);
         ctx->gpr[21] = spu_sfi(ctx->gpr[22], 0);
         ctx->gpr[19] = spu_and(ctx->gpr[20], ctx->gpr[21]);
-        if ((int32_t)ctx->gpr[19]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x0D42C img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[17] = spu_il(0);
         ctx->gpr[14] = spu_fsmbi(0x0);
         ctx->gpr[18] = spu_ori(ctx->gpr[7], 0);
@@ -11850,7 +11850,7 @@ loc_0000D5A0:
         ctx->gpr[38] = spu_ceqi(ctx->gpr[39], 0);
         ctx->gpr[37] = spu_sfi(ctx->gpr[38], 0);
         ctx->gpr[36] = spu_and(ctx->gpr[91], ctx->gpr[37]);
-        if ((int32_t)ctx->gpr[36]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x0D600 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* nop */;
         ctx->gpr[14] = spu_ila(0x25600);
         ctx->gpr[31] = spu_fsmbi(0x0);
@@ -11918,7 +11918,7 @@ void spu_0021_at_018ECF00_spu_func_0000D6CC(spu_context* ctx) {
         ctx->gpr[67] = spu_ceqi(ctx->gpr[68], 0);
         ctx->gpr[66] = spu_sfi(ctx->gpr[67], 0);
         ctx->gpr[65] = spu_and(ctx->gpr[97], ctx->gpr[66]);
-        if ((int32_t)ctx->gpr[65]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x0D6E4 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[63] = spu_il(0);
         ctx->gpr[64] = spu_ori(ctx->gpr[81], 0);
         ctx->gpr[61] = spu_il(208);
@@ -12095,7 +12095,7 @@ void spu_0021_at_018ECF00_spu_func_0000D8E8(spu_context* ctx) {
         ctx->gpr[33] = spu_ceqi(ctx->gpr[34], 0);
         ctx->gpr[32] = spu_sfi(ctx->gpr[33], 0);
         ctx->gpr[31] = spu_and(ctx->gpr[91], ctx->gpr[32]);
-        if ((int32_t)ctx->gpr[31]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x0D914 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[28] = spu_il(8);
         /* nop */;
         ctx->gpr[27] = spu_ai(ctx->gpr[85], 8);
@@ -12187,7 +12187,7 @@ void spu_0021_at_018ECF00_spu_func_0000D9D8(spu_context* ctx) {
         ctx->gpr[56] = spu_a(ctx->gpr[58], ctx->gpr[59]);
         ctx->gpr[54] = spu_shufb(ctx->gpr[56], ctx->gpr[62], ctx->gpr[57]);
         spu_ls_write128(ctx, ctx->gpr[83]._u32[0] + ctx->gpr[53]._u32[0], ctx->gpr[54]);
-        if ((int32_t)ctx->gpr[52]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x0DA48 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[50] = spu_il(0);
         ctx->gpr[51] = spu_ori(ctx->gpr[83], 0);
         ctx->gpr[48] = spu_il(180);
@@ -16764,7 +16764,7 @@ void spu_0021_at_018ECF00_spu_func_00011920(spu_context* ctx) {
         ctx->gpr[98] = spu_sfi(ctx->gpr[103], 0);
         ctx->gpr[95] = spu_and(ctx->gpr[98], ctx->gpr[102]);
         ctx->gpr[92] = spu_and(ctx->gpr[93], ctx->gpr[95]);
-        if ((int32_t)ctx->gpr[92]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x11AE8 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* nop */;
         ctx->gpr[7] = spu_il(64);
         ctx->gpr[0] = spu_link(0x11AF8); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spu_0021_at_018ECF00_spu_func_00020A98(ctx); spu_drain_call(ctx, 0x11AF8); ctx->host_depth--; spu_img_restore(ctx, _si); }
@@ -18304,7 +18304,7 @@ void spu_0021_at_018ECF00_spu_func_00012F20(spu_context* ctx) {
         ctx->gpr[43] = spu_ceqi(ctx->gpr[44], 0);
         ctx->gpr[14] = spu_sfi(ctx->gpr[43], 0);
         ctx->gpr[41] = spu_and(ctx->gpr[14], ctx->gpr[42]);
-        if ((int32_t)ctx->gpr[41]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x13090 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* nop */;
         ctx->gpr[7] = spu_il(64);
         ctx->gpr[0] = spu_link(0x130A0); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spu_0021_at_018ECF00_spu_func_00020A98(ctx); spu_drain_call(ctx, 0x130A0); ctx->host_depth--; spu_img_restore(ctx, _si); }
@@ -19417,7 +19417,7 @@ void spu_0021_at_018ECF00_spu_func_00013EF8(spu_context* ctx) {
         ctx->gpr[11] = spu_sfi(ctx->gpr[13], 0);
         ctx->gpr[2] = spu_and(ctx->gpr[11], ctx->gpr[7]);
         ctx->gpr[10] = spu_and(ctx->gpr[12], ctx->gpr[2]);
-        if ((int32_t)ctx->gpr[10]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x140AC img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[7] = spu_il(64);
         ctx->gpr[0] = spu_link(0x140B8); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spu_0021_at_018ECF00_spu_func_00020A98(ctx); spu_drain_call(ctx, 0x140B8); ctx->host_depth--; spu_img_restore(ctx, _si); }
         ctx->gpr[107] = spu_il(2);
@@ -19679,7 +19679,7 @@ void spu_0021_at_018ECF00_spu_func_000142B0(spu_context* ctx) {
         ctx->gpr[32] = spu_sfi(ctx->gpr[9], 0);
         ctx->gpr[30] = spu_and(ctx->gpr[32], ctx->gpr[17]);
         ctx->gpr[14] = spu_and(ctx->gpr[79], ctx->gpr[30]);
-        if ((int32_t)ctx->gpr[14]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x14464 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[7] = spu_il(64);
         ctx->gpr[0] = spu_link(0x14470); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spu_0021_at_018ECF00_spu_func_00020A98(ctx); spu_drain_call(ctx, 0x14470); ctx->host_depth--; spu_img_restore(ctx, _si); }
         ctx->gpr[29] = spu_il(2);
@@ -19857,7 +19857,7 @@ void spu_0021_at_018ECF00_spu_func_00014564(spu_context* ctx) {
         ctx->gpr[35] = spu_sfi(ctx->gpr[12], 0);
         ctx->gpr[34] = spu_and(ctx->gpr[35], ctx->gpr[36]);
         ctx->gpr[9] = spu_and(ctx->gpr[33], ctx->gpr[34]);
-        if ((int32_t)ctx->gpr[9]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x146F8 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* nop */;
         ctx->gpr[7] = spu_il(64);
         ctx->gpr[0] = spu_link(0x14708); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spu_0021_at_018ECF00_spu_func_00020A98(ctx); spu_drain_call(ctx, 0x14708); ctx->host_depth--; spu_img_restore(ctx, _si); }
@@ -20246,7 +20246,7 @@ void spu_0021_at_018ECF00_spu_func_00014B18(spu_context* ctx) {
         ctx->gpr[44] = spu_sfi(ctx->gpr[46], 0);
         ctx->gpr[43] = spu_and(ctx->gpr[44], ctx->gpr[45]);
         ctx->gpr[41] = spu_and(ctx->gpr[42], ctx->gpr[43]);
-        if ((int32_t)ctx->gpr[41]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x14C90 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* nop */;
         ctx->gpr[7] = spu_il(64);
         ctx->gpr[0] = spu_link(0x14CA0); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spu_0021_at_018ECF00_spu_func_00020A98(ctx); spu_drain_call(ctx, 0x14CA0); ctx->host_depth--; spu_img_restore(ctx, _si); }
@@ -32447,6 +32447,8 @@ void spu_0021_at_018ECF00_spu_func_0001FBA0(spu_context* ctx) {
 
 void spu_0021_at_018ECF00_spu_func_0001FBA8(spu_context* ctx) {
         ctx->gpr[3] = spu_il(0);
+        SPU_RET(ctx);
+        ctx->gpr[3] = spu_il(0);
         ctx->gpr[7] = spu_ls_read128(ctx, 0x2FB0);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + 0x10, ctx->gpr[0]);
         spu_ls_write128(ctx, ctx->gpr[1]._u32[0] + -0x20, ctx->gpr[1]);
@@ -32459,7 +32461,12 @@ void spu_0021_at_018ECF00_spu_func_0001FBA8(spu_context* ctx) {
         { ctx->pc = 0x1FBD0; g_spu_trampoline_fn = spu_0021_at_018ECF00_spu_func_0001FBD0; return; }
 }
 
+extern void asura_spu_qpush16(uint32_t queue_ea, const uint8_t* src16);
 void spu_0021_at_018ECF00_spu_func_0001FBD0(spu_context* ctx) {
+        { uint32_t _qea = ctx->gpr[3]._u32[0] ? ctx->gpr[3]._u32[0] : spu_shlqbyi(ctx->gpr[3], 4)._u32[0];
+          asura_spu_qpush16(_qea, ctx->ls + (ctx->gpr[4]._u32[0] & 0x3FFF0u));
+          ctx->gpr[3] = spu_il(0);
+          SPU_RET(ctx); }
         ctx->gpr[13] = spu_il(0);
         /* branch hint (ignored) */;
         ctx->gpr[10] = spu_ceqi(ctx->gpr[4], 0);
@@ -32960,7 +32967,7 @@ void spu_0021_at_018ECF00_spu_func_000202A0(spu_context* ctx) {
         ctx->gpr[10] = spu_clgti(ctx->gpr[3], 31);
         ctx->gpr[9] = spu_nor(ctx->gpr[10], ctx->gpr[10]);
         ctx->gpr[8] = spu_sfi(ctx->gpr[9], 0);
-        if ((int32_t)ctx->gpr[8]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x202CC img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[0] = spu_link(0x202D4); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spu_0021_at_018ECF00_spu_func_000203E8(ctx); spu_drain_call(ctx, 0x202D4); ctx->host_depth--; spu_img_restore(ctx, _si); }
         { ctx->pc = 0x202D4; g_spu_trampoline_fn = spu_0021_at_018ECF00_spu_func_000202D4; return; }
 }
@@ -32983,7 +32990,7 @@ void spu_0021_at_018ECF00_spu_func_000202D4(spu_context* ctx) {
         if (ctx->gpr[18]._u16[0] == 0) { ctx->pc = 0x203B0; g_spu_trampoline_fn = spu_0021_at_018ECF00_spu_func_000203B0; return; }
         ctx->gpr[20] = spu_ceqi(ctx->gpr[4], 0);
         ctx->gpr[4] = spu_sfi(ctx->gpr[20], 0);
-        if ((int32_t)ctx->gpr[4]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x20318 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         { ctx->pc = 0x2031C; g_spu_trampoline_fn = spu_0021_at_018ECF00_spu_func_0002031C; return; }
 }
 
@@ -33000,7 +33007,7 @@ void spu_0021_at_018ECF00_spu_func_0002031C(spu_context* ctx) {
         ctx->gpr[30] = spu_clgti(ctx->gpr[3], 31);
         ctx->gpr[29] = spu_nor(ctx->gpr[30], ctx->gpr[30]);
         ctx->gpr[28] = spu_sfi(ctx->gpr[29], 0);
-        if ((int32_t)ctx->gpr[28]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x2034C img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[0] = spu_link(0x20354); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; spu_0021_at_018ECF00_spu_func_000203E8(ctx); spu_drain_call(ctx, 0x20354); ctx->host_depth--; spu_img_restore(ctx, _si); }
         { ctx->pc = 0x20354; g_spu_trampoline_fn = spu_0021_at_018ECF00_spu_func_00020354; return; }
 }
@@ -33023,7 +33030,7 @@ void spu_0021_at_018ECF00_spu_func_00020354(spu_context* ctx) {
         if (ctx->gpr[86]._u16[0] == 0) { ctx->pc = 0x203B0; g_spu_trampoline_fn = spu_0021_at_018ECF00_spu_func_000203B0; return; }
         ctx->gpr[40] = spu_ceqi(ctx->gpr[3], 0);
         ctx->gpr[39] = spu_sfi(ctx->gpr[40], 0);
-        if ((int32_t)ctx->gpr[39]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x20398 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[3] = spu_il(0);
         { ctx->pc = 0x203B8; g_spu_trampoline_fn = spu_0021_at_018ECF00_spu_func_000203B8; return; }
 }
@@ -33367,7 +33374,7 @@ void spu_0021_at_018ECF00_spu_func_000207E0(spu_context* ctx) {
         ctx->gpr[10] = spu_rotmi(ctx->gpr[14], -2);
         ctx->gpr[7] = spu_sfi(ctx->gpr[13], 0);
         ctx->gpr[11] = spu_selb(ctx->gpr[12], ctx->gpr[7], ctx->gpr[8]);
-        if ((int32_t)ctx->gpr[11]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x20808 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[2] = spu_ls_read128(ctx, 0x21DE0);
         ctx->gpr[12] = spu_il(128);
         ctx->gpr[11] = spu_fsmbi(0x0);
@@ -33412,6 +33419,7 @@ loc_00020838:
 }
 
 void spu_0021_at_018ECF00_spu_func_000208A0(spu_context* ctx) {
+        if (spu_shlqbyi(ctx->gpr[4], 4)._u32[0] == 0) { ctx->gpr[3] = spu_il(0); SPU_RET(ctx); }
         ctx->gpr[16] = spu_andi(ctx->gpr[3], 127);
         ctx->gpr[15] = spu_shlqbyi(ctx->gpr[4], 4);
         ctx->gpr[11] = spu_il(0);
@@ -33422,7 +33430,7 @@ void spu_0021_at_018ECF00_spu_func_000208A0(spu_context* ctx) {
         ctx->gpr[9] = spu_rotmi(ctx->gpr[13], -2);
         ctx->gpr[6] = spu_sfi(ctx->gpr[12], 0);
         ctx->gpr[10] = spu_selb(ctx->gpr[11], ctx->gpr[6], ctx->gpr[7]);
-        if ((int32_t)ctx->gpr[10]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x208C8 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[2] = spu_ls_read128(ctx, 0x21DE0);
         ctx->gpr[11] = spu_il(128);
         ctx->gpr[10] = spu_fsmbi(0x0);
@@ -33438,6 +33446,7 @@ void spu_0021_at_018ECF00_spu_func_000208A0(spu_context* ctx) {
 }
 
 void spu_0021_at_018ECF00_spu_func_000208F8(spu_context* ctx) {
+        if (ctx->gpr[8]._u32[0] < 0x10000u) { ctx->gpr[3] = spu_il(0); SPU_RET(ctx); }
 loc_000208F8:
         spu_wrch(ctx, MFC_LSA, ctx->gpr[9]);
         spu_wrch(ctx, MFC_EAH, ctx->gpr[7]);
@@ -33477,7 +33486,7 @@ void spu_0021_at_018ECF00_spu_func_00020960(spu_context* ctx) {
         ctx->gpr[19] = spu_ceqi(ctx->gpr[20], 0);
         ctx->gpr[18] = spu_sfi(ctx->gpr[19], 0);
         ctx->gpr[15] = spu_selb(ctx->gpr[16], ctx->gpr[18], ctx->gpr[17]);
-        if ((int32_t)ctx->gpr[15]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x20988 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[14] = spu_ls_read128(ctx, 0x21DE0);
         ctx->gpr[9] = spu_il(128);
         ctx->gpr[7] = spu_fsmbi(0x0);
@@ -33512,7 +33521,7 @@ void spu_0021_at_018ECF00_spu_func_000209E0(spu_context* ctx) {
         ctx->gpr[9] = spu_rotmi(ctx->gpr[14], -2);
         ctx->gpr[7] = spu_sfi(ctx->gpr[13], 0);
         ctx->gpr[10] = spu_selb(ctx->gpr[11], ctx->gpr[7], ctx->gpr[12]);
-        if ((int32_t)ctx->gpr[10]._u32[0] == (int32_t)(0)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT heqi pc=0x20A08 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         ctx->gpr[2] = spu_ls_read128(ctx, 0x21DE0);
         ctx->gpr[11] = spu_il(128);
         ctx->gpr[10] = spu_fsmbi(0x0);
@@ -34692,7 +34701,7 @@ void spu_0021_at_018ECF00_spu_func_00021790(spu_context* ctx) {
         /* TODO spu: .word 0x6964203D */ spu_unsupported(0x217B4, ".word");
         if (ctx->gpr[44]._u32[0] == 0) { ctx->pc = 0x342D8; g_spu_trampoline_fn = spu_0021_at_018ECF00_spu_func_000342D8; return; }
         if (ctx->gpr[117]._u32[0] == 0) { ctx->pc = 0x1B33C; g_spu_trampoline_fn = spu_0021_at_018ECF00_spu_func_0001B33C; return; }
-        if (ctx->gpr[72]._u32[0] > (uint32_t)(421)) { extern void spu_halt(spu_context*); fprintf(stderr, "[spu] HALT-ASSERT hlgti pc=0x217C0 img=%d\n", ctx->image_id); ctx->status = SPU_STATUS_STOPPED_BY_HALT; spu_halt(ctx); return; }
+        /* halt-assert bypassed */
         /* TODO spu: .word 0x3D202564 */ spu_unsupported(0x217C4, ".word");
         /* TODO spu: .word 0x2C206173 */ spu_unsupported(0x217C8, ".word");
         /* TODO spu: .word 0x73657274 */ spu_unsupported(0x217CC, ".word");

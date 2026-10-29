@@ -1085,10 +1085,10 @@ s32 cellSpursCreateTask(CellSpursTaskset* taskset, CellSpursTaskId* taskId,
             g_ydkj_real_taskset_ea = taskset_ea;
             g_ydkj_real_taskid     = i;
 
-            printf("[cellSpurs] CreateTask(id=%u, entry=%p, arg=%08X %08X %08X %08X"
+            { static int _ctn=0; if (PS3_LOG_FIRST(_ctn, 12)) printf("[cellSpurs] CreateTask(id=%u, entry=%p, arg=%08X %08X %08X %08X"
                    " ctx=0x%08X lsp=%08X %08X %08X %08X)\n",
                    s_tasks[i].id, elf, task_arg[0], task_arg[1], task_arg[2], task_arg[3],
-                   context_ea, task_lsp[0], task_lsp[1], task_lsp[2], task_lsp[3]);
+                   context_ea, task_lsp[0], task_lsp[1], task_lsp[2], task_lsp[3]); }
 
             /* One-shot: dump the memory the task argument points at, to find the
              * pointer that reads back 0 (the task GETs from EA 0 -> some field of
@@ -2728,9 +2728,17 @@ static void jc_signal_done(u32 jc_ea, int job_index)
     }
 }
 
-static void jc_execute(u32 entry_ea, u32 jc_ea, u32 size_desc)
+static u32 s_jc_last_end_pc[MAX_JOBCHAINS];
+
+static void jc_execute(int slot, u32 entry_ea, u32 jc_ea, u32 size_desc)
 {
     u32 pc = entry_ea, ret_pc = 0;
+    if (s_jc_last_end_pc[slot] != 0) {
+        u64 prev_end = vm_read64(s_jc_last_end_pc[slot]);
+        /* If the game overwrote the previous END (0x7F) with a new command/NEXT, resume right there! */
+        if ((prev_end & 127ULL) != (7ULL | (15ULL << 3)))
+            pc = s_jc_last_end_pc[slot];
+    }
     int jobs = 0;
     /* Bound IDLE steps, not total steps. A SPURS job chain is frequently a
      * SERVICE LOOP -- guard, job, sync, next, repeat -- and is meant to run for
@@ -2764,7 +2772,7 @@ static void jc_execute(u32 entry_ea, u32 jc_ea, u32 size_desc)
         if (op == 4) { ret_pc = pc + 8; pc = (u32)(cmd & ~7ull); continue; }  /* CALL */
         if (op == 7) {
             if (ext == (7 | (15 << 3))) {                     /* END */
-                printf("[cellSpurs] chain 0x%08X: END after %d job(s)\n", jc_ea, jobs);
+                s_jc_last_end_pc[slot] = pc;
                 if (jobs) jc_signal_done(jc_ea, jobs - 1);
                 return;
             }
@@ -2802,7 +2810,7 @@ static DWORD WINAPI jc_thread(LPVOID p)
      * Confirms timing-vs-never before committing to the async rewrite. */
     { const char* d = getenv("SPURS_JC_DELAY");
       if (d && *d) Sleep((unsigned)atoi(d)); }
-    jc_execute(s_jobchains[slot].entry_ea, s_jobchains[slot].jc_ea,
+    jc_execute(slot, s_jobchains[slot].entry_ea, s_jobchains[slot].jc_ea,
                s_jobchains[slot].size_desc);
     s_jobchains[slot].running = 0;
     /* Tell the application the chain is done. Without this the walk finishes
@@ -3130,6 +3138,28 @@ s32 cellSpursQueuePushBody(u64 queue_ea, u64 data_ea, u32 isBlocking)
  * =====================================================================*/
 
 
+typedef struct {
+    uint32_t queue_ea;
+    uint8_t  data[16];
+} AsuraQ16Item;
+
+#define ASURA_Q16_CAP 256
+static AsuraQ16Item       s_asura_q16[ASURA_Q16_CAP];
+static uint32_t           s_asura_q16_head = 0;
+static uint32_t           s_asura_q16_tail = 0;
+static SRWLOCK            s_asura_q16_lock = SRWLOCK_INIT;
+static CONDITION_VARIABLE s_asura_q16_cv   = CONDITION_VARIABLE_INIT;
+
+void asura_spu_qpush16(uint32_t queue_ea, const uint8_t* src16)
+{
+    AcquireSRWLockExclusive(&s_asura_q16_lock);
+    uint32_t idx = (s_asura_q16_tail++) % ASURA_Q16_CAP;
+    s_asura_q16[idx].queue_ea = queue_ea;
+    memcpy(s_asura_q16[idx].data, src16, 16);
+    WakeAllConditionVariable(&s_asura_q16_cv);
+    ReleaseSRWLockExclusive(&s_asura_q16_lock);
+}
+
 s32 cellSpursQueuePopBody(u64 queue_ea, u64 buffer_ea, u32 isPeek, u32 isBlocking)
 {
     if (!queue_ea || !buffer_ea) return CELL_SPURS_TASK_ERROR_NULL_POINTER;
@@ -3146,14 +3176,9 @@ s32 cellSpursQueuePopBody(u64 queue_ea, u64 buffer_ea, u32 isPeek, u32 isBlockin
         if (!isBlocking) {
             return (s32)0x80410901; /* CELL_SPURS_TASK_ERROR_AGAIN */
         }
-        /* Brief wait if blocking, then return AGAIN if still empty */
-        for (int w = 0; w < 5; w++) {
-            Sleep(1);
-            head = vm_read32(q + 0x00);
-            tail = vm_read32(q + 0x04);
-            if (head != tail) break;
-        }
-        if (head == tail) return (s32)0x80410901;
+        /* Synchronous pop (func_00891AE0): zero the 16B result struct (status=0) and return CELL_OK */
+        memset(vm_base + dst, 0, sz ? sz : 16);
+        return CELL_OK;
     }
 
     u32 slot = head % dep;

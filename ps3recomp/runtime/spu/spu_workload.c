@@ -684,7 +684,7 @@ static void spu_async_run(spu_async_job* j)
              * the policy module (libsre @0x30021480 -> LS 0xA00) and write the
              * task descriptor {0xFFFFFFFF, 0x400, 0x2700, 0x3000} at 0x2FB0, then
              * run the cri task, to see how much further it gets. Diagnostic only. */
-            if (j->image_id == 22 && getenv("YDKJ_CRI_TASKSET")) {
+            if (0) {
                 /* cri build: load the TASKSET POLICY module (libsre 0x23680 ->
                  * LS 0xA00) alongside the cri task (already at 0x3000), then RUN
                  * THE POLICY ENTRY (tsp_spu_func_00000A00) under image 23. The
@@ -832,16 +832,14 @@ static void spu_async_run(spu_async_job* j)
              * Planting it makes the mixer read the real FMOD control block
              * (0x0094F5xx) and the EventFlag handshake completes. Default ON;
              * LBP_NO_TASKSET restores the old direct-dispatch for comparison. */
-            if (j->image_id != 22 && !getenv("LBP_NO_TASKSET")) {
+            if (!getenv("LBP_NO_TASKSET")) {
                 extern uint64_t spurs_pm_build_context(uint8_t*, uint32_t, uint32_t, uint32_t, uint32_t);
                 /* Use the taskset+taskid captured for THIS job at dispatch (not the
                  * globals, which the next CreateTask clobbers -- the race that made
                  * both audio tasks run task 1's descriptor). */
                 if (j->taskset_ea) {
                     spurs_pm_build_context(ls, j->taskset_ea, j->taskid, 0, 0);
-                    fprintf(stderr, "[taskset] built SpursTasksetContext image=%d "
-                            "taskset=0x%08X task=%u\n", j->image_id,
-                            j->taskset_ea, j->taskid); fflush(stderr);
+                    { static int _tcn=0; if (PS3_LOG_FIRST(_tcn, 12)) { fprintf(stderr, "[taskset] built SpursTasksetContext image=%d taskset=0x%08X task=%u\n", j->image_id, j->taskset_ea, j->taskid); fflush(stderr); } }
                 }
             }
             /* ---- Bink-layer probe + real-policy A/B (image 3 = binkspu) ----
@@ -979,7 +977,7 @@ static void spu_async_run(spu_async_job* j)
                   FILE* f = fopen(path, "wb");
                   if (f) { fwrite(ls, 1, SPU_LS_SIZE, f); fclose(f);
                       fprintf(stderr, "[spu_workload] wrote local store -> %s\n", path); } } }
-            fprintf(stderr, "[spu_workload] async image=%d RETURNED rc=%d "
+            if (0) fprintf(stderr, "[spu_workload] async image=%d RETURNED rc=%d "
                     "(job ran to completion, did not loop)\n", j->image_id, rc);
             spu_serial_release();
             if (j->taskset_ea) spu_taskset_task_exited(j->taskset_ea, j->taskid);
@@ -1067,7 +1065,7 @@ int spu_workload_dispatch_job(const uint8_t* image, uint32_t image_size,
      * lock, and it starved the guest threads competing for that lock badly
      * enough to change what the title does (see ps3_log.h). Milestones stay;
      * the per-job pair is verbose-only. */
-    int verbose = ps3_log_verbose();
+    int verbose = 0;
     if (verbose) {
         fprintf(stderr, "[spurs-job] dispatch HIT fp=0x%016llX image=%d job=0x%08X\n",
                 (unsigned long long)fp, image_id, job_ea);
@@ -1548,8 +1546,7 @@ int spu_workload_dispatch_async(const uint8_t* image, uint32_t image_size,
         if ((j->r3[0] >> 16) == 0x40) j->have_r3 = 1;   /* valid marker */
     }
 
-    fprintf(stderr,
-        "[spu_workload] dispatch HIT (async) fp=0x%016llX args=0x%08X image=%d -> spawning thread\n",
+    if (0) fprintf(stderr, "[spu_workload] dispatch HIT (async) fp=0x%016llX args=0x%08X image=%d -> spawning thread\n",
         (unsigned long long)fp, args_ea, image_id);
     if (args_ea) { extern uint8_t* vm_base; const uint8_t* c = vm_base + args_ea;
         static int _d=0; if (PS3_LOG_FIRST(_d, 1)) {

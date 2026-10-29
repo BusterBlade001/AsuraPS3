@@ -59,7 +59,7 @@
 #define MAX_VERTICES    393216  /* per-frame vertex buffer (dbgfont submits
                                  * ~7.5k verts/frame; leave generous headroom) */
 #define VP_MAX_INDICES  (1u << 21)  /* per-frame index buffer of indexed VP draws, x2 parity */
-#define MAX_DRAWS         2048  /* per-frame draw records. Sized from the
+#define MAX_DRAWS 4096  /* per-frame draw records. Sized from the
                                  * measured worst case (~1841, FRAME_BUDGET);
                                  * the per-draw constant buffer is
                                  * VP_CB_STRIDE * MAX_DRAWS * 2 bytes, so 16384
@@ -213,7 +213,7 @@ typedef struct {
  * so every draw past the fourth got slot -1 from vp_upload_tex_slot ("out of
  * slots") and drew UNTEXTURED. That reads as a correctly-lit but solid black
  * object, which is indistinguishable from a missing texture upload. */
-#define VP_TEX_SLOTS 192
+#define VP_TEX_SLOTS 1024
 /* Guest texture uploads are staged in one persistently mapped upload buffer,
  * a part per frame in flight, reset when that frame's command allocator is
  * (the GPU has finished its copies by then). A committed upload buffer per
@@ -232,7 +232,7 @@ typedef struct {
     ID3DBlob* vs;
     int uses_c03;
 } VPVSEntry;
-#define VP_VS_CACHE 128 /* wave uses 5+ distinct VPs; at 4 the cache
+#define VP_VS_CACHE 1024 /* wave uses 5+ distinct VPs; at 4 the cache
                          * thrashed every frame and eviction shifted slots
                          * under recorded vs_idx values -- the display mesh
                          * drew with the WRONG vertex program (sub-rect +
@@ -268,7 +268,7 @@ typedef struct {
  * single frame, so the FIFO evicted entries that were needed again immediately
  * and ~17 shaders were recompiled EVERY frame -- about half the frame's CPU
  * time. Entries are small (a PSO pointer plus key fields). */
-#define VP_FP_CACHE 256
+#define VP_FP_CACHE 4096
 
 /* ---------------------------------------------------------------------------
  * Internal state
@@ -2646,6 +2646,7 @@ static ID3D12PipelineState* vp_get_fp_pso(int vs_idx, u32 fp_addr, u32 blend, in
         char* rp = strstr(hlsl, "return r[0];");
         if (rp) memcpy(rp, "return float4(1,0,1,1)", 23);
     }
+    ID3D12PipelineState* pso = NULL;
     ID3DBlob* pb = NULL; ID3DBlob* e = NULL;
     HRESULT hr = D3DCompile(hlsl, strlen(hlsl), "guest_fp", NULL, NULL,
                             "main", "ps_5_0", 0, 0, &pb, &e);
@@ -2654,7 +2655,7 @@ static ID3D12PipelineState* vp_get_fp_pso(int vs_idx, u32 fp_addr, u32 blend, in
             printf("[FP] PS compile FAIL (fp=0x%08X): %s\n", fp_addr,
                    e ? (const char*)e->lpVtbl->GetBufferPointer(e) : "?");
         if (e) e->lpVtbl->Release(e);
-        return NULL;
+        goto cache_pso_entry;
     }
     if (e) e->lpVtbl->Release(e);
 
@@ -2775,11 +2776,9 @@ static ID3D12PipelineState* vp_get_fp_pso(int vs_idx, u32 fp_addr, u32 blend, in
                   pd.DepthStencilState.DepthWriteMask = D3D12_DEPTH_WRITE_MASK_ZERO; } }
     pd.SampleDesc.Count = 1;
 
-    ID3D12PipelineState* pso = NULL;
     hr = s_d3d.device->lpVtbl->CreateGraphicsPipelineState(
         s_d3d.device, &pd, &IID_ID3D12PipelineState, (void**)&pso);
     if (FAILED(hr)) {
-        /* Fallback: if vs_idx == -1 had old VS signature, use first compiled guest VP or disable blend */
         if (vs_idx < 0 && s_d3d.vp_vs_n > 0 && s_d3d.vp_vs[0].vs) {
             pd.VS.pShaderBytecode = s_d3d.vp_vs[0].vs->lpVtbl->GetBufferPointer(s_d3d.vp_vs[0].vs);
             pd.VS.BytecodeLength  = s_d3d.vp_vs[0].vs->lpVtbl->GetBufferSize(s_d3d.vp_vs[0].vs);
@@ -2794,11 +2793,13 @@ static ID3D12PipelineState* vp_get_fp_pso(int vs_idx, u32 fp_addr, u32 blend, in
         static int _e3=0; if (PS3_LOG_FIRST(_e3, 16))
             printf("[FP] PSO FAIL (fp=0x%08X, 0x%08lX, vs=%d, blend=0x%X, nrt=%d, rtfmt=%d, cmask=0x%X)\n",
                    fp_addr, hr, vs_idx, blend, nrt, (int)rtfmt, cmask);
-        return NULL;
+        pso = NULL;
+        goto cache_pso_entry;
     }
     { static int _ok=0; if (PS3_LOG_FIRST(_ok, 32)) printf("[FP] guest FP pipeline ready (fp=0x%08X)\n", fp_addr); }
     rdoc_name((ID3D12Object*)pso, "pso fp 0x%08X ucode %08X vs %d", fp_addr, uhash, vs_idx);
 
+cache_pso_entry:
     /* insert (evict oldest when full) */
     if (s_d3d.vp_fp_n >= VP_FP_CACHE) {
         if (s_d3d.vp_fp[0].pso) s_d3d.vp_fp[0].pso->lpVtbl->Release(s_d3d.vp_fp[0].pso);
@@ -6066,7 +6067,7 @@ static void d3d12_clear(void* ud, u32 flags, u32 color, float depth, u8 stencil)
     {
         extern unsigned cellGcm_flip_request_count(void);
         unsigned fc = cellGcm_flip_request_count();
-        if (fc != 0) {
+        if (0 && fc != 0) {
             if (fc == s_last_clear_boundary_flip)
                 return;   /* no flip since last present -> not a real boundary */
             /* A double-buffered title issues several display clears per flip
@@ -7799,10 +7800,17 @@ void rsx_d3d12_backend_present(void)
      * display clears, so records accumulated to MAX_DRAWS and were truncated. */
     {
         extern unsigned cellGcm_flip_request_count(void);
+        static unsigned s_last_flip_present = 0;
+        unsigned cur_fc = cellGcm_flip_request_count();
         if (rsx_present_flip_already_rendered(
-                s_clear_presents, s_last_clear_presented_flip,
-                cellGcm_flip_request_count()))
+                s_clear_presents, s_last_clear_presented_flip, cur_fc))
             return;
+        /* Wait until the guest actually issues a FLIP before draining/presenting the frame,
+         * so 60Hz frame_clock never splits a 30FPS guest frame into two half-built frames! */
+        if (cur_fc != 0 && cur_fc == s_last_flip_present)
+            return;
+        s_last_flip_present = cur_fc;
+        s_last_flip_present = cur_fc;
     }
 
     /* Same display gate as d3d12_present: a batch of offscreen pass work only

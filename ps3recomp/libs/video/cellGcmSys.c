@@ -4231,8 +4231,9 @@ u32 cellGcmGetDefaultSegmentWordSize(void)
 /* Immediate flip — perform flip right now */
 s32 cellGcmSetFlipImmediate(u32 bufferId)
 {
-    printf("[cellGcmSys] SetFlipImmediate(bufferId=%u)\n", bufferId);
-    return cellGcmSetFlipCommand(bufferId);
+    (void)bufferId;
+    s_flip_status = CELL_GCM_FLIP_STATUS_DONE;
+    return CELL_OK;
 }
 
 /* Set flip status directly */

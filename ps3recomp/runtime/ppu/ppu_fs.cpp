@@ -1011,6 +1011,7 @@ static void cellFsAioRead(ppu_context* ctx)
 
 extern "C" void ppu_fs_register(void)
 {
+    _setmaxstdio(2048);
     ps3_hle_register_ctx(ps3_compute_nid("cellFsOpen"),     "cellFsOpen",     cellFsOpen);
     /* Register by the literal import NID: LBP imports 0xB1840B53 for
      * cellFsSdataOpen, which ps3_compute_nid("cellFsSdataOpen") does NOT match
